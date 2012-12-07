@@ -13,6 +13,17 @@
 <div>
     @Html.Raw(Model.Content)
 </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'kijanawoodard';
+    var disqus_identifier = '@Model.Post.Slug';
+    (function () {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 @section AsideContent
 {
@@ -22,7 +33,7 @@
             @foreach (var post in Model.Latest)
             {
                 <li>
-                    <a href="@Url.Action("Execute", "PostGet", new {slug = post.Slug})">
+                    <a href="@Url.Action("Execute", "PostGet", new {slug = post.Slug})#disqus_thread">
                         <i class="icon-bookmark"></i>
                         <span>@post.Title</span>
                         <small>@post.PublishedAtCst.ToShortDateString()</small>
