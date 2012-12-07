@@ -8,10 +8,10 @@ h1 a { color: #000; }
 a { text-decoration: none; }
 li { list-style-type: none; }
 
-header hgroup, 
-header hgroup h4.subheader { margin-bottom: 0;}
-header form { text-align: right;margin-bottom: 0;}
-header form input[type=text] { line-height: 1.2em;font-size: 14px;border-radius: 2px;padding: 4px 10px;}
+header hgroup { margin-bottom: 0;}
+header form.search { text-align: right;margin-bottom: 0;float: right;}
+header form input[type=text] { line-height: 23px;font-size: 14px;border-top-right-radius: 2px;border-bottom-right-radius: 2px;padding: 4px 10px;border: 1px solid #ccc;box-shadow: none;}
+.surround-icon { border: 1px solid #ccc;background-color: #eee;padding: 4px 5px;height: 23px;min-width: 16px;display: inline-block;text-align: center;line-height: 23px;border-top-left-radius: 2px;border-bottom-left-radius: 2px;}
 
 article a { text-decoration: underline; }
 article header hgroup { margin-bottom: 1.5em;}
@@ -31,3 +31,26 @@ footer p {
 #contact i { font-size: 24px;line-height: 30px;float: left;}
 #contact small, 
 #latest small { display: block;padding-left: 40px;}
+
+/* =Mobile (Portrait)
+-----------------------------------------------------------------------------*/
+@media only screen and (max-width: 480px) {
+	#wrap { width: 300px; }
+	header form.search { text-align: left; float: left; }
+	header .subheader { font-size: 1em; }
+}
+
+/* =Mobile (Landscape)
+-----------------------------------------------------------------------------*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	#wrap { width: 420px; }
+	header form.search { text-align: left; float: left; }
+}
+
+/* =Tablet (Portrait)
+-----------------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    #wrap { width: 748px; }
+}
+
+
