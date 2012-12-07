@@ -24,7 +24,55 @@
                 </hgroup>
             </header>
             <hr/>
-            @RenderBody()
+            <div class="row">
+                <article class="threequarter">
+                    @RenderBody()
+                </article>
+                <aside class="quarter">
+                    <section>
+                        <h4>Contact</h4>
+                        <ul id="contact">
+                            <li>
+                                <a href="http://linkedin.com/in/kijanawoodard" target="_blank">
+                                    <i class="icon-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                    <small>linkedin.com/in/kijanawoodard</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://github.com/kijanawoodard" target="_blank">
+                                    <i class="icon-github"></i>
+                                    <span>GitHub</span>
+                                    <small>github.com/kijanawoodard</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/100680108589078267321/" target="_blank">
+                                    <i class="icon-google-plus"></i>
+                                    <span>Google+</span>
+                                    <small>plus.google.com/kijanawoodard</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://twitter.com/kijanawoodard" target="_blank">
+                                    <i class="icon-twitter"></i>
+                                    <span>Twitter</span>
+                                    <small>twitter.com/kijanawoodard</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.facebook.com/kijanawoodard" target="_blank">
+                                    <i class="icon-facebook"></i>
+                                    <span>Facebook</span>
+                                    <small>facebook.com/kijanawoodard</small>
+                                </a>
+                            </li>
+                            @*                <li><a href="http://feeds.feedburner.com/timgthomas" target="_blank"><i class="icon icon-rss"></i><span class="title">RSS Feed</span><small class="subtitle">feeds.feedburner.com/timgthomas</small></a></li>*@
+                        </ul>
+                    </section>
+                    @RenderSection("AsideContent", false)
+                </aside>    
+            </div>
             <footer>
                 <p>&copy; Kijana Woodard</p>
             </footer>
