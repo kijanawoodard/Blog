@@ -1,0 +1,70 @@
+﻿@model Blog.Web.Actions.PostGet.PostGetViewModel
+@{
+    ViewBag.Title = @Model.Post.Title;
+    Layout = "~/Views/_Layout.cshtml";
+}
+<div class="row">
+    <article class="threequarter">
+        <h2>@Model.Post.Title</h2>
+
+
+        @Html.Raw(Model.Content)
+    </article>
+    <aside class="quarter">
+        <section>
+            <h4>Contact</h4>
+            <ul id="contact">
+                <li>
+                    <a href="http://linkedin.com/in/kijanawoodard" target="_blank">
+                        <i class="icon-linkedin"></i>
+                        <span>LinkedIn</span>
+                        <small>linkedin.com/in/kijanawoodard</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://github.com/kijanawoodard" target="_blank">
+                        <i class="icon-github"></i>
+                        <span>GitHub</span>
+                        <small>github.com/kijanawoodard</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://plus.google.com/100680108589078267321/" target="_blank">
+                        <i class="icon-google-plus"></i>
+                        <span>Google+</span>
+                        <small>plus.google.com/kijanawoodard</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://twitter.com/kijanawoodard" target="_blank">
+                        <i class="icon-twitter"></i>
+                        <span>Twitter</span>
+                        <small>twitter.com/kijanawoodard</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.facebook.com/kijanawoodard" target="_blank">
+                        <i class="icon-facebook"></i>
+                        <span>Facebook</span>
+                        <small>facebook.com/kijanawoodard</small>
+                    </a>
+                </li>
+@*                <li><a href="http://feeds.feedburner.com/timgthomas" target="_blank"><i class="icon icon-rss"></i><span class="title">RSS Feed</span><small class="subtitle">feeds.feedburner.com/timgthomas</small></a></li>*@
+            </ul>
+        </section>
+        <section>
+            <h4>Latest Posts</h4>
+            <ul id="latest">
+                @foreach (var post in Model.Latest)
+                {
+                    <li>
+                        <a href="@Url.Action("Execute", "PostGet", new { slug = post.Slug})">
+                            <i class="icon-bookmark"></i>
+                            <span>@post.Title</span>
+                        </a>
+                    </li>    
+                }
+            </ul>
+        </section>
+    </aside>    
+</div>

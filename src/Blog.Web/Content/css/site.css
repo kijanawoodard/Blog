@@ -1,0 +1,26 @@
+﻿#wrap {
+	width: 940px;
+	padding: 0 10px;
+	margin: 24px auto;
+}
+
+h1 a { color: #000; }
+a { text-decoration: none; }
+li { list-style-type: none; }
+
+article a { text-decoration: underline; }
+
+aside ul {margin: 0;}
+aside h4 { color: #8f8f8f;margin-bottom: .7em;  }
+aside small {color: #999; font-size:.8em;}
+aside section { margin-bottom: 2em; }
+
+footer p {
+  color: #ccc;
+  font-size: 12px;
+  text-align: left;
+  line-height: 40px; 
+}
+
+#contact i { font-size: 24px;line-height: 30px;float: left;}
+#contact small { display: block;padding-left: 40px;}

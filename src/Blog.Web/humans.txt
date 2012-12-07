@@ -1,0 +1,8 @@
+﻿/* TEAM */
+Programmer: Kijana Woodard
+Email: contact [at] kijanawoodard.com
+twiiter: @kijanawoodard
+From: Dallas, TX, USA
+
+/* TECH */
+C#, Markdown, Visual Studio 2012
