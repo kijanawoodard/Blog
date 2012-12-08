@@ -23,7 +23,7 @@ namespace Blog.Web.Initialization
 			       .WithParameter("root", HttpContext.Current.Server.MapPath("~/Content/posts")); //do the httpcontext map here instead of buried in the class
 
 			var container = builder.Build();
-			DependencyResolver.SetResolver(new AutofacDependencyResolver(container)); //mvc
+			DependencyResolver.SetResolver(new AutofacDependencyResolver(container)); //for asp.net mvc
 		}
 	}
 }

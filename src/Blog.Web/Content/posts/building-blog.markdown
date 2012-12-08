@@ -1,5 +1,5 @@
 ﻿
-Why not? I took a day and wrote a blog engine. I had a few goals in mind.
+Why not? I took a day and wrote a blog engine. I had a few goals in mind. I started by stealing, er, uh, learning from the blog of [Tim G Thomas][timgthomas] whose [source code is conveniently on GitHub][timgthomas source].
 
 ###Minimalism
 I didn't go bare minimum, but I feel like I got pretty close. 
@@ -8,7 +8,7 @@ I didn't go bare minimum, but I feel like I got pretty close.
 * No DB.
 * A minimal css framework called [kube].
 * CSS icons from [Font Awesome].
-* [Markdown] for posts [(like this one)][this post].
+* [Markdown] for posts ([like this one][this post]).
 
 I cheated a bit. I didn't want a db, but I figured a blog has to have comments, so I went with [Disqus]. So, technically, [Disqus] has a db on my behalf and loads through js. But those things aren't in my code base which means I don't have to maintain them. Win.
 
@@ -16,9 +16,27 @@ I'm still deciding whether I should go with [Gists for code][my gists] or [plain
 
 For CSS, I could have gone with [Twitter Bootstrap] or [Foundation], but when I was making my decision, they seemed pretty heavy weight for a blog. [Kube] plus [Font Awesome] seem to be doing quite well.
 
+###Speed
 I was going for speed as well. I wanted page onload to be under 250ms. I was stoked when it was clocking in around 50ms.....until I added [Disqus] and [Gist]. The pops me to ~400ms, but I'll live with that for the features of Disqus. That fact may kill gists for me though. ;-) 
 
-I've wondered what it would be like to write in [Markdown]. I have to say, having written these posts once in html having fought with the editor, writing in Markdown is very nice. It flows quite naturally. I like the [use of labels for links][markdown links]. It makes it easy to refer to the same link many times in a document and you cna have a nice bibliography. Check out [the raw source of this post][this post raw].
+###Markdown
+I've wondered what it would be like to write in [Markdown]. I have to say, having written these posts once in html having fought with the editor, writing in Markdown is very nice. It flows quite naturally. I like the [use of labels for links][markdown links]. It makes it easy to refer to the same link many times in a document and you can have a nice bibliography. Check out [the raw source of this post][this post raw].
+
+###No DB? Where are the posts?
+The posts are Markdown, so they are in the [content folder][my posts]. The [meta data for posts][post meta] are in classes. I have just enough infrastructure there to post into the future. I nixed some code about putting posts in "active status". Pure YGANI. 
+
+I also didn't want a formula for the Slug. I wanted to tweak the slug, title, and file name without having to think about the output of a method somewhere. I also avoided a base class since I just describe the shape of the class. I created a [ReSharper live template][r# templates] to output a new class and I fill in the details. Works well. 
+
+Now I'm giving up the ability to "blog on the go". In reality, that never happened with my WordPress blog. Writing blog posts takes hours, for me anyway. But, I could always edit directly on GitHub and push to production if I wanted.
+
+###IoC
+Yes. I actually typed IoC. I've been so negative on IoC lately, I wanted to give it a try again. I wanted to use it in a minimal way where it could provide value rather than blindly using it everywhere. 
+
+I actually setup some [interfaces in the project][core]. *gasp*
+
+I wanted posts to follow the [Open/Closed principle][solid] and have the ability to create a new blog post and have it be picked up by the infrastructure automatically without modifying some particular class. When [`FilteredPostValult.cs`][post vault] gets instantiated by the container, all the posts are there. That bit of magic is accomplished by [this line of code][post magic].
+
+I decided to use [Autofac] since I hadn't tried that one before. It works fine IMO and there are nuget packages to get all the bits you need.
 
 ###Don't Fight the Framework
 MVC 4 doesn't add trailing slashes to routes. For consistency, your routes should always end the same way. On my old wordpress blog, there was a trailing slash. I added a [url rewrite rule][ruslany] to the [web.config][urlrewrite] to redirect to the canonical form.  I also normalized to lower case and to a non-www host name.
@@ -29,7 +47,7 @@ I wanted to see what it is like to put the model,view, and controller together i
 In order to get this structure to work, I had to [tweak the view engine][viewengine]. It's shockingly straight forward. This is customized exactly to the needs of this project.
 
 ###Summary
-I'm pretty happy with this all in all. The idea that I spent as much time working on the posts as on the blog engine tells me I'm on the right track. 
+I'm pretty happy with this all in all. There's not a whole lot of code. The idea that I spent as much time working on the posts as on the blog engine tells me I'm on the right track. 
 
 Tell me what you think.
 
@@ -47,6 +65,20 @@ Tell me what you think.
 [gist]:https://gist.github.com/
 
 [markdown links]:http://daringfireball.net/projects/markdown/syntax#link
+
+[timgthomas]: http://timgthomas.com/
+[timgthomas source]:https://github.com/TimGThomas/blog
+
+[my posts]: https://github.com/kijanawoodard/Blog/tree/master/src/Blog.Web/Content/posts
+[post meta]:https://github.com/kijanawoodard/Blog/blob/master/src/Blog.Web/Models/Posts.cs
+[post magic]:https://github.com/kijanawoodard/Blog/blob/master/src/Blog.Web/Initialization/AutofacConfig.cs#L20
+[core]: https://github.com/kijanawoodard/Blog/tree/master/src/Blog.Web/Core
+
+[r# templates]:http://www.jetbrains.com/resharper/features/code_templates.html
+[solid]:http://en.wikipedia.org/wiki/SOLID_(object-oriented_design)
+
+[post vault]:https://github.com/kijanawoodard/Blog/blob/master/src/Blog.Web/Infrastructure/FilteredPostVault.cs
+[Autofac]:http://code.google.com/p/autofac/
 
 [ruslany]: http://blogs.iis.net/ruslany/archive/2009/04/08/10-url-rewriting-tips-and-tricks.aspx "Url Rewriting tips"
 [urlrewrite]: https://github.com/kijanawoodard/Blog/blob/master/src/Blog.Web/Web.config#L32 "url rewrite rules"
