@@ -204,6 +204,9 @@
   <ItemGroup>
     <Content Include="Content\posts\thoughts-on-script-sharp.markdown" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\in-defense-of-blub.markdown" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

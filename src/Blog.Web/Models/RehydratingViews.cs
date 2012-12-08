@@ -85,7 +85,7 @@ namespace Blog.Web.Models
 
 	public class InDefenseOfBlub : IPost
 	{
-		public string Title { get { return "in-defense-of-blub"; } }
+		public string Title { get { return "In Defense of Blub"; } }
 		public string Slug { get { return "in-defense-of-blub"; } }
 		public string FileName { get { return "in-defense-of-blub.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("May 11, 2010"); } }
