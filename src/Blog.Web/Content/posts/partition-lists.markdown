@@ -1,4 +1,4 @@
-﻿[Edit: See the comments to see why this post is totally unnecessary. Thanks Matt T!]
+﻿[Edit: See the comments to see why this post is totally unnecessary. Thanks Matt!]
 
 I found myself in an odd situation. I had a List of objects that I needed to break into a List of Lists to make display a little more, well, sane. I did a web search and found a couple entries detailing [how to break a list into fixed sized chunks][SO].
 

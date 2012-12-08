@@ -109,7 +109,6 @@
     <Compile Include="Core\IContentStorage.cs" />
     <Compile Include="Core\IPostVault.cs" />
     <Compile Include="Actions\PostGet\PostGetViewModel.cs" />
-    <Compile Include="Models\BuildingABlog.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -117,10 +116,7 @@
     <Compile Include="Infrastructure\FilteredPostVault.cs" />
     <Compile Include="Core\IPost.cs" />
     <Compile Include="Infrastructure\MarkdownContentStorage.cs" />
-    <Compile Include="Models\JavascriptUtc.cs" />
-    <Compile Include="Models\RavenId.cs" />
-    <Compile Include="Models\RehydratingViews.cs" />
-    <Compile Include="Models\SeekingDensity.cs" />
+    <Compile Include="Models\Posts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +127,7 @@
     <Content Include="Content\css\kube.responsive.min.css" />
     <Content Include="Content\css\site.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
+    <Content Include="Content\posts\images\gmail-spam.png" />
     <Content Include="Content\posts\images\use-ctrl-period-to-insert-using.png" />
     <Content Include="favicon.png" />
     <Content Include="Global.asax" />
@@ -206,6 +203,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\posts\in-defense-of-blub.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\why-enums-suck.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\fizzbuzz-plus-plus.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\ienumerable-each.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\avoiding-fizzbuzz.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\gmail-spam.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\tekpub-rocks.markdown" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

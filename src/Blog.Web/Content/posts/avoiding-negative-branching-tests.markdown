@@ -1,4 +1,4 @@
-﻿I try to avoid ! tests in “if” blocks if there is a clearer way to express the idea in positive manner. Thanks to Larry M for turning me on to this concept.
+﻿I try to avoid ! tests in “if” blocks if there is a clearer way to express the idea in positive manner. Thanks to Larry McNutt for turning me on to this concept.
 
 In my post on [extension methods], I had a string extension called HasValue. What’s the use of this?
 

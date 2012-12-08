@@ -1,4 +1,5 @@
-﻿###Don't Fight the Framework
+﻿
+###Don't Fight the Framework
 MVC 4 doesn't add trailing slashes to routes. For consistency, your routes should always end the same way. On my old wordpress blog, there was a trailing slash. I added a [url rewrite rule][ruslany] to the [web.config][urlrewrite] to redirect to the canonical form.  I also normalized to lower case and to a non-www host name.
 
 ###Fight the Framework
