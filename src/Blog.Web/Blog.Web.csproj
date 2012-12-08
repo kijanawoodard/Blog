@@ -117,6 +117,10 @@
     <Compile Include="Infrastructure\FilteredPostVault.cs" />
     <Compile Include="Core\IPost.cs" />
     <Compile Include="Infrastructure\MarkdownContentStorage.cs" />
+    <Compile Include="Models\JavascriptUtc.cs" />
+    <Compile Include="Models\RavenId.cs" />
+    <Compile Include="Models\RehydratingViews.cs" />
+    <Compile Include="Models\SeekingDensity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +128,7 @@
     <Compile Include="Initialization\RouteConfig.cs" />
     <Content Include="Content\css\font-awesome.css" />
     <Content Include="Content\css\kube.min.css" />
+    <Content Include="Content\css\kube.responsive.min.css" />
     <Content Include="Content\css\site.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
     <Content Include="favicon.png" />
@@ -164,6 +169,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\posts\raven-id.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\seeking-density.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\rehydrating-views.markdown" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
