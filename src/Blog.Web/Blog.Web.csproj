@@ -131,6 +131,7 @@
     <Content Include="Content\css\kube.responsive.min.css" />
     <Content Include="Content\css\site.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
+    <Content Include="Content\posts\images\use-ctrl-period-to-insert-using.png" />
     <Content Include="favicon.png" />
     <Content Include="Global.asax" />
     <Content Include="humans.txt" />
@@ -175,6 +176,33 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\posts\rehydrating-views.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\partition-lists.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\selling-value-for-money.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\nullor-extension-method.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\nullcheck-extension-method.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\avoiding-negative-branching-tests.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\cool-feature-of-extension-methods.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\visual-studio-code-snippets.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\creating-using-directives.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\thoughts-on-script-sharp.markdown" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

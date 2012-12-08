@@ -6,7 +6,7 @@ I recently came up with a solution that I was happy with in ASP.Net MVC3. Howeve
 
 The crux of the idea is that the Input Model for the POST is symmetrical with the View Model for the GET. I took the idea just a bit further.
 
-<script src="https://gist.github.com/4237737.js?file=models.cs"></script>
+<script src="https://gist.github.com/4237737.js?file=fubumvc-validation-and-re-hydrating-the-view-models.cs"></script>
 
 I defined a RequestModel for the GET, a ViewModel which might contain reference data, and an InputModel which is POSTed back to the server.
 
@@ -14,7 +14,7 @@ The reference data is the kicker. I really don’t want to post all the referenc
 
 Here’s some non working code I threw together to see how I liked my idea.
 
-<script src="https://gist.github.com/4237737.js?file=execute.cs"></script>
+<script src="https://gist.github.com/4237737.js?file=fubumvc-validation-and-re-hydrating-the-view-execute.cs"></script>
 
 I’m using some FubuMVC patterns here, so you’ll kinda have to accept that this is possible if you’re coming from another web server stack. Both my GET and POST methods return the view model. I taught FubuMVC that any method the takes a class with "Request" in the name is a GET and any method that takes a class with "Input" in the name is a POST.
 
@@ -30,17 +30,18 @@ Now back to that try/catch I don’t like. The FubuMVC examples I’ve seen show
 
 It seems to me there are 4 general concepts of correctness for POSTing an InputModel.
 
-The data should be in the right shape (i.e., required fields are present and fields are of the right type, length, etc). This is handled by FubuValidation or Model.IsValid in ASP.Net MVC.
-The data should meet all business rules. If you GET the page a 2:55PM and submit at 3:01PM, a business rule stating that a particular BarId is not valid after 3 would invalidate the request.
-The data should pass all concurrency checks when submitted to the database. In addition, the database simply being unavailable could fail the request here.
-The data and database are in great shape, the user is authorized to make the request, but the user is POSTing data they are unauthorized for. Image a user who is allowed to POST BarIds 1-5. The user is smart and knows that BarId 15 exists and uses Firebug to alter the form before clicking submit.
+1. The data should be in the right shape (i.e., required fields are present and fields are of the right type, length, etc). This is handled by FubuValidation or Model.IsValid in ASP.Net MVC.
+2. The data should meet all business rules. If you GET the page a 2:55PM and submit at 3:01PM, a business rule stating that a particular BarId is not valid after 3 would invalidate the request.
+3. The data should pass all concurrency checks when submitted to the database. In addition, the database simply being unavailable could fail the request here.
+4.  The data and database are in great shape, the user is authorized to make the request, but the user is POSTing data they are unauthorized for. Image a user who is allowed to POST BarIds 1-5. The user is smart and knows that BarId 15 exists and uses Firebug to alter the form before clicking submit.
+
 In the last case, I prefer to send the user to a "Fail Whale" type of generic error page and issue a priority 1 alert to OPS. Either, someone is hacking the system, or we have a serious bug in our UI that is presenting invalid options to users. Either way, someone should deal with the problem quickly.
 
 In the other cases, it’s nice to present the form back to the user telling them what’s wrong and letting them make a choice. The PRG pattern above allows for this.
 
 Using FubuMVC, I can imagine ways to get this into the behavior chain based on our conventions and have it working seamlessly. I’ve been growing increasingly wary of inheritance, but I can see defining our classes like this.
 
-<script src="https://gist.github.com/4237737.js?file=classes.cs"></script>
+<script src="https://gist.github.com/4237737.js?file=fubumvc-validation-and-re-hydrating-the-view-classes.cs"></script>
 
 Now our behaviors could know exactly which methods to execute and which data to copy when doing it’s work.
 

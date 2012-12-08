@@ -23,7 +23,7 @@ namespace Blog.Web.Actions.PostGet
 
 			var content = _storage.GetContent(post.FileName);
 
-			var model = new PostGetViewModel(post, content, _vault.Posts.Take(5), _vault.Posts.Count);
+			var model = new PostGetViewModel(post, content, _vault.Posts.Take(30), _vault.Posts.Count);
             return View(model);
         }
     }

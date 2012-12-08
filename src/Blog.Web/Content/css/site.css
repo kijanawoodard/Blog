@@ -14,7 +14,9 @@ header form input[type=text] { line-height: 23px;font-size: 14px;border-top-righ
 .surround-icon { border: 1px solid #ccc;background-color: #eee;padding: 4px 5px;height: 23px;min-width: 16px;display: inline-block;text-align: center;line-height: 23px;border-top-left-radius: 2px;border-bottom-left-radius: 2px;}
 
 article a { text-decoration: underline; }
+article li { list-style-type: inherit; }
 article header hgroup { margin-bottom: 1.5em;}
+
 
 aside ul { margin-left: 0; }
 aside h4 { color: #8f8f8f;margin-bottom: .7em;  }
