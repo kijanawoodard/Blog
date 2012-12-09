@@ -11,6 +11,11 @@ namespace Blog.Web.Initialization
 
 			routes.MapRoute(
 				null,
+				"atom",
+				new { controller = "AtomGet", action = "Execute" });
+
+			routes.MapRoute(
+				null,
 				"{slug}",
 				new {controller = "PostGet", action = "Execute"});
 

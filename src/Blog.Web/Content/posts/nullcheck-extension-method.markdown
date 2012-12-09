@@ -4,7 +4,7 @@ It get’s annoying writing this code over and over:
 
 <script src="https://gist.github.com/4237737.js?file=nullcheck-problem.cs"></script>
 
-I had considered using a [`NotNull<T>` object][null object] to take care of null checking.
+I had considered using a [`NotNull<T>`][null object] to take care of null checking.
 
 But with extension methods like this:
 

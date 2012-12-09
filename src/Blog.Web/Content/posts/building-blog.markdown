@@ -16,7 +16,7 @@ I'm still deciding whether I should go with [Gists for code][my gists] or [plain
 
 For CSS, I could have gone with [Twitter Bootstrap] or [Foundation], but when I was making my decision, they seemed pretty heavy weight for a blog. [Kube] plus [Font Awesome] seem to be doing quite well.
 
-I considered adding an archive page, like on Tim Thomas' blog. Sinec I only have 20 posts as of now, I'll juts list the all posts. Once I have a hundred posts, I can come back and add that feature.
+I considered adding an archive page, like on Tim Thomas' blog. Since I only have 20 posts as of now, I'll juts list the all posts. Once I have a hundred posts, I can come back and add that feature.
 
 ###Speed
 I was going for speed as well. I wanted page onload to be under 250ms. I was stoked when it was clocking in around 50ms.....until I added [Disqus] and [Gist]. The pops me to ~400ms, but I'll live with that for the features of Disqus. That fact may kill gists for me though. ;-) 
@@ -24,12 +24,12 @@ I was going for speed as well. I wanted page onload to be under 250ms. I was sto
 ###Markdown
 I've wondered what it would be like to write in [Markdown]. I have to say, having written these posts once in html having fought with the editor, writing in Markdown is very nice. It flows quite naturally. I like the [use of labels for links][markdown links]. It makes it easy to refer to the same link many times in a document and you can have a nice bibliography. Check out [the raw source of this post][this post raw].
 
-###No DB? Where are the posts?
+###No DB!?! Where are the posts?
 The posts are Markdown, so they are in the [content folder][my posts]. The [meta data for posts][post meta] are in classes. I have just enough infrastructure there to post into the future. I nixed some code about putting posts in "active status". Pure YGANI. 
 
 I also didn't want a formula for the Slug. I wanted to tweak the slug, title, and file name without having to think about the output of a method somewhere. I also avoided a base class since I just describe the shape of the class. I created a [ReSharper live template][r# templates] to output a new class and I fill in the details. Works well. 
 
-Now I'm giving up the ability to "blog on the go". In reality, that never happened with my WordPress blog. Writing blog posts takes hours, for me anyway. But, I could always edit directly on GitHub and push to production if I wanted.
+I'm giving up the ability to "blog on the go". In reality, that never happened with my WordPress blog. Writing blog posts takes hours, for me anyway. Also, I could always edit directly on GitHub and push to production if I wanted.
 
 ###IoC
 Yes. I actually typed IoC. I've been so negative on IoC lately, I wanted to give it a try again. I wanted to use it in a minimal way where it could provide value rather than blindly using it everywhere. 

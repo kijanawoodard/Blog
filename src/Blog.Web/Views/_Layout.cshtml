@@ -74,7 +74,13 @@
                                     <small>facebook.com/kijanawoodard</small>
                                 </a>
                             </li>
-                            @*                <li><a href="http://feeds.feedburner.com/timgthomas" target="_blank"><i class="icon icon-rss"></i><span class="title">RSS Feed</span><small class="subtitle">feeds.feedburner.com/timgthomas</small></a></li>*@
+                            <li>
+                                <a href="@Url.Action("Execute", "AtomGet", null, "http")" target="_blank">
+                                    <i class="icon-rss"></i>
+                                    <span>Atom Feed</span>
+                                    <small>kijanawoodard.com/atom</small>
+                                </a>
+                            </li>
                         </ul>
                     </section>
                     @RenderSection("AsideContent", false)
