@@ -18,11 +18,12 @@ header form input[type=text] { line-height: 23px;font-size: 14px;border-top-righ
 article a { text-decoration: underline; }
 article li { list-style-type: inherit; }
 article header hgroup { margin-bottom: 1.5em;}
-
+article footer a { text-decoration: none; }
+article footer .next { text-align: right; }
 
 aside ul { margin-left: 0; }
 aside h4 { color: #8f8f8f;margin-bottom: .7em;  }
-aside small {color: #999; font-size:.8em;}
+aside small, article footer small {color: #999; font-size:.8em;}
 aside section { margin-bottom: 2em; }
 
 footer p {

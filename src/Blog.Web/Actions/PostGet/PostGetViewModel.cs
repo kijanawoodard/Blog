@@ -7,13 +7,20 @@ namespace Blog.Web.Actions.PostGet
 	{
 		public IPost Post { get; private set; }
 		public string Content { get; private set; }
+		public IPost Previous { get; private set; }
+		public IPost Next { get; private set; }
 		public IEnumerable<IPost> Latest { get; private set; }
 		public int PostCount { get; private set; }
 
-		public PostGetViewModel(IPost post, string content, IEnumerable<IPost> latest, int postCount)
+		public bool HasPrevious { get { return Previous != null; } }
+		public bool HasNext { get { return Next != null; } }
+
+		public PostGetViewModel(IPost post, string content, IPost previous, IPost next, IEnumerable<IPost> latest, int postCount)
 		{
 			Post = post;
 			Content = content;
+			Previous = previous;
+			Next = next;
 			Latest = latest;
 			PostCount = postCount;
 		}
