@@ -18,6 +18,8 @@ For CSS, I could have gone with [Twitter Bootstrap] or [Foundation], but when I 
 
 I considered adding an archive page, like on Tim Thomas' blog. Since I only have 20 posts as of now, I'll juts list the all posts. Once I have a hundred posts, I can come back and add that feature.
 
+I added an Atom feed just to see what that is like. It's trivial. Now, do I need it?
+
 ###Speed
 I was going for speed as well. I wanted page onload to be under 250ms. I was stoked when it was clocking in around 50ms.....until I added [Disqus] and [Gist]. The pops me to ~400ms, but I'll live with that for the features of Disqus. That fact may kill gists for me though. ;-) 
 
