@@ -18,7 +18,7 @@ namespace Blog.Web.Actions.AtomGet
 
 	    public ActionResult Execute()
 	    {
-		    Response.ContentType = " application/atomserv+xml";
+            Response.ContentType = " application/atom+xml";
 		    var model = _vault.Posts;
             return View(model);
         }
