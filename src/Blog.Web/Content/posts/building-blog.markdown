@@ -51,7 +51,7 @@ I wanted to see what it is like to put the model, view, and controller together 
 In order to get this structure to work, I had to [tweak the view engine][viewengine]. It's shockingly straight forward. This is customized exactly to the needs of this project.
 
 ###Deployment
-I used GitHub for scm, of course. I decided to see how easy it would be to launch a site on azure from github. I logged into Azure. Clicked on New -> Website. On the landing screen it asked me if I wanted to deploy from GitHub (amongst other choices). I picked the repo. Deployed. Wow.
+I used GitHub for source control, of course. I decided to see how easy it would be to launch a site on azure from github. I logged into Azure. Clicked on New -> Website. On the landing screen it asked me if I wanted to deploy from GitHub (amongst other choices). I picked the repo. Deployed. Wow.
 
 ###Summary
 I'm pretty happy with this all in all. There's not a whole lot of code. The idea that I spent as much time working on the posts as on the blog engine tells me I'm on the right track. 
