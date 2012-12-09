@@ -16,6 +16,8 @@ I'm still deciding whether I should go with [Gists for code][my gists] or [plain
 
 For CSS, I could have gone with [Twitter Bootstrap] or [Foundation], but when I was making my decision, they seemed pretty heavy weight for a blog. [Kube] plus [Font Awesome] seem to be doing quite well.
 
+I considered adding an archive page, like on Tim Thomas' blog. Sinec I only have 20 posts as of now, I'll juts list the all posts. Once I have a hundred posts, I can come back and add that feature.
+
 ###Speed
 I was going for speed as well. I wanted page onload to be under 250ms. I was stoked when it was clocking in around 50ms.....until I added [Disqus] and [Gist]. The pops me to ~400ms, but I'll live with that for the features of Disqus. That fact may kill gists for me though. ;-) 
 
