@@ -6,7 +6,7 @@ I didn't go bare minimum, but I feel like I got pretty close.
 
 * No javascript. 
 * No DB.
-* A minimal css framework called [kube].
+* A minimal css framework called [Kube].
 * CSS icons from [Font Awesome].
 * [Markdown] for posts ([like this one][this post]).
 
