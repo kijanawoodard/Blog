@@ -14,7 +14,9 @@
         
         <!--[if lt IE 9]>
 	    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	    <![endif]-->		
+        <![endif]-->		
+        
+        @RenderSection("canonical", false)        
     </head>
     <body>
         <div id="wrap">
@@ -83,7 +85,7 @@
                             </li>
                         </ul>
                     </section>
-                    @RenderSection("AsideContent", false)
+                    @RenderSection("aside", false)
                 </aside>    
             </div>
             <footer>

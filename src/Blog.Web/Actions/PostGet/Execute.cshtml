@@ -3,6 +3,12 @@
     ViewBag.Title = @Model.Post.Title;
     Layout = "~/Views/_Layout.cshtml";
 }
+
+@section canonical 
+{
+    <link rel="canonical" href="@Url.Action("Execute", "PostGet", new { slug = Model.Post.Slug}, "http")"/>
+}
+
 <header>
     <hgroup>
         <h2>@Model.Post.Title</h2>
@@ -43,7 +49,7 @@
     </div>
 </footer>
 
-@section AsideContent
+@section aside
 {
     <section>
         <h4>@Model.PostCount Posts</h4>
