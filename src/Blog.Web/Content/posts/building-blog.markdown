@@ -27,7 +27,7 @@ I was going for speed as well. I wanted page onload to be under 250ms. I was sto
 I've wondered what it would be like to write in [Markdown]. I have to say, having written these posts once in html having fought with the editor, writing in Markdown is very nice. It flows quite naturally. I like the [use of labels for links][markdown links]. It makes it easy to refer to the same link many times in a document and you can have a nice bibliography. Check out [the raw source of this post][this post raw].
 
 ###No DB!?! Where are the posts?
-The posts are Markdown, so they are in the [content folder][my posts]. The [meta data for posts][post meta] are in classes. I have just enough infrastructure there to post into the future. I nixed some code about putting posts in "active status". Pure YGANI. 
+The posts are Markdown, so they are in the [content folder][my posts]. The [meta data for posts][post meta] are in classes. I have just enough infrastructure there to post into the future. I nixed some code about putting posts in "active status". Pure YAGNI. 
 
 I also didn't want a formula for the Slug. I wanted to tweak the slug, title, and file name without having to think about the output of a method somewhere. I also avoided a base class since I just describe the shape of the class. I created a [ReSharper live template][r# templates] to output a new class and I fill in the details. Works well. 
 
