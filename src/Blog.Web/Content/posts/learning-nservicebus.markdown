@@ -16,6 +16,6 @@ A lot of tech books tend to be focused on programmers. Chapter 7 is focused on a
 
 The only annoyance I had in the book the use of exclamation points for emphasis. The first few times were fine, but after a while, it just pulled my focus out of the book!
 
-All in all, as someone who has explained basic NServiceBus and Messaging on numerous occasions, I can now refer people to [Learning NServiceBus][learning] as a primer. Deep knowledge comes through using a tool and this book is a great way to get started using a great tool.
+All in all, as someone who has explained basic NServiceBus and Messaging on numerous occasions, I can now refer people to [Learning NServiceBus][learning] as a primer. Deep knowledge of a tool comes through usage. This book is a great way to start using a great tool.
 
 [learning]: http://www.packtpub.com/build-distributed-software-systems-using-dot-net-enterprise-service-bus/book
