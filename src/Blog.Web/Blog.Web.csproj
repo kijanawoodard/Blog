@@ -228,6 +228,9 @@
   <ItemGroup>
     <Content Include="Actions\AtomGet\Execute.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\learning-nservicebus.markdown" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

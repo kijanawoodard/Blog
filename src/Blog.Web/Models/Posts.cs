@@ -6,6 +6,14 @@ using Blog.Web.Core;
 
 namespace Blog.Web.Models
 {
+	public class LearningNServiceBus : IPost
+	{
+		public string Title { get { return "Learning NServiceBus Review"; } }
+		public string Slug { get { return "learning-nservicebus-review"; } }
+		public string FileName { get { return "learning-nservicebus.markdown"; } }
+		public DateTime PublishedAtCst { get { return DateTime.Parse("September 30, 2013"); } }
+	}
+
 	public class BuildingABlog : IPost
 	{
 		public string Title { get { return "Building My Own Blog"; } }
