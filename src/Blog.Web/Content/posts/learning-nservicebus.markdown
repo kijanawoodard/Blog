@@ -10,7 +10,7 @@ All the code in the book is nicely formatted and easy to read. There is a great 
 
 I also felt there was a good balance of explaining just enough messaging theory to give context without dwelling on the ins and outs of SOA/DDD/TDD/ETC. There were a few points in the book where David simply referred to existing resources on the web to get further information. This is a good approach. While those things are essential to designing a message based architecture, they are not essential to understand how to use NServiceBus. The distinctions are not always clear, but David did a good job picking and choosing what to include. By pointing us to other resources, we're not left with that uneasy feeling that "there's something we don't know". Instead, we feel we have a good basic grasp of the necessary concepts and path to deepen our knowledge when necessary.
 
-After each chapter I felt that I had received "just enough" information to start using the features described. While easy to digest, the book covers a lot of ground. Encryption, fault tolerance, logging, virtualization, monitoring, and scaling are all covered. 
+After each chapter I felt that I had received "just enough" information to start using the features described. While easy to digest, the book covers a lot of ground. Encryption, fault tolerance, logging, virtualization, monitoring, and scaling are all explored. 
 
 Sagas, also known as long running processes or Process Managers, can be a challenge to understand at first glance. Chapter 6 focuses on Sagas and covers how you approach them from a technical perspective and from a business perspective. David reminds us that part of our jobs as software developers is understanding and educating the business, not simply typing code. 
 
