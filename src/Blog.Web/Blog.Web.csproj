@@ -131,6 +131,7 @@
     <Content Include="Content\css\site.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
     <Content Include="Content\posts\images\gmail-spam.png" />
+    <Content Include="Content\posts\images\learning-nservicebus.png" />
     <Content Include="Content\posts\images\use-ctrl-period-to-insert-using.png" />
     <Content Include="favicon.png" />
     <Content Include="Global.asax" />

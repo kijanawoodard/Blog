@@ -1,4 +1,9 @@
-﻿I was contacted by Packt Publishing to review [Learning NServiceBus by David Boike][learning]. David is active in the NServiceBus community, so I was eager to see what he had put together. 
+﻿<figure>
+	<img src="/content/posts/images/learning-nservicebus.png" alt="Cover photo of Learning NServiceBus by David Boike">
+	<figcaption>Learning NServiceBus by David Boike</figcaption>
+<figure>
+
+I was contacted by Packt Publishing to review [Learning NServiceBus by David Boike][learning]. David is active in the NServiceBus community, so I was eager to see what he had put together. 
 
 Using a messaging framework can be a daunting prospect for someone who is used to typical RPC / web service programming. In Learning NServiceBus, David has distilled the essential parts of getting messaging to work on NServiceBus into easily digestible bits. I consider myself a slow reader yet I was able to get through the book in a few hours. Also, as someone who is familiar with NServiceBus, I thought I might find the material boring. Instead, David presents it in a fun, engaging manner that had me happily swiping through the pages [kindle reader on iPad].
 
