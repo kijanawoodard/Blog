@@ -1,7 +1,7 @@
 ﻿<figure>
-	<img src="/content/posts/images/learning-nservicebus.png" alt="Cover photo of Learning NServiceBus by David Boike">
+	<img src="/content/posts/images/learning-nservicebus.png" alt="Cover photo of Learning NServiceBus by David Boike" />
 	<figcaption>Learning NServiceBus by David Boike</figcaption>
-<figure>
+</figure>
 
 I was contacted by Packt Publishing to review [Learning NServiceBus by David Boike][learning]. David is active in the NServiceBus community, so I was eager to see what he had put together. 
 

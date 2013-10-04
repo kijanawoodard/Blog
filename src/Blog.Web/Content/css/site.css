@@ -23,8 +23,8 @@ article footer a { text-decoration: none; }
 article footer .next { text-align: right; }
 article div.text { font-size: 1.7em; font-family: "ff-tisa-web-pro",serif; }
 
-aside ul { margin-left: 0; }
-aside h4 { color: #8f8f8f;margin-bottom: .7em;  }
+aside ul { margin: 0; }
+aside h4 { color: #8f8f8f;margin-bottom: .5em;font-size: 1em; }
 aside small, article footer small {color: #999; font-size:.8em;}
 aside section { margin-bottom: 2em; }
 
@@ -35,9 +35,14 @@ footer p {
   line-height: 40px; 
 }
 
-#contact i { font-size: 24px;line-height: 30px;float: left;}
-#contact small, 
-#latest small { display: block;padding-left: 40px;}
+#contact { border: 1px solid #ddd;padding: 12px;text-align: center;position: fixed;right: 0;top: 12%;}
+#contact i { font-size: 24px;line-height: 30px;}
+#contact small, #contact span { display: none; } 
+
+#latest small { display: block;}
+#latest i { display: none; }
+#latest li { margin-bottom: 3px; overflow: hidden;text-overflow: ellipsis;}
+#latest li span { line-height: 3px;white-space: nowrap;}
 
 /* =Mobile (Portrait)
 -----------------------------------------------------------------------------*/
@@ -45,6 +50,9 @@ footer p {
 	#wrap { width: 300px; }
 	header form.search { text-align: left; float: left; }
 	header .subheader { font-size: 1em; }
+	#contact { border: none;padding: 0;text-align: left;position: relative; }
+	#contact small { display: block;}
+	#contact span { display: initial; } 
 }
 
 /* =Mobile (Landscape)

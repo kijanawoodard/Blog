@@ -51,16 +51,16 @@
 
 @section aside
 {
-    <section>
-        <h4>@Model.PostCount Posts</h4>
-        <ul id="latest">
+    <section id="latest">
+        <h4>@Model.PostCount posts</h4>
+        <ul>
             @foreach (var post in Model.Latest)
             {
                 <li>
-                    <a href="@Url.Action("Execute", "PostGet", new {slug = post.Slug})">
+                    <a href="@Url.Action("Execute", "PostGet", new {slug = post.Slug})" title="@post.Title">
                         <i class="icon-bookmark"></i>
+                        <small>@post.PublishedAtCst.ToString("yyyy.MMM.dd")</small>
                         <span>@post.Title</span>
-                        <small>@post.PublishedAtCst.ToShortDateString()</small>
                     </a>
                 </li>
             }
