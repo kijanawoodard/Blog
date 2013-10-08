@@ -231,7 +231,12 @@
     <Content Include="Actions\AtomGet\Execute.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\posts\learning-nservicebus.markdown" />
+    <Content Include="Content\posts\learning-nservicebus.markdown">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\questioning-ioc-containers.markdown" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

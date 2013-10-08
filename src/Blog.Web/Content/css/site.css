@@ -8,8 +8,10 @@ body { color: #333;}
 h1 a { color: #333; }
 a { text-decoration: none; }
 li { list-style-type: none; }
-code { border: none; font-family: Consolas, Inconsolata, "Lucida Console", "Courier New", monospace; }
-pre { padding: .5em; }
+code { border: none; font-family: Consolas, Inconsolata, "Lucida Console", "Courier New", monospace;font-size: inherit;}
+pre { padding: .25em; }
+p, pre { margin-bottom: 1em; }
+p code { padding: 0;background: none;font-style: italic;color: #444;}
 
 header hgroup { margin-bottom: 0;}
 header hgroup h2 a { text-decoration: none;color: #333; }
@@ -71,5 +73,5 @@ footer p {
 
 /* Large format tablet and desktop */
 @media only screen and (min-width: 768px) {
-    code { font-size: 1.2em; }
+    
 }

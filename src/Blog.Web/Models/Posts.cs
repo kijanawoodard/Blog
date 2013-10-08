@@ -1,11 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using Blog.Web.Core;
 
 namespace Blog.Web.Models
 {
+	public class QuestioningIocContainers : IPost
+	{ 
+		public string Title { get { return "Questioning IOC Containers"; } }
+		public string Slug { get { return "questioning-ioc-containers"; } }
+		public string FileName { get { return "questioning-ioc-containers.markdown"; } }
+		public DateTime PublishedAtCst { get { return DateTime.Parse("October 8, 2013"); } }
+	}
+
 	public class LearningNServiceBus : IPost
 	{
 		public string Title { get { return "Learning NServiceBus Review"; } }
