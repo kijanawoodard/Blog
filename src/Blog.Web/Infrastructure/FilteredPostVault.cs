@@ -8,6 +8,7 @@ namespace Blog.Web.Infrastructure
 	public class FilteredPostVault : IPostVault
 	{
 		public IReadOnlyList<IPost> Posts { get; private set; }
+		public IReadOnlyList<IPost> AllPosts { get; private set; }
 
 		public FilteredPostVault(IEnumerable<IPost> posts)
 		{
@@ -18,6 +19,8 @@ namespace Blog.Web.Infrastructure
 				.OrderByDescending(x => x.PublishedAtCst)
 				.Where(x => now >= TimeZoneInfo.ConvertTimeToUtc(x.PublishedAtCst, timezone))
 				.ToList();
+
+			AllPosts = posts.ToList();
 		}
 	}
 }
