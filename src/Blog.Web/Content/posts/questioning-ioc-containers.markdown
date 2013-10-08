@@ -81,7 +81,7 @@ Well, we'd better do some kind of assertion on our container that it has only re
 
 In the example code here, everything is declared together. But those handlers could be in any file. They could be in any assembly. How do we tell what handlers are going to run? 
 
-I suppose our container might have a feature that would dump all the found instances or we could write something in the mediator that would dump that information. The we could....inspect that manually on every build to check if..... 
+I suppose our container might have a feature that would dump all the found instances or we could write something in the mediator that would dump that information. Then we could....inspect that manually on every build to check if..... 
 
 This is getting complicated.
 
