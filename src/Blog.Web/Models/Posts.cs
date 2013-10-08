@@ -8,7 +8,7 @@ namespace Blog.Web.Models
 		public string Title { get { return "Questioning IOC Containers"; } }
 		public string Slug { get { return "questioning-ioc-containers"; } }
 		public string FileName { get { return "questioning-ioc-containers.markdown"; } }
-		public DateTime PublishedAtCst { get { return DateTime.Parse("October 8, 2013"); } }
+		public DateTime PublishedAtCst { get { return DateTime.Parse("October 9, 2013"); } }
 	}
 
 	public class LearningNServiceBus : IPost
