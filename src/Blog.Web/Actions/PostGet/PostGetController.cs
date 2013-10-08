@@ -27,9 +27,9 @@ namespace Blog.Web.Actions.PostGet
 		    var count = _vault.Posts.Count;
 		    var index = list.IndexOf(post);
 
-		    var previous = index <= 0 ? null : list[index - 1];
-			var next = index < 0 ? list[0] : 
-					   index == count - 1 ? null : list[index + 1];
+		    var previous = index < 1 ? null : list[index - 1];
+			index++;
+			var next = index == count ? null : list[index];
 
 			var model = new PostGetViewModel(post, content, previous, next, _vault.Posts.Take(30), count);
             return View(model);
