@@ -1,7 +1,7 @@
 ﻿
 Sometimes it's the little things.
 
-A a while ago, I installed [.net demon] and ran the trial. I was instantly impressed. 
+A while ago, I installed [.net demon] and ran the trial. I was instantly impressed. 
 
 The trial expired during a period when I wasn't coding at home very often. I kind of forgot about it, except for occasionally noticing the trial expiration reminder at the bottom of visual studio. Too many other more pressing things to do...blah blah blah.
 
