@@ -11,6 +11,14 @@ namespace Blog.Web.Models
 		public DateTime PublishedAtCst { get { return DateTime.Parse("October 9, 2013"); } }
 	}
 
+	public class DotnetDemon : IPost
+	{
+		public string Title { get { return "The Little Things: .Net Demon"; } }
+		public string Slug { get { return "dotnet-demon"; } }
+		public string FileName { get { return "dotnet-demon.markdown"; } }
+		public DateTime PublishedAtCst { get { return DateTime.Parse("October 8, 2013"); } }
+	}
+
 	public class LearningNServiceBus : IPost
 	{
 		public string Title { get { return "Learning NServiceBus Review"; } }

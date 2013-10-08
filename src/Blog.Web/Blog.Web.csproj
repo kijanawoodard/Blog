@@ -238,6 +238,9 @@
   <ItemGroup>
     <Content Include="Content\posts\questioning-ioc-containers.markdown" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\dotnet-demon.markdown" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
