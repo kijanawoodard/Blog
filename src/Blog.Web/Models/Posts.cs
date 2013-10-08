@@ -13,7 +13,7 @@ namespace Blog.Web.Models
 
 	public class DotnetDemon : IPost
 	{
-		public string Title { get { return "The Little Things: .Net Demon"; } }
+		public string Title { get { return ".Net Demon"; } }
 		public string Slug { get { return "dotnet-demon"; } }
 		public string FileName { get { return "dotnet-demon.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("October 8, 2013"); } }
