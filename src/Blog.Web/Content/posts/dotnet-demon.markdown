@@ -15,7 +15,7 @@ Thirty dollars. I've been expending all those keystrokes to save thirty dollars?
 
 In addition to auto-save and compile, [.net demon] integrates with [live reload] so Chrome auto-refreshes as I code. I just glance at my browser to see changes.
 
-In addition, I find I'm using the mouse a lot less as well.
+I find I'm using the mouse a lot less as well.
 
 I think I've gotten my money's worth typing up this post. :-]
 
