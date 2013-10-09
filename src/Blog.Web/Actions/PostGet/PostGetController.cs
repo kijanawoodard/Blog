@@ -17,21 +17,16 @@ namespace Blog.Web.Actions.PostGet
 
 	    public ActionResult Execute(string slug)
 	    {
-			var post = _vault.Posts.First();
+			var posts = _vault.Posts.ToList(); 
+			var post = posts.FirstOrDefault();
 			if (slug != null) post = _vault.AllPosts.FirstOrDefault(x => x.Slug.ToLower() == slug.ToLower());
 			if (post == null) return HttpNotFound();
 
 			var content = _storage.GetContent(post.FileName);
+		    var previous = posts.OrderBy(x => x.PublishedAtCst).FirstOrDefault(x => x.PublishedAtCst > post.PublishedAtCst);
+			var next = posts.FirstOrDefault(x => x.PublishedAtCst < post.PublishedAtCst);
 
-		    var list = _vault.Posts.ToList(); //for indexOf
-		    var count = _vault.Posts.Count;
-		    var index = list.IndexOf(post);
-
-		    var previous = index < 1 ? null : list[index - 1];
-			index++;
-			var next = index == count ? null : list[index];
-
-			var model = new PostGetViewModel(post, content, previous, next, _vault.Posts, count);
+			var model = new PostGetViewModel(post, content, previous, next, _vault.Posts, posts.Count);
             return View(model);
         }
     }
