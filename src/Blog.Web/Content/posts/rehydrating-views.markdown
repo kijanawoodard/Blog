@@ -10,7 +10,7 @@ The crux of the idea is that the Input Model for the POST is symmetrical with th
 
 I defined a RequestModel for the GET, a ViewModel which might contain reference data, and an InputModel which is POSTed back to the server.
 
-The reference data is the kicker. I really don’t want to post all the reference data back to the server when most of my posts will be fine. On more complex pages, it’s just difficult to do. However, once on the server, it’s tricky to marshall the user’s input data over to the GET method. I also don’t want my GET method to have to deal with the possibility of Input model data showing up as parameters.
+The reference data is the kicker. I really don’t want to post all the reference data back to the server when most of my posts will be fine. On more complex pages, it’s just difficult to do. However, once on the server, it’s tricky to marshal the user’s input data over to the GET method. I also don’t want my GET method to have to deal with the possibility of Input model data showing up as parameters.
 
 Here’s some non working code I threw together to see how I liked my idea.
 
