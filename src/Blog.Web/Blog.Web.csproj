@@ -133,7 +133,7 @@
     <Content Include="Content\posts\images\gmail-spam.png" />
     <Content Include="Content\posts\images\learning-nservicebus.png" />
     <Content Include="Content\posts\images\use-ctrl-period-to-insert-using.png" />
-    <None Include="Content\posts\violating-isp.markdown" />
+    <Content Include="Content\posts\violating-isp.markdown" />
     <Content Include="Content\posts\images\violating-isp\jimmy-bogard-twitter.png" />
     <Content Include="Content\posts\images\violating-isp\passing-test.png" />
     <Content Include="Content\posts\images\violating-isp\too-many-dependencies.png" />
