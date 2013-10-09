@@ -3,10 +3,12 @@ using Blog.Web.Core;
 
 namespace Blog.Web.Models
 {
-	//messaging reduces dependencies
 	//prove isp violation too many dependencies for method called - http://en.wikipedia.org/wiki/Interface_segregation_principle
 	//prove isp violation interface too wide for method called
+	//messaging reduces dependencies - what value the interface
 	
+	//Foo - IFoo
+
 	//why not put the dependency in the method
 	//why can't an interface be declared for a method parameter
 
@@ -15,8 +17,19 @@ namespace Blog.Web.Models
 	//need a construct larger than a class, but smaller than a project - namespace?
 
 	//private, protected, internal, public - need something else in between public and internal
-
+	//reuse is coupling - if i can just get the interface right
+	//generic repository - http://codebetter.com/gregyoung/2009/01/16/ddd-the-generic-repository/
+	
 	//avoid ginormous file and keep classes https://twitter.com/jbogard/status/387945793430495233
+	
+	public class ViolatingIsp : IPost
+	{
+		public string Title { get { return "Violating ISP with Constructor Injection"; } }
+		public string Slug { get { return "violating-isp-with-constructor-injection"; } }
+		public string FileName { get { return "violating-isp.markdown"; } }
+		public DateTime PublishedAtCst { get { return DateTime.Parse("October 10, 2013"); } }
+	}
+
 	public class QuestioningIocContainers : IPost
 	{ 
 		public string Title { get { return "Questioning IoC Containers"; } }

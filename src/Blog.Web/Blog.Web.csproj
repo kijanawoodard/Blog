@@ -133,6 +133,11 @@
     <Content Include="Content\posts\images\gmail-spam.png" />
     <Content Include="Content\posts\images\learning-nservicebus.png" />
     <Content Include="Content\posts\images\use-ctrl-period-to-insert-using.png" />
+    <None Include="Content\posts\violating-isp.markdown" />
+    <Content Include="Content\posts\images\violating-isp\jimmy-bogard-twitter.png" />
+    <Content Include="Content\posts\images\violating-isp\passing-test.png" />
+    <Content Include="Content\posts\images\violating-isp\too-many-dependencies.png" />
+    <Content Include="Content\posts\images\violating-isp\too-many-methods.png" />
     <Content Include="favicon.png" />
     <Content Include="Global.asax" />
     <Content Include="humans.txt" />
@@ -241,6 +246,7 @@
   <ItemGroup>
     <Content Include="Content\posts\dotnet-demon.markdown" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
