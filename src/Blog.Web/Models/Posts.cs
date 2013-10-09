@@ -3,10 +3,6 @@ using Blog.Web.Core;
 
 namespace Blog.Web.Models
 {
-	//prove isp violation too many dependencies for method called - http://en.wikipedia.org/wiki/Interface_segregation_principle
-	//prove isp violation interface too wide for method called
-	//messaging reduces dependencies - what value the interface
-	
 	//Foo - IFoo
 
 	//why not put the dependency in the method
@@ -21,7 +17,14 @@ namespace Blog.Web.Models
 	//generic repository - http://codebetter.com/gregyoung/2009/01/16/ddd-the-generic-repository/
 	
 	//avoid ginormous file and keep classes https://twitter.com/jbogard/status/387945793430495233
-	
+	public class ViolatingSrp : IPost
+	{
+		public string Title { get { return "Violating SRP with Constructor Injection"; } }
+		public string Slug { get { return "violating-srp-with-constructor-injection"; } }
+		public string FileName { get { return "violating-srp.markdown"; } }
+		public DateTime PublishedAtCst { get { return DateTime.Parse("October 11, 2013"); } }
+	}
+
 	public class ViolatingIsp : IPost
 	{
 		public string Title { get { return "Violating ISP with Constructor Injection"; } }
