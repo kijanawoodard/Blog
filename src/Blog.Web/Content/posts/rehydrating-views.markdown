@@ -6,7 +6,29 @@ I recently came up with a solution that I was happy with in ASP.Net MVC3. Howeve
 
 The crux of the idea is that the Input Model for the POST is symmetrical with the View Model for the GET. I took the idea just a bit further.
 
-<script src="https://gist.github.com/4237737.js?file=fubumvc-validation-and-re-hydrating-the-view-models.cs"></script>
+	public class FooEditRequestModel
+	{
+	  public int FooId { get; set; }
+	}
+ 
+	public class FooEditViewModel : IRedirectable
+	{
+	  public int FooId { get; set; }
+ 
+	  [Required]
+	  public int BarId { get; set; }
+	  public IEnumerable<Bar> Bars { get; set; } //reference/lookup data
+ 
+	  public FubuContinuation RedirectTo { get; set; }
+	}
+ 
+	public class FooEditInputModel
+	{
+	  public int FooId { get; set; }
+ 
+	  [Required]
+	  public int BarId { get; set; }
+	}
 
 I defined a RequestModel for the GET, a ViewModel which might contain reference data, and an InputModel which is POSTed back to the server.
 
@@ -14,7 +36,32 @@ The reference data is the kicker. I really don’t want to post all the referenc
 
 Here’s some non working code I threw together to see how I liked my idea.
 
-<script src="https://gist.github.com/4237737.js?file=fubumvc-validation-and-re-hydrating-the-view-execute.cs"></script>
+	public FooEditViewModel Execute(FooEditRequestModel request)
+	{
+		var foo = db.GetFooById(request.FooId);
+		var bars = db.GetBars();
+		var model = new FooEditViewModel() {FooId = foo.FooId, BarId = foo.BarId, Bars = bars};
+		return model;
+	}
+ 
+	public FooEditViewModel Execute(FooEditInputModel input)
+	{
+		var model = new FooEditViewModel();
+ 
+		try
+		{
+			db.UpdateBarId(input.FooId, input.BarId);
+			model.RedirectTo = FubuContinuation.RedirectTo<SomeOtherRequestModel>();
+		}
+		catch (MyValidationBusinessRuleOrDBExceptions e)
+		{
+			//Auto Mapper the properties needed for the request
+			var request = input.MapTo<FooEditRequestModel>(); 
+			model = Execute(request);
+			model = input.MapTo(model); //Auto Mapper the input data to rehydrate the view
+		}
+		return model;
+	}
 
 I’m using some FubuMVC patterns here, so you’ll kinda have to accept that this is possible if you’re coming from another web server stack. Both my GET and POST methods return the view model. I taught FubuMVC that any method the takes a class with "Request" in the name is a GET and any method that takes a class with "Input" in the name is a POST.
 
@@ -41,7 +88,12 @@ In the other cases, it’s nice to present the form back to the user telling the
 
 Using FubuMVC, I can imagine ways to get this into the behavior chain based on our conventions and have it working seamlessly. I’ve been growing increasingly wary of inheritance, but I can see defining our classes like this.
 
-<script src="https://gist.github.com/4237737.js?file=fubumvc-validation-and-re-hydrating-the-view-classes.cs"></script>
+	public class FooEditRequestModel
+	...
+	public class FooEditInputModel : FooEditRequestModel
+	....
+	public class FooEditViewModel : FooEditInputModel, IRedirectable   
+	....
 
 Now our behaviors could know exactly which methods to execute and which data to copy when doing it’s work.
 

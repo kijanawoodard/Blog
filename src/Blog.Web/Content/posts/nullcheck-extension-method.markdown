@@ -2,13 +2,41 @@
 
 It get’s annoying writing this code over and over:
 
-<script src="https://gist.github.com/4237737.js?file=nullcheck-problem.cs"></script>
+	public static void ImportantMethod(string value)
+	{
+		if (value == null)
+			throw new ArgumentNullException();
+	}
 
 I had considered using a [`NotNull<T>`][null object] to take care of null checking.
 
 But with extension methods like this:
 
-<script src="https://gist.github.com/4237737.js?file=nullcheck-solution.cs"></script>
+	public static class ObjectExtensionMethods
+	{
+		public static void NullCheck<T>(this T foo)
+		{
+			NullCheck(foo, string.Empty);
+		}
+ 
+		public static void NullCheck<T>(this T foo, string variableName)
+		{
+			if (foo == null)
+				throw new ArgumentNullException(variableName);
+		}
+ 
+		public static void NullCheck<T>(this T foo, string variableName, string message)
+		{
+			if (foo == null)
+				throw new ArgumentNullException(variableName, message);
+		}
+	}
+
+	//usage
+	public static void ImportantMethod(string value)
+	{
+		value.NullCheck();
+	}
 
 Much nicer. The overloads can facilitate whatever messaging level you desire.
 
