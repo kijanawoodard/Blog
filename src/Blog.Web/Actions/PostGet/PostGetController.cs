@@ -31,7 +31,7 @@ namespace Blog.Web.Actions.PostGet
 			index++;
 			var next = index == count ? null : list[index];
 
-			var model = new PostGetViewModel(post, content, previous, next, _vault.Posts.Take(30), count);
+			var model = new PostGetViewModel(post, content, previous, next, _vault.Posts, count);
             return View(model);
         }
     }
