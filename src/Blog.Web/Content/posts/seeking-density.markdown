@@ -21,9 +21,7 @@ If you try to hide EF and NHibernate behind your abstraction you will be unable 
 Finding yourself in this predicament, you have a few options.
 
 1. Write your `IFetchingStrategy<T>` and map that against EF and NHibernate. You're wasting your life. You've got an app to build.
-
 2. Put a method on your abstraction that maps precisely to your current concrete O/RM. Your abstraction is now garbage. Your implementations become littered with "throw not implemented exceptions" or worse, will simply do nothing creating very subtle bugs. You can no longer swap implementations.
-
 3. Accept reality and use the O/RM you chose. Doing string replace on ISession to DBContext will be trivial to reworking the code around the subtleties of the new O/RM.
 
 Similarly, swapping out SQL Server for [CouchDB] for [RavenDB] for [HyperGraphDB] is not going to be trivial simply because you whipped together some `IDataBase<T>`. These technologies have subtle, and not so subtle, differences that contribute to a decision about whether or not to use them in your project. You can't hide them behind an abstraction "in case you were wrong".

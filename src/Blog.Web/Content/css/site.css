@@ -24,7 +24,11 @@ article li { list-style-type: inherit; }
 article header hgroup { margin-bottom: 1.5em;}
 article footer a { text-decoration: none; }
 article footer .next { text-align: right; }
-article div.text { font-size: 1.7em; font-family: "ff-tisa-web-pro",serif; }
+article div.text { font-family: "ff-tisa-web-pro",serif; }
+article div.text p,
+article div.text pre,
+article div.text ul,
+article div.text ol { font-size: 1.5em; }
 
 aside ul { margin: 0; }
 aside h4 { color: #8f8f8f;margin-bottom: .5em;font-size: 1em; }
