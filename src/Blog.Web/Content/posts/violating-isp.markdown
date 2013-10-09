@@ -96,7 +96,11 @@ Is the "Customer Service class" dependent on `IEmailService` or is the "Create C
 
 I'd say the latter, but that leads us back to [8 lines of code].
 
-To my mind, too many dependencies contribute to SRP violations as well, but I'll save that for a future post. As a preview, [Jimmy Bogard pointed out on twitter][unit testing?] that you can't really "unit test" classes like this.
+As further evidence, a thought experiment: why not inject every possible dependency and then it will already be there if we ever need it? We can use better tooling to auto-mock them for easy testing. 
+
+Pretty horrible idea, right? Why is a dependency we only need some of the time better?
+
+Too many dependencies contribute to SRP violations as well, but I'll save that for a future post. As a preview, [Jimmy Bogard pointed out on twitter][unit testing?] that you can't really "unit test" classes written in this manner.
 
 [questioning-ioc]: /questioning-ioc-containers
 [ISP]: http://en.wikipedia.org/wiki/Interface_segregation_principle
