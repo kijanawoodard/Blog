@@ -10,18 +10,21 @@ namespace Blog.Web.Actions.PostGet
 		public IPost Previous { get; private set; }
 		public IPost Next { get; private set; }
 		public IEnumerable<IPost> Latest { get; private set; }
+		public IEnumerable<IPost> Future { get; set; }
 		public int PostCount { get; private set; }
 
 		public bool HasPrevious { get { return Previous != null; } }
 		public bool HasNext { get { return Next != null; } }
 
-		public PostGetViewModel(IPost post, string content, IPost previous, IPost next, IEnumerable<IPost> latest, int postCount)
+		public PostGetViewModel(IPost post, string content, IPost previous, IPost next,
+								IEnumerable<IPost> latest, IEnumerable<IPost> future, int postCount)
 		{
 			Post = post;
 			Content = content;
 			Previous = previous;
 			Next = next;
 			Latest = latest;
+			Future = future;
 			PostCount = postCount;
 		}
 	}

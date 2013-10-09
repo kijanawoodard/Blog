@@ -26,7 +26,8 @@ namespace Blog.Web.Actions.PostGet
 		    var previous = posts.OrderBy(x => x.PublishedAtCst).FirstOrDefault(x => x.PublishedAtCst > post.PublishedAtCst);
 			var next = posts.FirstOrDefault(x => x.PublishedAtCst < post.PublishedAtCst);
 
-			var model = new PostGetViewModel(post, content, previous, next, _vault.Posts, posts.Count);
+		    var future = _vault.AllPosts.Except(posts);
+			var model = new PostGetViewModel(post, content, previous, next, _vault.Posts, future, posts.Count);
             return View(model);
         }
     }
