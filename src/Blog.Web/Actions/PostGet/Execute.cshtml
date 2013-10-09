@@ -56,7 +56,7 @@
         <ul>
             @foreach (var post in Model.Latest)
             {
-                <li>
+                <li class="@(post == Model.Post ? "active" : "")">
                     <a href="@Url.Action("Execute", "PostGet", new {slug = post.Slug})" title="@post.Title">
                         <i class="icon-bookmark"></i>
                         <small>@post.PublishedAtCst.ToString("yyyy.MMM.dd")</small>
