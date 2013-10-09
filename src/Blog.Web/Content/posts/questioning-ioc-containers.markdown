@@ -99,9 +99,9 @@ So, yes. Nearly any case can be handled by carefully studying and utilizing your
 
 But let's back up to where we first ran into trouble. We wanted to:
 
-* order our handlers
-* only include the ones we need
-* have visibility into which ones will be invoked. 
+1. order our handlers
+2. only include the ones we need
+3. have visibility into which ones will be invoked. 
 
 Consider this:
 

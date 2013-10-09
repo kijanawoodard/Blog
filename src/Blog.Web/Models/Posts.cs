@@ -5,7 +5,7 @@ namespace Blog.Web.Models
 {
 	public class QuestioningIocContainers : IPost
 	{ 
-		public string Title { get { return "Questioning IOC Containers"; } }
+		public string Title { get { return "Questioning IoC Containers"; } }
 		public string Slug { get { return "questioning-ioc-containers"; } }
 		public string FileName { get { return "questioning-ioc-containers.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("October 9, 2013"); } }
