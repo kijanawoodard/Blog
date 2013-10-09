@@ -94,13 +94,13 @@ namespace Blog.Web.Models
 		public DateTime PublishedAtCst { get { return DateTime.Parse("February 12, 2012"); } }
 	}
 
-	//	public class PartitionLists : IPost
-	//	{
-	//		public string Title { get { return "C# Partition List into List of Lists"; } }
-	//		public string Slug { get { return "c-partition-list-into-list-of-lists"; } }
-	//		public string FileName { get { return "partition-lists.markdown"; } }
-	//		public DateTime PublishedAtCst { get { return DateTime.Parse("October 16, 2010"); } }
-	//	}
+	public class PartitionLists
+	{
+		public string Title { get { return "C# Partition List into List of Lists"; } }
+		public string Slug { get { return "c-partition-list-into-list-of-lists"; } }
+		public string FileName { get { return "partition-lists.markdown"; } }
+		public DateTime PublishedAtCst { get { return DateTime.Parse("October 16, 2010"); } }
+	}
 
 	public class SellingValueForMoney : IPost
 	{
