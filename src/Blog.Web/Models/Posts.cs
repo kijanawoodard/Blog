@@ -3,6 +3,20 @@ using Blog.Web.Core;
 
 namespace Blog.Web.Models
 {
+	//messaging reduces dependencies
+	//prove isp violation too many dependencies for method called - http://en.wikipedia.org/wiki/Interface_segregation_principle
+	//prove isp violation interface too wide for method called
+	
+	//why not put the dependency in the method
+	//why can't an interface be declared for a method parameter
+
+	//make your roles explicit - http://www.infoq.com/presentations/Making-Roles-Explicit-Udi-Dahan#anch41169
+
+	//need a construct larger than a class, but smaller than a project - namespace?
+
+	//private, protected, internal, public - need something else in between public and internal
+
+	//avoid ginormous file and keep classes https://twitter.com/jbogard/status/387945793430495233
 	public class QuestioningIocContainers : IPost
 	{ 
 		public string Title { get { return "Questioning IoC Containers"; } }
