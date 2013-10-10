@@ -107,7 +107,7 @@ Consider this:
 
 	new Mediator(new DoThis(), new DoThat(), new DoTheOther());
 
-Done. All the use cases are satisfied. And we have a new instance per request. If I'm honest with myself about [autofac expressions][autofac-expressions], I'm pretty much writing this code already. 
+Done. All the use cases are satisfied. And we have a new instance per request. If I'm honest with myself about [autofac expressions][autofac-expressions], I'm pretty much writing this code in the app boostrap routines already. 
 
 The other thorny use cases can also be solved with pretty straight forward code.
 
