@@ -52,7 +52,7 @@
 @section aside
 {
     <section id="latest">
-        <h4>@Model.PostCount posts @Model.Future.Count() future</h4>
+        <h4>@Model.PostCount posts @(Model.Future.Any() ? Model.Future.Count + " future" : "")</h4>
         <ul>
             @foreach (var post in Model.Latest)
             {
