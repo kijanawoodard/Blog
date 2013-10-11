@@ -249,6 +249,9 @@
   <ItemGroup>
     <Content Include="Content\posts\violating-srp.markdown" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\how-to-wake-up-your-kids.markdown" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

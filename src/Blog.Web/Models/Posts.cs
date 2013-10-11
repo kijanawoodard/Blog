@@ -19,6 +19,15 @@ namespace Blog.Web.Models
 	
 	//avoid ginormous file and keep classes https://twitter.com/jbogard/status/387945793430495233
 
+	public class WakingUpKids : IPost
+	{
+		public string Title { get { return "How to Wake Up Your Kids"; } }
+		public string Slug { get { return "how-to-wake-up-your-kids"; } }
+		public string FileName { get { return "how-to-wake-up-your-kids.markdown"; } }
+		public DateTime PublishedAtCst { get { return DateTime.Parse("October 12, 2013"); } }
+		public string[] Tags { get { return new[] {"missives"}; } }
+	}
+
 	public class ViolatingSrp : IPost
 	{
 		public string Title { get { return "Violating SRP with Constructor Injection"; } }
