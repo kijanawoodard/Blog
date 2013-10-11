@@ -18,12 +18,14 @@ namespace Blog.Web.Models
 	//generic repository - http://codebetter.com/gregyoung/2009/01/16/ddd-the-generic-repository/
 	
 	//avoid ginormous file and keep classes https://twitter.com/jbogard/status/387945793430495233
+
 	public class ViolatingSrp : IPost
 	{
 		public string Title { get { return "Violating SRP with Constructor Injection"; } }
 		public string Slug { get { return "violating-srp-with-constructor-injection"; } }
 		public string FileName { get { return "violating-srp.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("October 11, 2013"); } }
+		public string[] Tags { get { return new string[] {}; } }
 	}
 
 	public class ViolatingIsp : IPost
@@ -32,6 +34,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "violating-isp-with-constructor-injection"; } }
 		public string FileName { get { return "violating-isp.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("October 10, 2013"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class QuestioningIocContainers : IPost
@@ -40,6 +43,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "questioning-ioc-containers"; } }
 		public string FileName { get { return "questioning-ioc-containers.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("October 9, 2013"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class DotnetDemon : IPost
@@ -48,6 +52,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "dotnet-demon"; } }
 		public string FileName { get { return "dotnet-demon.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("October 8, 2013"); } }
+		public string[] Tags { get { return new[] {"little things"}; } }
 	}
 
 	public class LearningNServiceBus : IPost
@@ -56,6 +61,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "learning-nservicebus-review"; } }
 		public string FileName { get { return "learning-nservicebus.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("September 30, 2013"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class BuildingABlog : IPost
@@ -64,6 +70,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "building-a-blog-engine"; } }
 		public string FileName { get { return "building-blog.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("December 8, 2012"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class JavascriptUtc : IPost
@@ -72,6 +79,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "javascript-utc-datetime"; } }
 		public string FileName { get { return "javascript-utc.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("June 05, 2012"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class RavenId : IPost
@@ -80,6 +88,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "just-use-string-id-for-ravendb"; } }
 		public string FileName { get { return "raven-id.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("May 31, 2012"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class SeekingDensity : IPost
@@ -88,6 +97,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "seeking-density-in-architectural-abstractions"; } }
 		public string FileName { get { return "seeking-density.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("February 14, 2012"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class RehydratingViews : IPost
@@ -96,6 +106,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "fubumvc-validation-and-re-hydrating-the-view"; } }
 		public string FileName { get { return "rehydrating-views.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("February 12, 2012"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class PartitionLists
@@ -104,6 +115,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "c-partition-list-into-list-of-lists"; } }
 		public string FileName { get { return "partition-lists.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("October 16, 2010"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class SellingValueForMoney : IPost
@@ -112,6 +124,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "selling-value-for-money"; } }
 		public string FileName { get { return "selling-value-for-money.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("May 20, 2010"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class NullOrExtensionMethod : IPost
@@ -120,6 +133,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "nullor-extension-method"; } }
 		public string FileName { get { return "nullor-extension-method.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("May 19, 2010"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class NullCheckExtensionMethod : IPost
@@ -128,6 +142,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "null-check-with-extension-methods"; } }
 		public string FileName { get { return "nullcheck-extension-method.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("May 18, 2010"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class AvoidNegativeBranching : IPost
@@ -136,6 +151,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "avoiding-negative-branching-tests"; } }
 		public string FileName { get { return "avoiding-negative-branching-tests.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("May 17, 2010"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class CoolExtensionMethods : IPost
@@ -144,6 +160,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "cool-feature-of-extension-methods"; } }
 		public string FileName { get { return "cool-feature-of-extension-methods.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("May 16, 2010"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class VisualStudioCodeSnippets : IPost
@@ -152,6 +169,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "visual-studio-code-snippets"; } }
 		public string FileName { get { return "visual-studio-code-snippets.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("May 15, 2010"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class CreatingUsingDirectives : IPost
@@ -160,6 +178,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "quickly-creating-using-namespace-directives"; } }
 		public string FileName { get { return "creating-using-directives.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("May 14, 2010"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class ScriptSharp : IPost
@@ -168,6 +187,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "thoughts-on-script-sharp"; } }
 		public string FileName { get { return "thoughts-on-script-sharp.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("May 12, 2010"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class InDefenseOfBlub : IPost
@@ -176,6 +196,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "in-defense-of-blub"; } }
 		public string FileName { get { return "in-defense-of-blub.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("May 11, 2010"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class EnumsSuck : IPost
@@ -184,6 +205,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "why-enums-suck"; } }
 		public string FileName { get { return "why-enums-suck.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("May 10, 2010"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class FizzBuzzPlusPlus : IPost
@@ -192,6 +214,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "fizzbuzz-plus-plus"; } }
 		public string FileName { get { return "fizzbuzz-plus-plus.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("May 9, 2010 2:00"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class EnumerableEach : IPost
@@ -200,6 +223,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "ienumerable-each"; } }
 		public string FileName { get { return "ienumerable-each.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("May 9, 2010 1:00"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class AvoidingFizzBuzz : IPost
@@ -208,6 +232,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "avoiding-fizzbuzz"; } }
 		public string FileName { get { return "avoiding-fizzbuzz.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("May 9, 2010"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class GmailSpam : IPost
@@ -216,6 +241,7 @@ namespace Blog.Web.Models
 		public string Slug { get { return "gmails-spam-criteria-is-stringent"; } }
 		public string FileName { get { return "gmail-spam.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("January 11, 2010"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 
 	public class TekPubRocks : IPost
@@ -224,5 +250,6 @@ namespace Blog.Web.Models
 		public string Slug { get { return "tekpub-rocks"; } }
 		public string FileName { get { return "tekpub-rocks.markdown"; } }
 		public DateTime PublishedAtCst { get { return DateTime.Parse("January 10, 2010"); } }
+		public string[] Tags { get { return new string[] { }; } }
 	}
 }

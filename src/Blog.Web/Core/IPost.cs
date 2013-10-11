@@ -8,5 +8,6 @@ namespace Blog.Web.Core
 		string Slug { get; }
 		string FileName { get; }
 		DateTime PublishedAtCst { get; }
+		string[] Tags { get; }
 	}
 }
