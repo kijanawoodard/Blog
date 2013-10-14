@@ -10,7 +10,7 @@ One goal of dependency inversion is that we can swap out implementations. Take t
 
 	class Authentication : IAuthentication
 
-We're basically declaring that we haven't thought about this very much and we're just typing away, brain off. What would another implementation be called? `Authentication2`?
+We're basically declaring that we haven't thought about this very much and we're just typing away, brain off. What would another implementation even be called? `Authentication2`?
 
 Instead we can do this:
 
