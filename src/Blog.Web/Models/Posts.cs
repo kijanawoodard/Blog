@@ -3,8 +3,6 @@ using Blog.Web.Core;
 
 namespace Blog.Web.Models
 {
-	//Foo - IFoo
-
 	//why not put the dependency in the method - is the func even necessary?
 	//why can't an interface be declared for a method parameter
 
