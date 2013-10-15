@@ -16,7 +16,6 @@ namespace Blog.Web.Initialization
 			var assembly = Assembly.GetExecutingAssembly();
 
 			builder.RegisterControllers(assembly);
-			builder.RegisterAssemblyTypes(assembly);
 			builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces(); //http://code.google.com/p/autofac/wiki/Scanning
 			builder.RegisterType<MarkdownContentStorage>()
 			       .As<IContentStorage>()
