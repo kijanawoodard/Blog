@@ -31,8 +31,8 @@ namespace Blog.Web.Infrastructure
 		//make your roles explicit - http://www.infoq.com/presentations/Making-Roles-Explicit-Udi-Dahan#anch41169
 
 		//need a construct larger than a class, but smaller than a project - namespace?
-
 		//private, protected, internal, public - need something else in between public and internal
+		
 		//reuse is coupling - if i can just get the interface right
 		//generic repository - http://codebetter.com/gregyoung/2009/01/16/ddd-the-generic-repository/
 
@@ -40,6 +40,13 @@ namespace Blog.Web.Infrastructure
 
 		private readonly Post[] _posts =
 		{
+			new Post
+			{
+				Title = "Interface Inversion",
+				Slug = "interface-inversion",
+				FileName = "interface-inversion.markdown",
+				PublishedAtCst = DateTime.Parse("October 15, 2013"),
+			},
 			new Post
 			{
 				Title = "Foo: IFoo is an Anti-Pattern",
