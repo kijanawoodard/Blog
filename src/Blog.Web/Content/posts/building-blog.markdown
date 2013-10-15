@@ -77,7 +77,7 @@ Tell me what you think.
 [timgthomas source]:https://github.com/TimGThomas/blog
 
 [my posts]: https://github.com/kijanawoodard/Blog/tree/master/src/Blog.Web/Content/posts
-[post meta]:https://github.com/kijanawoodard/Blog/blob/master/src/Blog.Web/Models/Posts.cs
+[post meta]:https://github.com/kijanawoodard/Blog/blob/56cc7ca343d4dfd89b42fdeed2ccc95afb400eeb/src/Blog.Web/Models/Posts.cs
 [post magic]:https://github.com/kijanawoodard/Blog/blob/master/src/Blog.Web/Initialization/AutofacConfig.cs#L20
 [core]: https://github.com/kijanawoodard/Blog/tree/master/src/Blog.Web/Core
 
