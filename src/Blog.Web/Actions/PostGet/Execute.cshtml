@@ -52,9 +52,9 @@
 @section aside
 {
     <section id="latest">
-        <h4>@Model.PostCount posts @(Model.Future.Any() ? Model.Future.Count + " future" : "")</h4>
+        <h4>@Model.Active.Count posts @(Model.Future.Any() ? Model.Future.Count + " future" : "")</h4>
         <ul>
-            @foreach (var post in Model.Latest)
+            @foreach (var post in Model.Active)
             {
                 <li class="@(post == Model.Post ? "active" : "")">
                     <a href="@Url.Action("Execute", "PostGet", new {slug = post.Slug})" title="@post.Title">

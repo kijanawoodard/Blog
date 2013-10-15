@@ -17,7 +17,7 @@ namespace Blog.Web.Actions.PostGet
 
 	    public ActionResult Execute(string slug)
 	    {
-			var posts = _vault.Posts.ToList(); 
+			var posts = _vault.ActivePosts; 
 			var post = posts.FirstOrDefault();
 			if (slug != null) post = _vault.AllPosts.FirstOrDefault(x => x.Slug.ToLower() == slug.ToLower());
 			if (post == null) return HttpNotFound();
@@ -26,8 +26,7 @@ namespace Blog.Web.Actions.PostGet
 		    var previous = posts.OrderBy(x => x.PublishedAtCst).FirstOrDefault(x => x.PublishedAtCst > post.PublishedAtCst);
 			var next = posts.FirstOrDefault(x => x.PublishedAtCst < post.PublishedAtCst);
 
-		    var future = _vault.AllPosts.Except(posts).ToList();
-			var model = new PostGetViewModel(post, content, previous, next, _vault.Posts, future, posts.Count);
+			var model = new PostGetViewModel(post, content, previous, next, _vault.ActivePosts, _vault.FuturePosts);
             return View(model);
         }
     }

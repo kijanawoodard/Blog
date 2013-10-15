@@ -19,7 +19,7 @@ namespace Blog.Web.Actions.AtomGet
 	    public ActionResult Execute()
 	    {
             Response.ContentType = " application/atom+xml";
-		    var model = _vault.Posts;
+		    var model = _vault.ActivePosts;
             return View(model);
         }
 

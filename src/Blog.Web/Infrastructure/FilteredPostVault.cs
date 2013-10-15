@@ -7,7 +7,8 @@ namespace Blog.Web.Infrastructure
 {
 	public class FilteredPostVault : IPostVault
 	{
-		public IReadOnlyList<Post> Posts { get; private set; }
+		public IReadOnlyList<Post> ActivePosts { get; private set; }
+		public IReadOnlyList<Post> FuturePosts { get; private set; }
 		public IReadOnlyList<Post> AllPosts { get { return _posts; } }
 
 		public FilteredPostVault()
@@ -15,10 +16,12 @@ namespace Blog.Web.Infrastructure
 			var now = DateTime.UtcNow;
 			var timezone = TimeZoneInfo.FindSystemTimeZoneById("Central Standard Time");
 
-			Posts = _posts
+			ActivePosts = _posts
 				.OrderByDescending(x => x.PublishedAtCst)
 				.Where(x => now >= TimeZoneInfo.ConvertTimeToUtc(x.PublishedAtCst, timezone))
 				.ToList();
+
+			FuturePosts = AllPosts.Except(ActivePosts).ToList();
 		}
 
 		//why not put the dependency in the method - is the func even necessary?
@@ -44,7 +47,6 @@ namespace Blog.Web.Infrastructure
 				FileName = "foo-ifoo-is-an-antipattern.markdown",
 				PublishedAtCst = DateTime.Parse("October 14, 2013"),
 			},	
-
 			new Post
 			{
 				Title = "How to Wake Up Your Kids",
