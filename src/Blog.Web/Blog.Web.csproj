@@ -117,9 +117,8 @@
     </Compile>
     <Compile Include="Initialization\AutofacConfig.cs" />
     <Compile Include="Infrastructure\FilteredPostVault.cs" />
-    <Compile Include="Core\IPost.cs" />
+    <Compile Include="Core\Post.cs" />
     <Compile Include="Infrastructure\MarkdownContentStorage.cs" />
-    <Compile Include="Models\Posts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -255,6 +254,7 @@
   <ItemGroup>
     <Content Include="Content\posts\foo-ifoo-is-an-antipattern.markdown" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
