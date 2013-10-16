@@ -33,7 +33,7 @@ Instead of relying on the declared interfaces on the signature, we'll declare wh
 
 There's no need to make up a name for this. It's called [duck typing].
 
-Unfortunately, in C#, the way to do duck typing is to use dynamic. That's _ok_ in some circumstances, but why can't the compiler recognize the signature compatibility. In addition, it would be really nice to _easily_ be able to marshal a class into the shape required by an interface.
+Unfortunately, in C#, the way to do duck typing is to use dynamic. That's _ok_ in some circumstances, but why can't the compiler recognize the signature compatibility. In addition, it would be really nice to _easily_ marshal a class into the shape required by an interface.
 
 If we're not willing to use dynamic and we don't control the source of our implementation classes, we're stuck using the [adapter pattern] and writing a bunch of boilerplate code.
 
