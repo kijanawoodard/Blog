@@ -52,6 +52,9 @@ footer p {
 #latest li span { line-height: 3px;white-space: nowrap;}
 #latest .active {border-left : solid 2px #777;padding-left: 3px;margin-left: -5px;}
 
+.headshot { text-align: center; }
+.headshot img { border-radius: 50%;margin: auto;}
+
 /* =Mobile (Portrait)
 -----------------------------------------------------------------------------*/
 @media only screen and (max-width: 480px) {

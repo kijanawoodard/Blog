@@ -130,6 +130,8 @@
     <Content Include="Content\css\site.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
     <Content Include="Content\posts\images\gmail-spam.png" />
+    <Content Include="Content\posts\images\kijana.woodard.headshot.medium.jpg" />
+    <Content Include="Content\posts\images\kijana.woodard.headshot.square.jpg" />
     <Content Include="Content\posts\images\learning-nservicebus.png" />
     <Content Include="Content\posts\images\use-ctrl-period-to-insert-using.png" />
     <Content Include="Content\posts\violating-isp.markdown" />
@@ -262,6 +264,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\posts\creating-a-resharper-macro.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\bio.markdown" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

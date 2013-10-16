@@ -39,6 +39,13 @@ namespace Blog.Web.Infrastructure
 		{
 			new Post
 			{
+				Title = "Bio",
+				Slug = "bio",
+				FileName = "bio.markdown",
+				PublishedAtCst = DateTime.Parse("April 17, 1974"),
+			},
+			new Post
+			{
 				Title = "Creating a ReSharper Macro",
 				Slug = "creating-a-resharper-macro",
 				FileName = "creating-a-resharper-macro.markdown",
