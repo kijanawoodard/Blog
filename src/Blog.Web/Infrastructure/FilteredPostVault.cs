@@ -24,9 +24,6 @@ namespace Blog.Web.Infrastructure
 			FuturePosts = AllPosts.Except(ActivePosts).ToList();
 		}
 
-		//why not put the dependency in the method - is the func even necessary?
-		//why can't an interface be declared for a method parameter
-
 		//blind men and the elephant
 		//make your roles explicit - http://www.infoq.com/presentations/Making-Roles-Explicit-Udi-Dahan#anch41169
 
