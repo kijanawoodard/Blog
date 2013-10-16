@@ -257,6 +257,12 @@
   <ItemGroup>
     <Content Include="Content\posts\interface-inversion.markdown" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\constructor-injection-is-partial-application.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\creating-a-resharper-macro.markdown" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

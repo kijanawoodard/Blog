@@ -42,6 +42,20 @@ namespace Blog.Web.Infrastructure
 		{
 			new Post
 			{
+				Title = "Creating a ReSharper Macro",
+				Slug = "creating-a-resharper-macro",
+				FileName = "creating-a-resharper-macro.markdown",
+				PublishedAtCst = DateTime.Parse("Thursday, October 17, 2013"),
+			},
+			new Post
+			{
+				Title = "Constructor Injection is Partial Application",
+				Slug = "constructor-injection-is-partial-application",
+				FileName = "constructor-injection-is-partial-application.markdown",
+				PublishedAtCst = DateTime.Parse("October 16, 2013"),
+			},
+			new Post
+			{
 				Title = "Interface Inversion",
 				Slug = "interface-inversion",
 				FileName = "interface-inversion.markdown",
