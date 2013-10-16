@@ -35,6 +35,12 @@ namespace Blog.Web.Infrastructure
 
 		//avoid ginormous file and keep classes https://twitter.com/jbogard/status/387945793430495233
 
+		/*
+		 * Video Menus
+		 * RunBag.com
+		 * 
+		 */
+
 		private readonly Post[] _posts =
 		{
 			new Post
