@@ -264,7 +264,7 @@
     <Content Include="Content\posts\creating-a-resharper-macro.markdown" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\posts\bio.markdown" />
+    <Content Include="Content\posts\contact.markdown" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\posts\introducing-nimbus.markdown" />

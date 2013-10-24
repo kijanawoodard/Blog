@@ -78,9 +78,9 @@ namespace Blog.Web.Infrastructure
 			},
 			new Post
 			{
-				Title = "Bio",
-				Slug = "bio",
-				FileName = "bio.markdown",
+				Title = "Contact",
+				Slug = "contact",
+				FileName = "contact.markdown",
 				PublishedAtCst = DateTime.Parse("April 17, 1974"),
 			},
 			new Post
