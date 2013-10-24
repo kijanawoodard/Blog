@@ -36,6 +36,7 @@ namespace Blog.Web.Infrastructure
 		//avoid ginormous file and keep classes https://twitter.com/jbogard/status/387945793430495233
 
 		/*
+		 * http://www.sixmonthmba.com/2009/02/999ideas.html
 		 * Video Menus
 		 * RunBag.com
 		 * 
