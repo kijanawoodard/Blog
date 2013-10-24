@@ -1,33 +1,43 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
 using Blog.Web.Core;
+using Blog.Web.Infrastructure;
 
 namespace Blog.Web.Actions.PostGet
 {
     public class PostGetController : Controller
     {
-		private readonly IPostVault _vault;
-	    private readonly IContentStorage _storage;
+	    private readonly IMediator _mediator;
 
-	    public PostGetController(IPostVault vault, IContentStorage storage)
+	    public PostGetController(IMediator mediator)
 		{
-			_vault = vault;
-			_storage = storage;
+		    _mediator = mediator;
 		}
 
-	    public ActionResult Execute(string slug)
+	    public ActionResult Execute(PostRequest request)
 	    {
-			var posts = _vault.ActivePosts; 
-			var post = posts.FirstOrDefault();
-			if (slug != null) post = _vault.AllPosts.FirstOrDefault(x => x.Slug.ToLower() == slug.ToLower());
-			if (post == null) return HttpNotFound();
-
-			var content = _storage.GetContent(post.FileName);
-		    var previous = posts.OrderBy(x => x.PublishedAtCst).FirstOrDefault(x => x.PublishedAtCst > post.PublishedAtCst);
-			var next = posts.FirstOrDefault(x => x.PublishedAtCst < post.PublishedAtCst);
-
-			var model = new PostGetViewModel(post, content, previous, next, _vault.ActivePosts, _vault.FuturePosts);
-            return View(model);
+			var model = _mediator.Send<PostRequest, PostGetViewModel>(request);
+			if (model.Post == null) return HttpNotFound();
+			return View(model);
         }
-    }
+    }	
+
+	public class PostRequest
+	{
+		public string Slug { get; set; }
+	}
+
+	public class PostGetViewModel
+	{
+		public Post Post { get; set; }
+		public string Content { get; set; }
+		public Post Previous { get; set; }
+		public Post Next { get; set; }
+		public IReadOnlyCollection<Post> Active { get; set; }
+		public IReadOnlyCollection<Post> Future { get; set; }
+
+		public bool HasPrevious { get { return Previous != null; } }
+		public bool HasNext { get { return Next != null; } }
+	}
 }

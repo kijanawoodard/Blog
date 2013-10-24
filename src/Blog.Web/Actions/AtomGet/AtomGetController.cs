@@ -1,27 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using Blog.Web.Core;
+using Blog.Web.Infrastructure;
 
 namespace Blog.Web.Actions.AtomGet
 {
     public class AtomGetController : Controller
     {
-	    private readonly IPostVault _vault;
+	    private readonly IMediator _mediator;
 
-	    public AtomGetController(IPostVault vault)
-		{
-			_vault = vault;
-		}
+	    public AtomGetController(IMediator mediator)
+	    {
+		    _mediator = mediator;
+	    }
 
 	    public ActionResult Execute()
 	    {
             Response.ContentType = " application/atom+xml";
-		    var model = _vault.ActivePosts;
+			var model = _mediator.Send<AtomRequest, AtomGetViewModel>(new AtomRequest());
             return View(model);
         }
-
     }
+
+	public class AtomRequest { }
+	public class AtomGetViewModel
+	{
+		public IReadOnlyList<Post> Posts { get; set; } 
+	}
 }

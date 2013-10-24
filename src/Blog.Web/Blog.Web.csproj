@@ -109,12 +109,10 @@
     <Compile Include="Actions\AtomGet\AtomGetController.cs" />
     <Compile Include="Actions\PostGet\PostGetController.cs" />
     <Compile Include="Infrastructure\AlternateViewEngine.cs" />
-    <Compile Include="Core\IContentStorage.cs" />
-    <Compile Include="Core\IPostVault.cs" />
-    <Compile Include="Actions\PostGet\PostGetViewModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\nimbus.cs" />
     <Compile Include="Initialization\AutofacConfig.cs" />
     <Compile Include="Infrastructure\FilteredPostVault.cs" />
     <Compile Include="Core\Post.cs" />
@@ -267,6 +265,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\posts\bio.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\introducing-nimbus.markdown" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

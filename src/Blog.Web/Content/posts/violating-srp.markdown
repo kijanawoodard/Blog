@@ -53,6 +53,6 @@ Notice a secondary beneift? You don't need the `IEmailService` interface any lon
 
 Decoupled is better than loosely coupled.
 
-[violating isp]: /violating-srp
+[violating isp]: /violating-isp-with-constructor-injection
 [srp]: http://en.wikipedia.org/wiki/Single_responsibility_principle
 [ocp]: http://en.wikipedia.org/wiki/Open/closed_principle

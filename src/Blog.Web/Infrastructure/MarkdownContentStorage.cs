@@ -1,10 +1,10 @@
 ﻿using System.IO;
-using Blog.Web.Core;
+using Blog.Web.Actions.PostGet;
 using MarkdownSharp;
 
 namespace Blog.Web.Infrastructure
 {
-	public class MarkdownContentStorage : IContentStorage
+	public class MarkdownContentStorage : IHandleResult<PostRequest, PostGetViewModel>
 	{
 		private readonly string _root;
 		private readonly Markdown _markdown;
@@ -16,7 +16,14 @@ namespace Blog.Web.Infrastructure
 
 		}
 
-		public string GetContent(string filename)
+		public PostGetViewModel Handle(PostRequest message, PostGetViewModel result)
+		{
+			if (result.Post == null) return result;
+			result.Content = GetContent(result.Post.FileName);
+			return result;
+		}
+
+		private string GetContent(string filename)
 		{
 			filename = Path.Combine(_root, filename);
 			if (!File.Exists(filename)) return string.Empty;

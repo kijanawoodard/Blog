@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Blog.Web.Actions.AtomGet;
+using Blog.Web.Actions.PostGet;
 using Blog.Web.Core;
 
 namespace Blog.Web.Infrastructure
 {
-	public class FilteredPostVault : IPostVault
+	public class FilteredPostVault : IHandleResult<PostRequest, PostGetViewModel>, IHandle<AtomRequest, AtomGetViewModel>
 	{
-		public IReadOnlyList<Post> ActivePosts { get; private set; }
-		public IReadOnlyList<Post> FuturePosts { get; private set; }
-		public IReadOnlyList<Post> AllPosts { get { return _posts; } }
+		private IReadOnlyList<Post> ActivePosts { get; set; }
+		private IReadOnlyList<Post> FuturePosts { get; set; }
+		private IEnumerable<Post> AllPosts { get { return _posts; } }
 
 		public FilteredPostVault()
 		{
@@ -22,6 +24,29 @@ namespace Blog.Web.Infrastructure
 				.ToList();
 
 			FuturePosts = AllPosts.Except(ActivePosts).ToList();
+		}
+
+		public PostGetViewModel Handle(PostRequest message, PostGetViewModel result)
+		{
+			var post = ActivePosts.FirstOrDefault();
+			if (message.Slug != null) post = AllPosts.FirstOrDefault(x => x.Slug.ToLower() == message.Slug.ToLower());
+			if (post == null) return result; //Decision: don't throw, handle downstream as to what this means
+
+			var previous = ActivePosts.OrderBy(x => x.PublishedAtCst).FirstOrDefault(x => x.PublishedAtCst > post.PublishedAtCst);
+			var next = ActivePosts.FirstOrDefault(x => x.PublishedAtCst < post.PublishedAtCst);
+
+			result.Post = post;
+			result.Previous = previous;
+			result.Next = next;
+			result.Active = ActivePosts;
+			result.Future = FuturePosts;
+			
+			return result;
+		}
+
+		public AtomGetViewModel Handle(AtomRequest message)
+		{
+			return new AtomGetViewModel {Posts = ActivePosts};
 		}
 
 		//blind men and the elephant
@@ -44,6 +69,13 @@ namespace Blog.Web.Infrastructure
 
 		private readonly Post[] _posts =
 		{
+			new Post
+			{
+				Title = "Introducing Nimbus",
+				Slug = "introducing-nimbus",
+				FileName = "introducing-nimbus.markdown",
+				PublishedAtCst = DateTime.Parse("October 24, 2013"),
+			},
 			new Post
 			{
 				Title = "Bio",

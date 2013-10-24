@@ -1,17 +1,17 @@
-﻿@model System.Collections.Generic.IReadOnlyList<Blog.Web.Core.Post>
+﻿@model Blog.Web.Actions.AtomGet.AtomGetViewModel
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Kijana Woodard</title>
     <subtitle>Programming and Perceptual Dissonance</subtitle>
     <link href="http://kijanawoodard.com/"/>
-    <updated>@Model.First().PublishedAtCst.ToUniversalTime().ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fff'Z'")</updated>
+    <updated>@Model.Posts.First().PublishedAtCst.ToUniversalTime().ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fff'Z'")</updated>
     <author>
             <name>Kijana Woodard</name>
             <email>atom@kijanawoodard.com</email>
     </author>
     <id>urn:http://kijanawoodard.com</id>
         
-    @foreach (var post in Model)
+    @foreach (var post in Model.Posts)
     {
         <entry>
             <title>@post.Title</title>
