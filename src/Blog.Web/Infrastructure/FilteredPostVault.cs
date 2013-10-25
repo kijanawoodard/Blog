@@ -7,7 +7,7 @@ using Blog.Web.Core;
 
 namespace Blog.Web.Infrastructure
 {
-	public class FilteredPostVault : IHandleResult<PostRequest, PostGetViewModel>, IHandle<AtomRequest, AtomGetViewModel>
+	public class FilteredPostVault
 	{
 		private IReadOnlyList<Post> ActivePosts { get; set; }
 		private IReadOnlyList<Post> FuturePosts { get; set; }
@@ -69,6 +69,13 @@ namespace Blog.Web.Infrastructure
 
 		private readonly Post[] _posts =
 		{
+			new Post
+			{
+				Title = "Introducing Liaison",
+				Slug = "introducing-liaison",
+				FileName = "introducing-liaison.markdown",
+				PublishedAtCst = DateTime.Parse("October 25, 2013"),
+			},
 			new Post
 			{
 				Title = "Introducing Nimbus",

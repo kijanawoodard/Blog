@@ -4,7 +4,7 @@ using MarkdownSharp;
 
 namespace Blog.Web.Infrastructure
 {
-	public class MarkdownContentStorage : IHandleResult<PostRequest, PostGetViewModel>
+	public class MarkdownContentStorage
 	{
 		private readonly string _root;
 		private readonly Markdown _markdown;

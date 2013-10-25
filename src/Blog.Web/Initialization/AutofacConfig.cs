@@ -17,8 +17,15 @@ namespace Blog.Web.Initialization
 			var assembly = Assembly.GetExecutingAssembly();
 			
 			var mediator = new Mediator();
-			mediator.Subscribe<PostRequest, PostGetViewModel>(() => new ISubscribeFor<PostRequest>[] { new FilteredPostVault(), new MarkdownContentStorage(root) });
-			mediator.Subscribe<AtomRequest, AtomGetViewModel>(() => new ISubscribeFor<AtomRequest>[] { new FilteredPostVault() });
+			mediator.Subscribe<PostRequest, PostGetViewModel>(message =>
+			{
+				var result = new PostGetViewModel();
+				result = new FilteredPostVault().Handle(message, result);
+				result = new MarkdownContentStorage(root).Handle(message, result);
+				return result;
+			});
+
+			mediator.Subscribe<AtomRequest, AtomGetViewModel>(message => new FilteredPostVault().Handle(message));
 			
 			var builder = new ContainerBuilder();
 			builder.RegisterControllers(assembly);
