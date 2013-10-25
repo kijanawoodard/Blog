@@ -20,7 +20,7 @@ Nimbus is passing the message and result to each handler in the order specified.
 
 The goal is to isolate the _units_ from each other and separate the organization of the units from the units themselves. Ok, what if we just code that? 
 
-Now the mediator configuration for Posts on this blog looks like this:
+Now the [mediator configuration] for Posts on this blog looks like this:
 
 	mediator.Subscribe<PostRequest, PostGetViewModel>(message =>
 	{
@@ -101,5 +101,6 @@ On a minor note, I named nimbus with the project, solution, folders, etc all low
 [web scale]: http://mongodb-is-web-scale.com/	
 [Mike Pennington]: www.linkedin.com/in/mikepennington
 [added comments]: https://github.com/kijanawoodard/nimbus/blob/507a3a9ba81e3af640d877158b8168f1e74e27f3/src/mediator.cs#L88
+[mediator configuration]: https://github.com/kijanawoodard/Blog/blob/36b4b747c0a538d46ac418e0ed51f07e66bedb52/src/Blog.Web/Initialization/AutofacConfig.cs#L20
 [liaison source code]: https://github.com/kijanawoodard/Liaison/blob/e0d6aa9be055a1da227aa5d0782bdaae204a5221/src/Liaison/Mediator.cs
 [3x performance boost]: https://github.com/kijanawoodard/Liaison/blob/master/src/Liaison.Tests/Performance.cs#L87
