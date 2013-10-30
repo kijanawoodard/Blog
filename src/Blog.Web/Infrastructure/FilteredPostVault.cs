@@ -71,6 +71,13 @@ namespace Blog.Web.Infrastructure
 		{
 			new Post
 			{
+				Title = "Introducing Vessel",
+				Slug = "introducing-vessel",
+				FileName = "introducing-vessel.markdown",
+				PublishedAtCst = DateTime.Parse("October 31, 2013"),
+			},
+			new Post
+			{
 				Title = "Introducing Liaison",
 				Slug = "introducing-liaison",
 				FileName = "introducing-liaison.markdown",

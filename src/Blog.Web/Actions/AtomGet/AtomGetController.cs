@@ -16,7 +16,7 @@ namespace Blog.Web.Actions.AtomGet
 
 	    public ActionResult Execute()
 	    {
-            Response.ContentType = " application/atom+xml";
+            Response.ContentType = "application/atom+xml";
 			var model = _mediator.Send<AtomRequest, AtomGetViewModel>(new AtomRequest());
             return View(model);
         }

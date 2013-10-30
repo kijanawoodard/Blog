@@ -13,7 +13,7 @@ namespace Blog.Web
 
 			FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
-			AutofacConfig.RegisterContainer();
+			VesselConfig.RegisterContainer();
 
 			ViewEngines.Engines.Clear();
 			ViewEngines.Engines.Add(new AlternateViewEngine());
