@@ -1,11 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Web;
 using System.Web.Mvc;
 using Blog.Web.Core;
 using Blog.Web.Infrastructure;
 
 namespace Blog.Web.Actions.PostGet
 {
+	public class PostGetModule : IModule
+	{
+		public void Execute(IContainer container)
+		{
+			var root = HttpContext.Current.Server.MapPath("~/Content/posts");
+
+			container.Register(c => new PostGetController(c.Resolve<IMediator>()));
+
+			var mediator = container.Resolve<ISubscribeHandlers>();
+			mediator.Subscribe<PostRequest, PostGetViewModel>(message =>
+			{
+				var result = new PostGetViewModel();
+				result = new FilteredPostVault().Handle(message, result);
+				result = new MarkdownContentStorage(root).Handle(message, result);
+				return result;
+			});
+		}
+	}
+
     public class PostGetController : Controller
     {
 	    private readonly IMediator _mediator;

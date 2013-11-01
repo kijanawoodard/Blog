@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Web.Mvc;
 
 namespace Blog.Web.Infrastructure
@@ -17,7 +18,14 @@ namespace Blog.Web.Infrastructure
 		void Register<T>(Func<IResolver, T> creator);
 	}
 
-	public class Vessel : IResolver, IRegistrar
+	public interface IContainer : IResolver, IRegistrar { }
+
+	public interface IModule
+	{
+		void Execute(IContainer container);
+	}
+
+	public class Vessel : IResolver, IRegistrar, IContainer
 	{
 		private delegate object Resolver(IResolver resolver);
 		private readonly IDictionary<int, Resolver> _registrations;
@@ -35,6 +43,21 @@ namespace Blog.Web.Infrastructure
 		void Register(Type type, Resolver resolver)
 		{
 			_registrations.Add(type.GetHashCode(), resolver);
+		}
+
+		public void RegisterModules()
+		{
+			var modules =
+				from assembly in AppDomain.CurrentDomain.GetAssemblies()
+				from t in assembly.GetLoadableTypes()
+				where t.IsClass
+				where typeof (IModule).IsAssignableFrom(t)
+				select Activator.CreateInstance(t) as IModule; //TODO: http://stackoverflow.com/a/1805609/214073
+
+			foreach (var module in modules)
+			{
+				module.Execute(this);
+			}
 		}
 
 		public T Resolve<T>()
@@ -72,6 +95,22 @@ namespace Blog.Web.Infrastructure
 		public IEnumerable<object> GetServices(Type serviceType)
 		{
 			return Enumerable.Empty<object>(); //wayback machine rocks ! blog was deleted. http://web.archive.org/web/20110204020311/http://davidhayden.com/blog/dave/archive/2011/02/01/IDependencyResolverAspNetMvc3.aspx
+		}
+	}
+
+	public static class AssemblyExtension
+	{
+		public static IEnumerable<Type> GetLoadableTypes(this Assembly assembly)
+		{
+			if (assembly == null) throw new ArgumentNullException("assembly");
+			try
+			{
+				return assembly.GetTypes();
+			}
+			catch (ReflectionTypeLoadException e)
+			{
+				return e.Types.Where(t => t != null);
+			}
 		}
 	}
 }
