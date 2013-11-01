@@ -71,6 +71,13 @@ namespace Blog.Web.Infrastructure
 		{
 			new Post
 			{
+				Title = "Vessel Modules",
+				Slug = "vessel-modules",
+				FileName = "vessel-modules.markdown",
+				PublishedAtCst = DateTime.Parse("November 01, 2013"),
+			},
+			new Post
+			{
 				Title = "Introducing Vessel",
 				Slug = "introducing-vessel",
 				FileName = "introducing-vessel.markdown",

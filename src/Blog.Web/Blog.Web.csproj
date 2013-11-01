@@ -267,6 +267,9 @@
   <ItemGroup>
     <Content Include="Content\posts\introducing-vessel.markdown" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\vessel-modules.markdown" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
