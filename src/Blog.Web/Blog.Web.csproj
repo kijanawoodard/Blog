@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actions\AtomGet\AtomGetController.cs" />
+    <Compile Include="Actions\DisplayErrors\DisplayErrorsController.cs" />
     <Compile Include="Actions\PostGet\PostGetController.cs" />
     <Compile Include="Infrastructure\AlternateViewEngine.cs" />
     <Compile Include="Global.asax.cs">
@@ -269,6 +270,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\posts\vessel-modules.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Actions\DisplayErrors\Http404.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
