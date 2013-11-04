@@ -13,7 +13,7 @@ namespace Blog.Web.Actions.PostGet
 		{
 			var root = HttpContext.Current.Server.MapPath("~/Content/posts");
 
-			container.Register(c => new PostGetController(c.Resolve<IMediator>()));
+			container.Register(c => new PostGetController(c.Resolve<IMediator>()) {ActionInvoker = new PartialViewActionInvoker()});
 
 			var mediator = container.Resolve<ISubscribeHandlers>();
 			mediator.Subscribe<PostRequest, PostGetViewModel>(message =>

@@ -7,6 +7,7 @@ namespace Blog.Web.Infrastructure
 		public AlternateViewEngine()
 		{
 			ViewLocationFormats = new[] { "~/Actions/{1}/{0}.cshtml" };
+			PartialViewLocationFormats = new[] { "~/Actions/{1}/{0}.cshtml" };
 		}
 	}
 }

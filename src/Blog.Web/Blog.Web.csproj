@@ -105,6 +105,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Liaison.cs" />
+    <Compile Include="Infrastructure\PartialViewActionInvoker.cs" />
     <Compile Include="Infrastructure\Vessel.cs" />
     <Compile Include="Infrastructure\FilteredPostVault.cs" />
     <Compile Include="Core\Post.cs" />
@@ -276,6 +277,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Actions\PostGet\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Actions\_ViewStart.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -5,6 +5,8 @@
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<h2>404</h2>
+<h2>Post not found</h2>
 
 Hmmm. The page you're looking for seems to be missing.
+
+@{ Html.RenderAction("Index", "PostGet"); }
