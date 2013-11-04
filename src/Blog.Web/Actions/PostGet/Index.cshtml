@@ -1,0 +1,23 @@
+﻿@model Blog.Web.Actions.PostGet.PostIndexViewModel
+
+@{
+    ViewBag.Title = "All Posts";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<h2>Archive</h2>
+
+<section id="archive">
+    <h4>@Model.Active.Count posts @(Model.Future.Any() ? Model.Future.Count + " future" : "")</h4>
+    <ul>
+        @foreach (var post in Model.Active)
+        {
+            <li>
+                <small>@post.PublishedAtCst.ToString("yyyy.MMM.dd")</small>
+                <a href="@Url.Action("Execute", "PostGet", new {slug = post.Slug})" title="@post.Title">
+                    <span>@post.Title</span>
+                </a>
+            </li>
+        }
+    </ul>
+</section>

@@ -23,6 +23,8 @@ namespace Blog.Web.Actions.PostGet
 				result = new MarkdownContentStorage(root).Handle(message, result);
 				return result;
 			});
+
+			mediator.Subscribe<PostIndexRequest, PostIndexViewModel>(message => new FilteredPostVault().Handle(message));
 		}
 	}
 
@@ -41,6 +43,12 @@ namespace Blog.Web.Actions.PostGet
 			if (model.Post == null) return HttpNotFound();
 			return View(model);
         }
+
+		public ActionResult Index()
+		{
+			var model = _mediator.Send<PostIndexRequest, PostIndexViewModel>(new PostIndexRequest());
+			return View(model);
+		}
     }	
 
 	public class PostRequest
@@ -59,5 +67,13 @@ namespace Blog.Web.Actions.PostGet
 
 		public bool HasPrevious { get { return Previous != null; } }
 		public bool HasNext { get { return Next != null; } }
+	}
+
+	public class PostIndexRequest { }
+
+	public class PostIndexViewModel
+	{
+		public IReadOnlyCollection<Post> Active { get; set; }
+		public IReadOnlyCollection<Post> Future { get; set; }
 	}
 }

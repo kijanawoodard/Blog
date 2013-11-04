@@ -44,6 +44,15 @@ namespace Blog.Web.Infrastructure
 			return result;
 		}
 
+		public PostIndexViewModel Handle(PostIndexRequest message)
+		{
+			var result = new PostIndexViewModel();
+			result.Active = ActivePosts;
+			result.Future = FuturePosts;
+
+			return result;
+		}
+
 		public AtomGetViewModel Handle(AtomRequest message)
 		{
 			return new AtomGetViewModel {Posts = ActivePosts};
