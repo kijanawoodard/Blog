@@ -11,7 +11,7 @@ namespace Blog.Web.Initialization
 
 			routes.MapRoute(
 				null,
-				"posts",
+				"archive",
 				new { controller = "PostGet", action = "Index" });
 
 			routes.MapRoute(
