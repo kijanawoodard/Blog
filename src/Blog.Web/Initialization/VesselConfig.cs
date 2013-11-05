@@ -12,6 +12,7 @@ namespace Blog.Web.Initialization
 			var container = new Vessel();
 			container.Register<IMediator>(mediator);
 			container.Register<ISubscribeHandlers>(mediator);
+			container.Register<IActionInvoker>(new PartialViewActionInvoker());
 			container.RegisterModules();
 			
 			DependencyResolver.SetResolver(new VesselDependencyResolver(container)); //for asp.net mvc
