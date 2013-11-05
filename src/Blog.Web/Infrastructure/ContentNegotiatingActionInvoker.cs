@@ -68,8 +68,14 @@ namespace Blog.Web.Infrastructure
 	{
 		public bool CanHandle(ControllerContext context)
 		{
-			if (context == null || context.HttpContext.Request == null || context.HttpContext.Request.AcceptTypes == null) return false;
-			return context.HttpContext.Request.AcceptTypes.Contains("application/atom+xml");
+			if (context == null) return false;
+			
+			var request = context.HttpContext.Request;
+			if (request == null || request.AcceptTypes == null) return false;
+			
+			return request.AcceptTypes.Contains("application/atom+xml") 
+					|| request.CurrentExecutionFilePathExtension.EndsWith("atom")
+					|| (string)context.RouteData.Values["ext"] == "atom";
 		}
 
 		public ActionResult Handle(ControllerContext context, ActionResult actionResult)

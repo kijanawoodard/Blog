@@ -11,13 +11,13 @@ namespace Blog.Web.Initialization
 
 			routes.MapRoute(
 				null,
-				"archive",
-				new { controller = "PostGet", action = "Index" });
+				"archive.{ext}",
+				new { controller = "PostGet", action = "Index", ext = UrlParameter.Optional });
 
 			routes.MapRoute(
 				null,
-				"atom",
-				new { controller = "AtomGet", action = "Execute" });
+				"archive",
+				new { controller = "PostGet", action = "Index" });
 
 			routes.MapRoute(
 				null,
