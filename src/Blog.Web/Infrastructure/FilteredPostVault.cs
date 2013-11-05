@@ -80,6 +80,13 @@ namespace Blog.Web.Infrastructure
 		{
 			new Post
 			{
+				Title = "A Tale of Scope Creep",
+				Slug = "a-tale-of-scope-creep",
+				FileName = "a-tale-of-scope-creep.markdown",
+				PublishedAtCst = DateTime.Parse("November 05, 2013"),
+			},
+			new Post
+			{
 				Title = "Vessel Modules",
 				Slug = "vessel-modules",
 				FileName = "vessel-modules.markdown",
