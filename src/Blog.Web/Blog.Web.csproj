@@ -97,7 +97,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Actions\AtomGet\AtomGetController.cs" />
     <Compile Include="Actions\DisplayErrors\DisplayErrorsController.cs" />
     <Compile Include="Actions\PostGet\PostGetController.cs" />
     <Compile Include="Infrastructure\AlternateViewEngine.cs" />
@@ -225,7 +224,7 @@
     <Content Include="Content\posts\tekpub-rocks.markdown" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Actions\AtomGet\Execute.cshtml" />
+    <Content Include="Actions\PostGet\Atom.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\posts\learning-nservicebus.markdown">
@@ -283,6 +282,7 @@
   <ItemGroup>
     <Content Include="Content\posts\a-tale-of-scope-creep.markdown" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -63,6 +63,31 @@ namespace Blog.Web.Infrastructure
 			};
 		}
 	}
+
+	class AtomContentNegotiation : IHandleContentNegotiation
+	{
+		public bool CanHandle(ControllerContext context)
+		{
+			if (context == null || context.HttpContext.Request == null || context.HttpContext.Request.AcceptTypes == null) return false;
+			return context.HttpContext.Request.AcceptTypes.Contains("application/atom+xml");
+		}
+
+		public ActionResult Handle(ControllerContext context, ActionResult actionResult)
+		{
+			var viewResult = actionResult as ViewResult;
+			if (viewResult == null) return null;
+
+			context.HttpContext.Response.ContentType = "application/atom+xml";
+
+			return new PartialViewResult
+			{
+				ViewData = viewResult.ViewData,
+				TempData = viewResult.TempData,
+				ViewName = "atom",
+				ViewEngineCollection = viewResult.ViewEngineCollection,
+			}; 
+		}
+	}
 }
 
 //http://www.mikesdotnetting.com/Article/80/Create-PDFs-in-ASP.NET-getting-started-with-iTextSharp

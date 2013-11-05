@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Blog.Web.Actions.AtomGet;
 using Blog.Web.Actions.PostGet;
 using Blog.Web.Core;
 
@@ -51,11 +50,6 @@ namespace Blog.Web.Infrastructure
 			result.Future = FuturePosts;
 
 			return result;
-		}
-
-		public AtomGetViewModel Handle(AtomRequest message)
-		{
-			return new AtomGetViewModel {Posts = ActivePosts};
 		}
 
 		//blind men and the elephant

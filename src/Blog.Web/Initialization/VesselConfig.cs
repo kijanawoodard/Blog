@@ -26,7 +26,8 @@ namespace Blog.Web.Initialization
 				new ContentNegotiatingActionInvoker(
 					new IHandleContentNegotiation[]
 					{
-						new PartialViewNegotiation()
+						new PartialViewNegotiation(),
+						new AtomContentNegotiation(),
 					});
 
 			container.Register<IActionInvoker>(invoker);
