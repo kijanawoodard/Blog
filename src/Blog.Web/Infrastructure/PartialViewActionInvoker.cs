@@ -8,6 +8,7 @@ namespace Blog.Web.Infrastructure
 	//http://stackoverflow.com/questions/7109967/using-json-net-as-default-json-serializer-in-asp-net-mvc-3-is-it-possible/11878694#11878694
 	//http://lozanotek.com/blog/archive/2010/10/06/poco_results_for_mvc_actions.aspx
 	//http://ben.onfabrik.com/posts/content-negotiation-in-aspnet-mvc
+	//http://lozanotek.com/blog/archive/2010/10/06/poco_results_for_mvc_actions.aspx
 
 	public class PartialViewActionInvoker : ControllerActionInvoker
 	{
@@ -45,3 +46,6 @@ namespace Blog.Web.Infrastructure
 		}
 	}
 }
+
+//http://www.mikesdotnetting.com/Article/80/Create-PDFs-in-ASP.NET-getting-started-with-iTextSharp
+//http://lozanotek.com/blog/archive/2009/08/11/Inferred_Controller_Actions.aspx - similar to missing method; I don't think I want to do this
