@@ -105,7 +105,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Liaison.cs" />
-    <Compile Include="Infrastructure\PartialViewActionInvoker.cs" />
+    <Compile Include="Infrastructure\ContentNegotiatingActionInvoker.cs" />
     <Compile Include="Infrastructure\Vessel.cs" />
     <Compile Include="Infrastructure\FilteredPostVault.cs" />
     <Compile Include="Core\Post.cs" />
