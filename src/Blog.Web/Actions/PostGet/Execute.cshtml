@@ -51,19 +51,7 @@
 @section aside
 {
     <section id="latest">
-        <h4>@Model.Active.Count posts @(Model.Future.Any() ? Model.Future.Count + " future" : "")</h4>
-        <ul>
-            @foreach (var post in Model.Active)
-            {
-                <li class="@(post == Model.Post ? "active" : "")">
-                    <a href="@Url.Action("Execute", "PostGet", new {slug = post.Slug})" title="@post.Title">
-                        <i class="icon-bookmark"></i>
-                        <small>@post.PublishedAtCst.ToString("yyyy.MMM.dd")</small>
-                        <span>@post.Title</span>
-                    </a>
-                </li>
-            }
-        </ul>
+        @{ Html.RenderAction("Index", "PostGet"); }
     </section>
 }
 

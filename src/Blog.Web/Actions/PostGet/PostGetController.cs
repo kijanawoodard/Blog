@@ -62,9 +62,7 @@ namespace Blog.Web.Actions.PostGet
 		public string Content { get; set; }
 		public Post Previous { get; set; }
 		public Post Next { get; set; }
-		public IReadOnlyCollection<Post> Active { get; set; }
-		public IReadOnlyCollection<Post> Future { get; set; }
-
+		
 		public bool HasPrevious { get { return Previous != null; } }
 		public bool HasNext { get { return Next != null; } }
 	}

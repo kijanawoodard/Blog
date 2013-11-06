@@ -51,6 +51,7 @@ footer p {
 #latest li { margin-bottom: 3px; overflow: hidden;text-overflow: ellipsis;}
 #latest li span { line-height: 3px;white-space: nowrap;}
 #latest .active {border-left : solid 2px #777;padding-left: 3px;margin-left: -5px;}
+#latest h2 { display: none; }
 
 .headshot { text-align: center; }
 .headshot img { margin: auto;}

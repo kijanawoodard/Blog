@@ -37,8 +37,6 @@ namespace Blog.Web.Infrastructure
 			result.Post = post;
 			result.Previous = previous;
 			result.Next = next;
-			result.Active = ActivePosts;
-			result.Future = FuturePosts;
 			
 			return result;
 		}

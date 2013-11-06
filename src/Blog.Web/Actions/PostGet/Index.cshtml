@@ -2,7 +2,8 @@
 
 @{
     ViewBag.Title = "All Posts";
-    //specifying layout prevents partial view from rendering correctly: http://stackoverflow.com/a/9769097/214073
+    var slug = Request.Url.LocalPath.Substring(1);
+    var onHomePage = string.IsNullOrWhiteSpace(slug);
 }
 
 <h2>Archive</h2>
@@ -12,7 +13,7 @@
     <ul>
         @foreach (var post in Model.Active)
         {
-            <li>
+            <li class="@(post.Slug == slug || onHomePage && post == Model.Active.First() ? "active" : "")">
                 <small>@post.PublishedAtCst.ToString("yyyy.MMM.dd")</small>
                 <a href="@Url.Action("Execute", "PostGet", new {slug = post.Slug})" title="@post.Title">
                     <span>@post.Title</span>
