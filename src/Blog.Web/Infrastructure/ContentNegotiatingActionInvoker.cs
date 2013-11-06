@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Web;
 using System.Web.Mvc;
 using System.Xml.Serialization;
 using Newtonsoft.Json;
@@ -139,10 +138,9 @@ namespace Blog.Web.Infrastructure
 			var request = context.HttpContext.Request;
 			if (request == null || request.AcceptTypes == null) return false;
 
-			return (request.AcceptTypes.Contains("text/xml")
-					|| request.CurrentExecutionFilePathExtension.EndsWith("xml")
-					|| (string)context.RouteData.Values["ext"] == "xml")
-					|| CustomViewExists(context);
+			return request.AcceptTypes.Contains("text/xml")
+			         || request.CurrentExecutionFilePathExtension.EndsWith("xml")
+			         || (string) context.RouteData.Values["ext"] == "xml";
 		}
 
 		public ActionResult Handle(ControllerContext context, ActionResult actionResult)
@@ -160,7 +158,6 @@ namespace Blog.Web.Infrastructure
 					ViewData = context.Controller.ViewData,
 					TempData = context.Controller.TempData,
 					ViewName = GetViewName(context),
-					//ViewEngineCollection = actionResult.ViewEngineCollection,
 				}; 
 
 			return new XmlResult(model);
@@ -222,11 +219,11 @@ namespace Blog.Web.Infrastructure
 		public string ContentType { get; set; }
 		public Encoding Encoding { get; set; }
 
-		public XmlResult(object objectToSerialize)
+		public XmlResult(object data)
 		{
-			if (objectToSerialize == null) throw new ArgumentNullException("objectToSerialize");
+			if (data == null) throw new ArgumentNullException("data");
 
-			Data = objectToSerialize;
+			Data = data;
 			ContentType = "text/xml";
 			Encoding = Encoding.UTF8;
 		}
