@@ -89,7 +89,7 @@ namespace Blog.Web.Infrastructure
 			{
 				ViewData = viewResult.ViewData,
 				TempData = viewResult.TempData,
-				ViewName = "atom",
+				ViewName = (string)context.RouteData.Values["action"] + ".atom",
 				ViewEngineCollection = viewResult.ViewEngineCollection,
 			}; 
 		}

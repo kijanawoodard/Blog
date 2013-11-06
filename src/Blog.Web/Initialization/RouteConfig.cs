@@ -21,6 +21,11 @@ namespace Blog.Web.Initialization
 
 			routes.MapRoute(
 				null,
+				"{slug}.{ext}",
+				new { controller = "PostGet", action = "Execute", ext = UrlParameter.Optional });
+
+			routes.MapRoute(
+				null,
 				"{slug}",
 				new {controller = "PostGet", action = "Execute"});
 

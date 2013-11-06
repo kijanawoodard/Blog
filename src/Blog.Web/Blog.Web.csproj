@@ -224,7 +224,7 @@
     <Content Include="Content\posts\tekpub-rocks.markdown" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Actions\PostGet\Atom.cshtml" />
+    <Content Include="Actions\PostGet\Index.Atom.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\posts\learning-nservicebus.markdown">
