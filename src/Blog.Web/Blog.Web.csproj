@@ -113,7 +113,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Initialization\FilterConfig.cs" />
     <Compile Include="Initialization\RouteConfig.cs" />
     <Content Include="Content\css\font-awesome.css" />
     <Content Include="Content\css\kube.min.css" />
