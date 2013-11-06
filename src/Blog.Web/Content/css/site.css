@@ -56,6 +56,8 @@ footer p {
 .headshot { text-align: center; }
 .headshot img { margin: auto;}
 
+#archive ul { list-style-type: none;margin: 0;}
+
 /* =Mobile (Portrait)
 -----------------------------------------------------------------------------*/
 @media only screen and (max-width: 480px) {
@@ -85,4 +87,7 @@ footer p {
     
 }
 
-#archive ul { list-style-type: none;margin: 0;}
+@media print {
+	#latest, #contact, #disqus_thread { display: none; }
+	article { width: 100% !important; } /* bah! - this is what's wrong with non-semantic classes - have to use important'*/	
+}

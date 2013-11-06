@@ -340,3 +340,5 @@ namespace Blog.Web.Infrastructure
 
 //http://www.mikesdotnetting.com/Article/80/Create-PDFs-in-ASP.NET-getting-started-with-iTextSharp
 //http://lozanotek.com/blog/archive/2009/08/11/Inferred_Controller_Actions.aspx - similar to missing method; I don't think I want to do this
+
+//PDF: https://github.com/webgio/Rotativa, http://pdfcrowd.com/html-to-pdf-api/, http://www.nyveldt.com/blog/post/Introducing-RazorPDF
