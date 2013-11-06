@@ -29,6 +29,7 @@ namespace Blog.Web.Initialization
 						new PartialViewNegotiation(),
 						new AtomContentNegotiation(),
 						new JsonContentNegotiation(), 
+						new XmlContentNegotiation(), 
 					});
 
 			container.Register<IActionInvoker>(invoker);

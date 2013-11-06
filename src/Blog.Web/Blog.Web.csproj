@@ -284,7 +284,9 @@
   <ItemGroup>
     <Content Include="Content\posts\a-tale-of-scope-creep.markdown" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Actions\PostGet\Execute.Xml.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

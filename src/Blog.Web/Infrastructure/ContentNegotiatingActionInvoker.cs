@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
+using System.Xml.Serialization;
 using Newtonsoft.Json;
 
 namespace Blog.Web.Infrastructure
@@ -79,7 +80,7 @@ namespace Blog.Web.Infrastructure
 			return (request.AcceptTypes.Contains("application/atom+xml") 
 					|| request.CurrentExecutionFilePathExtension.EndsWith("atom")
 					|| (string)context.RouteData.Values["ext"] == "atom")
-					&& ViewEngines.Engines.FindView(context, GetAtomViewName(context), null).View != null;
+					&& ViewEngines.Engines.FindView(context, GetViewName(context), null).View != null;
 		}
 
 		public ActionResult Handle(ControllerContext context, ActionResult actionResult)
@@ -93,12 +94,12 @@ namespace Blog.Web.Infrastructure
 			{
 				ViewData = viewResult.ViewData,
 				TempData = viewResult.TempData,
-				ViewName = GetAtomViewName(context),
+				ViewName = GetViewName(context),
 				ViewEngineCollection = viewResult.ViewEngineCollection,
 			}; 
 		}
 
-		private string GetAtomViewName(ControllerContext context)
+		private string GetViewName(ControllerContext context)
 		{
 			return (string) context.RouteData.Values["action"] + ".atom";
 		}
@@ -114,7 +115,7 @@ namespace Blog.Web.Infrastructure
 			if (request == null || request.AcceptTypes == null) return false;
 
 			return request.AcceptTypes.Contains("application/json")
-				|| request.CurrentExecutionFilePathExtension.EndsWith("json")
+					|| request.CurrentExecutionFilePathExtension.EndsWith("json")
 					|| (string)context.RouteData.Values["ext"] == "json";
 		}
 
@@ -126,6 +127,53 @@ namespace Blog.Web.Infrastructure
 				return null;
 
 			return new JsonNetResult { Data = model };
+		}
+	}
+
+	class XmlContentNegotiation : IHandleContentNegotiation
+	{
+		public bool CanHandle(ControllerContext context)
+		{
+			if (context == null) return false;
+
+			var request = context.HttpContext.Request;
+			if (request == null || request.AcceptTypes == null) return false;
+
+			return (request.AcceptTypes.Contains("text/xml")
+					|| request.CurrentExecutionFilePathExtension.EndsWith("xml")
+					|| (string)context.RouteData.Values["ext"] == "xml")
+					|| CustomViewExists(context);
+		}
+
+		public ActionResult Handle(ControllerContext context, ActionResult actionResult)
+		{
+			var model = context.Controller.ViewData.Model;
+
+			if (model == null)
+				return null;
+
+			context.HttpContext.Response.ContentType = "text/xml";
+
+			if (CustomViewExists(context))
+				return new PartialViewResult
+				{
+					ViewData = context.Controller.ViewData,
+					TempData = context.Controller.TempData,
+					ViewName = GetViewName(context),
+					//ViewEngineCollection = actionResult.ViewEngineCollection,
+				}; 
+
+			return new XmlResult(model);
+		}
+
+		private string GetViewName(ControllerContext context)
+		{
+			return (string)context.RouteData.Values["action"] + ".xml";
+		}
+
+		private bool CustomViewExists(ControllerContext context)
+		{
+			return ViewEngines.Engines.FindView(context, GetViewName(context), null).View != null;
 		}
 	}
 
@@ -148,7 +196,7 @@ namespace Blog.Web.Infrastructure
 			if (context == null)
 				throw new ArgumentNullException("context");
 
-			HttpResponseBase response = context.HttpContext.Response;
+			var response = context.HttpContext.Response;
 
 			response.ContentType = !string.IsNullOrEmpty(ContentType)
 			  ? ContentType
@@ -159,13 +207,39 @@ namespace Blog.Web.Infrastructure
 
 			if (Data != null)
 			{
-				JsonTextWriter writer = new JsonTextWriter(response.Output) { Formatting = Formatting };
-
-				JsonSerializer serializer = JsonSerializer.Create(SerializerSettings);
+				var writer = new JsonTextWriter(response.Output) { Formatting = Formatting };
+				var serializer = JsonSerializer.Create(SerializerSettings);
 				serializer.Serialize(writer, Data);
 
 				writer.Flush();
 			}
+		}
+	}
+
+	public class XmlResult : ActionResult
+	{
+		public object Data { get; private set; }
+		public string ContentType { get; set; }
+		public Encoding Encoding { get; set; }
+
+		public XmlResult(object objectToSerialize)
+		{
+			if (objectToSerialize == null) throw new ArgumentNullException("objectToSerialize");
+
+			Data = objectToSerialize;
+			ContentType = "text/xml";
+			Encoding = Encoding.UTF8;
+		}
+
+		public override void ExecuteResult(ControllerContext context)
+		{
+			var response = context.HttpContext.Response;
+
+			response.ContentType = ContentType;
+			response.HeaderEncoding = Encoding;
+
+			var serializer = new XmlSerializer(Data.GetType());
+			serializer.Serialize(response.Output, Data);
 		}
 	}
 }
