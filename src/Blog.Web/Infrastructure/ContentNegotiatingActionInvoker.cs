@@ -100,6 +100,32 @@ namespace Blog.Web.Infrastructure
 			return (string) context.RouteData.Values["action"] + ".atom";
 		}
 	}
+
+	class JsonContentNegotiation : IHandleContentNegotiation
+	{
+		public bool CanHandle(ControllerContext context)
+		{
+			if (context == null) return false;
+			
+			var request = context.HttpContext.Request;
+			if (request == null || request.AcceptTypes == null) return false;
+
+			return request.AcceptTypes.Contains("application/json")
+				|| request.CurrentExecutionFilePathExtension.EndsWith("json")
+					|| (string)context.RouteData.Values["ext"] == "json";
+		}
+
+		public ActionResult Handle(ControllerContext context, ActionResult actionResult)
+		{
+			var model = context.Controller.ViewData.Model;
+
+			if (model == null)
+				return null;
+
+			//TODO: switch to json.net for better date formatting
+			return new JsonResult { Data = model, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+		}
+	}
 }
 
 //http://www.mikesdotnetting.com/Article/80/Create-PDFs-in-ASP.NET-getting-started-with-iTextSharp
