@@ -41,6 +41,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Kent.Boogaart.HelperTrinity">
+      <HintPath>..\packages\Kent.Boogaart.HelperTrinity.2.0.1\lib\portable-win8+net403+sl40+wp+xbox40\Kent.Boogaart.HelperTrinity.dll</HintPath>
+    </Reference>
+    <Reference Include="Kent.Boogaart.KBCsv">
+      <HintPath>..\packages\Kent.Boogaart.KBCsv.3.0.0\lib\portable-win+net45+wp8\Kent.Boogaart.KBCsv.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Kent.Boogaart.KBCsv.Extensions">
+      <HintPath>..\packages\Kent.Boogaart.KBCsv.Extensions.3.0.0\lib\portable-windows8+net45+windowsphone8\Kent.Boogaart.KBCsv.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="MarkdownSharp">
       <HintPath>..\packages\MarkdownSharp.1.13.0.0\lib\35\MarkdownSharp.dll</HintPath>
     </Reference>

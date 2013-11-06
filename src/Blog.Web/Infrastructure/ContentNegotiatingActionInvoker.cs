@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Web.Mvc;
 using System.Xml.Serialization;
+using Kent.Boogaart.KBCsv;
+using Kent.Boogaart.KBCsv.Extensions;
 using Newtonsoft.Json;
 
 namespace Blog.Web.Infrastructure
@@ -174,6 +177,51 @@ namespace Blog.Web.Infrastructure
 		}
 	}
 
+	class CsvContentNegotiation : IHandleContentNegotiation
+	{
+		public bool CanHandle(ControllerContext context)
+		{
+			if (context == null) return false;
+
+			var request = context.HttpContext.Request;
+			if (request == null || request.AcceptTypes == null) return false;
+
+			return (request.AcceptTypes.Contains("text/csv")
+					|| request.CurrentExecutionFilePathExtension.EndsWith("csv")
+					|| (string)context.RouteData.Values["ext"] == "csv");
+		}
+
+		public ActionResult Handle(ControllerContext context, ActionResult actionResult)
+		{
+			var model = context.Controller.ViewData.Model;
+
+			if (model == null)
+				return null;
+
+			context.HttpContext.Response.ContentType = "text/csv";
+
+			if (CustomViewExists(context))
+				return new PartialViewResult
+				{
+					ViewData = context.Controller.ViewData,
+					TempData = context.Controller.TempData,
+					ViewName = GetViewName(context),
+				};
+
+			return new CsvResult(model);
+		}
+
+		private string GetViewName(ControllerContext context)
+		{
+			return (string)context.RouteData.Values["action"] + ".csv";
+		}
+
+		private bool CustomViewExists(ControllerContext context)
+		{
+			return ViewEngines.Engines.FindView(context, GetViewName(context), null).View != null;
+		}
+	}
+
 	public class JsonNetResult : ActionResult
 	{
 		public Encoding ContentEncoding { get; set; }
@@ -237,6 +285,55 @@ namespace Blog.Web.Infrastructure
 
 			var serializer = new XmlSerializer(Data.GetType());
 			serializer.Serialize(response.Output, Data);
+		}
+	}
+
+	class CsvResult : ActionResult
+	{
+		public object Data { get; private set; }
+		public string ContentType { get; set; }
+		public Encoding Encoding { get; set; }
+
+		public CsvResult(object data)
+		{
+			if (data == null) throw new ArgumentNullException("data");
+
+			Data = data;
+			ContentType = "text/csv";
+			Encoding = Encoding.UTF8;
+		}
+
+		public override void ExecuteResult(ControllerContext context)
+		{
+			var response = context.HttpContext.Response;
+
+			response.ContentType = ContentType;
+			response.HeaderEncoding = Encoding;
+
+			//TODO: use the mediator to get csv friendly viewmodel - will be cleaner than relying on reflection 
+			//At the moment - the class has to be "csv-able" to get any use here
+			var writer = new CsvWriter(response.Output);
+			
+			var type = Data.GetType();
+			var isEnumerable = type.GetInterfaces()
+			                       .Any(i => i.IsGenericType &&
+			                                 i.GetGenericTypeDefinition() == typeof (IEnumerable<>));
+			if (isEnumerable)
+			{
+				//http://stackoverflow.com/a/4667999/214073
+				//http://stackoverflow.com/a/1969419/214073
+				//http://stackoverflow.com/a/906538/214073
+				var method = typeof(EnumerableExtensions)
+					.GetMethods(BindingFlags.Public | BindingFlags.Static)
+					.Where(x => x.Name == "WriteCsv")
+					.FirstOrDefault(x => x.GetParameters().Count() == 2);
+				method = method.MakeGenericMethod(type.GetGenericArguments()[0]);
+				method.Invoke(null, new object[]{Data, writer});
+			}
+			else //wrap ourselves
+			{
+				(new[] { Data }).WriteCsv(writer);	
+			}
 		}
 	}
 }

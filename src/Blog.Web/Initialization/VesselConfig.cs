@@ -30,6 +30,7 @@ namespace Blog.Web.Initialization
 						new AtomContentNegotiation(),
 						new JsonContentNegotiation(), 
 						new XmlContentNegotiation(), 
+						new CsvContentNegotiation(), 
 					});
 
 			container.Register<IActionInvoker>(invoker);
