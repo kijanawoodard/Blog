@@ -8,6 +8,19 @@ namespace Blog.Web.Initialization
 		public static void RegisterRoutes(RouteCollection routes)
 		{
 			routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+			routes.IgnoreRoute("{*favicon}", new { favicon = @"(.*/)?favicon.ico(/.*)?" });
+
+			routes.MapRoute(
+				"Error - 404",
+				"NotFound",
+				new { controller = "DisplayErrors", action = "Http404" }
+				);
+
+//			routes.MapRoute(
+//				"Error - 500",
+//				"ServerError",
+//				new { controller = "DisplayErrors", action = "Http500" }
+//				);
 
 			routes.MapRoute(
 				null,
@@ -22,7 +35,7 @@ namespace Blog.Web.Initialization
 			routes.MapRoute(
 				null,
 				"{slug}.{ext}",
-				new { controller = "PostGet", action = "Execute", ext = UrlParameter.Optional });
+				new { controller = "PostGet", action = "Execute" });
 
 			routes.MapRoute(
 				null,

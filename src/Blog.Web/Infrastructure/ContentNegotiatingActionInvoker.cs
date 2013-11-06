@@ -72,10 +72,11 @@ namespace Blog.Web.Infrastructure
 			
 			var request = context.HttpContext.Request;
 			if (request == null || request.AcceptTypes == null) return false;
-			
-			return request.AcceptTypes.Contains("application/atom+xml") 
+
+			return (request.AcceptTypes.Contains("application/atom+xml") 
 					|| request.CurrentExecutionFilePathExtension.EndsWith("atom")
-					|| (string)context.RouteData.Values["ext"] == "atom";
+					|| (string)context.RouteData.Values["ext"] == "atom")
+					&& ViewEngines.Engines.FindView(context, GetAtomViewName(context), null).View != null;
 		}
 
 		public ActionResult Handle(ControllerContext context, ActionResult actionResult)
@@ -89,9 +90,14 @@ namespace Blog.Web.Infrastructure
 			{
 				ViewData = viewResult.ViewData,
 				TempData = viewResult.TempData,
-				ViewName = (string)context.RouteData.Values["action"] + ".atom",
+				ViewName = GetAtomViewName(context),
 				ViewEngineCollection = viewResult.ViewEngineCollection,
 			}; 
+		}
+
+		private string GetAtomViewName(ControllerContext context)
+		{
+			return (string) context.RouteData.Values["action"] + ".atom";
 		}
 	}
 }
