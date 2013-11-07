@@ -5,6 +5,7 @@
 
 @section canonical 
 {
+    @{ Request.RequestContext.RouteData.Values.Remove("ext"); /*was being magically applied to the routes*/ }
     <link rel="canonical" href="@Url.Action("Execute", "PostGet", new { slug = Model.Post.Slug}, "http")"/>
 }
 
