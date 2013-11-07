@@ -19,13 +19,13 @@
 <div class="text">
     @Html.Raw(Model.Content)
 </div>
-
+           
 <hr/>
 <footer class="row">
     <div class="half">
         @if (Model.HasPrevious)
         {
-            <a href="@Url.Action("Execute", "PostGet", new { slug = Model.Previous.Slug})">
+            <a href="@Url.Action("Execute", "PostGet", new { slug = Model.Previous.Slug, ext = ViewContext.RequestContext.RouteData.Values["ext"] })">
                 <div>
                     <i class="icon-arrow-left"></i>
                     <span>@Model.Previous.Title</span>
@@ -38,7 +38,7 @@
     <div class="half push-right next">
         @if (Model.HasNext)
         {
-            <a href="@Url.Action("Execute", "PostGet", new { slug = Model.Next.Slug})">
+            <a href="@Url.Action("Execute", "PostGet", new { slug = Model.Next.Slug, ext = ViewContext.RequestContext.RouteData.Values["ext"] })">
                 <div>
                     <span>@Model.Next.Title</span>
                     <i class="icon-arrow-right"></i>

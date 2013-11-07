@@ -59,13 +59,11 @@ namespace Blog.Web.Infrastructure
 		 *	Display posts csv
 		 *	Only get future post count for archive
 		 *	Xml format for archive?
-		 *	html ext
-		 *	phtml extension
 		 *	hal extension/formatter
 		 *	
 		 * summaries
 		 * home page - multiple entires
-		 * link to arhive?
+		 * link to archive?
 		 * 
 		 * Full posts in atom feed
 		 * Update date vs published date
