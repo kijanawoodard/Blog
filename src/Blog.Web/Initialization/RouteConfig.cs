@@ -25,7 +25,7 @@ namespace Blog.Web.Initialization
 			routes.MapRoute(
 				null,
 				"archive.{ext}",
-				new { controller = "PostGet", action = "Index", ext = UrlParameter.Optional });
+				new { controller = "PostGet", action = "Index" });
 
 			routes.MapRoute(
 				null,
@@ -38,7 +38,7 @@ namespace Blog.Web.Initialization
 				new { controller = "PostGet", action = "Execute" });
 
 			routes.MapRoute(
-				null,
+				"canonical-slug",
 				"{slug}",
 				new {controller = "PostGet", action = "Execute"});
 

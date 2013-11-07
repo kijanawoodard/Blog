@@ -11,13 +11,12 @@
             <email>atom@kijanawoodard.com</email>
     </author>
     <id>http://kijanawoodard.com/</id>
-@{ Request.RequestContext.RouteData.Values.Remove("ext"); /*was being magically applied to the routes*/ }
 @foreach (var post in Model.Active)
 {
     <entry>
         <title>@post.Title</title>
-        <link href="@Url.Action("Execute", "PostGet", new { slug = post.Slug}, "http")"/>
-        <id>@Url.Action("Execute", "PostGet", new { slug = post.Slug}, "http")</id>
+        <link href="@Url.RouteUrl("canonical-slug", new { slug = post.Slug }, "http")"/>
+        <id>@Url.RouteUrl("canonical-slug", new { slug = post.Slug }, "http")</id>
         <updated>@post.PublishedAtCst.ToUniversalTime().ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fff'Z'")</updated>
         <summary>@post.Title</summary>
     </entry>
