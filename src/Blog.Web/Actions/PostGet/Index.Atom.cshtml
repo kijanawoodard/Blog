@@ -1,4 +1,7 @@
 ﻿@model Blog.Web.Actions.PostGet.PostIndexViewModel
+@{
+     Request.RequestContext.RouteData.Values.Remove("ext"); //was being magically applied to the routes
+}
 <?xml version="1.0" encoding="utf-8"?>
 <feed xml:lang="en-us" xmlns="http://www.w3.org/2005/Atom">
     <title>Kijana Woodard</title>
