@@ -50,6 +50,29 @@ namespace Blog.Web.Infrastructure
 			return result;
 		}
 
+
+		/*
+		 * Features:
+		 * 
+		 * Merge posts and content at startup
+		 *		mixin?
+		 *	Display posts csv
+		 *	Only get future post count for archive
+		 *	Xml format for archive?
+		 *	html ext
+		 *	phtml extension
+		 *	hal extension/formatter
+		 *	
+		 * summaries
+		 * home page - multiple entires
+		 * link to arhive?
+		 * 
+		 * Full posts in atom feed
+		 * Update date vs published date
+		 * Alternate urls in atom feed - json, xml, csv, html, phtml
+		 * 
+		 */
+
 		//blind men and the elephant
 		//make your roles explicit - http://www.infoq.com/presentations/Making-Roles-Explicit-Udi-Dahan#anch41169
 
