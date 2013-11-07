@@ -69,6 +69,9 @@ namespace Blog.Web.Infrastructure
 		 * Update date vs published date
 		 * Alternate urls in atom feed - json, xml, csv, html, phtml
 		 * 
+		 * conneg from content type
+		 * 
+		 * Automatic csv for complext types until you reach primitives property.property.property //http://stackoverflow.com/a/10929560/214073
 		 */
 
 		//blind men and the elephant
@@ -91,6 +94,13 @@ namespace Blog.Web.Infrastructure
 
 		private readonly Post[] _posts =
 		{
+			new Post
+			{
+				Title = "Asp.net MVC Content Negotiation",
+				Slug = "asp-net-mvc-content-negotiation",
+				FileName = "asp-net-mvc-content-negotiation.markdown",
+				PublishedAtCst = DateTime.Parse("November 08, 2013"),
+			},
 			new Post
 			{
 				Title = "A Tale of Scope Creep",
