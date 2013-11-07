@@ -51,8 +51,10 @@ namespace Blog.Web.Infrastructure
 		public bool CanHandle(ControllerContext context)
 		{
 			if (context == null || context.HttpContext.Request == null || context.HttpContext.Request.AcceptTypes == null) return false;
-			return context.HttpContext.Request.AcceptTypes.Contains("text/html")
-				   && (context.HttpContext.Request.IsAjaxRequest() || context.IsChildAction); //cargo cult-ing IsAjaxRequest. I understand it, but I think that case may need more attention
+			return (context.HttpContext.Request.AcceptTypes.Contains("text/html")
+					&&  (context.HttpContext.Request.IsAjaxRequest() || context.IsChildAction))
+					|| context.HttpContext.Request.CurrentExecutionFilePathExtension.EndsWith("phtml")
+					|| (string)context.RouteData.Values["ext"] == "phtml"; //cargo cult-ing IsAjaxRequest. I understand it, but I think that case may need more attention
 		}
 
 		public ActionResult Handle(ControllerContext context, ActionResult actionResult)
