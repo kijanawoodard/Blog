@@ -9,7 +9,7 @@
 <h2>Archive</h2>
 
 <section id="archive">
-    <h4>@Model.Active.Count posts @(Model.Future.Any() ? Model.Future.Count + " future" : "")</h4>
+    <h4>@Model.Active.Count posts @(Model.FuturePostCount > 0 ? Model.FuturePostCount + " future" : "")</h4>
     <ul>
         @foreach (var post in Model.Active)
         {

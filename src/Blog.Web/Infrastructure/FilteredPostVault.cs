@@ -45,7 +45,7 @@ namespace Blog.Web.Infrastructure
 		{
 			var result = new PostIndexViewModel();
 			result.Active = ActivePosts;
-			result.Future = FuturePosts;
+			result.FuturePostCount = FuturePosts.Count;
 
 			return result;
 		}
@@ -57,7 +57,6 @@ namespace Blog.Web.Infrastructure
 		 * Merge posts and content at startup
 		 *		mixin?
 		 *	Display posts csv
-		 *	Only get future post count for archive
 		 *	Xml format for archive?
 		 *	hal extension/formatter
 		 *	

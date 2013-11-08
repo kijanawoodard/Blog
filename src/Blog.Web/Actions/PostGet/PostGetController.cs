@@ -72,6 +72,6 @@ namespace Blog.Web.Actions.PostGet
 	public class PostIndexViewModel
 	{
 		public IReadOnlyCollection<Post> Active { get; set; }
-		public IReadOnlyCollection<Post> Future { get; set; }
+		public int FuturePostCount { get; set; }
 	}
 }
