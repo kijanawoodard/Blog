@@ -86,7 +86,6 @@ namespace Blog.Web.Infrastructure
 		 * home page - multiple entires
 		 * link to archive?
 		 * 
-		 * Full posts in atom feed
 		 * Update date vs published date
 		 * Alternate urls in atom feed - json, xml, csv, html, phtml
 		 * 
