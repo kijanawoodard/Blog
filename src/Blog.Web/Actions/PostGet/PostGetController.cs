@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using Blog.Web.Core;
 using Blog.Web.Infrastructure;
@@ -11,20 +9,18 @@ namespace Blog.Web.Actions.PostGet
 	{
 		public void Execute(IContainer container)
 		{
-			var root = HttpContext.Current.Server.MapPath("~/Content/posts");
-
 			container.Register(c => new PostGetController(c.Resolve<IMediator>()) {ActionInvoker = c.Resolve<IActionInvoker>()});
 
 			var mediator = container.Resolve<ISubscribeHandlers>();
+
 			mediator.Subscribe<PostRequest, PostGetViewModel>(message =>
 			{
 				var result = new PostGetViewModel();
-				result = new FilteredPostVault().Handle(message, result);
-				result = new MarkdownContentStorage(root).Handle(message, result);
+				result = new FilteredPostVault(container.Resolve<IMediator>()).Handle(message, result);
 				return result;
 			});
 
-			mediator.Subscribe<PostIndexRequest, PostIndexViewModel>(message => new FilteredPostVault().Handle(message));
+			mediator.Subscribe<PostIndexRequest, PostIndexViewModel>(message => new FilteredPostVault(container.Resolve<IMediator>()).Handle(message));
 		}
 	}
 
@@ -58,10 +54,9 @@ namespace Blog.Web.Actions.PostGet
 
 	public class PostGetViewModel
 	{
-		public Post Post { get; set; }
-		public string Content { get; set; }
-		public Post Previous { get; set; }
-		public Post Next { get; set; }
+		public PostViewModel Post { get; set; }
+		public PostViewModel Previous { get; set; }
+		public PostViewModel Next { get; set; }
 		
 		public bool HasPrevious { get { return Previous != null; } }
 		public bool HasNext { get { return Next != null; } }
@@ -71,7 +66,7 @@ namespace Blog.Web.Actions.PostGet
 
 	public class PostIndexViewModel
 	{
-		public IReadOnlyCollection<Post> Active { get; set; }
+		public IReadOnlyCollection<PostViewModel> Active { get; set; }
 		public int FuturePostCount { get; set; }
 	}
 }

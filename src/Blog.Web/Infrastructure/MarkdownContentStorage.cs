@@ -1,5 +1,6 @@
-﻿using System.IO;
-using Blog.Web.Actions.PostGet;
+﻿using System;
+using System.IO;
+using Blog.Web.Core;
 using MarkdownSharp;
 
 namespace Blog.Web.Infrastructure
@@ -16,11 +17,11 @@ namespace Blog.Web.Infrastructure
 
 		}
 
-		public PostGetViewModel Handle(PostRequest message, PostGetViewModel result)
+		public PostViewModel Handle(PostViewModel message)
 		{
-			if (result.Post == null) return result;
-			result.Content = GetContent(result.Post.FileName);
-			return result;
+			if (message == null) throw new ArgumentNullException("message");
+			message.Content = GetContent(message.FileName);
+			return message;
 		}
 
 		private string GetContent(string filename)

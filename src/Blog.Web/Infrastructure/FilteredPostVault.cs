@@ -1,26 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web;
 using Blog.Web.Actions.PostGet;
 using Blog.Web.Core;
 
 namespace Blog.Web.Infrastructure
 {
+	public class PostGetModule : IModule
+	{
+		public void Execute(IContainer container)
+		{
+			var root = HttpContext.Current.Server.MapPath("~/Content/posts");
+			var mediator = container.Resolve<ISubscribeHandlers>();
+			mediator.Subscribe<PostViewModel, PostViewModel>(message => new MarkdownContentStorage(root).Handle(message));
+		}
+	}
+
 	public class FilteredPostVault
 	{
-		private IReadOnlyList<Post> ActivePosts { get; set; }
-		private IReadOnlyList<Post> FuturePosts { get; set; }
-		private IEnumerable<Post> AllPosts { get { return _posts; } }
+		private IReadOnlyList<PostViewModel> ActivePosts { get; set; }
+		private IReadOnlyList<PostViewModel> FuturePosts { get; set; }
+		private IEnumerable<PostViewModel> AllPosts { get; set; }
 
-		public FilteredPostVault()
+		public FilteredPostVault(IMediator mediator)
 		{
 			var now = DateTime.UtcNow;
 			var timezone = TimeZoneInfo.FindSystemTimeZoneById("Central Standard Time");
 
-			ActivePosts = _posts
-				.OrderByDescending(x => x.PublishedAtCst)
-				.Where(x => now >= TimeZoneInfo.ConvertTimeToUtc(x.PublishedAtCst, timezone))
-				.ToList();
+			AllPosts =
+				_posts
+					.Select(post => new PostViewModel
+					{
+						Title = post.Title,
+						Slug = post.Slug,
+						FileName = post.FileName,
+						PublishedAtCst = post.PublishedAtCst
+					})
+					.Select(mediator.Send<PostViewModel, PostViewModel>)
+					.ToList();
+
+			ActivePosts =
+				AllPosts
+					.OrderByDescending(x => x.PublishedAtCst)
+					.Where(x => now >= TimeZoneInfo.ConvertTimeToUtc(x.PublishedAtCst, timezone))
+					.ToList();
 
 			FuturePosts = AllPosts.Except(ActivePosts).ToList();
 		}
@@ -54,8 +78,6 @@ namespace Blog.Web.Infrastructure
 		/*
 		 * Features:
 		 * 
-		 * Merge posts and content at startup
-		 *		mixin?
 		 *	Display posts csv
 		 *	Xml format for archive?
 		 *	hal extension/formatter
