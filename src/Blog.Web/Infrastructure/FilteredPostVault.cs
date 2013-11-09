@@ -68,7 +68,7 @@ namespace Blog.Web.Infrastructure
 		public PostIndexViewModel Handle(PostIndexRequest message)
 		{
 			var result = new PostIndexViewModel();
-			result.Active = ActivePosts;
+			result.Active = ActivePosts.ToList();
 			result.FuturePostCount = FuturePosts.Count;
 
 			return result;
@@ -79,7 +79,6 @@ namespace Blog.Web.Infrastructure
 		 * Features:
 		 * 
 		 *	Display posts csv
-		 *	Xml format for archive?
 		 *	hal extension/formatter
 		 *	
 		 * summaries
