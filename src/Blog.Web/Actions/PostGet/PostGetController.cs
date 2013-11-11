@@ -34,12 +34,25 @@ namespace Blog.Web.Actions.PostGet
 		    _mediator = mediator;
 		}
 
-	    public ActionResult Execute(PostRequest request)
+	    public object Execute(PostRequest request)
 	    {
 			var model = _mediator.Send<PostRequest, PostGetViewModel>(request);
 			if (model.Post == null) return HttpNotFound();
-			return View(model);
+			return model;
         }
+
+		public object Csv(PostRequest request)
+		{
+			var model = _mediator.Send<PostRequest, PostGetViewModel>(request);
+			var url = new UrlHelper(HttpContext.Request.RequestContext);
+			return new
+			{
+				model.Post.Title,
+				model.Post.PublishedAtCst,
+				Url = url.RouteUrl("canonical-slug", new {slug = model.Post.Slug}, "http"),
+				model.Post.Content
+			};
+		}
 
 		public ActionResult Index()
 		{
@@ -48,6 +61,10 @@ namespace Blog.Web.Actions.PostGet
 		}
     }	
 
+	public class Foo
+	{
+		public string Hello { get; set; }
+	}
 	public class PostRequest
 	{
 		public string Slug { get; set; }

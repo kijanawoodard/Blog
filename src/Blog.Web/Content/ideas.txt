@@ -1,6 +1,5 @@
 ﻿Features:
 
-	Display posts csv
 	hal extension/formatter
 	
 home page - multiple entires

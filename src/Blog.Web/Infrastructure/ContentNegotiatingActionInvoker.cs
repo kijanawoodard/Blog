@@ -30,15 +30,29 @@ namespace Blog.Web.Infrastructure
 			var customActionName =
 				_handlers
 					.Select(handler => handler.GetActionName(controllerContext))
-					.FirstOrDefault();
+					.FirstOrDefault(x => x != null);
 
 			if (customActionName == null)
 				return base.FindAction(controllerContext, controllerDescriptor, actionName);
 
 			return base.FindAction(controllerContext, controllerDescriptor, customActionName)
-			             ?? base.FindAction(controllerContext, controllerDescriptor, actionName); //this would be a lot nicer if FindAction just returned null if the input is null or empty
+						 ?? base.FindAction(controllerContext, controllerDescriptor, actionName); //this would be a lot nicer if FindAction just returned null if the input is null or empty
 		}
 
+		protected override ActionResult CreateActionResult(ControllerContext controllerContext, ActionDescriptor actionDescriptor, object actionReturnValue)
+		{
+			if (actionReturnValue is ActionResult)
+				return base.CreateActionResult(controllerContext, actionDescriptor, actionReturnValue);
+
+			controllerContext.Controller.ViewData.Model = actionReturnValue;
+			return new ViewResult
+			{
+				ViewData = controllerContext.Controller.ViewData,
+				TempData = controllerContext.Controller.TempData,
+				ViewName = actionDescriptor.ActionName,
+			};
+		}
+		
 		protected override ActionResult InvokeActionMethod(ControllerContext controllerContext,
 														   ActionDescriptor actionDescriptor,
 														   IDictionary<string, object> parameters)
@@ -112,8 +126,7 @@ namespace Blog.Web.Infrastructure
 
 		public virtual string GetActionName(ControllerContext context)
 		{
-			var ok = SupportsMediaTypes(context) || SupportsExtensions(context);
-			return ok ? Extension : null;
+			return CanHandle(context) ? Extension : null;
 		}
 	}
 
@@ -156,14 +169,10 @@ namespace Blog.Web.Infrastructure
 			Extension = "atom";
 		}
 
-		protected override bool CanHandle(ControllerContext context)
-		{
-			return base.CanHandle(context) && CustomViewExists(context);
-		}
-
 		public override ActionResult Handle(ControllerContext context, ActionResult actionResult)
 		{
-			if (!CanHandle(context)) return null;
+			var ok = CanHandle(context) && CustomViewExists(context);
+			if (!ok) return null;
 
 			var viewResult = actionResult as ViewResult;
 			if (viewResult == null) return null;
@@ -338,30 +347,38 @@ namespace Blog.Web.Infrastructure
 			response.ContentType = ContentType;
 			response.HeaderEncoding = Encoding;
 
-			//TODO: use the mediator to get csv friendly viewmodel - will be cleaner than relying on reflection 
-			//At the moment - the class has to be "csv-able" to get any use here
 			var writer = new CsvWriter(response.Output);
 			
 			var type = Data.GetType();
 			var isEnumerable = type.GetInterfaces()
 			                       .Any(i => i.IsGenericType &&
 			                                 i.GetGenericTypeDefinition() == typeof (IEnumerable<>));
-			if (isEnumerable)
+			if (!isEnumerable)
 			{
-				//http://stackoverflow.com/a/4667999/214073
-				//http://stackoverflow.com/a/1969419/214073
-				//http://stackoverflow.com/a/906538/214073
-				var method = typeof(EnumerableExtensions)
-					.GetMethods(BindingFlags.Public | BindingFlags.Static)
-					.Where(x => x.Name == "WriteCsv")
-					.FirstOrDefault(x => x.GetParameters().Count() == 2);
-				method = method.MakeGenericMethod(type.GetGenericArguments()[0]);
-				method.Invoke(null, new object[]{Data, writer});
+				var arr = Array.CreateInstance(type, 1);
+				arr.SetValue(Data, 0); //wrap ourselves - anonymous arrays don't render
+				Data = arr; 
+				type = Data.GetType();
 			}
-			else //wrap ourselves
-			{
-				(new[] { Data }).WriteCsv(writer);	
-			}
+
+			//http://stackoverflow.com/a/4667999/214073
+			//http://stackoverflow.com/a/1969419/214073
+			//http://stackoverflow.com/a/906538/214073
+			var method = typeof(EnumerableExtensions)
+				.GetMethods(BindingFlags.Public | BindingFlags.Static)
+				.Where(x => x.Name == "WriteCsv")
+				.First(x => x.GetParameters().Count() == 2);
+
+			Type typeToMake;
+			if (type.IsArray)
+				typeToMake = type.GetElementType();
+			else if (type.IsGenericType)
+				typeToMake = type.GetGenericArguments()[0];
+			else
+				throw new ArgumentException("Wasn't expecting to be here");
+
+			method = method.MakeGenericMethod(typeToMake);
+			method.Invoke(null, new object[] { Data, writer });
 		}
 	}
 }
