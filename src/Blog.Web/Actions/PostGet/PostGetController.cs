@@ -16,11 +16,12 @@ namespace Blog.Web.Actions.PostGet
 			mediator.Subscribe<PostRequest, PostGetViewModel>(message =>
 			{
 				var result = new PostGetViewModel();
-				result = new FilteredPostVault(container.Resolve<IMediator>()).Handle(message, result);
+				result = new FilteredPostVault(container.Resolve<IReadOnlyList<PostViewModel>>())
+								.Handle(message, result);
 				return result;
 			});
 
-			mediator.Subscribe<PostIndexRequest, PostIndexViewModel>(message => new FilteredPostVault(container.Resolve<IMediator>()).Handle(message));
+			mediator.Subscribe<PostIndexRequest, PostIndexViewModel>(message => new FilteredPostVault(container.Resolve<IReadOnlyList<PostViewModel>>()).Handle(message));
 		}
 	}
 
