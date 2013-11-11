@@ -1,4 +1,9 @@
-﻿using System.Web.Mvc;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using Blog.Web.Content;
+using Blog.Web.Core;
 using Blog.Web.Infrastructure;
 
 namespace Blog.Web.Initialization
@@ -34,6 +39,27 @@ namespace Blog.Web.Initialization
 					});
 
 			container.Register<IActionInvoker>(invoker);
+		}
+	}
+
+	public class PostsModule : IModule
+	{
+		public void Execute(IContainer container)
+		{
+			var root = HttpContext.Current.Server.MapPath("~/Content/posts");
+			var posts =
+				WritingPosts.Posts
+							.Select(post => new PostViewModel
+							{
+								Title = post.Title,
+								Slug = post.Slug,
+								FileName = post.FileName,
+								PublishedAtCst = post.PublishedAtCst
+							})
+							.Select(vm => new MarkdownContentStorage(root).Handle(vm))
+							.ToList();
+
+			container.Register<IReadOnlyList<PostViewModel>>(posts);
 		}
 	}
 }
