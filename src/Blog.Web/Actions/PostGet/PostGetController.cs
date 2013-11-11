@@ -34,16 +34,18 @@ namespace Blog.Web.Actions.PostGet
 		    _mediator = mediator;
 		}
 
-	    public object Execute(PostRequest request)
+		public PostGetViewModel Execute(PostRequest request)
 	    {
 			var model = _mediator.Send<PostRequest, PostGetViewModel>(request);
-			if (model.Post == null) return HttpNotFound();
+			if (model.Post == null) return null;
 			return model;
         }
 
 		public object Csv(PostRequest request)
 		{
-			var model = _mediator.Send<PostRequest, PostGetViewModel>(request);
+			var model = Execute(request);
+			if (model == null) return null;
+			
 			var url = new UrlHelper(HttpContext.Request.RequestContext);
 			return new
 			{

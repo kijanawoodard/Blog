@@ -41,6 +41,9 @@ namespace Blog.Web.Infrastructure
 
 		protected override ActionResult CreateActionResult(ControllerContext controllerContext, ActionDescriptor actionDescriptor, object actionReturnValue)
 		{
+			if (actionReturnValue == null)
+				return new HttpNotFoundResult(); //not entirely sure this is a good choice universally, but trying it on for size
+
 			if (actionReturnValue is ActionResult)
 				return base.CreateActionResult(controllerContext, actionDescriptor, actionReturnValue);
 
