@@ -27,10 +27,16 @@ namespace Blog.Web.Infrastructure
 
 		protected override ActionDescriptor FindAction(ControllerContext controllerContext, ControllerDescriptor controllerDescriptor, string actionName)
 		{
-			actionName = "Execute.Csv";
-			var result =  base.FindAction(controllerContext, controllerDescriptor, actionName);
+			var customActionName =
+				_handlers
+					.Select(handler => handler.GetActionName(controllerContext))
+					.FirstOrDefault();
 
-			return result;
+			if (customActionName == null)
+				return base.FindAction(controllerContext, controllerDescriptor, actionName);
+
+			return base.FindAction(controllerContext, controllerDescriptor, customActionName)
+			             ?? base.FindAction(controllerContext, controllerDescriptor, actionName); //this would be a lot nicer if FindAction just returned null if the input is null or empty
 		}
 
 		protected override ActionResult InvokeActionMethod(ControllerContext controllerContext,
@@ -38,14 +44,8 @@ namespace Blog.Web.Infrastructure
 														   IDictionary<string, object> parameters)
 		{
 			var baseResult = base.InvokeActionMethod(controllerContext, actionDescriptor, parameters);
-
-			foreach (var handler in _handlers)
-			{
-				if (handler.CanHandle(controllerContext))
-					return handler.Handle(controllerContext, baseResult);
-			}
-
-			return baseResult;
+			var result = _handlers.Select(handler => handler.Handle(controllerContext, baseResult)).FirstOrDefault(x => x != null);
+			return result ?? baseResult;
 		}
 	}
 
@@ -57,8 +57,8 @@ namespace Blog.Web.Infrastructure
 
 	public interface IHandleContentNegotiation
 	{
-		bool CanHandle(ControllerContext context);
 		ActionResult Handle(ControllerContext context, ActionResult actionResult);
+		string GetActionName(ControllerContext context);
 	}
 
 	//having a bit of fun with CPS
@@ -103,12 +103,18 @@ namespace Blog.Web.Infrastructure
 			return ViewEngines.Engines.FindView(context, GetCustomViewName(context), null).View != null;
 		}
 
-		public virtual bool CanHandle(ControllerContext context)
+		protected virtual bool CanHandle(ControllerContext context)
 		{
 			return SupportsMediaTypes(context) || SupportsExtensions(context);
 		}
 
 		public abstract ActionResult Handle(ControllerContext context, ActionResult actionResult);
+
+		public virtual string GetActionName(ControllerContext context)
+		{
+			var ok = SupportsMediaTypes(context) || SupportsExtensions(context);
+			return ok ? Extension : null;
+		}
 	}
 
 	class PartialViewNegotiation : ContentNegotiationBase
@@ -118,8 +124,8 @@ namespace Blog.Web.Infrastructure
 			MediaTypes.Add("text/html");
 			Extension = "phtml";
 		}
-		
-		public override bool CanHandle(ControllerContext context)
+
+		protected override bool CanHandle(ControllerContext context)
 		{
 			return SupportsExtensions(context)
 			       || (SupportsMediaTypes(context) && context.IsChildAction);
@@ -127,6 +133,8 @@ namespace Blog.Web.Infrastructure
 
 		public override ActionResult Handle(ControllerContext context, ActionResult actionResult)
 		{
+			if (!CanHandle(context)) return null;
+
 			var viewResult = actionResult as ViewResult;
 			if (viewResult == null) return null;
 
@@ -148,13 +156,15 @@ namespace Blog.Web.Infrastructure
 			Extension = "atom";
 		}
 
-		public override bool CanHandle(ControllerContext context)
+		protected override bool CanHandle(ControllerContext context)
 		{
 			return base.CanHandle(context) && CustomViewExists(context);
 		}
 
 		public override ActionResult Handle(ControllerContext context, ActionResult actionResult)
 		{
+			if (!CanHandle(context)) return null;
+
 			var viewResult = actionResult as ViewResult;
 			if (viewResult == null) return null;
 
@@ -180,6 +190,7 @@ namespace Blog.Web.Infrastructure
 		
 		public override ActionResult Handle(ControllerContext context, ActionResult actionResult)
 		{
+			if (!CanHandle(context)) return null;
 			var model = context.Controller.ViewData.Model;
 			return model == null ? null : new JsonNetResult { Data = model };
 		}
@@ -195,6 +206,7 @@ namespace Blog.Web.Infrastructure
 		
 		public override ActionResult Handle(ControllerContext context, ActionResult actionResult)
 		{
+			if (!CanHandle(context)) return null;
 			var model = context.Controller.ViewData.Model;
 			if (model == null) return null;
 
@@ -222,6 +234,7 @@ namespace Blog.Web.Infrastructure
 
 		public override ActionResult Handle(ControllerContext context, ActionResult actionResult)
 		{
+			if (!CanHandle(context)) return null;
 			var model = context.Controller.ViewData.Model;
 			if (model == null) return null;
 
