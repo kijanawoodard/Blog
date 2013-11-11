@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -24,6 +25,14 @@ namespace Blog.Web.Infrastructure
 			_handlers = handlers;
 		}
 
+		protected override ActionDescriptor FindAction(ControllerContext controllerContext, ControllerDescriptor controllerDescriptor, string actionName)
+		{
+			actionName = "Execute.Csv";
+			var result =  base.FindAction(controllerContext, controllerDescriptor, actionName);
+
+			return result;
+		}
+
 		protected override ActionResult InvokeActionMethod(ControllerContext controllerContext,
 														   ActionDescriptor actionDescriptor,
 														   IDictionary<string, object> parameters)
@@ -40,24 +49,83 @@ namespace Blog.Web.Infrastructure
 		}
 	}
 
+	//http://www.strathweb.com/2012/07/everything-you-want-to-know-about-asp-net-web-api-content-negotation/
+	//identify media type
+ 	//look for custom action
+	//look for custom action-less view
+	//return default formatter
+
 	public interface IHandleContentNegotiation
 	{
 		bool CanHandle(ControllerContext context);
 		ActionResult Handle(ControllerContext context, ActionResult actionResult);
 	}
 
-	class PartialViewNegotiation : IHandleContentNegotiation
+	//having a bit of fun with CPS
+	abstract class ContentNegotiationBase : IHandleContentNegotiation
 	{
-		public bool CanHandle(ControllerContext context)
+		protected ICollection<string> MediaTypes { get; private set; }
+		protected string Extension { get; set; }
+
+		protected ContentNegotiationBase()
 		{
-			if (context == null || context.HttpContext.Request == null || context.HttpContext.Request.AcceptTypes == null) return false;
-			return (context.HttpContext.Request.AcceptTypes.Contains("text/html")
-					&&  (context.HttpContext.Request.IsAjaxRequest() || context.IsChildAction))
-					|| context.HttpContext.Request.CurrentExecutionFilePathExtension.EndsWith("phtml")
-					|| (string)context.RouteData.Values["ext"] == "phtml"; //cargo cult-ing IsAjaxRequest. I understand it, but I think that case may need more attention
+			MediaTypes = new Collection<string>();
 		}
 
-		public ActionResult Handle(ControllerContext context, ActionResult actionResult)
+		protected bool SupportsMediaTypes(ControllerContext context)
+		{
+			if (context == null) return false;
+			
+			var request = context.HttpContext.Request;
+			if (request == null || request.AcceptTypes == null) return false;
+
+			return MediaTypes.Any(x => request.AcceptTypes.Contains(x));
+		}
+
+		protected bool SupportsExtensions(ControllerContext context)
+		{
+			if (context == null) return false;
+
+			var request = context.HttpContext.Request;
+			if (request == null || request.AcceptTypes == null) return false;
+
+			return request.CurrentExecutionFilePathExtension.EndsWith(Extension)
+					|| (string)context.RouteData.Values["ext"] == Extension;
+		}
+
+		protected string GetCustomViewName(ControllerContext context)
+		{
+			return (string)context.RouteData.Values["action"] + "." + Extension;
+		}
+
+		protected bool CustomViewExists(ControllerContext context)
+		{
+			return ViewEngines.Engines.FindView(context, GetCustomViewName(context), null).View != null;
+		}
+
+		public virtual bool CanHandle(ControllerContext context)
+		{
+			return SupportsMediaTypes(context) || SupportsExtensions(context);
+		}
+
+		public abstract ActionResult Handle(ControllerContext context, ActionResult actionResult);
+	}
+
+	class PartialViewNegotiation : ContentNegotiationBase
+	{
+		public PartialViewNegotiation()
+		{
+			MediaTypes.Add("text/html");
+			Extension = "phtml";
+		}
+		
+		public override bool CanHandle(ControllerContext context)
+		{
+			return SupportsExtensions(context)
+			       || (SupportsMediaTypes(context) && context.IsChildAction);
+		}
+
+		public override ActionResult Handle(ControllerContext context, ActionResult actionResult)
 		{
 			var viewResult = actionResult as ViewResult;
 			if (viewResult == null) return null;
@@ -72,22 +140,20 @@ namespace Blog.Web.Infrastructure
 		}
 	}
 
-	class AtomContentNegotiation : IHandleContentNegotiation
+	class AtomContentNegotiation : ContentNegotiationBase
 	{
-		public bool CanHandle(ControllerContext context)
+		public AtomContentNegotiation()
 		{
-			if (context == null) return false;
-			
-			var request = context.HttpContext.Request;
-			if (request == null || request.AcceptTypes == null) return false;
-
-			return (request.AcceptTypes.Contains("application/atom+xml") 
-					|| request.CurrentExecutionFilePathExtension.EndsWith("atom")
-					|| (string)context.RouteData.Values["ext"] == "atom")
-					&& ViewEngines.Engines.FindView(context, GetViewName(context), null).View != null;
+			MediaTypes.Add("application/atom+xml");
+			Extension = "atom";
 		}
 
-		public ActionResult Handle(ControllerContext context, ActionResult actionResult)
+		public override bool CanHandle(ControllerContext context)
+		{
+			return base.CanHandle(context) && CustomViewExists(context);
+		}
+
+		public override ActionResult Handle(ControllerContext context, ActionResult actionResult)
 		{
 			var viewResult = actionResult as ViewResult;
 			if (viewResult == null) return null;
@@ -98,62 +164,39 @@ namespace Blog.Web.Infrastructure
 			{
 				ViewData = viewResult.ViewData,
 				TempData = viewResult.TempData,
-				ViewName = GetViewName(context),
+				ViewName = GetCustomViewName(context),
 				ViewEngineCollection = viewResult.ViewEngineCollection,
 			}; 
 		}
+	}
 
-		private string GetViewName(ControllerContext context)
+	class JsonContentNegotiation : ContentNegotiationBase
+	{
+		public JsonContentNegotiation()
 		{
-			return (string) context.RouteData.Values["action"] + ".atom";
+			MediaTypes.Add("application/json");
+			Extension = "json";
+		}
+		
+		public override ActionResult Handle(ControllerContext context, ActionResult actionResult)
+		{
+			var model = context.Controller.ViewData.Model;
+			return model == null ? null : new JsonNetResult { Data = model };
 		}
 	}
 
-	class JsonContentNegotiation : IHandleContentNegotiation
+	class XmlContentNegotiation : ContentNegotiationBase
 	{
-		public bool CanHandle(ControllerContext context)
+		public XmlContentNegotiation()
 		{
-			if (context == null) return false;
-			
-			var request = context.HttpContext.Request;
-			if (request == null || request.AcceptTypes == null) return false;
-
-			return request.AcceptTypes.Contains("application/json")
-					|| request.CurrentExecutionFilePathExtension.EndsWith("json")
-					|| (string)context.RouteData.Values["ext"] == "json";
+			MediaTypes.Add("text/xml");
+			Extension = "xml";
 		}
-
-		public ActionResult Handle(ControllerContext context, ActionResult actionResult)
+		
+		public override ActionResult Handle(ControllerContext context, ActionResult actionResult)
 		{
 			var model = context.Controller.ViewData.Model;
-
-			if (model == null)
-				return null;
-
-			return new JsonNetResult { Data = model };
-		}
-	}
-
-	class XmlContentNegotiation : IHandleContentNegotiation
-	{
-		public bool CanHandle(ControllerContext context)
-		{
-			if (context == null) return false;
-
-			var request = context.HttpContext.Request;
-			if (request == null || request.AcceptTypes == null) return false;
-
-			return request.AcceptTypes.Contains("text/xml")
-			         || request.CurrentExecutionFilePathExtension.EndsWith("xml")
-			         || (string) context.RouteData.Values["ext"] == "xml";
-		}
-
-		public ActionResult Handle(ControllerContext context, ActionResult actionResult)
-		{
-			var model = context.Controller.ViewData.Model;
-
-			if (model == null)
-				return null;
+			if (model == null) return null;
 
 			context.HttpContext.Response.ContentType = "text/xml";
 
@@ -162,43 +205,25 @@ namespace Blog.Web.Infrastructure
 				{
 					ViewData = context.Controller.ViewData,
 					TempData = context.Controller.TempData,
-					ViewName = GetViewName(context),
+					ViewName = GetCustomViewName(context),
 				}; 
 
 			return new XmlResult(model);
 		}
-
-		private string GetViewName(ControllerContext context)
-		{
-			return (string)context.RouteData.Values["action"] + ".xml";
-		}
-
-		private bool CustomViewExists(ControllerContext context)
-		{
-			return ViewEngines.Engines.FindView(context, GetViewName(context), null).View != null;
-		}
 	}
 
-	class CsvContentNegotiation : IHandleContentNegotiation
+	class CsvContentNegotiation : ContentNegotiationBase
 	{
-		public bool CanHandle(ControllerContext context)
+		public CsvContentNegotiation()
 		{
-			if (context == null) return false;
-
-			var request = context.HttpContext.Request;
-			if (request == null || request.AcceptTypes == null) return false;
-
-			return (request.AcceptTypes.Contains("text/csv")
-					|| request.CurrentExecutionFilePathExtension.EndsWith("csv")
-					|| (string)context.RouteData.Values["ext"] == "csv");
+			MediaTypes.Add("text/csv");
+			Extension = "csv";
 		}
 
-		public ActionResult Handle(ControllerContext context, ActionResult actionResult)
+		public override ActionResult Handle(ControllerContext context, ActionResult actionResult)
 		{
 			var model = context.Controller.ViewData.Model;
-
-			if (model == null)
-				return null;
+			if (model == null) return null;
 
 			context.HttpContext.Response.ContentType = "text/csv";
 
@@ -207,20 +232,10 @@ namespace Blog.Web.Infrastructure
 				{
 					ViewData = context.Controller.ViewData,
 					TempData = context.Controller.TempData,
-					ViewName = GetViewName(context),
+					ViewName = GetCustomViewName(context),
 				};
 
 			return new CsvResult(model);
-		}
-
-		private string GetViewName(ControllerContext context)
-		{
-			return (string)context.RouteData.Values["action"] + ".csv";
-		}
-
-		private bool CustomViewExists(ControllerContext context)
-		{
-			return ViewEngines.Engines.FindView(context, GetViewName(context), null).View != null;
 		}
 	}
 
@@ -252,14 +267,12 @@ namespace Blog.Web.Infrastructure
 			if (ContentEncoding != null)
 				response.ContentEncoding = ContentEncoding;
 
-			if (Data != null)
-			{
-				var writer = new JsonTextWriter(response.Output) { Formatting = Formatting };
-				var serializer = JsonSerializer.Create(SerializerSettings);
-				serializer.Serialize(writer, Data);
+			if (Data == null) return;
+			var writer = new JsonTextWriter(response.Output) { Formatting = Formatting };
+			var serializer = JsonSerializer.Create(SerializerSettings);
+			serializer.Serialize(writer, Data);
 
-				writer.Flush();
-			}
+			writer.Flush();
 		}
 	}
 
