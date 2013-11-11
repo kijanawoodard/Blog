@@ -122,6 +122,7 @@
     <Compile Include="Infrastructure\FilteredPostVault.cs" />
     <Compile Include="Core\Post.cs" />
     <Compile Include="Infrastructure\MarkdownContentStorage.cs" />
+    <Compile Include="Content\WritingPosts.cs" />
     <Compile Include="Initialization\VesselConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
