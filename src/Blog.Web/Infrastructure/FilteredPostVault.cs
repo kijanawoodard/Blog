@@ -75,40 +75,7 @@ namespace Blog.Web.Infrastructure
 		}
 
 
-		/*
-		 * Features:
-		 * 
-		 *	Display posts csv
-		 *	hal extension/formatter
-		 *	
-		 * home page - multiple entires
-		 * link to archive?
-		 * 
-		 * Update date vs published date
-		 * Alternate urls in atom feed - json, xml, csv, html, phtml
-		 * 
-		 * conneg from content type
-		 * 
-		 * Automatic csv for complext types until you reach primitives property.property.property //http://stackoverflow.com/a/10929560/214073
-		 */
-
-		//blind men and the elephant
-		//make your roles explicit - http://www.infoq.com/presentations/Making-Roles-Explicit-Udi-Dahan#anch41169
-
-		//need a construct larger than a class, but smaller than a project - namespace?
-		//private, protected, internal, public - need something else in between public and internal
 		
-		//reuse is coupling - if i can just get the interface right
-		//generic repository - http://codebetter.com/gregyoung/2009/01/16/ddd-the-generic-repository/
-
-		//avoid ginormous file and keep classes https://twitter.com/jbogard/status/387945793430495233
-
-		/*
-		 * http://www.sixmonthmba.com/2009/02/999ideas.html
-		 * Video Menus
-		 * RunBag.com
-		 * 
-		 */
 
 		private readonly Post[] _posts =
 		{
