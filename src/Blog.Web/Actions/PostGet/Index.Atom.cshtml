@@ -18,8 +18,8 @@
         <link href="@Url.RouteUrl("canonical-slug", new { slug = post.Slug }, "http")"/>
         <id>@Url.RouteUrl("canonical-slug", new { slug = post.Slug }, "http")</id>
         <updated>@post.PublishedAtCst.ToUniversalTime().ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fff'Z'")</updated>
-        <summary>@post.Title</summary>
-        <content type="html">@post.Content</content>
+        <summary type="html">@Html.Raw(post.Summary) <br/><br/><a href="@Url.RouteUrl("canonical-slug", new { slug = post.Slug }, "http")">Continue Reading...</a></summary>
+        <content type="html">@Html.Raw(post.Content)</content>
     </entry>
 }
 </feed>

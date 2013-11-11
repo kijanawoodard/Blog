@@ -81,7 +81,6 @@ namespace Blog.Web.Infrastructure
 		 *	Display posts csv
 		 *	hal extension/formatter
 		 *	
-		 * summaries
 		 * home page - multiple entires
 		 * link to archive?
 		 * 
