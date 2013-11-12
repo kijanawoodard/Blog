@@ -9,9 +9,9 @@ Say you want to copy a file and you type the word "File" and realize you don’t
 Now press Ctrl-. (period). You get a pop-up like this:
 
 <figure>
-	<img src="/content/posts/images/use-ctrl-period-to-insert-using.png" alt="use ctrl period to insert using">
+	<img src="/content/posts/images/use-ctrl-period-to-insert-using.png" alt="use ctrl period to insert using" /> 
 	<figcaption>Quickly insert using directives with ctrl period</figcaption>
-<figure>
+</figure>
 
 Now cringe like I did and think about all the time you wasted scrolling up to the top of the file and typing in the using manually. Oh but wait, you already know that File is in System.IO. What about all the times that you didn’t know what namespace the class was in and you had to go to MSDN or Google to figure that out.
 

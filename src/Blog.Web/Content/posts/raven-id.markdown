@@ -4,7 +4,7 @@ You can overcome the MVC issues pretty quickly just by making your Id an int pro
 
 It turns out though that once you get into more interesting RavenDB features, notably indexes, using int for Id is a real PITA. Indexes run on the Server and the server still sees all the document as having Id as string list "posts/1". Your queries with int Id properties won't match and you'll be frustrated.
 
-So I decided to switch back to string Id properties and then convert them to int for the routing. For Load<Post>(id), using the int works great. However, as soon as that id is used in a where clause, forget it; you have to figure out how to get the proper string representation again.
+So I decided to switch back to string Id properties and then convert them to int for the routing. For Load&lt;Post&gt;(id), using the int works great. However, as soon as that id is used in a where clause, forget it; you have to figure out how to get the proper string representation again.
 
 Here are [two choices for what to do with your id properties][ravenid]. 
 

@@ -29,10 +29,7 @@ namespace Blog.Web.Core
 			{
 				if (Content == null) return Title;
 				var firstParagraph = Content.IndexOf("\n", System.StringComparison.Ordinal);
-				if (firstParagraph == -1) return Title;
-
-				var secondParagraph = Content.IndexOf("\n", firstParagraph + 2, System.StringComparison.Ordinal);
-				return Content.Substring(0, secondParagraph == -1 ? firstParagraph : secondParagraph);
+				return firstParagraph == -1 ? Title : Content.Substring(0, firstParagraph);
 			}
 		}
 

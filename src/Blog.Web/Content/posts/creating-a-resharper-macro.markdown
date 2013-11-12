@@ -36,7 +36,7 @@ This is great. When I activate the template, I get a chance to type for each `$v
 
 * When you create your project, add a reference to `JetBrains.ReSharper.Feature.Services.dll` from the R# program files bin directory. R# itself will then be able to pull in the rest of the dependencies from the bin folder as needed.
 * You specify that you will transform another variable in the template through the [Parameters property][example 1] and then manipulate that value in EvaluateQuickResult.
-* To install your plugin, put it in user app data, NOT the R# bin directory. It will be something like: C:\Users&lt;USERNAME>\AppData\Local\JetBrains\ReSharper\v8.0\Plugins\<YOURPLUGIN>\
+* To install your plugin, put it in user app data, NOT the R# bin directory. It will be something like: C:\Users&lt;USERNAME&gt;\AppData\Local\JetBrains\ReSharper\v8.0\Plugins\&lt;YOUR_PLUGIN&gt;\
 * Each plugin gets it's own folder 
 * If the plugins directory doesn't exist, create it.
 

@@ -1,8 +1,10 @@
 ﻿Looking back on my posts about [violating ISP][violating-isp-with-constructor-injection] and [duck typing][interface-inversion], a question emerges: why not declare our dependencies on the _methods_ that need them, rather than at the object level?
 
+For example:
+
 	void LoginUser(IAuthenication auth, string userid)
 
-This would be very explicit and allow us to be more granular with our dependency chain.
+This code would be very explicit and allow us to be more granular with our dependency chain.
 
 However, it would also be a pain in the neck. Specifically, every caller would have to take a dependency on the target's dependencies just to pass them through.
 
