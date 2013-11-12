@@ -83,6 +83,7 @@ namespace Blog.Web.Infrastructure
 	{
 		protected ICollection<string> MediaTypes { get; private set; }
 		protected string Extension { get; set; }
+		protected bool AlwaysReturnPartial { get; set; }
 
 		protected ContentNegotiationBase()
 		{
@@ -120,12 +121,51 @@ namespace Blog.Web.Infrastructure
 			return ViewEngines.Engines.FindView(context, GetCustomViewName(context), null).View != null;
 		}
 
+		/// <summary>
+		/// override to affect both GetActionName and Handle
+		/// </summary>
+		/// <param name="context"></param>
+		/// <returns></returns>
 		protected virtual bool CanHandle(ControllerContext context)
 		{
-			return SupportsMediaTypes(context) || SupportsExtensions(context);
+			var ok = SupportsMediaTypes(context) || SupportsExtensions(context);
+			return ok && OnCanHandle(context);
 		}
 
-		public abstract ActionResult Handle(ControllerContext context, ActionResult actionResult);
+		/// <summary>
+		///  override for cases where you only want to affect the CanHandle call within Handle
+		/// </summary>
+		/// <param name="context"></param>
+		/// <returns></returns>
+		protected virtual bool OnCanHandle(ControllerContext context)
+		{
+			return true; 
+		}
+
+		public ActionResult Handle(ControllerContext context, ActionResult actionResult)
+		{
+			if (!CanHandle(context)) return null;
+			var model = context.Controller.ViewData.Model;
+			if (model == null) return null;
+
+			context.HttpContext.Response.ContentType = MediaTypes.First();
+			context.HttpContext.Response.ContentEncoding = Encoding.UTF8;
+
+			if (AlwaysReturnPartial || CustomViewExists(context))
+				return new PartialViewResult
+				{
+					ViewData = context.Controller.ViewData,
+					TempData = context.Controller.TempData,
+					ViewName = CustomViewExists(context) ? GetCustomViewName(context) : (string)context.RouteData.Values["action"],
+				};
+
+			return OnHandle(context, actionResult);
+		}
+
+		protected virtual ActionResult OnHandle(ControllerContext context, ActionResult actionResult)
+		{
+			return actionResult;
+		}
 
 		public virtual string GetActionName(ControllerContext context)
 		{
@@ -139,28 +179,13 @@ namespace Blog.Web.Infrastructure
 		{
 			MediaTypes.Add("text/html");
 			Extension = "phtml";
+			AlwaysReturnPartial = true;
 		}
 
 		protected override bool CanHandle(ControllerContext context)
 		{
 			return SupportsExtensions(context)
 			       || (SupportsMediaTypes(context) && context.IsChildAction);
-		}
-
-		public override ActionResult Handle(ControllerContext context, ActionResult actionResult)
-		{
-			if (!CanHandle(context)) return null;
-
-			var viewResult = actionResult as ViewResult;
-			if (viewResult == null) return null;
-
-			return new PartialViewResult
-			{
-				ViewData = viewResult.ViewData,
-				TempData = viewResult.TempData,
-				ViewName = viewResult.ViewName,
-				ViewEngineCollection = viewResult.ViewEngineCollection,
-			};
 		}
 	}
 
@@ -172,23 +197,9 @@ namespace Blog.Web.Infrastructure
 			Extension = "atom";
 		}
 
-		public override ActionResult Handle(ControllerContext context, ActionResult actionResult)
+		protected override bool OnCanHandle(ControllerContext context)
 		{
-			var ok = CanHandle(context) && CustomViewExists(context);
-			if (!ok) return null;
-
-			var viewResult = actionResult as ViewResult;
-			if (viewResult == null) return null;
-
-			context.HttpContext.Response.ContentType = "application/atom+xml";
-
-			return new PartialViewResult
-			{
-				ViewData = viewResult.ViewData,
-				TempData = viewResult.TempData,
-				ViewName = GetCustomViewName(context),
-				ViewEngineCollection = viewResult.ViewEngineCollection,
-			}; 
+			return CustomViewExists(context);
 		}
 	}
 
@@ -200,11 +211,9 @@ namespace Blog.Web.Infrastructure
 			Extension = "json";
 		}
 		
-		public override ActionResult Handle(ControllerContext context, ActionResult actionResult)
+		protected override ActionResult OnHandle(ControllerContext context, ActionResult actionResult)
 		{
-			if (!CanHandle(context)) return null;
-			var model = context.Controller.ViewData.Model;
-			return model == null ? null : new JsonNetResult { Data = model };
+			return new JsonNetResult(context.Controller.ViewData.Model);
 		}
 	}
 
@@ -216,23 +225,9 @@ namespace Blog.Web.Infrastructure
 			Extension = "xml";
 		}
 		
-		public override ActionResult Handle(ControllerContext context, ActionResult actionResult)
+		protected override ActionResult OnHandle(ControllerContext context, ActionResult actionResult)
 		{
-			if (!CanHandle(context)) return null;
-			var model = context.Controller.ViewData.Model;
-			if (model == null) return null;
-
-			context.HttpContext.Response.ContentType = "text/xml";
-
-			if (CustomViewExists(context))
-				return new PartialViewResult
-				{
-					ViewData = context.Controller.ViewData,
-					TempData = context.Controller.TempData,
-					ViewName = GetCustomViewName(context),
-				}; 
-
-			return new XmlResult(model);
+			return new XmlResult(context.Controller.ViewData.Model);
 		}
 	}
 
@@ -244,124 +239,81 @@ namespace Blog.Web.Infrastructure
 			Extension = "csv";
 		}
 
-		public override ActionResult Handle(ControllerContext context, ActionResult actionResult)
+		protected override ActionResult OnHandle(ControllerContext context, ActionResult actionResult)
 		{
-			if (!CanHandle(context)) return null;
-			var model = context.Controller.ViewData.Model;
-			if (model == null) return null;
-
-			context.HttpContext.Response.ContentType = "text/csv";
-
-			if (CustomViewExists(context))
-				return new PartialViewResult
-				{
-					ViewData = context.Controller.ViewData,
-					TempData = context.Controller.TempData,
-					ViewName = GetCustomViewName(context),
-				};
-
-			return new CsvResult(model);
+			return new CsvResult(context.Controller.ViewData.Model);
 		}
 	}
 
 	public class JsonNetResult : ActionResult
 	{
-		public Encoding ContentEncoding { get; set; }
-		public string ContentType { get; set; }
-		public object Data { get; set; }
+		private readonly object _data;
 
 		public JsonSerializerSettings SerializerSettings { get; set; }
 		public Formatting Formatting { get; set; }
 
-		public JsonNetResult()
+		public JsonNetResult(object data)
 		{
+			if (data == null) throw new ArgumentNullException("data");
+			_data = data;
+			
 			SerializerSettings = new JsonSerializerSettings();
 		}
 
 		public override void ExecuteResult(ControllerContext context)
 		{
-			if (context == null)
-				throw new ArgumentNullException("context");
-
 			var response = context.HttpContext.Response;
-
-			response.ContentType = !string.IsNullOrEmpty(ContentType)
-			  ? ContentType
-			  : "application/json";
-
-			if (ContentEncoding != null)
-				response.ContentEncoding = ContentEncoding;
-
-			if (Data == null) return;
 			var writer = new JsonTextWriter(response.Output) { Formatting = Formatting };
 			var serializer = JsonSerializer.Create(SerializerSettings);
-			serializer.Serialize(writer, Data);
-
+			
+			serializer.Serialize(writer, _data);
 			writer.Flush();
 		}
 	}
 
 	public class XmlResult : ActionResult
 	{
-		public object Data { get; private set; }
-		public string ContentType { get; set; }
-		public Encoding Encoding { get; set; }
+		private readonly object _data;
 
 		public XmlResult(object data)
 		{
 			if (data == null) throw new ArgumentNullException("data");
-
-			Data = data;
-			ContentType = "text/xml";
-			Encoding = Encoding.UTF8;
+			_data = data;
 		}
 
 		public override void ExecuteResult(ControllerContext context)
 		{
 			var response = context.HttpContext.Response;
-
-			response.ContentType = ContentType;
-			response.HeaderEncoding = Encoding;
-
-			var serializer = new XmlSerializer(Data.GetType());
-			serializer.Serialize(response.Output, Data);
+			var serializer = new XmlSerializer(_data.GetType());
+			serializer.Serialize(response.Output, _data);
 		}
 	}
 
 	class CsvResult : ActionResult
 	{
-		public object Data { get; private set; }
-		public string ContentType { get; set; }
-		public Encoding Encoding { get; set; }
+		private object _data;
 
 		public CsvResult(object data)
 		{
 			if (data == null) throw new ArgumentNullException("data");
-
-			Data = data;
-			ContentType = "text/csv";
-			Encoding = Encoding.UTF8;
+			_data = data;
 		}
 
 		public override void ExecuteResult(ControllerContext context)
 		{
 			var response = context.HttpContext.Response;
-
-			response.ContentType = ContentType;
-			response.HeaderEncoding = Encoding;
-
 			var writer = new CsvWriter(response.Output);
-			
-			var type = Data.GetType();
+
+			var type = _data.GetType();
 			var isEnumerable = type.GetInterfaces()
 			                       .Any(i => i.IsGenericType &&
 			                                 i.GetGenericTypeDefinition() == typeof (IEnumerable<>));
 			if (!isEnumerable)
 			{
 				var arr = Array.CreateInstance(type, 1);
-				arr.SetValue(Data, 0); //wrap ourselves - anonymous arrays don't render
-				Data = arr; 
-				type = Data.GetType();
+				arr.SetValue(_data, 0); //wrap ourselves - anonymous arrays don't render
+				_data = arr;
+				type = _data.GetType();
 			}
 
 			//http://stackoverflow.com/a/4667999/214073
@@ -381,7 +333,7 @@ namespace Blog.Web.Infrastructure
 				throw new ArgumentException("Wasn't expecting to be here");
 
 			method = method.MakeGenericMethod(typeToMake);
-			method.Invoke(null, new object[] { Data, writer });
+			method.Invoke(null, new object[] { _data, writer });
 		}
 	}
 }
