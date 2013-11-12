@@ -61,7 +61,7 @@ namespace Blog.Web.Infrastructure
 														   IDictionary<string, object> parameters)
 		{
 			var baseResult = base.InvokeActionMethod(controllerContext, actionDescriptor, parameters);
-			var result = _handlers.Select(handler => handler.Handle(controllerContext, baseResult)).FirstOrDefault(x => x != null);
+			var result = _handlers.Select(handler => handler.Handle(controllerContext)).FirstOrDefault(x => x != null);
 			return result ?? baseResult;
 		}
 	}
@@ -74,7 +74,7 @@ namespace Blog.Web.Infrastructure
 
 	public interface IHandleContentNegotiation
 	{
-		ActionResult Handle(ControllerContext context, ActionResult actionResult);
+		ActionResult Handle(ControllerContext context);
 		string GetActionName(ControllerContext context);
 	}
 
@@ -142,7 +142,7 @@ namespace Blog.Web.Infrastructure
 			return true; 
 		}
 
-		public ActionResult Handle(ControllerContext context, ActionResult actionResult)
+		public ActionResult Handle(ControllerContext context)
 		{
 			if (!CanHandle(context)) return null;
 			var model = context.Controller.ViewData.Model;
@@ -159,12 +159,12 @@ namespace Blog.Web.Infrastructure
 					ViewName = CustomViewExists(context) ? GetCustomViewName(context) : (string)context.RouteData.Values["action"],
 				};
 
-			return OnHandle(context, actionResult);
+			return OnHandle(context);
 		}
 
-		protected virtual ActionResult OnHandle(ControllerContext context, ActionResult actionResult)
+		protected virtual ActionResult OnHandle(ControllerContext context)
 		{
-			return actionResult;
+			return null;
 		}
 
 		public virtual string GetActionName(ControllerContext context)
@@ -211,7 +211,7 @@ namespace Blog.Web.Infrastructure
 			Extension = "json";
 		}
 		
-		protected override ActionResult OnHandle(ControllerContext context, ActionResult actionResult)
+		protected override ActionResult OnHandle(ControllerContext context)
 		{
 			return new JsonNetResult(context.Controller.ViewData.Model);
 		}
@@ -225,7 +225,7 @@ namespace Blog.Web.Infrastructure
 			Extension = "xml";
 		}
 		
-		protected override ActionResult OnHandle(ControllerContext context, ActionResult actionResult)
+		protected override ActionResult OnHandle(ControllerContext context)
 		{
 			return new XmlResult(context.Controller.ViewData.Model);
 		}
@@ -239,7 +239,7 @@ namespace Blog.Web.Infrastructure
 			Extension = "csv";
 		}
 
-		protected override ActionResult OnHandle(ControllerContext context, ActionResult actionResult)
+		protected override ActionResult OnHandle(ControllerContext context)
 		{
 			return new CsvResult(context.Controller.ViewData.Model);
 		}
