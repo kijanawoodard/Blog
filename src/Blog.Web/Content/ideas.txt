@@ -8,8 +8,6 @@ link to archive?
 Update date vs published date
 Alternate urls in atom feed - json, xml, csv, html, phtml
 
-conneg from content type
-
 Automatic csv for complext types until you reach primitives property.property.property 
 	http://stackoverflow.com/a/10929560/214073
 

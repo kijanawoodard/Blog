@@ -97,7 +97,7 @@ namespace Blog.Web.Infrastructure
 			var request = context.HttpContext.Request;
 			if (request == null || request.AcceptTypes == null) return false;
 
-			return MediaTypes.Any(x => request.AcceptTypes.Contains(x));
+			return MediaTypes.Any(x => request.AcceptTypes.Contains(x) || request.ContentType == x);
 		}
 
 		protected bool SupportsExtensions(ControllerContext context)
