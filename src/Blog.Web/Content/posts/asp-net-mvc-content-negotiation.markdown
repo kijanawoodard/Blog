@@ -12,7 +12,7 @@ Web API has a decent [conneg system][web api conneg] built in. Fortunately, asp.
  
  Hat tip to [Joey Guerra] for the extensions and phtml. He's pushed these ideas for years. I haven't always been receptive to them, but I felt there was enough value to implement them here.
 
- One thing I learned doing this implementation is that the content negotiation should effect what action gets called rather, than being merely reactive to the action result. 
+One thing I learned doing this implementation is that the content negotiation should effect what action gets called rather, than being merely reactive to the action result. 
 
  For instance, I have code to do [csv negotiation] but it isn't being used because the [current structure for posts][PostGetViewModel] isn't "flat" enough for csv. I considered some tricks using the mediator or cooking up some reflection magic to automatically flatten classes, but that seemed time consuming. Besides, what I really wanted was to get a clear opportunity in my controller to shape the output for a given mime type.
 

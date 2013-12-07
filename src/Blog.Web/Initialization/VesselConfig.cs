@@ -60,6 +60,7 @@ namespace Blog.Web.Initialization
 							.ToList();
 
 			container.Register<IReadOnlyList<PostViewModel>>(posts);
+			container.Register<MarkdownContentStorage>(new MarkdownContentStorage(root));
 		}
 	}
 }

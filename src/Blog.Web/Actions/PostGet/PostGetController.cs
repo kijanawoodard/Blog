@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Web.Mvc;
 using Blog.Web.Core;
 using Blog.Web.Infrastructure;
@@ -15,13 +16,25 @@ namespace Blog.Web.Actions.PostGet
 
 			mediator.Subscribe<PostRequest, PostGetViewModel>(message =>
 			{
+				var posts = container.Resolve<IReadOnlyList<PostViewModel>>();
+				RefreshContent(container, posts);
 				var result = new PostGetViewModel();
-				result = new FilteredPostVault(container.Resolve<IReadOnlyList<PostViewModel>>())
-								.Handle(message, result);
+
+				result = new FilteredPostVault(posts).Handle(message, result);
 				return result;
 			});
 
 			mediator.Subscribe<PostIndexRequest, PostIndexViewModel>(message => new FilteredPostVault(container.Resolve<IReadOnlyList<PostViewModel>>()).Handle(message));
+		}
+
+		[Conditional("DEBUG")]
+		void RefreshContent(IResolver container, IEnumerable<PostViewModel> posts)
+		{
+			var storage = container.Resolve<MarkdownContentStorage>();
+			foreach (var post in posts)
+			{
+				storage.Handle(post);
+			}
 		}
 	}
 
