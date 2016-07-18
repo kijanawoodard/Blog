@@ -2,7 +2,7 @@
 
 	hal extension/formatter
 	
-home page - multiple entires
+home page - multiple entries
 link to archive?
 
 Update date vs published date
