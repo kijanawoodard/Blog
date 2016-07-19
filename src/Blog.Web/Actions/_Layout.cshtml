@@ -105,7 +105,7 @@
             </div>
             <footer>
                 <p>&copy; Kijana Woodard 2010 - @DateTime.UtcNow.Year</p>
-                @{ var info = AssemblyExtensions.GetAssemblyInfo();}
+                @{ var info = AssemblyExtensions.GetAssemblyInfo(); }
                 <p>v @info.Version - @info.LastModified.ToLongDateString() @info.LastModified.ToShortTimeString()</p>
             </footer>
         </div>
