@@ -311,7 +311,7 @@
     <Content Include="Content\posts\why-enums-suck.comments.yaml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Actions\CommentsGet\Index.cshtml" />
+    <Content Include="Actions\CommentsGet\Index.cshtml" />
     <Content Include="Content\posts\violating-isp-with-constructor-injection.comments.yaml" />
     <Content Include="Content\posts\violating-srp-with-constructor-injection.comments.yaml" />
     <Content Include="Content\posts\visual-studio-code-snippets.comments.yaml" />
