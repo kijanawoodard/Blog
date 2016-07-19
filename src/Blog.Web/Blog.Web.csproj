@@ -147,7 +147,7 @@
     <Content Include="Content\posts\images\kijana.woodard.headshot.square.jpg" />
     <Content Include="Content\posts\images\learning-nservicebus.png" />
     <Content Include="Content\posts\images\use-ctrl-period-to-insert-using.png" />
-    <Content Include="Content\posts\violating-isp.markdown" />
+    <Content Include="Content\posts\violating-isp-with-constructor-injection.markdown" />
     <Content Include="Content\posts\images\violating-isp\jimmy-bogard-twitter.png" />
     <Content Include="Content\posts\images\violating-isp\passing-test.png" />
     <Content Include="Content\posts\images\violating-isp\too-many-dependencies.png" />
@@ -260,7 +260,7 @@
     <Content Include="Content\posts\dotnet-demon.markdown" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\posts\violating-srp.markdown" />
+    <Content Include="Content\posts\violating-srp-with-constructor-injection.markdown" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\posts\how-to-wake-up-your-kids.markdown" />
@@ -312,6 +312,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Actions\CommentsGet\Index.cshtml" />
+    <Content Include="Content\posts\violating-isp-with-constructor-injection.comments.yaml" />
+    <Content Include="Content\posts\violating-srp-with-constructor-injection.comments.yaml" />
+    <Content Include="Content\posts\visual-studio-code-snippets.comments.yaml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
