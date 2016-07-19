@@ -21,7 +21,7 @@ namespace Blog.Web.Actions.CommentsGet
             var yaml = new YamlDotNet.Serialization.Deserializer();
             using (var reader = new StreamReader(path))
             {
-                var comments = yaml.Deserialize<List<Comment>>(reader);
+                var comments = yaml.Deserialize<List<Comment>>(reader) ?? new List<Comment>();
                 var model = new CommentsViewModel { Comments = comments };
                 return View(model);
             }
