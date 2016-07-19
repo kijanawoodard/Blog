@@ -1,18 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using YamlDotNet;
 
 namespace Blog.Web.Actions.CommentsGet
 {
     public class CommentsGetController : Controller
     {
-        //
-        // GET: /CommentsGet/
-
         public ActionResult Index(CommentsRequest request)
         {
             var root = System.Web.HttpContext.Current.Server.MapPath("~/Content/posts");
