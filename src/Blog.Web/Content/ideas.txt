@@ -1,9 +1,13 @@
-﻿Add metadata to markdown
+﻿Add explicit about page
+	Links to Talks
+Add metadata to markdown
 Add folders to contain images and comments
 Remove disqus
 	X Add comments.markdown
 cache responses
 Convert to aspnet core
+Add series
+Add tags
 
 Features:
 
