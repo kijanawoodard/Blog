@@ -118,6 +118,7 @@
     <Compile Include="Actions\CommentsGet\CommentsGetController.cs" />
     <Compile Include="Actions\AboutGet\AboutGetController.cs" />
     <Compile Include="Actions\Home\HomeController.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="Core\AssemblyExtensions.cs" />
     <Compile Include="Core\DateTimeExtensions.cs" />
     <Compile Include="Actions\DisplayErrors\DisplayErrorsController.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\LastModifiedCacheAttribute.cs" />
     <Compile Include="Infrastructure\Liaison.cs" />
     <Compile Include="Infrastructure\ContentNegotiatingActionInvoker.cs" />
     <Compile Include="Infrastructure\Vessel.cs" />
