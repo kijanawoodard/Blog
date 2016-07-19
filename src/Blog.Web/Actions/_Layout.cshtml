@@ -51,10 +51,10 @@
                     <section id="contact">
                         <ul>
                             <li>
-                                <a href="~/contact" target="_blank">
+                                <a href="@Url.Action("Index", "AboutGet")">
                                     <i class="icon-envelope"></i>
-                                    <span>Contact</span>
-                                    <small>@Url.Action("Execute", "PostGet", new {slug="contact"})</small>
+                                    <span>About</span>
+                                    <small>@Url.Action("Index", "AboutGet")</small>
                                 </a>
                             </li>
                             <li>
