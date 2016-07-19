@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Blog.Web.Core
 {
@@ -28,8 +29,8 @@ namespace Blog.Web.Core
 			get
 			{
 				if (Content == null) return Title;
-				var firstParagraph = Content.IndexOf("\n", System.StringComparison.Ordinal);
-				return firstParagraph == -1 ? Title : Content.Substring(0, firstParagraph);
+			    var paragraphs = Content.Split(new[] {"</p>"}, StringSplitOptions.None);
+                return paragraphs.Length == 0 ? Title : string.Join("</p>", paragraphs.Take(3));
 			}
 		}
 

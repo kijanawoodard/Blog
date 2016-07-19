@@ -117,6 +117,7 @@
   <ItemGroup>
     <Compile Include="Actions\CommentsGet\CommentsGetController.cs" />
     <Compile Include="Actions\AboutGet\AboutGetController.cs" />
+    <Compile Include="Actions\Home\HomeController.cs" />
     <Compile Include="Core\DateTimeExtensions.cs" />
     <Compile Include="Actions\DisplayErrors\DisplayErrorsController.cs" />
     <Compile Include="Actions\PostGet\PostGetController.cs" />
@@ -353,6 +354,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Actions\AboutGet\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Actions\Home\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

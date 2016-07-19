@@ -56,7 +56,9 @@ footer p {
 .headshot { text-align: center; }
 .headshot img { margin: auto;}
 
-#archive ul { list-style-type: none;margin: 0;}
+#home ul, #archive ul { list-style-type: none;margin: 0;}
+
+#home li { margin-bottom: 2em;}
 
 #comments > header { font-weight: bold;font-style: italic;font-size: 1.2em;margin-bottom: 2em;}
 #comments .comment { display: flex;margin-bottom: 2em;}

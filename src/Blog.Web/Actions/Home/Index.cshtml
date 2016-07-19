@@ -1,0 +1,25 @@
+﻿@model Blog.Web.Actions.PostGet.PostIndexViewModel
+
+@{
+    ViewBag.Title = "Techinical Blog of Kijana Woodard";
+}
+
+<section id="home">
+    <ul>
+        @foreach (var post in Model.Active)
+        {
+            <li>
+                <a href="@Url.Action("Execute", "PostGet", new {slug = post.Slug})" title="@post.Title">
+                    <h3>@post.Title </h3>
+                    
+                </a>
+                <div>
+                    @Html.Raw(post.Summary)
+                </div>
+                <a href="@Url.Action("Execute", "PostGet", new {slug = post.Slug})" title="@post.Title">
+                    <span>continue reading...</span>
+                </a>
+            </li>
+        }
+    </ul>
+</section>
