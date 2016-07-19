@@ -1,7 +1,7 @@
 ﻿#wrap {
-	width: 940px;
-	padding: 0 10px;
-	margin: 24px auto;
+    width: 940px;
+    padding: 0 10px;
+    margin: 24px auto;
 }
 
 body { color: #333;}
@@ -68,19 +68,19 @@ footer p {
 /* =Mobile (Portrait)
 -----------------------------------------------------------------------------*/
 @media only screen and (max-width: 480px) {
-	#wrap { width: 300px; }
-	header form.search { text-align: left; float: left; }
-	header .subheader { font-size: 1em; }
-	#contact { border: none;padding: 0;text-align: left;position: relative; }
-	#contact small { display: block;}
-	#contact span { display: initial; } 
+    #wrap { width: 300px; }
+    header form.search { text-align: left; float: left; }
+    header .subheader { font-size: 1em; }
+    #contact { border: none;padding: 0;text-align: left;position: relative; }
+    #contact small { display: block;}
+    #contact span { display: initial; } 
 }
 
 /* =Mobile (Landscape)
 -----------------------------------------------------------------------------*/
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-	#wrap { width: 420px; }
-	header form.search { text-align: left; float: left; }
+    #wrap { width: 420px; }
+    header form.search { text-align: left; float: left; }
 }
 
 /* =Tablet (Portrait)
@@ -95,6 +95,6 @@ footer p {
 }
 
 @media print {
-	#latest, #contact, #disqus_thread { display: none; }
-	article { width: 100% !important; } /* bah! - this is what's wrong with non-semantic classes - have to use important'*/	
+    #latest, #contact, #disqus_thread { display: none; }
+    article { width: 100% !important; } /* bah! - this is what's wrong with non-semantic classes - have to use important'*/    
 }

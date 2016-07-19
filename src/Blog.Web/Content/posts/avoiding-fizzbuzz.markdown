@@ -8,14 +8,14 @@ If there is a fit, then the fact that I haven’t been doing C# 4.0 for 5 years 
 
 So in the interest of saving time and skipping ahead to what matters, I decided to post my implementation of [FizzBuzz]. I used LINQ since I hadn’t seen that implementation, though I’m sure it’s out there.
 
-	var numbers = from num in Enumerable.Range(1, 100)
-		select num % 15 == 0 ? "FizzBuzz"
-			: num % 5 == 0 ? "Buzz"
-			: num % 3 == 0 ? "Fizz"
-			: num.ToString();
+    var numbers = from num in Enumerable.Range(1, 100)
+        select num % 15 == 0 ? "FizzBuzz"
+            : num % 5 == 0 ? "Buzz"
+            : num % 3 == 0 ? "Fizz"
+            : num.ToString();
  
-	foreach (var num in numbers)
-		Console.WriteLine(num);
+    foreach (var num in numbers)
+        Console.WriteLine(num);
 
 That took about two minutes with a decent chunk of that spent firing up VS2010. Yes, I could have used a lambda for the Console.WriteLine, but I think the foreach is still more readable.
 

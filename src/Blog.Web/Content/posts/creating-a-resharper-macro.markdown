@@ -1,26 +1,26 @@
 ﻿I wanted to get [R#] to do a little typing for me so that I can more easily add new blog posts.
 
 A new post looks like this:
-	
-	new Post
-	{
-		Title = "Creating a ReSharper Macro",
-		Slug = "creating-a-resharper-macro",
-		FileName = "creating-a-resharper-macro.markdown",
-		PublishedAtCst = DateTime.Parse("October 17, 2013"),
-	},
+    
+    new Post
+    {
+        Title = "Creating a ReSharper Macro",
+        Slug = "creating-a-resharper-macro",
+        FileName = "creating-a-resharper-macro.markdown",
+        PublishedAtCst = DateTime.Parse("October 17, 2013"),
+    },
 
 The slug and filename are independently adjustable for flexibility, but they usually start out as a derivative of whatever I'm going to name the post.
 
 I created a [R# Live Template] that looks like this:
 
-	new Post
-	{
-		Title = "$title$",
-		Slug = "$slug$",
-		FileName = "$slug$.markdown",
-		PublishedAtCst = System.DateTime.Parse("$date$"),
-	},
+    new Post
+    {
+        Title = "$title$",
+        Slug = "$slug$",
+        FileName = "$slug$.markdown",
+        PublishedAtCst = System.DateTime.Parse("$date$"),
+    },
 
 This is great. When I activate the template, I get a chance to type for each `$variable$`. So I can type `$title$`, then `$slug$`, which gets used on two lines, and finally `$date$`.
 

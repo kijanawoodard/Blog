@@ -10,48 +10,48 @@ Now, let me state right away. I don't have any intention of convincing you of an
 
 Here's a [command handler interface from ShortBus][shortbus-icommandhandler].
 
-	public interface ICommandHandler<in TMessage>
+    public interface ICommandHandler<in TMessage>
     {
         void Handle(TMessage message);
     }
 
 It's called from a [mediator] like this: 
 
-	public virtual Response Send<TMessage>(TMessage message)
+    public virtual Response Send<TMessage>(TMessage message)
     {
         var allInstances = 
-				_container
-					.GetAllInstances<ICommandHandler<TMessage>>();
-		...
+                _container
+                    .GetAllInstances<ICommandHandler<TMessage>>();
+        ...
         foreach (var handler in allInstances)
             ...
                 handler.Handle(message);
 
 I can write up my system like so:
 
-	class DoSomething
-	class DoThis : ICommandHandler<DoSomething> 
-	class DoThat : ICommandHandler<DoSomething> 
-	
+    class DoSomething
+    class DoThis : ICommandHandler<DoSomething> 
+    class DoThat : ICommandHandler<DoSomething> 
+    
 Beautiful. This gives us a simple way to do in-memory messaging. 
 
 To invoke all the handlers:
 
-	mediator.Send(doSomething);
+    mediator.Send(doSomething);
   
 To add some new functionality:
-	
-	class DoSomething
-	class DoThis : ICommandHandler<DoSomething> 
-	class DoThat : ICommandHandler<DoSomething> 
-	class DoTheOther : ICommandHandler<DoSomething>
-	
+    
+    class DoSomething
+    class DoThis : ICommandHandler<DoSomething> 
+    class DoThat : ICommandHandler<DoSomething> 
+    class DoTheOther : ICommandHandler<DoSomething>
+    
 To replace functionality:
 
-	class DoSomething
-	class DoThis : ICommandHandler<DoSomething> 
-	class DoThat : ICommandHandler<DoSomething> 
-	class DoAnother : ICommandHandler<DoSomething>
+    class DoSomething
+    class DoThis : ICommandHandler<DoSomething> 
+    class DoThat : ICommandHandler<DoSomething> 
+    class DoAnother : ICommandHandler<DoSomething>
 
 
 SRP? Check. OCP? Check. Decoupled, flexible, testable? Check. Check. Check. 
@@ -60,10 +60,10 @@ I like this.
 
 Now, let's imagine that `DoThat` must follow `DoThis`. We need ordering. Hmmm. Well, if we need ordering, we really need a chain of events. Ok, let's sketch something.
 
-	class DoSomething
-	class DoThis : ICommandHandler<DoSomething> 
-	class DoThisCompleted
-	class DoThat : ICommandHandler<DoThisCompleted>
+    class DoSomething
+    class DoThis : ICommandHandler<DoSomething> 
+    class DoThisCompleted
+    class DoThat : ICommandHandler<DoThisCompleted>
 
 Not too bad. 
 
@@ -105,7 +105,7 @@ But let's back up to where we first ran into trouble. We wanted to:
 
 Consider this:
 
-	new Mediator(new DoThis(), new DoThat(), new DoTheOther());
+    new Mediator(new DoThis(), new DoThat(), new DoTheOther());
 
 Done. All the use cases are satisfied. And we have a new instance per request. If I'm honest with myself about [autofac expressions][autofac-expressions], I'm pretty much writing this code in the app boostrap routines already. 
 
@@ -121,7 +121,7 @@ I'm not quite ready to give up my container and start using `Func<Unit>` everywh
 
 And I think that was Greg Young's point.
 
-		
+        
 
 [eight-lines]: http://www.infoq.com/presentations/8-lines-code-refactoring
 [shortbus-icommandhandler]: https://github.com/mhinze/ShortBus/blob/master/ShortBus/ICommandHandler.cs#L5

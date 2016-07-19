@@ -4,54 +4,54 @@
 
 Let's take a look at some typical, and very terrible, code. I'm actually astonished at how many anti-patterns can be put into so few lines of code (AP/LOC?). It makes my eyes bleed.
 
-	public interface ICustomerService
-	{
-		Customer GetCustomer(int id);
-		void CreateCustomer(Customer customer);
-	}
+    public interface ICustomerService
+    {
+        Customer GetCustomer(int id);
+        void CreateCustomer(Customer customer);
+    }
 
-	public interface IRepository<T>
-	{
-		T GetById(int id);
-		void Add(T entity);
-	}
+    public interface IRepository<T>
+    {
+        T GetById(int id);
+        void Add(T entity);
+    }
 
-	public interface IEmailService
-	{
-		void SendWelcomeEmail(Customer customer);
-		void SendDailyAppStatusToOperations(Customer customer);
-	}
+    public interface IEmailService
+    {
+        void SendWelcomeEmail(Customer customer);
+        void SendDailyAppStatusToOperations(Customer customer);
+    }
 
-	public class Customer
-	{
-		public int Id { get; set; }
-		public string Name { get; set; }
-	}
-	
-	public class CustomerService : ICustomerService
-	{
-		private readonly IRepository<Customer> _repository;
-		private readonly IEmailService _email;
+    public class Customer
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
+    
+    public class CustomerService : ICustomerService
+    {
+        private readonly IRepository<Customer> _repository;
+        private readonly IEmailService _email;
 
-		public CustomerService(
-			IRepository<Customer> repository, 
-			IEmailService email)
-		{
-			_repository = repository;
-			_email = email;
-		}
+        public CustomerService(
+            IRepository<Customer> repository, 
+            IEmailService email)
+        {
+            _repository = repository;
+            _email = email;
+        }
 
-		public Customer GetCustomer(int id)
-		{
-			return _repository.GetById(id);
-		}
+        public Customer GetCustomer(int id)
+        {
+            return _repository.GetById(id);
+        }
 
-		public void CreateCustomer(Customer customer)
-		{
-			_repository.Add(customer);
-			_email.SendWelcomeEmail(customer);
-		}
-	}
+        public void CreateCustomer(Customer customer)
+        {
+            _repository.Add(customer);
+            _email.SendWelcomeEmail(customer);
+        }
+    }
 
 About the only thing that code is missing is an `ICustomer` class. Don't laugh. Interfaces on POCOs/DTOs have been spotted in the wild. Let's not dwell on this code or how it can be changed. 
 

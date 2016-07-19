@@ -22,48 +22,48 @@ The goal is to isolate the _units_ from each other and separate the organization
 
 Now the [mediator configuration] for Posts on this blog looks like this:
 
-	mediator.Subscribe<PostRequest, PostGetViewModel>(message =>
-	{
-		var result = new PostGetViewModel();
-		result = new FilteredPostVault().Handle(message, result);
-		result = new MarkdownContentStorage(root).Handle(message, result);
-		return result;
-	});
+    mediator.Subscribe<PostRequest, PostGetViewModel>(message =>
+    {
+        var result = new PostGetViewModel();
+        result = new FilteredPostVault().Handle(message, result);
+        result = new MarkdownContentStorage(root).Handle(message, result);
+        return result;
+    });
 
 That code could be cut down to two lines, but I found this more readable. It should be clear now how the message is transformed into a result.
 
 If we don't like inline functions, we can do this:
-	
-	public static void RegisterContainer()
-	{
-		...
-		mediator.Subscribe<PostRequest, PostGetViewModel>(Execute);
-		...
-	}
-	...
-	private static PostGetViewModel Execute(PostRequest message)
-	{
-		var result = new PostGetViewModel();
-		result = new FilteredPostVault().Handle(message, result);
-		result = new MarkdownContentStorage(root).Handle(message, result);
-		return result;
-	}
+    
+    public static void RegisterContainer()
+    {
+        ...
+        mediator.Subscribe<PostRequest, PostGetViewModel>(Execute);
+        ...
+    }
+    ...
+    private static PostGetViewModel Execute(PostRequest message)
+    {
+        var result = new PostGetViewModel();
+        result = new FilteredPostVault().Handle(message, result);
+        result = new MarkdownContentStorage(root).Handle(message, result);
+        return result;
+    }
 
 If we don't want a bunch of functions, we can use classes:
 
-	mediator.Subscribe<PostRequest, PostGetViewModel>(message => 
-		new HandlePostGetViewModel().Handle(message));
-	...
-	public class HandlePostGetViewModel
-	{
-		public PostGetViewModel Handle(PostRequest message)
-		{
-			var result = new PostGetViewModel();
-			result = new FilteredPostVault().Handle(message, result);
-			result = new MarkdownContentStorage(root).Handle(message, result);
-			return result;
-		}
-	}
+    mediator.Subscribe<PostRequest, PostGetViewModel>(message => 
+        new HandlePostGetViewModel().Handle(message));
+    ...
+    public class HandlePostGetViewModel
+    {
+        public PostGetViewModel Handle(PostRequest message)
+        {
+            var result = new PostGetViewModel();
+            result = new FilteredPostVault().Handle(message, result);
+            result = new MarkdownContentStorage(root).Handle(message, result);
+            return result;
+        }
+    }
 
 Wait. Wait. Wait! Whoa! Whoa! Whoa! Whoa. Whoa. Whoa. Whoa.
 
@@ -98,7 +98,7 @@ On a minor note, I named nimbus with the project, solution, folders, etc all low
 [introducing nimbus]: /introducing-nimbus
 [nimbus]: https://github.com/kijanawoodard/nimbus/blob/507a3a9ba81e3af640d877158b8168f1e74e27f3/src/mediator.cs
 [Liaison]: https://github.com/kijanawoodard/Liaison
-[web scale]: http://mongodb-is-web-scale.com/	
+[web scale]: http://mongodb-is-web-scale.com/    
 [Mike Pennington]: www.linkedin.com/in/mikepennington
 [added comments]: https://github.com/kijanawoodard/nimbus/blob/507a3a9ba81e3af640d877158b8168f1e74e27f3/src/mediator.cs#L88
 [mediator configuration]: https://github.com/kijanawoodard/Blog/blob/36b4b747c0a538d46ac418e0ed51f07e66bedb52/src/Blog.Web/Initialization/AutofacConfig.cs#L20

@@ -5,39 +5,39 @@ using MarkdownSharp;
 
 namespace Blog.Web.Infrastructure
 {
-	public class MarkdownContentStorage
-	{
-		private readonly string _root;
-		private readonly Markdown _markdown;
+    public class MarkdownContentStorage
+    {
+        private readonly string _root;
+        private readonly Markdown _markdown;
 
-		public MarkdownContentStorage(string root)
-		{
-			_root = root;
-			_markdown = new Markdown();
+        public MarkdownContentStorage(string root)
+        {
+            _root = root;
+            _markdown = new Markdown();
 
-		}
+        }
 
-		public PostViewModel Handle(PostViewModel message)
-		{
-			if (message == null) throw new ArgumentNullException("message");
-			message.Content = GetContent(message.FileName);
-			return message;
-		}
+        public PostViewModel Handle(PostViewModel message)
+        {
+            if (message == null) throw new ArgumentNullException("message");
+            message.Content = GetContent(message.FileName);
+            return message;
+        }
 
-		private string GetContent(string filename)
-		{
-			filename = Path.Combine(_root, filename);
-			if (!File.Exists(filename)) return string.Empty;
+        private string GetContent(string filename)
+        {
+            filename = Path.Combine(_root, filename);
+            if (!File.Exists(filename)) return string.Empty;
 
-			string fileContents;
+            string fileContents;
 
-			using (var fileStream = new FileStream(filename, FileMode.Open, FileAccess.Read, FileShare.None))
-			using (var streamReader = new StreamReader(fileStream))
-			{
-				fileContents = streamReader.ReadToEnd();
-			}
+            using (var fileStream = new FileStream(filename, FileMode.Open, FileAccess.Read, FileShare.None))
+            using (var streamReader = new StreamReader(fileStream))
+            {
+                fileContents = streamReader.ReadToEnd();
+            }
 
-			return _markdown.Transform(fileContents);
-		}
-	}
+            return _markdown.Transform(fileContents);
+        }
+    }
 }

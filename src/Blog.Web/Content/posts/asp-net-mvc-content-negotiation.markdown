@@ -18,19 +18,19 @@ One thing I learned doing this implementation is that the content negotiation sh
 
  I am halfway there as I enable atom and xml to use a [razor view][index.atom.xml] to shape the output. For csv though I'd rather have something like:
 
-	public class MyController : Controller
+    public class MyController : Controller
     {
-	    ...
-	    public object Csv(PostRequest request)
-		{
-			var model = _mediator.Send<PostRequest, PostGetViewModel>(request);
-			return new SomeCsvShape
-			{
-			   Title = model.Post.Title,
-			   ...
-			};
-		}
-    }	
+        ...
+        public object Csv(PostRequest request)
+        {
+            var model = _mediator.Send<PostRequest, PostGetViewModel>(request);
+            return new SomeCsvShape
+            {
+               Title = model.Post.Title,
+               ...
+            };
+        }
+    }    
 
 Similarly rather than have a bunch of interfaces to support something like [HAL], an action could decorate the regular model with links, etc. 
 

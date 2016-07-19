@@ -6,27 +6,27 @@ In other words, isn't the interface declared in the wrong place?
 
 Interfaces, as we typically use them in C#, mean "these are methods and properties supported by this class".
 
-	interface IAuthentication { bool Authenticate(); }
-	class Authentication : IAuthentication
+    interface IAuthentication { bool Authenticate(); }
+    class Authentication : IAuthentication
 
 That's fine and dandy, but it's only half of the equation. The problem is that we don't usually know the _use cases_ when we write the interface. We can't necessarily coordinate the interface definition across other potential implementations either.
 
 When we get to usage, say we find that there are two classes we can use:
 
-	class SamlAuthentication : IAuthentication 
-	{ bool Authenticate() {...} }
+    class SamlAuthentication : IAuthentication 
+    { bool Authenticate() {...} }
 
-	class ClaimsAuthentication : IAuthenticateUsers 
-	{ bool Authenticate() {...} }
+    class ClaimsAuthentication : IAuthenticateUsers 
+    { bool Authenticate() {...} }
 
 It turns out, they have the exact same method signature. But alas, they don't have the same interface. I've been in the maddening circumstance that the two interfaces were _named_ the same, but they were from different namespaces / vendors.
 
 Here we are with two classes that could work for us, but that don't share a common interface Wouldn't it be nice to just declare this:
 
-	interface IAuth { bool Authenticate(); }
+    interface IAuth { bool Authenticate(); }
 
-	//usage
-	public void LoginUser(IAuth auth) { ... }
+    //usage
+    public void LoginUser(IAuth auth) { ... }
 
 
 Instead of relying on the declared interfaces on the signature, we'll declare what our method needs and let the compiler sort out if the class matches the signature. A sort of interface inversion.

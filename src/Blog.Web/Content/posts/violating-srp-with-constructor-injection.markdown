@@ -2,23 +2,23 @@
 
 Let's look at the same class:
 
-	public class CustomerService : ICustomerService
-	{
-		private readonly IRepository<Customer> _repository;
-		private readonly IEmailService _email;
+    public class CustomerService : ICustomerService
+    {
+        private readonly IRepository<Customer> _repository;
+        private readonly IEmailService _email;
 
-		public CustomerService(IRepository<Customer> repository, IEmailService email)
-		{
-			_repository = repository;
-			_email = email;
-		}
-		...
-		public void CreateCustomer(Customer customer)
-		{
-			_repository.Add(customer);
-			_email.SendWelcomeEmail(customer);
-		}
-	}
+        public CustomerService(IRepository<Customer> repository, IEmailService email)
+        {
+            _repository = repository;
+            _email = email;
+        }
+        ...
+        public void CreateCustomer(Customer customer)
+        {
+            _repository.Add(customer);
+            _email.SendWelcomeEmail(customer);
+        }
+    }
 
 `CreateCustomer` calls the repository to add the customer and instructs the email service to send the welcome email.
 
@@ -42,10 +42,10 @@ As it turns out, "loose coupling", is still coupling. Our class here has to _kno
 
 So what to do instead? Messaging.
 
-	interface ICustomerCreated
-	class EmailService: IHandle<ICustomerCreated>
-	class SwagService: IHandle<ICustomerCreated>
-	class StatsService: IHandle<ICustomerCreated>
+    interface ICustomerCreated
+    class EmailService: IHandle<ICustomerCreated>
+    class SwagService: IHandle<ICustomerCreated>
+    class StatsService: IHandle<ICustomerCreated>
 
 Now the customer service only cares about customer issues. Reasons to change: customer reasons. Clean.
 

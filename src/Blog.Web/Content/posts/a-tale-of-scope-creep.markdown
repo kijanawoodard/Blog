@@ -6,10 +6,10 @@ Next I decided that the 404 page should display the post archive so that the use
 
 So far so good. But the archive is rendered with the full layout on the 404 page. We don't want duplicate headers and sidebars. The easy answer is to write some code like this in the controller.
 
-	if (ControllerContext.IsChildAction)
-		return PartialView(model);
-	else
-		return View(model);
+    if (ControllerContext.IsChildAction)
+        return PartialView(model);
+    else
+        return View(model);
 
 Yuck. I don't like that. How can we remove this logic from our controller? I need something like [FubuMVC Behaviors], but we don't have those in asp.net mvc.
 

@@ -2,30 +2,30 @@
 
 So say you write some code like this:
 
-	using System;
+    using System;
  
-	namespace FizzBuzz
-	{
-		public class ExtensionsDemo
-		{
-			public static void TestString()
-			{
-				var s = "hello";
-				var ok = s.HasValue();
+    namespace FizzBuzz
+    {
+        public class ExtensionsDemo
+        {
+            public static void TestString()
+            {
+                var s = "hello";
+                var ok = s.HasValue();
  
-				s = null;
-				ok = s.HasValue();
-			}
-		}
+                s = null;
+                ok = s.HasValue();
+            }
+        }
  
-		public static class StringExtensionMethods
-		{
-			public static bool HasValue(this string value)
-			{
-				return !string.IsNullOrWhiteSpace(value);
-			}
-		}
-	}
+        public static class StringExtensionMethods
+        {
+            public static bool HasValue(this string value)
+            {
+                return !string.IsNullOrWhiteSpace(value);
+            }
+        }
+    }
 
 You would expect the second call to HasValue would blow up because the string is null. But the extension method is on the class not the instance so it goes through with no problem. Very handy. In fact, while typing this post I just thought of a very good use for this…coming soon.
 

@@ -2,12 +2,12 @@
 
 namespace Blog.Web.Infrastructure
 {
-	public class AlternateViewEngine : RazorViewEngine
-	{
-		public AlternateViewEngine()
-		{
-			ViewLocationFormats = new[] { "~/Actions/{1}/{0}.cshtml" };
-			PartialViewLocationFormats = new[] { "~/Actions/{1}/{0}.cshtml" };
-		}
-	}
+    public class AlternateViewEngine : RazorViewEngine
+    {
+        public AlternateViewEngine()
+        {
+            ViewLocationFormats = new[] { "~/Actions/{1}/{0}.cshtml" };
+            PartialViewLocationFormats = new[] { "~/Actions/{1}/{0}.cshtml" };
+        }
+    }
 }

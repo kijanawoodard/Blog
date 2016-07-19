@@ -2,7 +2,7 @@
 
 Near the end of [questioning IoC], I posited an escape hatch:
 
-		new Mediator(new DoThis(), new DoThat(), new DoTheOther());
+        new Mediator(new DoThis(), new DoThat(), new DoTheOther());
 
 Working to achieve this api, I came up with [Nimbus]. To see how it works, I incorporated nimbus into this blog.
 
@@ -10,27 +10,27 @@ Here is the controller that displays a blog post [before]:
 
     public class PostGetController : Controller
     {
-		private readonly IPostVault _vault;
-	    private readonly IContentStorage _storage;
+        private readonly IPostVault _vault;
+        private readonly IContentStorage _storage;
 
-	    public PostGetController(IPostVault vault, IContentStorage storage)
-		{
-			_vault = vault;
-			_storage = storage;
-		}
+        public PostGetController(IPostVault vault, IContentStorage storage)
+        {
+            _vault = vault;
+            _storage = storage;
+        }
 
-	    public ActionResult Execute(string slug)
-	    {
-			var posts = _vault.ActivePosts; 
-			var post = posts.FirstOrDefault();
-			if (slug != null) post = _vault.AllPosts.FirstOrDefault(x => x.Slug.ToLower() == slug.ToLower());
-			if (post == null) return HttpNotFound();
+        public ActionResult Execute(string slug)
+        {
+            var posts = _vault.ActivePosts; 
+            var post = posts.FirstOrDefault();
+            if (slug != null) post = _vault.AllPosts.FirstOrDefault(x => x.Slug.ToLower() == slug.ToLower());
+            if (post == null) return HttpNotFound();
 
-			var content = _storage.GetContent(post.FileName);
-		    var previous = posts.OrderBy(x => x.PublishedAtCst).FirstOrDefault(x => x.PublishedAtCst > post.PublishedAtCst);
-			var next = posts.FirstOrDefault(x => x.PublishedAtCst < post.PublishedAtCst);
+            var content = _storage.GetContent(post.FileName);
+            var previous = posts.OrderBy(x => x.PublishedAtCst).FirstOrDefault(x => x.PublishedAtCst > post.PublishedAtCst);
+            var next = posts.FirstOrDefault(x => x.PublishedAtCst < post.PublishedAtCst);
 
-			var model = new PostGetViewModel(post, content, previous, next, _vault.ActivePosts, _vault.FuturePosts);
+            var model = new PostGetViewModel(post, content, previous, next, _vault.ActivePosts, _vault.FuturePosts);
             return View(model);
         }
     }
@@ -39,20 +39,20 @@ Here is the same controller [after]:
 
     public class PostGetController : Controller
     {
-	    private readonly IMediator _mediator;
+        private readonly IMediator _mediator;
 
-	    public PostGetController(IMediator mediator)
-		{
-		    _mediator = mediator;
-		}
-
-	    public ActionResult Execute(PostRequest request)
-	    {
-			var model = _mediator.Send<PostRequest, PostGetViewModel>(request);
-			if (model.Post == null) return HttpNotFound();
-			return View(model);
+        public PostGetController(IMediator mediator)
+        {
+            _mediator = mediator;
         }
-    }		
+
+        public ActionResult Execute(PostRequest request)
+        {
+            var model = _mediator.Send<PostRequest, PostGetViewModel>(request);
+            if (model.Post == null) return HttpNotFound();
+            return View(model);
+        }
+    }        
 
 I'll stipulate that the net effect is that I've simply shifted the code around. My assertion is that I have shifted it to a better place. The implementation gets to decide precisely how to fulfill the message contract and it can optimize aggressively.
 
@@ -66,12 +66,12 @@ How about we make them [private]. Ahhhhh. Debate over. Much better. :-]
 
 Here's the [mediator configuration]:
 
-	var mediator = new Mediator();
+    var mediator = new Mediator();
 
-	mediator.Subscribe<PostRequest, PostGetViewModel>(() => 
-		new ISubscribeFor<PostRequest>[] { 
-			new FilteredPostVault(), 
-			new MarkdownContentStorage(root) });
+    mediator.Subscribe<PostRequest, PostGetViewModel>(() => 
+        new ISubscribeFor<PostRequest>[] { 
+            new FilteredPostVault(), 
+            new MarkdownContentStorage(root) });
 
 This configuration becomes a [Rosetta stone] for understanding how the application is wired together. If we want to make a change to a particular request, we know exactly what pieces are involved. Even better, if we decide to, say, change persistence technology, we have a project plan laid before us of what pieces need to be implemented with the new technology. It's already separated into pieces to dole out to the team.
 

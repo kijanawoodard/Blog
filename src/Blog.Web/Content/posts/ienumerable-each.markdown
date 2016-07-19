@@ -2,15 +2,15 @@
 
 Anyway, an Each() extension method on IEnumerable is trivial:
 
-	public static class IEnumerableExtensionMethods
-	{
-		public static void Each<T>(
-			this IEnumerable<T> list
-		  , Action<T> action)
-		{
-			foreach (var item in list)
-				action(item);
-		}
-	}
+    public static class IEnumerableExtensionMethods
+    {
+        public static void Each<T>(
+            this IEnumerable<T> list
+          , Action<T> action)
+        {
+            foreach (var item in list)
+                action(item);
+        }
+    }
 
 [Avoiding FizzBuzz]:http://kijanawoodard.com/avoiding-fizzbuzz/
