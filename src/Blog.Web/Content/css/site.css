@@ -60,6 +60,7 @@ footer p {
 
 #comments .comment { display: flex;margin-bottom: 2em;}
 #comments .comment .avatar { flex: 0 0 100px; }
+#comments .comment .name { font-weight: bold; }
 
 /* =Mobile (Portrait)
 -----------------------------------------------------------------------------*/

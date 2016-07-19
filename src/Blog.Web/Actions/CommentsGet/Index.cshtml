@@ -4,7 +4,7 @@
 @foreach (var comment in Model.Comments)
 {
     <div class="comment">
-        <div class="avatar"><img src="https://s.gravatar.com/avatar/@(comment.Email.ToMd5())?d=identicon" alt="@comment.Email" /></div>
+        <div class="avatar"><img src="https://s.gravatar.com/avatar/@(comment.Email.ToMd5())?d=identicon" alt="@comment.Name" /></div>
         <div class="body">
             <header>
                 <span class="name">@comment.Name</span>
