@@ -1,7 +1,7 @@
 ﻿Add metadata to markdown
 Add folders to contain images and comments
 Remove disqus
-	Add comments.markdown
+	X Add comments.markdown
 cache responses
 Convert to aspnet core
 
