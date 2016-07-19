@@ -1,0 +1,18 @@
+﻿@using Blog.Web.Core
+@model Blog.Web.Actions.CommentsGet.CommentsGetController.CommentsViewModel
+
+@foreach (var comment in Model.Comments)
+{
+    <div class="comment">
+        <div class="avatar"><img src="https://s.gravatar.com/avatar/@(comment.Email.ToMd5())?d=identicon" alt="@comment.Email" /></div>
+        <div class="body">
+            <header>
+                <span class="name">@comment.Name</span>
+                <span class="when">• @comment.When.TimeAgo()</span>
+            </header>
+            <main>
+                @Html.Raw(comment.Message)
+            </main>
+        </div>
+    </div>    
+}
