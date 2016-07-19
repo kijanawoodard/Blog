@@ -101,14 +101,14 @@ namespace Blog.Web.Content
 					{
 						Title = "Violating SRP with Constructor Injection",
 						Slug = "violating-srp-with-constructor-injection",
-						FileName = "violating-srp.markdown",
+						FileName = "violating-srp-with-constructor-injection.markdown",
 						PublishedAtCst = DateTime.Parse("October 11, 2013"),
 					},
 					new Post
 					{
 						Title = "Violating ISP with Constructor Injection",
 						Slug = "violating-isp-with-constructor-injection",
-						FileName = "violating-isp.markdown",
+						FileName = "violating-isp-with-constructor-injection.markdown",
 						PublishedAtCst = DateTime.Parse("October 10, 2013"),
 					},
 					new Post
