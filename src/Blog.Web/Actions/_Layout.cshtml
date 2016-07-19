@@ -26,19 +26,23 @@
                     <h1><a href="/" rel="home">Kijana Woodard</a></h1>
                     <h4 class="subheader">Software Minimalism</h4>
                 </hgroup>
-                <form action="http://www.google.com/search" method="GET" class="third search">
+                <form action="http://www.google.com/search" method="GET" class="half search">
                     <input type="hidden" name="q" value="site://kijanawoodard.com" />
                     
                     <span class="surround-icon"><i class="icon-search"></i></span>
-                    <input type="text" name="q" placeholder="Search" />
+                    <input type="text" name="q" placeholder="Search"/>
+
+                    <a href="@Url.Action("Index", "PostGet")">
+                        <span class="surround-icon"><i class="icon-inbox"></i> Archive</span>
+                    </a>
                 </form>
             </header>
             <hr/>
             <div class="row">
-                <article class="fivesixth">
+                <article>
                     @RenderBody()
                 </article>
-                <aside class="sixth push-right">
+                <aside>
                     <section id="contact">
                         <ul>
                             <li>
@@ -92,7 +96,6 @@
                             </li>
                         </ul>
                     </section>
-                    @RenderSection("aside", false)
                 </aside>    
             </div>
             <footer>

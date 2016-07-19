@@ -8,6 +8,8 @@ cache responses
 Convert to aspnet core
 Add series
 Add tags
+X Add archive
+	X Remove posts on sidebar
 
 Features:
 
