@@ -118,6 +118,7 @@
     <Compile Include="Actions\CommentsGet\CommentsGetController.cs" />
     <Compile Include="Actions\AboutGet\AboutGetController.cs" />
     <Compile Include="Actions\Home\HomeController.cs" />
+    <Compile Include="Core\AssemblyExtensions.cs" />
     <Compile Include="Core\DateTimeExtensions.cs" />
     <Compile Include="Actions\DisplayErrors\DisplayErrorsController.cs" />
     <Compile Include="Actions\PostGet\PostGetController.cs" />
