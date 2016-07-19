@@ -32,7 +32,7 @@ namespace Blog.Web.Infrastructure
         {
             requestContext.HttpContext.Response.Cache.SetCacheability(HttpCacheability.Public);
             requestContext.HttpContext.Response.Cache.SetLastModified(modificationDate);
-            requestContext.HttpContext.Response.Cache.SetMaxAge(TimeSpan.FromDays(365));
+            requestContext.HttpContext.Response.Cache.SetMaxAge(TimeSpan.FromSeconds(5));
             requestContext.HttpContext.Response.Cache.SetSlidingExpiration(true);
         }
 
@@ -50,7 +50,7 @@ namespace Blog.Web.Infrastructure
 
         private static ActionResult NotModified(RequestContext response, DateTime lastModificationDate)
         {
-            response.HttpContext.Response.Cache.SetLastModified(lastModificationDate.AddYears(-6));
+            response.HttpContext.Response.Cache.SetLastModified(lastModificationDate);
             return new HttpStatusCodeResult(304, "Page has not been modified");
         }
     }
