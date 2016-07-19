@@ -10,7 +10,7 @@
         <div class="body">
             <header>
                 <span class="name">@comment.Name</span>
-                <span class="when">• @comment.When.TimeAgo()</span>
+                <span class="when" title="@comment.When.ToLongDateString() @comment.When.ToShortTimeString()">• @comment.When.TimeAgo()</span>
             </header>
             <main>
                 @Html.Raw(comment.Message)
