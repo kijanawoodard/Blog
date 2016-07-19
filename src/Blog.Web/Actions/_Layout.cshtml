@@ -23,16 +23,12 @@
     <body>
         <div id="wrap">
             <header class="row">
-                <hgroup class="half">
-                    <h1><a href="/" rel="home">Kijana Woodard</a></h1>
+                <hgroup class="third">
+                    <h1><a href="/" rel="home">Kijana Woodard</a>
+                    </h1>
                     <h4 class="subheader">Software Minimalism</h4>
                 </hgroup>
-                <form action="http://www.google.com/search" method="GET" class="half search">
-                    <input type="hidden" name="q" value="site://kijanawoodard.com" />
-                    
-                    <span class="surround-icon"><i class="icon-search"></i></span>
-                    <input type="text" name="q" placeholder="Search"/>
-
+                <div class="third actions">
                     <a href="@Url.Action("Index", "PostGet")">
                         <span class="surround-icon"><i class="icon-inbox"></i> Archive</span>
                     </a>
@@ -40,6 +36,12 @@
                     <a href="@Url.Action("Index", "AboutGet")">
                         <span class="surround-icon"><i class="icon-user"></i> About</span>
                     </a>
+                </div>
+                <form action="http://www.google.com/search" method="GET" class="third search">
+                    <input type="hidden" name="q" value="site://kijanawoodard.com" />
+
+                    <span class="surround-icon"><i class="icon-search"></i></span>
+                    <input type="text" name="q" placeholder="Search" />
                 </form>
             </header>
             <hr/>

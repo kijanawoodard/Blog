@@ -18,6 +18,7 @@ header hgroup h2 a { text-decoration: none;color: #333; }
 header form.search { text-align: right;margin-bottom: 0;float: right;}
 header form input[type=text] { line-height: 23px;font-size: 14px;border-top-right-radius: 2px;border-bottom-right-radius: 2px;padding: 4px 10px;border: 1px solid #ccc;box-shadow: none;}
 .surround-icon { border: 1px solid #ccc;background-color: #eee;padding: 4px 5px;height: 23px;min-width: 16px;display: inline-block;text-align: center;line-height: 23px;border-top-left-radius: 2px;border-bottom-left-radius: 2px;}
+header .actions { text-align: center;}
 
 article a { text-decoration: underline; }
 article li { list-style-type: inherit; }
@@ -69,7 +70,8 @@ footer p {
 -----------------------------------------------------------------------------*/
 @media only screen and (max-width: 480px) {
     #wrap { width: 300px; }
-    header form.search { text-align: left; float: left; }
+    header form.search { text-align: left; float: left; margin-top: 1em; }
+    header .actions { text-align: left; }
     header .subheader { font-size: 1em; }
     #contact { border: none;padding: 0;text-align: left;position: relative; }
     #contact small { display: block;}
@@ -80,7 +82,8 @@ footer p {
 -----------------------------------------------------------------------------*/
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     #wrap { width: 420px; }
-    header form.search { text-align: left; float: left; }
+    header form.search { text-align: left; float: left;  margin-top: 1em; }
+    header .actions { text-align: left; }
 }
 
 /* =Tablet (Portrait)

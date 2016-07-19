@@ -50,8 +50,9 @@
 
 <hr/>
 <section id="comments">
-    @{ Html.RenderAction("Index", "CommentsGet", new { Model.Post.Slug }); }
+    @{ Html.RenderAction("Index", "CommentsGet", new {Model.Post.Slug}); }
 </section>
+<hr/>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'kijanawoodard';
