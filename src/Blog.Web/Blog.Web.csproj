@@ -352,7 +352,7 @@
     <Content Include="Content\posts\avoiding-negative-branching-tests.comments.yaml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Actions\AboutGet\Index.cshtml" />
+    <Content Include="Actions\AboutGet\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
