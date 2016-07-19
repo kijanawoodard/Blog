@@ -86,7 +86,7 @@ namespace Blog.Web.Content
 					{
 						Title = "Foo: IFoo is an Anti-Pattern",
 						Slug = "foo-ifoo-is-an-anti-pattern",
-						FileName = "foo-ifoo-is-an-antipattern.markdown",
+						FileName = "foo-ifoo-is-an-anti-pattern.markdown",
 						PublishedAtCst = DateTime.Parse("October 14, 2013"),
 					},
 					new Post
@@ -130,49 +130,49 @@ namespace Blog.Web.Content
 					{
 						Title = "Learning NServiceBus Review",
 						Slug = "learning-nservicebus-review",
-						FileName = "learning-nservicebus.markdown",
+						FileName = "learning-nservicebus-review.markdown",
 						PublishedAtCst = DateTime.Parse("September 30, 2013"),
 					},
 					new Post
 					{
 						Title = "Building My Own Blog",
 						Slug = "building-a-blog-engine",
-						FileName = "building-blog.markdown",
+						FileName = "building-a-blog-engine.markdown",
 						PublishedAtCst = DateTime.Parse("December 8, 2012"),
 					},
 					new Post
 					{
 						Title = "Javascript UTC Datetime",
 						Slug = "javascript-utc-datetime",
-						FileName = "javascript-utc.markdown",
+						FileName = "javascript-utc-datetime.markdown",
 						PublishedAtCst = DateTime.Parse("June 05, 2012"),
 					},
 					new Post
 					{
 						Title = "Just use string Id for RavenDB",
 						Slug = "just-use-string-id-for-ravendb",
-						FileName = "raven-id.markdown",
+						FileName = "just-use-string-id-for-ravendb.markdown",
 						PublishedAtCst = DateTime.Parse("May 31, 2012"),
 					},
 					new Post
 					{
 						Title = "Seeking Density in Architectural Abstractions",
 						Slug = "seeking-density-in-architectural-abstractions",
-						FileName = "seeking-density.markdown",
+						FileName = "seeking-density-in-architectural-abstractions.markdown",
 						PublishedAtCst = DateTime.Parse("February 14, 2012"),
 					},
 					new Post
 					{
 						Title = "FubuMVC, Validation, and Re-Hydrating the View",
 						Slug = "fubumvc-validation-and-re-hydrating-the-view",
-						FileName = "rehydrating-views.markdown",
+						FileName = "fubumvc-validation-and-re-hydrating-the-view.markdown",
 						PublishedAtCst = DateTime.Parse("February 12, 2012"),
 					},
 //			new Post
 //			{
 //				Title = "C# Partition List into List of Lists",
 //				Slug = "c-partition-list-into-list-of-lists",
-//				FileName = "partition-lists.markdown",
+//				FileName = "c-partition-list-into-list-of-lists.markdown",
 //				PublishedAtCst = DateTime.Parse("October 16, 2010"),
 //				Tags = new string[] {},
 //			},
@@ -194,7 +194,7 @@ namespace Blog.Web.Content
 					{
 						Title = "Null Check with Extension Methods",
 						Slug = "null-check-with-extension-methods",
-						FileName = "nullcheck-extension-method.markdown",
+						FileName = "null-check-with-extension-methods.markdown",
 						PublishedAtCst = DateTime.Parse("May 18, 2010"),
 					},
 					new Post
@@ -222,7 +222,7 @@ namespace Blog.Web.Content
 					{
 						Title = "Quickly Creating Using Namespace Directives",
 						Slug = "quickly-creating-using-namespace-directives",
-						FileName = "creating-using-directives.markdown",
+						FileName = "quickly-creating-using-namespace-directives.markdown",
 						PublishedAtCst = DateTime.Parse("May 14, 2010"),
 					},
 					new Post
@@ -271,7 +271,7 @@ namespace Blog.Web.Content
 					{
 						Title = "Gmail’s Spam Criteria is Stringent",
 						Slug = "gmails-spam-criteria-is-stringent",
-						FileName = "gmail-spam.markdown",
+						FileName = "gmails-spam-criteria-is-stringent.markdown",
 						PublishedAtCst = DateTime.Parse("January 11, 2010"),
 					},
 					new Post

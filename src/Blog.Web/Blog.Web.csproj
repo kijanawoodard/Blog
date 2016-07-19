@@ -166,7 +166,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\posts\javascript-utc.markdown" />
+    <Content Include="Content\posts\javascript-utc-datetime.markdown" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -178,7 +178,7 @@
     <Content Include="Actions\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\posts\building-blog.markdown" />
+    <Content Include="Content\posts\building-a-blog-engine.markdown" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Actions\Web.config" />
@@ -189,16 +189,16 @@
     <Content Include="Content\font\fontawesome-webfont.woff" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\posts\raven-id.markdown" />
+    <Content Include="Content\posts\just-use-string-id-for-ravendb.markdown" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\posts\seeking-density.markdown" />
+    <Content Include="Content\posts\seeking-density-in-architectural-abstractions.markdown" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\posts\rehydrating-views.markdown" />
+    <Content Include="Content\posts\fubumvc-validation-and-re-hydrating-the-view.markdown" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\posts\partition-lists.markdown" />
+    <Content Include="Content\posts\c-partition-list-into-list-of-lists.markdown" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\posts\selling-value-for-money.markdown" />
@@ -207,7 +207,7 @@
     <Content Include="Content\posts\nullor-extension-method.markdown" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\posts\nullcheck-extension-method.markdown" />
+    <Content Include="Content\posts\null-check-with-extension-methods.markdown" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\posts\avoiding-negative-branching-tests.markdown" />
@@ -219,7 +219,7 @@
     <Content Include="Content\posts\visual-studio-code-snippets.markdown" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\posts\creating-using-directives.markdown" />
+    <Content Include="Content\posts\quickly-creating-using-namespace-directives.markdown" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\posts\thoughts-on-script-sharp.markdown" />
@@ -240,7 +240,7 @@
     <Content Include="Content\posts\avoiding-fizzbuzz.markdown" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\posts\gmail-spam.markdown" />
+    <Content Include="Content\posts\gmails-spam-criteria-is-stringent.markdown" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\posts\tekpub-rocks.markdown" />
@@ -249,7 +249,7 @@
     <Content Include="Actions\PostGet\Index.Atom.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\posts\learning-nservicebus.markdown">
+    <Content Include="Content\posts\learning-nservicebus-review.markdown">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
@@ -266,7 +266,7 @@
     <Content Include="Content\posts\how-to-wake-up-your-kids.markdown" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\posts\foo-ifoo-is-an-antipattern.markdown" />
+    <Content Include="Content\posts\foo-ifoo-is-an-anti-pattern.markdown" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\posts\interface-inversion.markdown" />
@@ -315,6 +315,40 @@
     <Content Include="Content\posts\violating-isp-with-constructor-injection.comments.yaml" />
     <Content Include="Content\posts\violating-srp-with-constructor-injection.comments.yaml" />
     <Content Include="Content\posts\visual-studio-code-snippets.comments.yaml" />
+    <Content Include="Content\posts\tekpub-rocks.comments.yaml" />
+    <Content Include="Content\posts\thoughts-on-script-sharp.comments.yaml" />
+    <Content Include="Content\posts\vessel-modules.comments.yaml" />
+    <Content Include="Content\posts\selling-value-for-money.comments.yaml" />
+    <Content Include="Content\posts\seeking-density-in-architectural-abstractions.comments.yaml" />
+    <Content Include="Content\posts\just-use-string-id-for-ravendb.comments.yaml" />
+    <Content Include="Content\posts\learning-nservicebus-review.comments.yaml" />
+    <Content Include="Content\posts\null-check-with-extension-methods.comments.yaml" />
+    <Content Include="Content\posts\nullor-extension-method.comments.yaml" />
+    <Content Include="Content\posts\questioning-ioc-containers.comments.yaml" />
+    <Content Include="Content\posts\quickly-creating-using-namespace-directives.comments.yaml" />
+    <Content Include="Content\posts\in-defense-of-blub.comments.yaml" />
+    <Content Include="Content\posts\interface-inversion.comments.yaml" />
+    <Content Include="Content\posts\introducing-liaison.comments.yaml" />
+    <Content Include="Content\posts\introducing-nimbus.comments.yaml" />
+    <Content Include="Content\posts\introducing-vessel.comments.yaml" />
+    <Content Include="Content\posts\javascript-utc-datetime.comments.yaml" />
+    <Content Include="Content\posts\how-to-wake-up-your-kids.comments.yaml" />
+    <Content Include="Content\posts\ienumerable-each.comments.yaml" />
+    <Content Include="Content\posts\gmails-spam-criteria-is-stringent.comments.yaml" />
+    <Content Include="Content\posts\fubumvc-validation-and-re-hydrating-the-view.comments.yaml" />
+    <Content Include="Content\posts\foo-ifoo-is-an-anti-pattern.comments.yaml" />
+    <Content Include="Content\posts\fizzbuzz-plus-plus.comments.yaml" />
+    <Content Include="Content\posts\cool-feature-of-extension-methods.comments.yaml" />
+    <Content Include="Content\posts\creating-a-resharper-macro.comments.yaml" />
+    <Content Include="Content\posts\dotnet-demon.comments.yaml" />
+    <Content Include="Content\posts\c-partition-list-into-list-of-lists.comments.yaml" />
+    <Content Include="Content\posts\contact.comments.yaml" />
+    <Content Include="Content\posts\constructor-injection-is-partial-application.comments.yaml" />
+    <Content Include="Content\posts\building-a-blog-engine.comments.yaml" />
+    <Content Include="Content\posts\a-tale-of-scope-creep.comments.yaml" />
+    <Content Include="Content\posts\asp-net-mvc-content-negotiation.comments.yaml" />
+    <Content Include="Content\posts\avoiding-fizzbuzz.comments.yaml" />
+    <Content Include="Content\posts\avoiding-negative-branching-tests.comments.yaml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
