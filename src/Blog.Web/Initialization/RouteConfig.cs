@@ -32,7 +32,12 @@ namespace Blog.Web.Initialization
 				"archive",
 				new { controller = "PostGet", action = "Index" });
 
-			routes.MapRoute(
+            routes.MapRoute(
+                null,
+                "about",
+                new { controller = "AboutGet", action = "Index" });
+
+            routes.MapRoute(
 				null,
 				"{slug}.{ext}",
 				new { controller = "PostGet", action = "Execute" });

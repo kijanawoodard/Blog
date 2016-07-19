@@ -116,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actions\CommentsGet\CommentsGetController.cs" />
+    <Compile Include="Actions\AboutGet\AboutGetController.cs" />
     <Compile Include="Core\DateTimeExtensions.cs" />
     <Compile Include="Actions\DisplayErrors\DisplayErrorsController.cs" />
     <Compile Include="Actions\PostGet\PostGetController.cs" />
@@ -349,6 +350,9 @@
     <Content Include="Content\posts\asp-net-mvc-content-negotiation.comments.yaml" />
     <Content Include="Content\posts\avoiding-fizzbuzz.comments.yaml" />
     <Content Include="Content\posts\avoiding-negative-branching-tests.comments.yaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Actions\AboutGet\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

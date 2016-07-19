@@ -56,13 +56,6 @@ namespace Blog.Web.Content
 					},
 					new Post
 					{
-						Title = "Contact",
-						Slug = "contact",
-						FileName = "contact.markdown",
-						PublishedAtCst = DateTime.Parse("April 17, 1974"),
-					},
-					new Post
-					{
 						Title = "Creating a ReSharper Macro",
 						Slug = "creating-a-resharper-macro",
 						FileName = "creating-a-resharper-macro.markdown",

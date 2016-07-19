@@ -1,4 +1,4 @@
-﻿Add explicit about page
+﻿X Add explicit about page
 	Links to Talks
 Add metadata to markdown
 Add folders to contain images and comments
