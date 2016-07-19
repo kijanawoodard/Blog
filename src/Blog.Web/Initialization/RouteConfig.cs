@@ -10,17 +10,24 @@ namespace Blog.Web.Initialization
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.IgnoreRoute("{*favicon}", new { favicon = @"(.*/)?favicon.ico(/.*)?" });
 
+            routes.RouteExistingFiles = true;
+
             routes.MapRoute(
                 "Error - 404",
                 "NotFound",
                 new { controller = "DisplayErrors", action = "Http404" }
                 );
 
-//            routes.MapRoute(
-//                "Error - 500",
-//                "ServerError",
-//                new { controller = "DisplayErrors", action = "Http500" }
-//                );
+            //            routes.MapRoute(
+            //                "Error - 500",
+            //                "ServerError",
+            //                new { controller = "DisplayErrors", action = "Http500" }
+            //                );
+
+            routes.MapRoute(
+                null,
+                "sitemap",
+                new { controller = "Sitemap", action = "Index" });
 
             routes.MapRoute(
                 null,
