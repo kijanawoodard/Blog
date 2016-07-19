@@ -58,6 +58,7 @@ footer p {
 
 #archive ul { list-style-type: none;margin: 0;}
 
+#comments > header { font-weight: bold;font-style: italic;font-size: 1.2em;margin-bottom: 2em;}
 #comments .comment { display: flex;margin-bottom: 2em;}
 #comments .comment .avatar { flex: 0 0 100px; }
 #comments .comment .name { font-weight: bold; }
