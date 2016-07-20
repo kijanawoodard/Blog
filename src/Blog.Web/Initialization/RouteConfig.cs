@@ -24,6 +24,11 @@ namespace Blog.Web.Initialization
 
             routes.MapRoute(
                 null,
+                "sitemap.{ext}",
+                new { controller = "Sitemap", action = "Index" });
+
+            routes.MapRoute(
+                null,
                 "sitemap",
                 new { controller = "Sitemap", action = "Index" });
 
