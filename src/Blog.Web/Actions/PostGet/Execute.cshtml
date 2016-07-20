@@ -26,7 +26,7 @@
         {
             <a href="@Url.Action("Execute", "PostGet", new { slug = Model.Previous.Slug, ext = ViewContext.RequestContext.RouteData.Values["ext"] })">
                 <div>
-                    <i class="icon-arrow-left"></i>
+                    <span class="fa fa-arrow-left"></span >
                     <span>@Model.Previous.Title</span>
                 </div>
                 <small>@Model.Previous.PublishedAtCst.ToLongDateString()</small>
@@ -40,7 +40,7 @@
             <a href="@Url.Action("Execute", "PostGet", new { slug = Model.Next.Slug, ext = ViewContext.RequestContext.RouteData.Values["ext"] })">
                 <div>
                     <span>@Model.Next.Title</span>
-                    <i class="icon-arrow-right"></i>
+                    <span class="fa fa-arrow-right"></span >
                 </div>
                 <small>@Model.Next.PublishedAtCst.ToLongDateString()</small>
             </a>

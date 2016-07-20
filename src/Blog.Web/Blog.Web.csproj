@@ -142,7 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Initialization\RouteConfig.cs" />
-    <Content Include="Content\css\font-awesome.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
     <Content Include="Content\css\kube.min.css" />
     <Content Include="Content\css\kube.responsive.min.css" />
     <Content Include="Content\css\site.css" />
@@ -362,6 +362,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Actions\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\font\fontawesome-webfont.woff2" />
+    <Content Include="Content\font\FontAwesome.otf" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
