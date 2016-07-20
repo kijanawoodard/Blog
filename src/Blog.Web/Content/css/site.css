@@ -73,6 +73,7 @@ footer p {
     #wrap { width: 300px; }
     header form.search { text-align: left; float: left; margin-top: 1em; }
     header .actions { text-align: left; }
+    header .actions a { margin-right: 1em; }
     header .subheader { font-size: 1em; }
     #contact { border: none;padding: 0;text-align: left;position: relative; }
     #contact small { display: block;}
