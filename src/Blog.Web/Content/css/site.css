@@ -19,6 +19,7 @@ header form.search { text-align: right;margin-bottom: 0;float: right;}
 header form input[type=text] { line-height: 23px;font-size: 14px;border-top-right-radius: 2px;border-bottom-right-radius: 2px;padding: 4px 10px;border: 1px solid #ccc;box-shadow: none;}
 .surround-icon { border: 1px solid #ccc;background-color: #eee;padding: 4px 5px;height: 23px;min-width: 16px;display: inline-block;text-align: center;line-height: 23px;border-top-left-radius: 2px;border-bottom-left-radius: 2px;}
 header .actions { text-align: center;}
+header .actions a { margin-right: 0.5em; }
 
 article a { text-decoration: underline; }
 article li { list-style-type: inherit; }
