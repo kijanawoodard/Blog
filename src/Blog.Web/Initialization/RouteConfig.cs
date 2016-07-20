@@ -10,8 +10,6 @@ namespace Blog.Web.Initialization
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.IgnoreRoute("{*favicon}", new { favicon = @"(.*/)?favicon.ico(/.*)?" });
 
-            routes.RouteExistingFiles = true;
-
             routes.MapRoute(
                 "Error - 404",
                 "NotFound",
