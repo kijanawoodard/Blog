@@ -40,7 +40,7 @@
             </form>
         </header>
         <hr/>
-        <div class="row">
+        <div>
             <article>
                 @RenderBody()
             </article>
@@ -102,7 +102,11 @@
         </div>
         <footer>
             @{ var info = AssemblyExtensions.GetAssemblyInfo(); }
-            <p>&copy; Kijana Woodard 2010 - @DateTime.UtcNow.Year - v @info.Version - @info.LastModified.ToLongDateString() @info.LastModified.ToShortTimeString()</p>
+            <p>
+                <span class="fa fa-copyright copyright"></span> 
+                <span class="copyright">Kijana Woodard 2010 - @DateTime.UtcNow.Year</span> 
+                Version @info.Version - @info.LastModified.ToLongDateString() @info.LastModified.ToShortTimeString()
+            </p>
         </footer>
     </div>
 

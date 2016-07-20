@@ -39,9 +39,13 @@ aside section { margin-bottom: 2em; }
 
 footer p {
   color: #ccc;
-  font-size: 12px;
+  font-size: 1em;
   text-align: left;
   line-height: 40px; 
+}
+
+footer .copyright {
+    color: #555;
 }
 
 #contact { border: 1px solid #ddd;padding: 12px;text-align: center;position: fixed;right: 0;top: 12%;}
