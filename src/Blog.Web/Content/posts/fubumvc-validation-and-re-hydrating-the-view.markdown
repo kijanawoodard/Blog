@@ -115,7 +115,7 @@ For the last couple of hours I’ve been trying to come up with a scenario where
 
 I’m going to try to POST via ajax most of the time.
 
-[FubuMVC]:http://mvc.fubu-project.org/
+[FubuMVC]:http://fubuworld.com/fubumvc/
 [SOA Course]:http://www.udidahan.com/training/
 [stack]:http://stackoverflow.com/questions/6759287/how-to-set-up-fubumvc-validation
 [overflow]:http://stackoverflow.com/questions/8856390/fubumvc-simple-forms-validation-using-ifailurevalidationpolicy
