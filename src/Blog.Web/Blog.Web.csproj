@@ -119,7 +119,7 @@
     <Compile Include="Actions\AboutGet\AboutGetController.cs" />
     <Compile Include="Actions\Home\HomeController.cs" />
     <Compile Include="Actions\Sitemap\SitemapController.cs" />
-    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="Initialization\FilterConfig.cs" />
     <Compile Include="Core\AssemblyExtensions.cs" />
     <Compile Include="Core\DateTimeExtensions.cs" />
     <Compile Include="Actions\DisplayErrors\DisplayErrorsController.cs" />
@@ -146,7 +146,7 @@
     <Content Include="Content\css\kube.min.css" />
     <Content Include="Content\css\kube.responsive.min.css" />
     <Content Include="Content\css\site.css" />
-    <Content Include="Content\font\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\ideas.txt" />
     <Content Include="Content\posts\images\gmail-spam.png" />
     <Content Include="Content\posts\images\kijana.woodard.headshot.medium.jpg" />
@@ -191,9 +191,9 @@
     <Content Include="Actions\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\font\fontawesome-webfont.eot" />
-    <Content Include="Content\font\fontawesome-webfont.ttf" />
-    <Content Include="Content\font\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\posts\just-use-string-id-for-ravendb.markdown" />
@@ -364,8 +364,8 @@
     <Content Include="Actions\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\font\fontawesome-webfont.woff2" />
-    <Content Include="Content\font\FontAwesome.otf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
