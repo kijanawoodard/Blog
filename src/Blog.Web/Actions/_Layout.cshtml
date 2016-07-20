@@ -9,6 +9,8 @@
         <link rel="icon" type="image/x-icon" href="/favicon.png" />
         <link href="@Url.Action("Index", "PostGet", new { ext = "atom"})" type="application/atom+xml" rel="alternate" title="ATOM Feed">
 
+        @System.Web.Optimization.Styles.Render("~/bundles/css")
+
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->        
@@ -109,8 +111,6 @@
             </p>
         </footer>
     </div>
-
-    @System.Web.Optimization.Styles.Render("~/bundles/css")
 
     @if (Request.UserAgent != null && !Request.UserAgent.Contains("Speed Insights"))
     {
