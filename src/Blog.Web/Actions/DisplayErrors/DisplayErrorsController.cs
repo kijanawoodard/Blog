@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using System.Web.Mvc;
 
 namespace Blog.Web.Actions.DisplayErrors
@@ -7,6 +8,7 @@ namespace Blog.Web.Actions.DisplayErrors
     {
         public ActionResult Http404()
         {
+            Response.StatusCode = (int)HttpStatusCode.NotFound;
             return View();
         }
 
