@@ -8,6 +8,5 @@ namespace Blog.Web.Actions.AboutGet
         {
             return View();
         }
-
     }
 }

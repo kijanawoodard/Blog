@@ -11,8 +11,11 @@ namespace Blog.Web.Initialization
             bundles.DirectoryFilter.Ignore("font-awesome.*", OptimizationMode.Always);
 
             var css = new StyleBundle("~/bundles/css");
-            css.IncludeDirectory("~/content/css", "*.css");
             css.Include("~/content/css/font-awesome.min.css", new CssRewriteUrlTransform());
+            css.Include("~/content/css/kube.min.css");
+            css.Include("~/content/css/kube.responsive.min.css");
+            css.Include("~/content/css/forms.css");
+            css.Include("~/content/css/site.css");
 
             bundles.Add(css);
         }

@@ -1,4 +1,5 @@
-﻿@model dynamic
+﻿@using System.Configuration
+@model dynamic
 
 @{
     ViewBag.Title = "About";
@@ -9,8 +10,27 @@
 <figure class="headshot">
     <img src="/content/posts/images/kijana.woodard.headshot.square.jpg"
          alt="Head shot of Kijana Woodard"/>
-    @*<figcaption>214.395.4965 m | contact@kijanawoodard.com</figcaption>*@
+    <figcaption>Kijana Woodard - Programmer</figcaption>
 </figure>
+<form action="@Url.Action("Index", "Contact")" method="post" class="submit">
+    <fieldset>
+        <legend>Contact Me</legend>
+
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Your Name" required />
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Your Email Address" required />
+
+        <label>Details</label>
+        <textarea name="text"></textarea>
+
+        <label class="honey">Don't fill out. Only For Robots</label>
+        <input class="honey" type="text" name="access"/>
+
+        <button type="submit">Submit</button>
+    </fieldset>
+</form>
 
 <br/>
 <p>Kijana Woodard is a business focused programmer living in Dallas, TX</p>

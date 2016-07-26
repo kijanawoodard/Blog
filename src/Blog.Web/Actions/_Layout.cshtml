@@ -112,6 +112,8 @@
         </footer>
     </div>
 
+    @RenderSection("scripts", false)
+        
     @if (Request.UserAgent != null && !Request.UserAgent.Contains("Speed Insights"))
     {
         <script>

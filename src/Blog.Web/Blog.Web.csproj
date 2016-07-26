@@ -130,6 +130,7 @@
   <ItemGroup>
     <Compile Include="Actions\CommentsGet\CommentsGetController.cs" />
     <Compile Include="Actions\AboutGet\AboutGetController.cs" />
+    <Compile Include="Actions\Contact\ContactController.cs" />
     <Compile Include="Actions\Home\HomeController.cs" />
     <Compile Include="Actions\Sitemap\SitemapController.cs" />
     <Compile Include="Initialization\BundleConfig.cs" />
@@ -159,6 +160,7 @@
     <Content Include="Content\css\font-awesome.min.css" />
     <Content Include="Content\css\kube.min.css" />
     <Content Include="Content\css\kube.responsive.min.css" />
+    <Content Include="Content\css\forms.css" />
     <Content Include="Content\css\site.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\ideas.txt" />
@@ -380,6 +382,9 @@
   <ItemGroup>
     <Content Include="Content\fonts\fontawesome-webfont.woff2" />
     <Content Include="Content\fonts\FontAwesome.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Actions\Contact\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

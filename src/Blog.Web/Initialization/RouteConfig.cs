@@ -48,6 +48,11 @@ namespace Blog.Web.Initialization
                 new { controller = "AboutGet", action = "Index" });
 
             routes.MapRoute(
+                null,
+                "contact",
+                new { controller = "Contact", action = "Index" });
+
+            routes.MapRoute(
                 "Root",
                 "",
                 new {controller = "Home", action = "Index", id = ""}
