@@ -104,6 +104,6 @@ footer .copyright {
 }
 
 @media print {
-    #latest, #contact, #disqus_thread { display: none; }
+    header .actions, header .search, #contact { display: none; }
     article { width: 100% !important; } /* bah! - this is what's wrong with non-semantic classes - have to use important'*/    
 }
