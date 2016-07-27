@@ -1,4 +1,4 @@
-﻿Sorry to frighten you in this [Hallow's eve][hallow], but this post is _not_ about [yet][shortbus] [another][nimbus] [mediator][liaison post]. :-]
+﻿Sorry to frighten you on this [Hallow's eve][hallow], but this post is _not_ about [yet][shortbus] [another][nimbus] [mediator][liaison post]. :-]
 
 After finishing [Liaison], I found myself [coding in anger]. What else could I cull from my stack? The obvious answer:
 
