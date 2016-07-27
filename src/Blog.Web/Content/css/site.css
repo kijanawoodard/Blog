@@ -22,7 +22,7 @@ header .actions { text-align: center;}
 header .actions a { margin-right: 0.5em; }
 
 article a { text-decoration: underline; }
-article li { list-style-type: inherit; }
+article li { list-style-type: disc; }
 article header hgroup { margin-bottom: 1.5em;}
 article footer a { text-decoration: none; }
 article footer .next { text-align: right; }
@@ -62,9 +62,9 @@ footer .copyright {
 .headshot { text-align: center; }
 .headshot img { margin: auto;}
 
-#home ul, #archive ul { list-style-type: none;margin: 0;}
-
-#home li { margin-bottom: 2em;}
+#archive ul { margin: 0;}
+#archive ul li { list-style-type: none;}
+#home article { margin-bottom: 2em;}
 
 #comments > header { font-weight: bold;font-style: italic;font-size: 1.2em;margin-bottom: 2em;}
 #comments .comment { display: flex;margin-bottom: 2em;}
