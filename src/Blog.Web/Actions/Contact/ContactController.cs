@@ -8,6 +8,7 @@ namespace Blog.Web.Actions.Contact
 {
     public class ContactController : Controller
     {
+        [HttpGet]
         public ActionResult Index()
         {
             return View();
@@ -29,7 +30,13 @@ namespace Blog.Web.Actions.Contact
             
             smtp.Send(message);
             
-            return RedirectToAction("Index", "Contact");
+            return RedirectToAction("Thanks", "Contact");
+        }
+
+        [HttpGet]
+        public ActionResult Thanks()
+        {
+            return View();
         }
 
         public class PostModel

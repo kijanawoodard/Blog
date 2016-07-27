@@ -52,12 +52,19 @@ button:disabled {
 form label { width: 100%;display: inline-block;}
 form.submit input, form.submit input[type="text"], form.submit input[type="password"],
 form.submit input[type="email"], form.submit textarea {
-    min-width: 400px;
+    min-width: 240px;
     min-height: 2em;
     padding-left: .7em;
     display: block;
     margin-bottom: 1em;
 }
 
-form.submit textarea { min-height: 5em; }
+form.submit textarea { min-height: 8em; }
 form.submit .special { display: none !important;}
+
+@media only screen and (min-width: 768px)  {
+    form.submit input, form.submit input[type="text"], form.submit input[type="password"],
+    form.submit input[type="email"], form.submit textarea {
+        min-width: 440px;
+    }
+}

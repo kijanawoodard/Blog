@@ -10,6 +10,8 @@ namespace Blog.Web.Initialization
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.IgnoreRoute("{*favicon}", new { favicon = @"(.*/)?favicon.ico(/.*)?" });
 
+            routes.LowercaseUrls = true;
+
             routes.MapRoute(
                 "Error - 404",
                 "NotFound",
@@ -49,7 +51,7 @@ namespace Blog.Web.Initialization
 
             routes.MapRoute(
                 null,
-                "contact",
+                "contact/{action}",
                 new { controller = "Contact", action = "Index" });
 
             routes.MapRoute(

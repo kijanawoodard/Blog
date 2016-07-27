@@ -1,9 +1,27 @@
 ﻿@model dynamic
 
 @{
-    ViewBag.Title = "Thanks for contacting!";
+    ViewBag.Title = "Contact";
 }
 
-<h2>Thanks for contacting!</h2>
+<h2>Contact Kijana Woodard</h2>
 
-I'll be in touch
+<form action="@Url.Action("Index", "Contact")" method="post" class="submit">
+    <fieldset>
+        <legend>Contact</legend>
+
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Your Name" required/>
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Your Email Address" required/>
+
+        <label>Details</label>
+        <textarea name="text"></textarea>
+
+        <label class="special">Don't fill out. Only For Robots</label>
+        <input class="special" type="text" name="access"/>
+
+        <button type="submit">Submit</button>
+    </fieldset>
+</form>
