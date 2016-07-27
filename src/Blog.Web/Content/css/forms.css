@@ -60,5 +60,4 @@ form.submit input[type="email"], form.submit textarea {
 }
 
 form.submit textarea { min-height: 5em; }
-
-.honey { display: none !important;}
+form.submit .special { display: none !important;}
