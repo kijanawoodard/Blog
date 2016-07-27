@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using System.Net;
 using System.Net.Mail;
-using System.Web;
 using System.Web.Mvc;
 
 using static System.Configuration.ConfigurationManager;
@@ -20,12 +16,18 @@ namespace Blog.Web.Actions.Contact
         [HttpPost]
         public ActionResult Index(PostModel model)
         {
+            var isbot = !string.IsNullOrWhiteSpace(model.Access);
+            var access = isbot ? $"BOT Access: {model.Access}\n\n" : "";
+            var message = new MailMessage("contact-form@kijanawoodard.com", "contact-form@kijanawoodard.com");
+            message.Subject = $"[Blog Contact] from {model.Name}";
+            message.Body = access + model.Text;
+            message.ReplyToList.Add(model.Email);
+
             var smtp = new SmtpClient(AppSettings["smtp::host"], int.Parse(AppSettings["smtp::port"]));
             smtp.Credentials = new NetworkCredential(AppSettings["smtp::username"], AppSettings["smtp::password"]);
             smtp.EnableSsl = bool.Parse(AppSettings["smtp::usessl"]);
-
-            smtp.Send("contact-form@kijanawoodard.com", "contact-form@kijanawoodard.com", $"[Blog Contact] from {model.Name}", model.Email + "\n\nAccess:" + model.Access + "\n\n" + model.Text);
-
+            
+            smtp.Send(message);
             
             return RedirectToAction("Index", "Contact");
         }
