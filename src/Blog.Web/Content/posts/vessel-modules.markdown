@@ -1,4 +1,10 @@
-﻿After implementing [Vessel], I was curious what it would be like to add a module system. To do this, I added a [RegisterModules] method that scans for classes implementing `IModule` and executes them.
+---
+title: Vessel Modules
+published: November 01, 2013
+tags: 
+---
+
+After implementing [Vessel], I was curious what it would be like to add a module system. To do this, I added a [RegisterModules] method that scans for classes implementing `IModule` and executes them.
 
 Doing this allows us to [define our mediator functionality in context][use module]. I like this because it allows us to add new features without having to modify a central registry.
 

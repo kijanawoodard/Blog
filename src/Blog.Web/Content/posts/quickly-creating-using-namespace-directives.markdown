@@ -1,4 +1,10 @@
-﻿If you’re not watching [TekPub videos], you’re doing yourself a disservice.
+---
+title: Quickly Creating Using Namespace Directives
+published: May 14, 2010
+tags: 
+---
+
+If you’re not watching [TekPub videos], you’re doing yourself a disservice.
 
 I was watching an awesome video from the [Mastering ASP.NET MVC 2 series][MVC 2], and i noticed the presenter doing something interesting.
 

@@ -1,4 +1,10 @@
-﻿One [problem with IoC containers][questioning-ioc] is that they facilitate [ISP] violations through constructor injection.
+---
+title: Violating ISP with Constructor Injection
+published: October 10, 2013
+tags: 
+---
+
+One [problem with IoC containers][questioning-ioc] is that they facilitate [ISP] violations through constructor injection.
 
 > The interface-segregation principle (ISP) states that no client should be forced to depend on methods it does not use.
 

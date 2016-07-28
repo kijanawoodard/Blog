@@ -1,4 +1,10 @@
-﻿One recurrent theme in business is the disconnect between the “product team” and the Sales/Marketing team. I’ve repeatedly seen product teams working long hours to make insane deadlines because the Sales team has undersold their value.
+---
+title: Selling Value for Money
+published: May 20, 2010
+tags: 
+---
+
+One recurrent theme in business is the disconnect between the “product team” and the Sales/Marketing team. I’ve repeatedly seen product teams working long hours to make insane deadlines because the Sales team has undersold their value.
 
 Sane rules of sales go out the window when it comes to selling software, and probably any kind of service business that primarily involves brain work like advertising or design.
 

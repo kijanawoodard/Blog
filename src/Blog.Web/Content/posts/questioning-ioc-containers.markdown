@@ -1,4 +1,10 @@
-﻿Last night I awoke at 3am with a thought: maybe Greg Young has a point.
+---
+title: Questioning IoC Containers
+published: October 09, 2013
+tags: 
+---
+
+Last night I awoke at 3am with a thought: maybe Greg Young has a point.
 
 The other day, I watched Greg's [8 lines of code][eight-lines] video. I found myself agreeing, out loud, with the presentation, which is somewhat startling when you're sitting by yourself. One thing I couldn't quite swallow was his "no ioc" stance.
 

@@ -1,4 +1,10 @@
-﻿I mentioned that I got an idea while writing the post on [extension methods]. I realized that you can null check using this technique.
+---
+title: Null Check with Extension Methods
+published: May 18, 2010
+tags: 
+---
+
+I mentioned that I got an idea while writing the post on [extension methods]. I realized that you can null check using this technique.
 
 It get’s annoying writing this code over and over:
 

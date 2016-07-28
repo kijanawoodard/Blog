@@ -1,4 +1,10 @@
-﻿[Zach Burke] mentioned to me that he wanted to add a 404 page to his new blog. Sounds like a good idea, lets do it.
+---
+title: A Tale of Scope Creep
+published: November 05, 2013
+tags: 
+---
+
+[Zach Burke] mentioned to me that he wanted to add a 404 page to his new blog. Sounds like a good idea, lets do it.
 
 I assumed I was going to [configure httpErrors][httperrors], but I figured I'd google a bit anyway. Turns out, there is quite a [debate][404 debate] about 404 pages with asp.net mvc. I decided I didn't really care about the nuances and I wanted to get the feature done. Good enough. [Commit][404 commit].
 

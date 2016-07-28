@@ -1,4 +1,10 @@
-﻿I've decided to remove disqus comments from my blog.
+---
+title: Goodbye Disqus
+published: July 27, 2016
+tags: 
+---
+
+I've decided to remove disqus comments from my blog.
 
 I had several issues with disqus:
 

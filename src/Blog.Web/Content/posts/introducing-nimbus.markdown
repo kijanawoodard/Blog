@@ -1,4 +1,10 @@
-﻿Once I started [questioning IoC] containers, a [variety][violating isp] of [problems][violating srp] presented [themselves][foo ifoo].
+---
+title: Introducing Nimbus
+published: October 24, 2013
+tags: 
+---
+
+Once I started [questioning IoC] containers, a [variety][violating isp] of [problems][violating srp] presented [themselves][foo ifoo].
 
 Near the end of [questioning IoC], I posited an escape hatch:
 

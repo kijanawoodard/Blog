@@ -1,4 +1,10 @@
-﻿Getting hired for a programming job means interviewing. This process is utterly necessary, but often tedious.
+---
+title: Avoiding FizzBuzz
+published: May 09, 2010
+tags: 
+---
+
+Getting hired for a programming job means interviewing. This process is utterly necessary, but often tedious.
 
 Interviewers have to be able to weed out the “no hopers”. The problem is, decent candidates are put off being asked “the basics”.
 

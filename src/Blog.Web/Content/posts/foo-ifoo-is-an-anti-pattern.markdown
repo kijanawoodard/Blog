@@ -1,4 +1,10 @@
-﻿This simple code, used in so many examples, has always bothered me.
+---
+title: Foo: IFoo is an Anti-Pattern
+published: October 14, 2013
+tags: 
+---
+
+This simple code, used in so many examples, has always bothered me.
 
     class Foo : IFoo
 

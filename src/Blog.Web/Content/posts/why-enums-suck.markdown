@@ -1,4 +1,10 @@
-﻿I inherited some code at work that made use of enums. I happily continued the pattern in order to get the job done considering the tight deadline. My spidey sense kept tingling telling me something was wrong, but I couldn’t quite put my finger on it.
+---
+title: Why Enums Suck
+published: May 10, 2010
+tags: 
+---
+
+I inherited some code at work that made use of enums. I happily continued the pattern in order to get the job done considering the tight deadline. My spidey sense kept tingling telling me something was wrong, but I couldn’t quite put my finger on it.
 
 The code I started with was pretty standard stuff.
 

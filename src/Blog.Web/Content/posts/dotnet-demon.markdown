@@ -1,4 +1,10 @@
-﻿
+---
+title: .Net Demon
+published: October 08, 2013
+tags: little things
+---
+
+
 Sometimes it's the little things.
 
 A while ago, I installed [.net demon] and ran the trial. I was instantly impressed. 

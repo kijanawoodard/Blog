@@ -1,4 +1,10 @@
-﻿In the previous post post, we explored how constructor injection can be abused to [violate isp][violating isp]. At the end, I mentioned possible [SRP] violations as well.
+---
+title: Violating SRP with Constructor Injection
+published: October 11, 2013
+tags: 
+---
+
+In the previous post post, we explored how constructor injection can be abused to [violate isp][violating isp]. At the end, I mentioned possible [SRP] violations as well.
 
 Let's look at the same class:
 

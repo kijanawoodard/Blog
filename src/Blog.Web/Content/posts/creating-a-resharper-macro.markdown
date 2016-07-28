@@ -1,4 +1,10 @@
-﻿I wanted to get [R#] to do a little typing for me so that I can more easily add new blog posts.
+---
+title: Creating a ReSharper Macro
+published: October 17, 2013
+tags: 
+---
+
+I wanted to get [R#] to do a little typing for me so that I can more easily add new blog posts.
 
 A new post looks like this:
     

@@ -1,4 +1,10 @@
-﻿
+---
+title: Building My Own Blog
+published: December 08, 2012
+tags: 
+---
+
+
 Why not? I took a day and wrote a blog engine. I had a few goals in mind. I started by stealing, er, uh, learning from the blog of [Tim G Thomas][timgthomas] whose [source code is conveniently on GitHub][timgthomas source].
 
 ###Minimalism

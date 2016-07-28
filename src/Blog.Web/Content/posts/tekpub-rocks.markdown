@@ -1,4 +1,10 @@
-﻿I finally got around to getting a subscription for [TekPub]. I watched three of the jQuery videos, two of the MVC videos and one Linq video.
+---
+title: TekPub Rocks!
+published: January 10, 2010
+tags: 
+---
+
+I finally got around to getting a subscription for [TekPub]. I watched three of the jQuery videos, two of the MVC videos and one Linq video.
 
 The thing is, I use jQuery and Linq all the time. I thought I “knew” these technologies. I’ve watched a slew of the MVC videos on asp.net. I’ve read articles all over the web. I’ve read the docs for these products.
 

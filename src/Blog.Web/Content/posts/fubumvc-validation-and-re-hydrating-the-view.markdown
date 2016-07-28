@@ -1,4 +1,10 @@
-﻿Last week, I started experimenting with FubuMVC. About two months ago, I met three of the Fubu guys down in Austin and they sparked my curiosity about [FubuMVC]. Last month I took [Udi Dahan’s excellent SOA course][SOA Course] and asked him about FubuMVC in light of his views on SOA. His response was to challenge me to give FubuMVC a try and find out.
+---
+title: FubuMVC, Validation, and Re-Hydrating the View
+published: February 12, 2012
+tags: 
+---
+
+Last week, I started experimenting with FubuMVC. About two months ago, I met three of the Fubu guys down in Austin and they sparked my curiosity about [FubuMVC]. Last month I took [Udi Dahan’s excellent SOA course][SOA Course] and asked him about FubuMVC in light of his views on SOA. His response was to challenge me to give FubuMVC a try and find out.
 
 I started working my way through the beginner material on FubuMVC when I struck upon an issue present in any web framework: when you POST data and hit a problem, how do you re-hydrate the view with the data the user entered and show the user about what went wrong.
 

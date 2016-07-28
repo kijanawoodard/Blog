@@ -1,4 +1,10 @@
-﻿Sorry to frighten you on this [Hallow's eve][hallow], but this post is _not_ about [yet][shortbus] [another][nimbus] [mediator][liaison post]. :-]
+---
+title: Introducing Vessel
+published: October 31, 2013
+tags: 
+---
+
+Sorry to frighten you on this [Hallow's eve][hallow], but this post is _not_ about [yet][shortbus] [another][nimbus] [mediator][liaison post]. :-]
 
 After finishing [Liaison], I found myself [coding in anger]. What else could I cull from my stack? The obvious answer:
 

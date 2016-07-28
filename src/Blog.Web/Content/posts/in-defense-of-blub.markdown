@@ -1,4 +1,10 @@
-﻿A while back, I read quite a bit of [Reginald Braithwaite’s excellent blog][rb]. If you care at all about programming, reading his blog will intrigue, mystify, depress, and inspire you.
+---
+title: In Defense of Blub
+published: May 11, 2010
+tags: 
+---
+
+A while back, I read quite a bit of [Reginald Braithwaite’s excellent blog][rb]. If you care at all about programming, reading his blog will intrigue, mystify, depress, and inspire you.
 
 I particularly liked his post about everyone being a [Blub programmer][blub]. To quote a Paul Graham quote from Reg’s blog:
 

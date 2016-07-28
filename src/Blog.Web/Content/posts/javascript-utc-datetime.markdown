@@ -1,4 +1,10 @@
-﻿I created a date in js like this: `new Date(2012, 0, 1, 8, 15, 0);`.
+---
+title: Javascript UTC Datetime
+published: June 05, 2012
+tags: 
+---
+
+I created a date in js like this: `new Date(2012, 0, 1, 8, 15, 0);`.
 
 When I console.log it, I get this: `2012-01-01T14:15:00.000Z` (My timezone is CST).
 

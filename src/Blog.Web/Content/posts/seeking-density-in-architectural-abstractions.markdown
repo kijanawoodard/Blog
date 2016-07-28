@@ -1,4 +1,10 @@
-﻿I've found myself making mental leaps about coding more quickly by cross pollinating the input data.
+---
+title: Seeking Density in Architectural Abstractions
+published: February 14, 2012
+tags: 
+---
+
+I've found myself making mental leaps about coding more quickly by cross pollinating the input data.
 
 Take architectural abstractions. They've always grated on me. The better I got at writing code, the more I thought they were a waste of time...most of the time.
 

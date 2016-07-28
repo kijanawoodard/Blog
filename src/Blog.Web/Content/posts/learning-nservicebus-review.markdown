@@ -1,4 +1,10 @@
-﻿I was contacted by Packt Publishing to review [Learning NServiceBus by David Boike][learning]. David is active in the NServiceBus community, so I was eager to see what he had put together. 
+---
+title: Learning NServiceBus Review
+published: September 30, 2013
+tags: 
+---
+
+I was contacted by Packt Publishing to review [Learning NServiceBus by David Boike][learning]. David is active in the NServiceBus community, so I was eager to see what he had put together. 
 
 <figure>
   <img src="/content/posts/images/learning-nservicebus.png" alt="Cover photo of Learning NServiceBus by David Boike" />

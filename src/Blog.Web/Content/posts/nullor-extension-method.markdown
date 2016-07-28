@@ -1,4 +1,10 @@
-﻿I find myself writing code like this a lot:
+---
+title: NullOr Extension Method
+published: May 19, 2010
+tags: 
+---
+
+I find myself writing code like this a lot:
 
     public static void DoSomething(Foo foo)
     {

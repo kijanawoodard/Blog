@@ -1,4 +1,10 @@
-﻿Well [nimbus][introducing nimbus], you had a great run, but now it's over. Make room for [Liaison].
+---
+title: Introducing Liaison
+published: October 25, 2013
+tags: 
+---
+
+Well [nimbus][introducing nimbus], you had a great run, but now it's over. Make room for [Liaison].
 
 While I was building nimbus, something was nagging me. It was great and flexible and [web scale] and all, but...
 

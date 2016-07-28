@@ -1,4 +1,10 @@
-﻿I had an email discussion about [Script#] the other day. I didn’t like it. I admit I looked at the website for less time than it took me to write this post.
+---
+title: Thoughts on Script#
+published: May 12, 2010
+tags: 
+---
+
+I had an email discussion about [Script#] the other day. I didn’t like it. I admit I looked at the website for less time than it took me to write this post.
 
 After sleeping on it, I figured out what bothers me about it. It reminds me of WebForms – let’s pretend we’re not in a browser.
 

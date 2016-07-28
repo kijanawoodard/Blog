@@ -1,4 +1,10 @@
-﻿It's long bothered me that I had a separate endpoint for Atom. After adding the [archive] endpoint, the absurdity really showed since is the same data, just in a different format.
+---
+title: Asp.net MVC Content Negotiation
+published: November 08, 2013
+tags: 
+---
+
+It's long bothered me that I had a separate endpoint for Atom. After adding the [archive] endpoint, the absurdity really showed since is the same data, just in a different format.
 
 Content negotiation to the rescue.
 

@@ -1,4 +1,10 @@
-﻿Thanks to Matt Taylor sending me email comments about my [Avoiding FizzBuzz] post, I decided to jazz it up a bit.
+---
+title: FizzBuzz++
+published: May 09, 2010
+tags: 
+---
+
+Thanks to Matt Taylor sending me email comments about my [Avoiding FizzBuzz] post, I decided to jazz it up a bit.
 
 This whole blog is dedicated to avoiding FizzBuzz type questions in general, so I figure the more code posts the better.
 
