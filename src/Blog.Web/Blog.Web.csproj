@@ -402,6 +402,12 @@
   <ItemGroup>
     <Content Include="Content\posts\goodbye-disqus.comments.yaml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\removing-disqus-with-f-sharp.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\removing-disqus-with-f-sharp.comments.yaml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
