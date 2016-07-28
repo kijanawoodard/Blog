@@ -62,6 +62,10 @@
     <Reference Include="Kent.Boogaart.KBCsv.Extensions">
       <HintPath>..\packages\Kent.Boogaart.KBCsv.Extensions.3.0.0\lib\portable-windows8+net45+windowsphone8\Kent.Boogaart.KBCsv.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Markdig, Version=0.7.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Markdig.0.7.3\lib\net40\Markdig.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MarkdownSharp">
       <HintPath>..\packages\MarkdownSharp.1.13.0.0\lib\35\MarkdownSharp.dll</HintPath>
     </Reference>
