@@ -2,7 +2,6 @@
 
 I particularly liked his post about everyone being a [Blub programmer][blub]. To quote a Paul Graham quote from Reg’s blog:
 
->Blub falls right in the middle of the abstractness continuum… As long as our hypothetical Blub programmer is looking down the power continuum, he knows he’s looking down. Languages less powerful than Blub are obviously less powerful, because they’re missing some feature he’s used to. But when our hypothetical Blub programmer looks in the other direction, up the power continuum, he doesn’t realize he’s looking up. What he sees are merely weird languages… Blub is good enough for him, because he thinks in Blub.
 
 Most people take their language of choice being called Blub with offense. Being called a Blub programmer is even more offensive.
 
