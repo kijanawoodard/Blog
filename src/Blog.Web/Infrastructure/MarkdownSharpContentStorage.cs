@@ -65,11 +65,11 @@ namespace Blog.Web.Infrastructure
             //look for two yaml lines
             if (!text.StartsWith("---")) return null;
 
-            var endMetadata = text.IndexOf("---", 4, StringComparison.Ordinal);
+            var endMetadata = text.IndexOf("---", 3, StringComparison.Ordinal);
             if (endMetadata == -1) return null;
 
-            var metadata = text.Substring(4, endMetadata).Trim();
-            var article = text.Substring(endMetadata + 4).Trim();
+            var metadata = text.Substring(3, endMetadata - 3).Trim();
+            var article = text.Substring(endMetadata + 3).Trim();
             return new Tuple<string, string>(metadata, article);
         }
 
