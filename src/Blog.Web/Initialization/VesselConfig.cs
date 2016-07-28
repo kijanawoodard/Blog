@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Blog.Web.Content;
 using Blog.Web.Core;
 using Blog.Web.Infrastructure;
 
@@ -47,20 +46,11 @@ namespace Blog.Web.Initialization
         public void Execute(IContainer container)
         {
             var root = HttpContext.Current.Server.MapPath("~/Content/posts");
-            var posts =
-                WritingPosts.Posts
-                            .Select(post => new PostViewModel
-                            {
-                                Title = post.Title,
-                                Slug = post.Slug,
-                                FileName = post.FileName,
-                                PublishedAtCst = post.PublishedAtCst
-                            })
-                            .Select(vm => new MarkdownSharpContentStorage(root).Handle(vm))
-                            .ToList();
+            var contentStorage = new MarkdownSharpContentStorage(root);
+            var posts = contentStorage.GetAll().ToList();
 
             container.Register<IReadOnlyList<PostViewModel>>(posts);
-            container.Register<MarkdownSharpContentStorage>(new MarkdownSharpContentStorage(root));
+            container.Register<MarkdownSharpContentStorage>(contentStorage);
         }
     }
 }
