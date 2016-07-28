@@ -5,12 +5,12 @@ using MarkdownSharp;
 
 namespace Blog.Web.Infrastructure
 {
-    public class MarkdownContentStorage
+    public class MarkdownSharpContentStorage
     {
         private readonly string _root;
         private readonly Markdown _markdown;
 
-        public MarkdownContentStorage(string root)
+        public MarkdownSharpContentStorage(string root)
         {
             _root = root;
             _markdown = new Markdown();

@@ -56,11 +56,11 @@ namespace Blog.Web.Initialization
                                 FileName = post.FileName,
                                 PublishedAtCst = post.PublishedAtCst
                             })
-                            .Select(vm => new MarkdownContentStorage(root).Handle(vm))
+                            .Select(vm => new MarkdownSharpContentStorage(root).Handle(vm))
                             .ToList();
 
             container.Register<IReadOnlyList<PostViewModel>>(posts);
-            container.Register<MarkdownContentStorage>(new MarkdownContentStorage(root));
+            container.Register<MarkdownSharpContentStorage>(new MarkdownSharpContentStorage(root));
         }
     }
 }

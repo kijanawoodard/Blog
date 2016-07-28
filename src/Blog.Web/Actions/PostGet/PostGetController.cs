@@ -30,7 +30,7 @@ namespace Blog.Web.Actions.PostGet
         [Conditional("DEBUG")]
         void RefreshContent(IResolver container, IEnumerable<PostViewModel> posts)
         {
-            var storage = container.Resolve<MarkdownContentStorage>();
+            var storage = container.Resolve<MarkdownSharpContentStorage>();
             foreach (var post in posts)
             {
                 storage.Handle(post);
