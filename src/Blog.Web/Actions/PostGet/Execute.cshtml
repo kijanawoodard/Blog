@@ -3,6 +3,14 @@
     ViewBag.Title = @Model.Post.Title;
 }
 
+@section meta
+{
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@Html.Raw("@")kijanawoodard" />
+    <meta name="twitter:title" content="@Model.Post.Title" />
+    <meta name="twitter:description" content="@Model.Post.Description" />
+}
+
 @section canonical 
 {
     <link rel="canonical" href="@Url.RouteUrl("canonical-slug", new { slug = Model.Post.Slug }, "http")"/>
