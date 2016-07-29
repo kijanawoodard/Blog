@@ -1,8 +1,13 @@
-﻿X Add explicit about page
+﻿twitter cards / seo
+honey pot
+sitemap [try View]: http://jphellemons.nl/post/Make-a-Google-Sitemap-with-AspNet-C
+social: https://fourtonfish.makes.org/thimble/make-your-own-social-media-sharing-buttons
+
+X Add explicit about page
     Links to Talks
-Add metadata to markdown
+X Add metadata to markdown
 Add folders to contain images and comments
-Remove disqus
+X Remove disqus
     X Add comments.markdown
 cache responses
 Convert to aspnet core
@@ -15,8 +20,8 @@ Features:
 
     hal extension/formatter
     
-home page - multiple entries
-link to archive?
+X home page - multiple entries
+X link to archive?
 
 Update date vs published date
 Alternate urls in atom feed - json, xml, csv, html, phtml
