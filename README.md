@@ -4,13 +4,13 @@ My personal blog
 
 A learning excerise which borrowed heavily from the [blog of Tim G Thomas][timgthomas].
 
-MVC 4
-Markdown
-Autofac
-GitHub
-Azure
-Kube
-Font-Awesome
+* ASP.NET MVC 4
+* Markdown
+* ~~Autofac~~ Vessel/Liason
+* GitHub
+* Azure
+* Kube + Marx
+* Font-Awesome
 
 [Details about the blog][blog].
 
