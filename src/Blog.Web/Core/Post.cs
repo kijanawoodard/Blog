@@ -34,6 +34,19 @@ namespace Blog.Web.Core
             }
         }
 
+        public string Description
+        {
+            get
+            {
+                var stock = "An article by Kijana Woodard";
+
+                if (Content == null) return stock;
+                var paragraph = Content.Split(new[] { "</p>" }, StringSplitOptions.None).FirstOrDefault()?.Replace("<p>", "");
+                return paragraph ?? stock; 
+            }
+        }
+
+
         public string Content { get; set; }
     }
 }
