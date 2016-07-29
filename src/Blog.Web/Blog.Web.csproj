@@ -408,6 +408,12 @@
   <ItemGroup>
     <Content Include="Content\posts\removing-disqus-with-f-sharp.comments.yaml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\winning-with-c-sharp-interactive.markdown" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\winning-with-c-sharp-interactive.comments.yaml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

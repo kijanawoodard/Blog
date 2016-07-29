@@ -1,7 +1,7 @@
 ﻿---
 title: Removing Disqus with F# 
 published: July 28, 2016
-tags: 
+tags: fsharp
 ---
 
 In my previous post, I wrote about [removing Disqus] from this blog. One tricky part was dealing with the comment export data. While you certainly can get your comments out of Disqus, they don't come in a great format. You get [a lovely chunk of xml][xml] where the posts (called threads) are disconnected from the comments (which are called posts).
