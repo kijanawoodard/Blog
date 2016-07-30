@@ -164,6 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Initialization\RouteConfig.cs" />
+    <Content Include="Content\css\font-awesome.css" />
     <Content Include="Content\css\font-awesome.min.css" />
     <Content Include="Content\css\kube.min.css" />
     <Content Include="Content\css\kube.responsive.min.css" />
