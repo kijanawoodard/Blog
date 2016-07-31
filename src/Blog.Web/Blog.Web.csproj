@@ -165,7 +165,6 @@
   <ItemGroup>
     <Compile Include="Initialization\RouteConfig.cs" />
     <Content Include="Content\css\font-awesome.css" />
-    <Content Include="Content\css\font-awesome.min.css" />
     <Content Include="Content\css\kube.min.css" />
     <Content Include="Content\css\kube.responsive.min.css" />
     <Content Include="Content\css\forms.css" />
@@ -389,7 +388,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Content\fonts\FontAwesome.otf" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Actions\Contact\Index.cshtml" />
