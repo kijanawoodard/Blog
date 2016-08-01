@@ -360,6 +360,9 @@
   <ItemGroup>
     <Content Include="Content\posts\winning-with-c-sharp-interactive.markdown" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\comments-collapse.markdown" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

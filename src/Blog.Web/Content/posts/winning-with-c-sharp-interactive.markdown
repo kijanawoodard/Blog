@@ -1,7 +1,7 @@
 ---
 title: #Winning with C# Interactive
 published: July 29, 2016
-tags: csharp
+tags: blog, csharp
 ---
 
 For my blog engine, I had a static C# class that contained a list of metadata about each post. That means when adding a new post, I had to add an element to the Posts list and create the markdown file.
@@ -16,7 +16,7 @@ Full disclosure: I didn't write it perfectly the first time, but I just discarde
 
 I can already see an improvement writing this post. Just create the post.mardown file and go.
 
-Hmmmm. Now I'm wondering if I should add the yaml comments at the bottom of the post file. I had thought I would use a library to parse the metadata, but none were quite what I wanted and it turned out to be [not that much code]. Since I'm doing my own parsing up front, I can't snip the comments section before passing the post text to the markdown processor. Hmmmm.
+Hmmmm. Now I'm wondering if I should add the yaml comments at the bottom of the post file. I had thought I would use a library to parse the metadata, but none were quite what I wanted and it turned out to be [not that much code]. Since I'm doing my own parsing up front, I can snip out the comments section before passing the post text to the markdown processor. Hmmmm.
 
 [Jekyll Front Matter]: https://jekyllrb.com/docs/frontmatter/
 [C# Interactive]: http://www.hanselman.com/blog/InteractiveCodingWithCAndFREPLsScriptCSOrTheVisualStudioInteractiveWindow.aspx
