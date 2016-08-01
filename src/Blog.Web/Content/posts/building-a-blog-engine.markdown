@@ -22,7 +22,7 @@ I'm still deciding whether I should go with [Gists for code][my gists] or [plain
 
 For CSS, I could have gone with [Twitter Bootstrap] or [Foundation], but when I was making my decision, they seemed pretty heavy weight for a blog. [Kube] plus [Font Awesome] seem to be doing quite well.
 
-I considered adding an archive page, like on Tim Thomas' blog. Since I only have 20 posts as of now, I'll juts list the all posts. Once I have a hundred posts, I can come back and add that feature.
+I considered adding an archive page, like on Tim Thomas' blog. Since I only have 20 posts as of now, I'll just list the all posts. Once I have a hundred posts, I can come back and add that feature.
 
 I added an Atom feed just to see what that is like. It's trivial. Now, do I need it?
 
