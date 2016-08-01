@@ -7,6 +7,7 @@
 <h2>Contact Kijana Woodard</h2>
 
 <form action="@Url.Action("Index", "Contact")" method="post" class="submit">
+    @Html.AntiForgeryToken()
     <fieldset>
         <legend>Contact</legend>
 
@@ -16,14 +17,22 @@
         <label>Email</label>
         <input type="email" name="email" placeholder="Your Email Address" required/>
 
-        <label>Details</label>
+        <label>Message</label>
         <textarea name="text"></textarea>
-
-        <label class="special">Don't fill out. Only For Robots</label>
-        <input class="special" type="text" name="access"/>
-
-        <button type="submit">Submit</button>
     </fieldset>
+    <fieldset class="special">
+        <legend>This section is for robots. Humans can ignore.</legend>
+
+        <label>Special Instructions</label>
+        <input type="text" name="instructions"/>
+
+        <label>
+            <input class="recaptcha-checkbox-checkmark" type="checkbox" name="confirm" value="true" />
+            I am a Robot
+        </label>
+    </fieldset>
+
+    <button type="submit">Submit</button>
 </form>
 
 @*[devops]: http://www.devopslive.org/devops-at-gamestop/*@
