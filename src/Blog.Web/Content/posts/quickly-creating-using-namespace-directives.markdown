@@ -28,3 +28,7 @@ Breathe deep and move on.
 [TekPub videos]:http://www.tekpub.com/
 [MVC 2]: http://www.tekpub.com/production/aspmvc
 [ReSharper]:http://www.jetbrains.com/resharper/
+
+---
+# comments begin here
+

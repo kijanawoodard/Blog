@@ -24,3 +24,11 @@ I’ll take a team full of Blub programmers over a team of average programmers a
 
 [rb]: http://raganwald.com/
 [blub]: http://raganwald.com/2006/10/are-we-blub-programmers.html
+
+---
+# comments begin here
+
+- Email: "graphite@joeyguerra.com"
+  Message: "<p>What about Blub Companies?</p>"
+  Name: "Joey Guerra"
+  When: "2014-10-12 14:20:25.000"

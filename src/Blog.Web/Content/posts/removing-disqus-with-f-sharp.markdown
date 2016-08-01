@@ -1,4 +1,4 @@
-﻿---
+---
 title: Removing Disqus with F# 
 published: July 28, 2016
 tags: fsharp
@@ -29,3 +29,7 @@ F# could grow on me.
 [FSharp.Data]: http://fsharp.github.io/FSharp.Data/
 [code]: https://github.com/kijanawoodard/DisqusParser/blob/master/tryout.fsx#L11
 [F# Interactive]: https://fsharpforfunandprofit.com/installing-and-using/
+
+---
+# comments begin here
+

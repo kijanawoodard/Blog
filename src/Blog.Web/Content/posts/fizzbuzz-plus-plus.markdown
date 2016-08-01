@@ -28,3 +28,19 @@ Thoughts?
 
 [Avoiding FizzBuzz]:http://kijanawoodard.com/avoiding-fizzbuzz/
 [enumerable]:http://kijanawoodard.com/ienumerable-each/
+
+---
+# comments begin here
+
+- Email: "larry@mcnutt-consulting.com"
+  Message: "<p>My biggest pet peeve is people who post code do not include the using/imports required to cut/paste/run the snippet!  I'm lazy!</p>"
+  Name: "Larry"
+  When: "2010-05-10 02:56:38.000"
+- Email: "kijanawoodard@wyldeye.com"
+  Message: "<p>Haha. I didn't post them because I didn't write them. Wrote it all in one file. I'm lazier!</p><p>Paste into static Main of your choice.</p>"
+  Name: "kijana"
+  When: "2010-05-10 03:14:03.000"
+- Email: "luv2code+kijanassite@gmail.com"
+  Message: "<p>I use <a href=\"http://www.linqpad.net/\" rel=\"nofollow\">linqpad</a><a> for these kinds of things.  It's pretty handy for pasting a code snippet and hitting \"run\".</a></p>"
+  Name: "Matt T"
+  When: "2010-05-10 03:21:57.000"

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Blog.Web.Core
@@ -23,7 +24,9 @@ namespace Blog.Web.Core
         public string Slug { get; set; }
         public string FileName { get; set; }
         public DateTime PublishedAtCst { get; set; }
-        
+        public string Content { get; set; }
+        public List<Comment> Comments { get; set; }
+
         public string Summary
         {
             get
@@ -45,8 +48,13 @@ namespace Blog.Web.Core
                 return paragraph ?? stock; 
             }
         }
+    }
 
-
-        public string Content { get; set; }
+    public class Comment
+    {
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public DateTime When { get; set; }
+        public string Message { get; set; }
     }
 }

@@ -23,3 +23,7 @@ Whoops. Your business is now in a death spiral.
 And yet, for real goods, it’s so much more obvious this is a bad deal. I could be the #1 Lexus salesman in the country if I sold any vehicle for $20,000. That will never happen because the sales manager won’t approve the deal.
 
 I wish more managers would veto bad deals in service based companies.
+
+---
+# comments begin here
+

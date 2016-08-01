@@ -32,3 +32,11 @@ The only annoyance I had in the book the use of exclamation points for emphasis.
 All in all, as someone who has explained basic NServiceBus and Messaging on numerous occasions, I can now refer people to [Learning NServiceBus][learning] as a primer. Deep knowledge of a tool comes through usage. This book is a great way to start using a great tool.
 
 [learning]: http://www.packtpub.com/build-distributed-software-systems-using-dot-net-enterprise-service-bus/book
+
+---
+# comments begin here
+
+- Email: "sandyp@packtpub.com"
+  Message: "<p>Thanks for a detailed review of the book. Certainly looking forward to it.</p>"
+  Name: "Sandy"
+  When: "2013-10-03 09:12:04.000"

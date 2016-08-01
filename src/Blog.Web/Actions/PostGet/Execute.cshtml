@@ -1,4 +1,5 @@
-﻿@model Blog.Web.Actions.PostGet.PostGetViewModel
+﻿@using Blog.Web.Core
+@model Blog.Web.Actions.PostGet.PostGetViewModel
 @{
     ViewBag.Title = @Model.Post.Title;
 }
@@ -61,8 +62,26 @@
     <p>If you see a mistake in the post, feel free to <a href="@($"https://github.com/kijanawoodard/Blog/edit/master/src/Blog.Web/Content/posts/{Model.Post.Slug}.markdown")">edit</a>.
     <p>To make a comment, please submit a <a href="@($"https://github.com/kijanawoodard/Blog/edit/master/src/Blog.Web/Content/posts/{Model.Post.Slug}.comments.yaml")">pull request</a>.
         See any *.comment.yaml file in the repo for an example.</p>
-    <p>You can also <a href="@Url.Action("Index", "Contact")">contact me</a> and I'll post the comment.</p>
-    @{ Html.RenderAction("Index", "CommentsGet", new {Model.Post.Slug}); }
+    <p>You can also <a href="@Url.Action("Index", "Contact")">contact me</a> and I'll post the comment.
+    </p>
+
+    <header>@Model.Post.Comments.Count Comments...</header>
+
+    @foreach (var comment in Model.Post.Comments)
+    {
+        <div class="comment">
+            <div class="avatar"><img src="https://s.gravatar.com/avatar/@(comment.Email.ToMd5())?d=identicon" alt="@comment.Name" /></div>
+            <div class="body">
+                <header>
+                    <span class="name">@comment.Name</span>
+                    <span class="when" title="@comment.When.ToLongDateString() @comment.When.ToShortTimeString()">• @comment.When.TimeAgo()</span>
+                </header>
+                <main>
+                    @Html.Raw(comment.Message)
+                </main>
+            </div>
+        </div>
+    }
 </section>
 <hr/>
 @*

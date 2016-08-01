@@ -26,3 +26,7 @@ Constructor injection is partial application for OO.
 [interface-inversion]: /interface-inversion
 [constructor injection]: http://martinfowler.com/articles/injection.html
 [partial application]: http://fsharpforfunandprofit.com/posts/partial-application/
+
+---
+# comments begin here
+

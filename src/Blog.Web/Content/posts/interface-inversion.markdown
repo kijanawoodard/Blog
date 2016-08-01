@@ -54,3 +54,11 @@ Isn't [Big Design Up Front][bduf] what we were trying to avoid when we decided t
 [duck typing]: http://en.wikipedia.org/wiki/Duck_typing
 [adapter pattern]: http://en.wikipedia.org/wiki/Adapter_pattern
 [bduf]: http://en.wikipedia.org/wiki/Big_Design_Up_Front
+
+---
+# comments begin here
+
+- Email: "graphite@joeyguerra.com"
+  Message: "<p>Oh the paradox!</p>"
+  Name: "Joey Guerra"
+  When: "2013-10-16 01:52:43.000"

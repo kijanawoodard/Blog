@@ -56,3 +56,7 @@ Still, in the right situations I’d like to work on avoiding null altogether wi
 [DevLabs]:http://msdn.microsoft.com/en-us/devlabs/dd491992.aspx
 [Null Object Pattern]:http://en.wikipedia.org/wiki/Null_Object_pattern
 [immutable classes]:http://weblogs.asp.net/bleroy/archive/2008/01/16/immutability-in-c.aspx
+
+---
+# comments begin here
+

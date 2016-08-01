@@ -121,3 +121,23 @@ But I think we can do better.
 [rosetta stone]: http://en.wikipedia.org/wiki/Rosetta_Stone
 [abstraction surface]: http://ayende.com/blog/154081/limit-your-abstractions-you-only-get-six-to-a-dozen-in-the-entire-app
 [sphinx]: http://sphinx-doc.org/rest.html#rst-primer
+
+---
+# comments begin here
+
+- Email: "mikepennington@gmail.com"
+  Message: "<p>I'm somewhat conflicted about this blog post.  I like what you're doing, and the code is very clean and concise.  And ISP is followed such that, as you mention, units of work are separate and can be tested as actual units.  Although, on the other hand, it feels a little bit like magic.  The old way, although messier, was at-a-glance readable.  I feel like there's a middle ground somewhere.</p><p>Been enjoying your blog.  :)</p>"
+  Name: "Mike Pennington"
+  When: "2013-10-24 18:35:53.000"
+- Email: "disqus@wyldeye.com"
+  Message: "<p>Wait till next time. :-]</p>"
+  Name: "Kijana Woodard"
+  When: "2013-10-24 18:38:43.000"
+- Email: "joey@joeyguerra.com"
+  Message: "<p>I want to see how this looks when you apply similar principles in JavaScript. </p>"
+  Name: "Joey Guerra"
+  When: "2013-10-24 21:48:17.000"
+- Email: "disqus@wyldeye.com"
+  Message: "<p>Ummmm. Me too. Rob Ashton is laying it down: <a href=\"https://github.com/robashton/look-ma-no-frameworks\" rel=\"nofollow\">https://github.com/robashton/l...</a></p>"
+  Name: "Kijana Woodard"
+  When: "2013-10-24 21:50:24.000"

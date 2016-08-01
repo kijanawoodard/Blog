@@ -20,3 +20,11 @@ Anyway, an Each() extension method on IEnumerable is trivial:
     }
 
 [Avoiding FizzBuzz]:http://kijanawoodard.com/avoiding-fizzbuzz/
+
+---
+# comments begin here
+
+- Email: "landon.poch@gmail.com"
+  Message: "<p>You probably already know this but just for fun: <a href=\"http://blogs.msdn.com/b/ericlippert/archive/2009/05/18/foreach-vs-foreach.aspx\" rel=\"nofollow\">http://blogs.msdn.com/b/ericli...</a></p><p>When using expressions they should be for evaluation, not for side effects.  I found myself using SomeList.ForEach(x =&gt; { some action }) for a while.  I stopped using it after reading that just as a way to build good functional programming habits.  Even though { some action } isn't really an expression because it doesn't return anything, it just seems a little strange.</p>"
+  Name: "Landon Poch"
+  When: "2013-03-17 05:31:13.000"

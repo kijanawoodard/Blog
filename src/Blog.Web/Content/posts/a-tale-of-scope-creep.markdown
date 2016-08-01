@@ -58,3 +58,7 @@ The more I use [git], the more I like tiny commits that address a single issue. 
 [passthrough]: https://github.com/kijanawoodard/Blog/commit/c5bcffeef6bc3e10c8fcf635ca5a8bff26d69357
 [git]: http://git-scm.com/
 [copyright commit]: https://github.com/kijanawoodard/Blog/commit/8f3ae65d841bab2bc6287f41923a269a458adf94
+
+---
+# comments begin here
+
