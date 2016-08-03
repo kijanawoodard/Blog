@@ -8,10 +8,18 @@
         @RenderSection("meta", false)
         <title>@ViewBag.Title | kijana woodard</title>
         <link rel="author" href="/humans.txt">
-        <link rel="icon" type="image/x-icon" href="/favicon.png" />
+        <link rel="icon" type="image/x-icon" href="//cdn.kijanawoodard.com/favicon.png" />
         <link href="@Url.Action("Index", "PostGet", new { ext = "atom"})" type="application/atom+xml" rel="alternate" title="ATOM Feed">
 
-        @System.Web.Optimization.Styles.Render("~/bundles/css")
+        @if (HttpContext.Current.IsDebuggingEnabled)
+        {
+            @System.Web.Optimization.Styles.Render("~/bundles/css")
+        }
+        else
+        {
+            @System.Web.Optimization.Styles.Render("~/bundles/css")
+            //@System.Web.Optimization.Styles.RenderFormat("<script src='//cdn.kijanawoodard.com{0}'></script>", "~/bundles/css")
+        }
 
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
