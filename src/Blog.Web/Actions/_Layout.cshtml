@@ -1,4 +1,5 @@
-﻿@using Blog.Web.Core
+﻿@using System.Configuration
+@using Blog.Web.Core
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,21 +12,14 @@
         <link rel="icon" type="image/x-icon" href="//cdn.kijanawoodard.com/favicon.png" />
         <link href="@Url.Action("Index", "PostGet", new { ext = "atom"})" type="application/atom+xml" rel="alternate" title="ATOM Feed">
 
-        @if (HttpContext.Current.IsDebuggingEnabled)
-        {
-            @System.Web.Optimization.Styles.Render("~/bundles/css")
-        }
-        else
-        {
-            @System.Web.Optimization.Styles.Render("~/bundles/css")
-            //@System.Web.Optimization.Styles.RenderFormat("<script src='//cdn.kijanawoodard.com{0}'></script>", "~/bundles/css")
-        }
+        @{ var cdn = $@"{ConfigurationManager.AppSettings["cdn::host"]}"; }
+        @System.Web.Optimization.Styles.RenderFormat($"<link href='{cdn}{{0}}' rel='stylesheet' />", "~/bundles/css")
 
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->        
-        
-        @RenderSection("canonical", false)        
+        <![endif]-->
+
+        @RenderSection("canonical", false)
     </head>
     <body>
     <div id="wrap">

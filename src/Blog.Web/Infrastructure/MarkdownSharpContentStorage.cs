@@ -7,6 +7,7 @@ using Blog.Web.Core;
 using MarkdownSharp;
 
 using static System.Environment;
+using static System.Configuration.ConfigurationManager;
 
 namespace Blog.Web.Infrastructure
 {
@@ -78,10 +79,8 @@ namespace Blog.Web.Infrastructure
             var startComments = text.LastIndexOf($"---{NewLine}", StringComparison.Ordinal);
             
             var metadata = text.Substring(3, endMetadata - 3).Trim();
-            var article = text.Substring(endMetadata + 3, startComments - endMetadata - 3).Trim();
+            var article = text.Substring(endMetadata + 3, startComments - endMetadata - 3).Trim().Replace("/content/posts/images", $@"{AppSettings["cdn::host"]}/content/posts/images");
             var comments = text.Substring(startComments + 3).Trim();
-
-            //if (!comments.StartsWith("# comments")) return null;
 
             return new Tuple<string, string, string>(metadata, article, comments);
         }
