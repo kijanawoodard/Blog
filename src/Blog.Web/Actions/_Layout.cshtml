@@ -1,5 +1,8 @@
 ﻿@using System.Configuration
 @using Blog.Web.Core
+
+@{ var cdn = $@"{ConfigurationManager.AppSettings["cdn::host"]}"; }
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,10 +12,9 @@
         @RenderSection("meta", false)
         <title>@ViewBag.Title | kijana woodard</title>
         <link rel="author" href="/humans.txt">
-        <link rel="icon" type="image/x-icon" href="//cdn.kijanawoodard.com/favicon.png" />
+        <link rel="icon" type="image/x-icon" href="@($"{cdn}/favicon.png")" />
         <link href="@Url.Action("Index", "PostGet", new { ext = "atom"})" type="application/atom+xml" rel="alternate" title="ATOM Feed">
 
-        @{ var cdn = $@"{ConfigurationManager.AppSettings["cdn::host"]}"; }
         @System.Web.Optimization.Styles.RenderFormat($"<link href='{cdn}{{0}}' rel='stylesheet' />", "~/bundles/css")
 
         <!--[if lt IE 9]>
