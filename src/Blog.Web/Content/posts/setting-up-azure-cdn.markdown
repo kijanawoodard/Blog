@@ -11,9 +11,9 @@ My first concern was I didn't want to have to push assets, especially css, to th
 
 I did run into a couple of issues which may help you out.
 
-I was confused at first, but the simple choice was setting the Enpoint Type as web app. Once I chose my site, most of the other options wee filled in. 
+I was confused at first, but the simple choice was setting the Endpoint Type as web app. Once I chose my site, most of the other options were filled in. 
 
-For some reason, the Standard Verizon option didn't work well for me. It's has a 90 minute propagation time and I could quite seem to get things working consistently. Since the Standard Akamai option has a 1 minute propagation time, I swithed to that. The CDN worked quite smootly from there.
+For some reason, the Standard Verizon option didn't work well for me. It's has a 90 minute propagation time and I couldn't quite seem to get things working consistently. Since the Standard Akamai option has a 1 minute propagation time, I switched to that. The CDN worked quite smoothly from there.
 
 To switch, I had to delete the CDN in azure portal and set it back up again. Fortunately, the names I used were released and avaialble again the second time.
 
