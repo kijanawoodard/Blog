@@ -10,7 +10,9 @@ namespace Blog.Web.Infrastructure
     {
         public override void OnActionExecuted(ActionExecutedContext filterContext)
         {
-            var lastModified = MvcApplication.LastModified;
+            var now = DateTime.UtcNow;
+            //var lastModified = MvcApplication.LastModified;
+            var lastModified = new DateTime(now.Year, now.Month, now.Day, now.Hour, 0, 0, DateTimeKind.Utc); //refresh every hour
 
             if (filterContext.Result is FilePathResult)
             {
@@ -32,7 +34,7 @@ namespace Blog.Web.Infrastructure
         {
             requestContext.HttpContext.Response.Cache.SetCacheability(HttpCacheability.Public);
             requestContext.HttpContext.Response.Cache.SetLastModified(modificationDate);
-            requestContext.HttpContext.Response.Cache.SetMaxAge(TimeSpan.FromSeconds(5));
+            requestContext.HttpContext.Response.Cache.SetMaxAge(TimeSpan.FromSeconds(1));
             requestContext.HttpContext.Response.Cache.SetSlidingExpiration(true);
         }
 
