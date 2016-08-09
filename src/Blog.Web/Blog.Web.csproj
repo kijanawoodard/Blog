@@ -373,6 +373,11 @@
       <SubType>Web</SubType>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\posts\to-catch-a-bot-use-a-honeypot.markdown">
+      <SubType>Web</SubType>
+    </Content>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
