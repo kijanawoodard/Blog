@@ -14,14 +14,13 @@
         <link rel="author" href="/humans.txt">
         <link rel="icon" type="image/x-icon" href="@($"{cdn}/favicon.png")" />
         <link href="@Url.Action("Index", "PostGet", new { ext = "atom"})" type="application/atom+xml" rel="alternate" title="ATOM Feed">
-
-        @System.Web.Optimization.Styles.RenderFormat($"<link href='{cdn}{{0}}' rel='stylesheet' />", "~/bundles/css")
-
-        <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-
         @RenderSection("canonical", false)
+
+        <style>
+            body {
+              color: #202020;
+            }
+        </style>
     </head>
     <body>
     <div id="wrap">
@@ -122,6 +121,9 @@
         </footer>
     </div>
 
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
     @RenderSection("scripts", false)
         
     @if (Request.UserAgent != null && !Request.UserAgent.Contains("Speed Insights"))
@@ -144,5 +146,9 @@
 
         </script>
     }
+
+    @System.Web.Optimization.Styles.RenderFormat($"<link href='{cdn}{{0}}' rel='stylesheet' />", "~/bundles/css")
+
+
     </body>
 </html>
