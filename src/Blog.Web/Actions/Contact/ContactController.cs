@@ -30,9 +30,9 @@ namespace Blog.Web.Actions.Contact
             var smtp = new SmtpClient(AppSettings["smtp::host"], int.Parse(AppSettings["smtp::port"]));
             smtp.Credentials = new NetworkCredential(AppSettings["smtp::username"], AppSettings["smtp::password"]);
             smtp.EnableSsl = bool.Parse(AppSettings["smtp::usessl"]);
-            
+
             smtp.Send(message);
-            
+
             return RedirectToAction("Thanks", "Contact");
         }
 
