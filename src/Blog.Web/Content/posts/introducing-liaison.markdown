@@ -104,7 +104,7 @@ On a minor note, I named nimbus with the project, solution, folders, etc all low
 [introducing nimbus]: /introducing-nimbus
 [nimbus]: https://github.com/kijanawoodard/nimbus/blob/507a3a9ba81e3af640d877158b8168f1e74e27f3/src/mediator.cs
 [Liaison]: https://github.com/kijanawoodard/Liaison
-[web scale]: http://mongodb-is-web-scale.com/    
+[web scale]: https://mongodb-is-web-scale.com/    
 [Mike Pennington]: https://www.linkedin.com/in/mikepennington
 [added comments]: https://github.com/kijanawoodard/nimbus/blob/507a3a9ba81e3af640d877158b8168f1e74e27f3/src/mediator.cs#L88
 [mediator configuration]: https://github.com/kijanawoodard/Blog/blob/36b4b747c0a538d46ac418e0ed51f07e66bedb52/src/Blog.Web/Initialization/AutofacConfig.cs#L20
@@ -119,7 +119,7 @@ On a minor note, I named nimbus with the project, solution, folders, etc all low
   Name: "Joey Guerra"
   When: "2013-10-26 04:03:09.000"
 - Email: "graphite@joeyguerra.com"
-  Message: "<p>And I couldn't help but <a href=\"http://www.youtube.com/watch?v=b2F-DItXtZs\" rel=\"nofollow\">http://www.youtube.com/watch?v...</a> to the web scale link.</p>"
+  Message: "<p>And I couldn't help but <a href=\"https://www.youtube.com/watch?v=b2F-DItXtZs\" rel=\"nofollow\">https://www.youtube.com/watch?v...</a> to the web scale link.</p>"
   Name: "Joey Guerra"
   When: "2013-10-26 14:41:41.000"
 - Email: "khalidabuhakmeh@gmail.com"
@@ -139,7 +139,7 @@ On a minor note, I named nimbus with the project, solution, folders, etc all low
   Name: "Afif Mohammed"
   When: "2013-12-09 22:12:40.000"
 - Email: "disqus@wyldeye.com"
-  Message: "<p>Thanks.</p><p>I started this journey looking at NSB 4.0 \"In Memory Publish\" and realized I really wanted to do Send, which it didn't have. I didn't realize how far that would take me. :-]</p><p>I started out with nimbus (<a href=\"http://kijanawoodard.com/introducing-nimbus/\" rel=\"nofollow\">http://kijanawoodard.com/intro...</a>) so that I could register handlers for messages anywhere, like nsb. What I quickly realized is that you get into cases like \"I need the handlers to run in a particular order\", \"This handler needs two parameters\", \"This handler needs zero parameters\", \"This handler uses the result of the work of the first 3 handlers (an Event)\".</p><p>Once there, I either needed to retreat to a \"full featured\" container, although that doesn't solve the ordering issue (see nsb's .First&lt;t&gt;(), etc), or I needed something else.</p><p>What I've found is that the \"orchestration code\" is fairly concise to write manually and keeps a lot of if/switch logic out of the handler code. Not to mention, I don't have to learn the incantations of the container.</p><p>I still owe you a blog post with more details and code. :-]</p>"
+  Message: "<p>Thanks.</p><p>I started this journey looking at NSB 4.0 \"In Memory Publish\" and realized I really wanted to do Send, which it didn't have. I didn't realize how far that would take me. :-]</p><p>I started out with nimbus (<a href=\"https://kijanawoodard.com/introducing-nimbus/\" rel=\"nofollow\">https://kijanawoodard.com/intro...</a>) so that I could register handlers for messages anywhere, like nsb. What I quickly realized is that you get into cases like \"I need the handlers to run in a particular order\", \"This handler needs two parameters\", \"This handler needs zero parameters\", \"This handler uses the result of the work of the first 3 handlers (an Event)\".</p><p>Once there, I either needed to retreat to a \"full featured\" container, although that doesn't solve the ordering issue (see nsb's .First&lt;t&gt;(), etc), or I needed something else.</p><p>What I've found is that the \"orchestration code\" is fairly concise to write manually and keeps a lot of if/switch logic out of the handler code. Not to mention, I don't have to learn the incantations of the container.</p><p>I still owe you a blog post with more details and code. :-]</p>"
   Name: "Kijana Woodard"
   When: "2013-12-09 23:00:52.000"
 - Email: "disqus@wyldeye.com"

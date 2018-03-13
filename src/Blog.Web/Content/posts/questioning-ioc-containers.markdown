@@ -129,13 +129,13 @@ And I think that was Greg Young's point.
 
         
 
-[eight-lines]: http://www.infoq.com/presentations/8-lines-code-refactoring
+[eight-lines]: https://www.infoq.com/presentations/8-lines-code-refactoring
 [shortbus-icommandhandler]: https://github.com/mhinze/ShortBus/blob/master/ShortBus/ICommandHandler.cs#L5
 [mediator]: https://github.com/mhinze/ShortBus/blob/master/ShortBus/Mediator.cs#L43
-[identity map]: http://martinfowler.com/eaaCatalog/identityMap.html
-[git]: http://git-scm.com/
-[autofac-multi]: http://stackoverflow.com/a/14017242/214073
-[autofac-expressions]: http://www.codeproject.com/Articles/25380/Dependency-Injection-with-Autofac#registering-a-component-created-with-an-expression
+[identity map]: https://martinfowler.com/eaaCatalog/identityMap.html
+[git]: https://git-scm.com/
+[autofac-multi]: https://stackoverflow.com/a/14017242/214073
+[autofac-expressions]: https://www.codeproject.com/Articles/25380/Dependency-Injection-with-Autofac#registering-a-component-created-with-an-expression
 [event-store]: https://github.com/EventStore/EventStore/blob/master/src/EventStore/EventStore.Core/SingleVNode.cs
 
 ---

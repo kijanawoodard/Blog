@@ -30,7 +30,7 @@ Not quite. The files from my recently added [azure cdn] weren't coming through. 
 Oh well. I could buy a cert for this, or just wait until Q4 and see what happens. Since my domain is cookieless, has no login, and is public information, TLS can wait. Besides, I'll get to see if the Let's Encrypt extension updates the cert as advertised.
 
 [Let's Encypt]: https://letsencrypt.org/getting-started/
-[IRL]: http://www.urbandictionary.com/define.php?term=IRL
+[IRL]: https://www.urbandictionary.com/define.php?term=IRL
 [troy hunt]: https://www.troyhunt.com/everything-you-need-to-know-about-loading-a-free-lets-encrypt-certificate-into-an-azure-website/
 [azure cdn]: /setting-up-azure-cdn
 [CDN TLS]: https://feedback.azure.com/forums/169397-cdn/suggestions/1332683-allow-https-for-custom-cdn-domain-names

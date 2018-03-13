@@ -50,12 +50,12 @@ This is all probably a moot point with [Code Contracts in .net 4.0][code contrac
 
 Still, in the right situations I’d like to work on avoiding null altogether with the [Null Object Pattern] or [immutable classes].
 
-[extension methods]:http://kijanawoodard.com/cool-feature-of-extension-methods
-[null object]: http://journal.stuffwithstuff.com/2008/04/08/whats-the-opposite-of-nullable/
-[code contracts]:http://mariusbancila.ro/blog/2009/05/31/code-contracts-in-visual-studio-2010/
-[DevLabs]:http://msdn.microsoft.com/en-us/devlabs/dd491992.aspx
-[Null Object Pattern]:http://en.wikipedia.org/wiki/Null_Object_pattern
-[immutable classes]:http://weblogs.asp.net/bleroy/archive/2008/01/16/immutability-in-c.aspx
+[extension methods]:https://kijanawoodard.com/cool-feature-of-extension-methods
+[null object]: https://journal.stuffwithstuff.com/2008/04/08/whats-the-opposite-of-nullable/
+[code contracts]:https://mariusbancila.ro/blog/2009/05/31/code-contracts-in-visual-studio-2010/
+[DevLabs]:https://msdn.microsoft.com/en-us/devlabs/dd491992.aspx
+[Null Object Pattern]:https://en.wikipedia.org/wiki/Null_Object_pattern
+[immutable classes]:https://weblogs.asp.net/bleroy/archive/2008/01/16/immutability-in-c.aspx
 
 ---
 # comments begin here

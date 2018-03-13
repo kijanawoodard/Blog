@@ -15,7 +15,7 @@ Better approaches to being uncomfortable working in a browser:
 
 WPF/Click Once seems like a good choice. jQuery seems like a good choice. Compiling a high level language into a scripting language seems like a recipe for headaches.
 
-[Script#]:http://projects.nikhilk.net/ScriptSharp
+[Script#]:https://projects.nikhilk.net/ScriptSharp
 
 ---
 # comments begin here

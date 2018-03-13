@@ -52,7 +52,7 @@ namespace Blog.Web.Infrastructure
                 from t in assembly.GetLoadableTypes()
                 where t.IsClass
                 where typeof (IModule).IsAssignableFrom(t)
-                select Activator.CreateInstance(t) as IModule; //TODO: http://stackoverflow.com/a/1805609/214073
+                select Activator.CreateInstance(t) as IModule; //TODO: https://stackoverflow.com/a/1805609/214073
 
             foreach (var module in modules)
             {
@@ -94,7 +94,7 @@ namespace Blog.Web.Infrastructure
 
         public IEnumerable<object> GetServices(Type serviceType)
         {
-            return Enumerable.Empty<object>(); //wayback machine rocks ! blog was deleted. http://web.archive.org/web/20110204020311/http://davidhayden.com/blog/dave/archive/2011/02/01/IDependencyResolverAspNetMvc3.aspx
+            return Enumerable.Empty<object>(); //wayback machine rocks ! blog was deleted. https://web.archive.org/web/20110204020311/https://davidhayden.com/blog/dave/archive/2011/02/01/IDependencyResolverAspNetMvc3.aspx
         }
     }
 
@@ -117,9 +117,9 @@ namespace Blog.Web.Infrastructure
 
 /*
 
-http://geekswithblogs.net/mrsteve/archive/2012/02/19/a-fast-c-sharp-extension-method-using-expression-trees-create-instance-from-type-again.aspx
-http://ayende.com/blog/3167/creating-objects-perf-implications
-http://rogeralsing.com/2008/02/28/linq-expressions-creating-objects/
+https://geekswithblogs.net/mrsteve/archive/2012/02/19/a-fast-c-sharp-extension-method-using-expression-trees-create-instance-from-type-again.aspx
+https://ayende.com/blog/3167/creating-objects-perf-implications
+https://rogeralsing.com/2008/02/28/linq-expressions-creating-objects/
 var constructor = type.GetConstructor(
                 BindingFlags.Instance | BindingFlags.Public,
                 null,

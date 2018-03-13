@@ -40,8 +40,8 @@ p.s.
 
 That [MoreLinq] project by Jon Skeet mentioned in the StackOverflow post looks interesting. I didn’t get a chance to go through it yet.
 
-[SO]:http://stackoverflow.com/questions/3773403/linq-partition-list-into-lists-of-8-members
-[MoreLinq]:http://code.google.com/p/morelinq/source/browse/#svn/trunk/MoreLinq
+[SO]:https://stackoverflow.com/questions/3773403/linq-partition-list-into-lists-of-8-members
+[MoreLinq]:https://code.google.com/p/morelinq/source/browse/#svn/trunk/MoreLinq
 
 ---
 # comments begin here

@@ -24,8 +24,8 @@ Constructor injection is partial application for OO.
 
 [violating-isp-with-constructor-injection]: /violating-isp-with-constructor-injection
 [interface-inversion]: /interface-inversion
-[constructor injection]: http://martinfowler.com/articles/injection.html
-[partial application]: http://fsharpforfunandprofit.com/posts/partial-application/
+[constructor injection]: https://martinfowler.com/articles/injection.html
+[partial application]: https://fsharpforfunandprofit.com/posts/partial-application/
 
 ---
 # comments begin here

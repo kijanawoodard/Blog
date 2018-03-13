@@ -26,7 +26,7 @@ F# could grow on me.
 
 [removing Disqus]: /goodbye-disqus
 [xml]: https://github.com/kijanawoodard/DisqusParser/blob/master/kijanawoodard-2015-03-19T23_28_52.887832-all.xml
-[FSharp.Data]: http://fsharp.github.io/FSharp.Data/
+[FSharp.Data]: https://fsharp.github.io/FSharp.Data/
 [code]: https://github.com/kijanawoodard/DisqusParser/blob/master/tryout.fsx#L11
 [F# Interactive]: https://fsharpforfunandprofit.com/installing-and-using/
 

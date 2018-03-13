@@ -26,7 +26,7 @@ I find I'm using the mouse a lot less as well.
 I think I've gotten my money's worth typing up this post. :-]
 
 
-[.net demon]: http://www.red-gate.com/products/dotnet-development/dotnet-demon/
+[.net demon]: https://www.red-gate.com/products/dotnet-development/dotnet-demon/
 [live reload]: https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
 
 ---

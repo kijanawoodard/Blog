@@ -38,12 +38,12 @@ Now all that sounds awful unless you get the odd idea in your head that you can 
 
 An aside, the writing on [RibbonFarm] demonstrates that I need to work on my writing. The entire site is worth reading if only for the mind-expanding properties of the dense writing.
 
-[limiting abstractions]:http://ayende.com/blog/153889/limit-your-abstractions-analyzing-a-ddd-application
-[dense writing]: http://www.ribbonfarm.com/2012/01/11/seeking-density-in-the-gonzo-theater/
-[RibbonFarm]: http://www.ribbonfarm.com/
-[CouchDB]: http://couchdb.apache.org/
-[RavenDB]: http://ravendb.net/
-[HyperGraphDB]: http://www.hypergraphdb.org/index
+[limiting abstractions]:https://ayende.com/blog/153889/limit-your-abstractions-analyzing-a-ddd-application
+[dense writing]: https://www.ribbonfarm.com/2012/01/11/seeking-density-in-the-gonzo-theater/
+[RibbonFarm]: https://www.ribbonfarm.com/
+[CouchDB]: https://couchdb.apache.org/
+[RavenDB]: https://ravendb.net/
+[HyperGraphDB]: https://www.hypergraphdb.org/index
 
 ---
 # comments begin here
@@ -57,7 +57,7 @@ An aside, the writing on [RibbonFarm] demonstrates that I need to work on my wri
   Name: "Casey Watson"
   When: "2012-02-15 07:52:03.000"
 - Email: "landon.poch@parivedasolutions.com"
-  Message: "<p>There are a couple of great posts about this same thing being applied to the Entity Framework and other persistence technologies.</p><p><a href=\"http://www.nogginbox.co.uk/blog/do-we-need-the-repository-pattern\" rel=\"nofollow\">http://www.nogginbox.co.uk/blo...</a><br><a href=\"http://ayende.com/blog/3955/repository-is-the-new-singleton\" rel=\"nofollow\">http://ayende.com/blog/3955/re...</a></p><p>Much worth the read in my opinion.  I also like the follow up on not protecting your developers.</p><p><a href=\"http://davybrion.com/blog/2009/04/educate-developers-instead-of-protecting-them/\" rel=\"nofollow\">http://davybrion.com/blog/2009...</a></p>"
+  Message: "<p>There are a couple of great posts about this same thing being applied to the Entity Framework and other persistence technologies.</p><p><a href=\"https://www.nogginbox.co.uk/blog/do-we-need-the-repository-pattern\" rel=\"nofollow\">https://www.nogginbox.co.uk/blo...</a><br><a href=\"https://ayende.com/blog/3955/repository-is-the-new-singleton\" rel=\"nofollow\">https://ayende.com/blog/3955/re...</a></p><p>Much worth the read in my opinion.  I also like the follow up on not protecting your developers.</p><p><a href=\"https://davybrion.com/blog/2009/04/educate-developers-instead-of-protecting-them/\" rel=\"nofollow\">https://davybrion.com/blog/2009...</a></p>"
   Name: "Landon Poch"
   When: "2012-07-31 02:19:54.000"
 - Email: "askafif@y7mail.com"

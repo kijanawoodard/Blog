@@ -18,13 +18,13 @@ I think I am seeking bedrock. I want to _know_ the pain that causes me to use a 
 
 One [interesting discovery][vessel controller registration] I made through this exercise: a controller is a class that has exactly one dependency and that dependency is IMediator. I think this fact can be exploited in the future, but for the moment, I'm happy with this small victory.
 
-[hallow]: http://en.wikipedia.org/wiki/Halloween
+[hallow]: https://en.wikipedia.org/wiki/Halloween
 [shortbus]: https://github.com/mhinze/ShortBus
 [nimbus]: /introducing-nimbus
 [liaison post]: /introducing-liaison
 [Liaison]: https://github.com/kijanawoodard/Liaison
-[coding in anger]: http://programmers.stackexchange.com/a/98103
-[IoC container in 15 lines of code]: http://ayende.com/blog/2886/building-an-ioc-container-in-15-lines-of-code
+[coding in anger]: https://programmers.stackexchange.com/a/98103
+[IoC container in 15 lines of code]: https://ayende.com/blog/2886/building-an-ioc-container-in-15-lines-of-code
 [vessel source]: https://github.com/kijanawoodard/Blog/blob/b67089168f218140eb3a06da1571ed94b593e377/src/Blog.Web/Infrastructure/Vessel.cs#L20
 [vessel controller registration]: https://github.com/kijanawoodard/Blog/blob/b67089168f218140eb3a06da1571ed94b593e377/src/Blog.Web/Initialization/VesselConfig.cs#L29
 
@@ -48,7 +48,7 @@ One [interesting discovery][vessel controller registration] I made through this 
   Name: "Landon Poch"
   When: "2013-11-01 21:55:39.000"
 - Email: "disqus@wyldeye.com"
-  Message: "<p>Yeah. That is <a href=\"http://asp.net\" rel=\"nofollow\">asp.net</a> MVC's way to wire in your container: IDependencyResolver.</p><p>They actually have quite a few hooks into the pipeline, but for most folks, you pick your IoC and use it's IDependencyResolver implementation. This is AutoFac's version I was using: <a href=\"https://github.com/kijanawoodard/Blog/blob/785daa908deaa6caa0074974b6a25085f5efd9f0/src/Blog.Web/Initialization/AutofacConfig.cs#L26\" rel=\"nofollow\">https://github.com/kijanawooda...</a></p>"
+  Message: "<p>Yeah. That is <a href=\"https://asp.net\" rel=\"nofollow\">asp.net</a> MVC's way to wire in your container: IDependencyResolver.</p><p>They actually have quite a few hooks into the pipeline, but for most folks, you pick your IoC and use it's IDependencyResolver implementation. This is AutoFac's version I was using: <a href=\"https://github.com/kijanawoodard/Blog/blob/785daa908deaa6caa0074974b6a25085f5efd9f0/src/Blog.Web/Initialization/AutofacConfig.cs#L26\" rel=\"nofollow\">https://github.com/kijanawooda...</a></p>"
   Name: "Kijana Woodard"
   When: "2013-11-01 22:55:17.000"
 - Email: "askafif@y7mail.com"

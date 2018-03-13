@@ -51,7 +51,7 @@ Interestingly, I had nearly run out of reasons to have a controller class, other
 A side note on [scope creep]. I spent a fair amount of time trying to work out pdf content negotiation. After hunting around, I found [Rotativa], which looked promising, but I ran into [a bug]. It could be my issue, by while I was thinking about how to code my way out of this problem, it finally dawned on me: ctrl-p in chrome, plus [a little css][print css], pdf support done. :-]
 
 [archive]: /archive
-[web api conneg]: http://www.asp.net/web-api/overview/formats-and-model-binding/content-negotiation
+[web api conneg]: https://www.asp.net/web-api/overview/formats-and-model-binding/content-negotiation
 [404 page]: /oops
 [partial action invoker]: https://github.com/kijanawoodard/Blog/blob/728c10ec6608cac03644454a7a38b7376bd10d71/src/Blog.Web/Infrastructure/PartialViewActionInvoker.cs
 [conneg action invoker]: https://github.com/kijanawoodard/Blog/blob/0c6c3fb975deaec89035c79e9213698c7a5be5a3/src/Blog.Web/Infrastructure/ContentNegotiatingActionInvoker.cs#L14
@@ -60,11 +60,11 @@ A side note on [scope creep]. I spent a fair amount of time trying to work out p
 [xml]: /asp-net-mvc-content-negotiation.xml
 [html]: /asp-net-mvc-content-negotiation.html
 [phtml]: /asp-net-mvc-content-negotiation.phtml
-[Joey Guerra]: http://blog.joeyguerra.com/
+[Joey Guerra]: https://blog.joeyguerra.com/
 [csv negotiation]: https://github.com/kijanawoodard/Blog/blob/0c6c3fb975deaec89035c79e9213698c7a5be5a3/src/Blog.Web/Infrastructure/ContentNegotiatingActionInvoker.cs#L182
 [PostGetViewModel]: https://github.com/kijanawoodard/Blog/blob/0c6c3fb975deaec89035c79e9213698c7a5be5a3/src/Blog.Web/Actions/PostGet/PostGetController.cs#L59
 [index.atom.xml]: https://github.com/kijanawoodard/Blog/blob/0c6c3fb975deaec89035c79e9213698c7a5be5a3/src/Blog.Web/Actions/PostGet/Index.Atom.cshtml
-[HAL]: http://stateless.co/hal_specification.html
+[HAL]: https://stateless.co/hal_specification.html
 [scope creep]: /a-tale-of-scope-creep
 [Rotativa]: https://github.com/webgio/Rotativa
 [a bug]: https://github.com/webgio/Rotativa/issues/44
@@ -74,11 +74,11 @@ A side note on [scope creep]. I spent a fair amount of time trying to work out p
 # comments begin here
 
 - Email: "khalidabuhakmeh@gmail.com"
-  Message: "<p>Restful Routing has the idea of a FormatResult. You can send in data, and based on the requests extension it will figure out what view you want to render it in. It works decently well, just gets goofy when dealing with ajax and routings \"keep stuff around\" default.</p><p><a href=\"http://restfulrouting.com/mappings/extras\" rel=\"nofollow\">http://restfulrouting.com/mapp...</a></p><p>OH YEAH I WENT THERE!!!! Booyah!</p>"
+  Message: "<p>Restful Routing has the idea of a FormatResult. You can send in data, and based on the requests extension it will figure out what view you want to render it in. It works decently well, just gets goofy when dealing with ajax and routings \"keep stuff around\" default.</p><p><a href=\"https://restfulrouting.com/mappings/extras\" rel=\"nofollow\">https://restfulrouting.com/mapp...</a></p><p>OH YEAH I WENT THERE!!!! Booyah!</p>"
   Name: "khalidabuhakmeh"
   When: "2013-11-08 17:05:09.000"
 - Email: "graphite@joeyguerra.com"
-  Message: "<p>IIIIIIEEEEEEEEE!!!!!! IE Accepts header doesn't include text/html.</p><p><a href=\"http://www.gethifi.com/blog/browser-rest-http-accept-headers\" rel=\"nofollow\">http://www.gethifi.com/blog/br...</a></p>"
+  Message: "<p>IIIIIIEEEEEEEEE!!!!!! IE Accepts header doesn't include text/html.</p><p><a href=\"https://www.gethifi.com/blog/browser-rest-http-accept-headers\" rel=\"nofollow\">https://www.gethifi.com/blog/br...</a></p>"
   Name: "Joey Guerra"
   When: "2013-11-11 20:14:07.000"
 - Email: "disqus@wyldeye.com"

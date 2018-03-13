@@ -25,9 +25,9 @@ I always thought people I saw doing this were using [ReSharper] and I didn’t w
 
 Breathe deep and move on.
 
-[TekPub videos]:http://www.tekpub.com/
-[MVC 2]: http://www.tekpub.com/production/aspmvc
-[ReSharper]:http://www.jetbrains.com/resharper/
+[TekPub videos]:https://www.tekpub.com/
+[MVC 2]: https://www.tekpub.com/production/aspmvc
+[ReSharper]:https://www.jetbrains.com/resharper/
 
 ---
 # comments begin here

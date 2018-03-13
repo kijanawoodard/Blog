@@ -37,7 +37,7 @@ To get radical on my first example, I’ll sometimes go as far as removing any f
 
 And yes, I will use simple variables like “bool ok;” instead of “bool stringHasAValue;” because the clarity of intent is there. If this thing is ok, get out of the function. I can use this all over the code and the reader knows that nothing interesting is happening. We’ve done a check and determined we can short circuit this method. Now we can look below and determine what is interesting about this method.
 
-[extension methods]:http://kijanawoodard.com/cool-feature-of-extension-methods
+[extension methods]:https://kijanawoodard.com/cool-feature-of-extension-methods
 
 ---
 # comments begin here

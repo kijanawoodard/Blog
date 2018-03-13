@@ -1,16 +1,16 @@
 ﻿@model Blog.Web.Actions.PostGet.PostIndexViewModel
 <?xml version="1.0" encoding="utf-8"?>
-<feed xml:lang="en-us" xmlns="http://www.w3.org/2005/Atom">
+<feed xml:lang="en-us" xmlns="https://www.w3.org/2005/Atom">
     <title>Kijana Woodard</title>
     <subtitle>Software Minimalism</subtitle>
-    <link href="http://kijanawoodard.com/"/>
+    <link href="https://kijanawoodard.com/"/>
     <rights type="text">Copyright @DateTime.UtcNow.Year</rights>
     <updated>@Model.Active.First().PublishedAtCst.ToUniversalTime().ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fff'Z'")</updated>
     <author>
             <name>Kijana Woodard</name>
             <email>atom@kijanawoodard.com</email>
     </author>
-    <id>http://kijanawoodard.com/</id>
+    <id>https://kijanawoodard.com/</id>
 @foreach (var post in Model.Active)
 {
     <entry>

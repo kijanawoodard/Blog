@@ -37,26 +37,26 @@ It also turns out that the `Application_EndRequest` wasn't getting called when r
 
 The more I use [git], the more I like tiny commits that address a single issue. I don't bother to create tickets for personal projects, but in my head, I try and reason about the simplest way to solve a problem and then only commit code for that problem. Other issues I see along the way, I will either code them, but [commit][copyright commit] them individually, or make a note and come back to them later. Getting to _done_ is vital.
 
-[Zach Burke]: http://www.throw-up.com/building-openresty
-[httperrors]: http://stackoverflow.com/questions/3554844/asp-net-mvc-404-handling-and-iis7-httperrors
-[404 debate]: http://stackoverflow.com/a/9026907/214073
+[Zach Burke]: https://www.throw-up.com/building-openresty
+[httperrors]: https://stackoverflow.com/questions/3554844/asp-net-mvc-404-handling-and-iis7-httperrors
+[404 debate]: https://stackoverflow.com/a/9026907/214073
 [404 commit]: https://github.com/kijanawoodard/Blog/commit/48ed632e7045522e1404f1739dcc2cd982a63697
 [archive]: /archive
 [mediator]: /introducing-liaison
 [archive commit]: https://github.com/kijanawoodard/Blog/commit/ce65020fdb81e06dab3a70365c7588407e695f1e
-[FubuMVC Behaviors]: http://lostechies.com/chadmyers/2011/06/23/cool-stuff-in-fubumvc-no-1-behaviors/
+[FubuMVC Behaviors]: https://lostechies.com/chadmyers/2011/06/23/cool-stuff-in-fubumvc-no-1-behaviors/
 [stumbling around]: https://github.com/kijanawoodard/Blog/blob/728c10ec6608cac03644454a7a38b7376bd10d71/src/Blog.Web/Infrastructure/PartialViewActionInvoker.cs#L8
 [partial commit]: https://github.com/kijanawoodard/Blog/commit/728c10ec6608cac03644454a7a38b7376bd10d71
 [vessel]: /introducing-vessel
 [wire]: https://github.com/kijanawoodard/Blog/commit/97dee8e93dd305436e7687892bebbcdfeba0b9de
-[FubuMVC]: http://fubuworld.com/fubumvc/
-[openrasta]: http://openrasta.org/
-[container incantations]: http://docs.structuremap.net/ConstructorAndSetterInjection.htm
+[FubuMVC]: https://fubuworld.com/fubumvc/
+[openrasta]: https://openrasta.org/
+[container incantations]: https://docs.structuremap.net/ConstructorAndSetterInjection.htm
 [404 page]: /oops
 [remove layout]: https://github.com/kijanawoodard/Blog/commit/728c10ec6608cac03644454a7a38b7376bd10d71#diff-8bc27b9c14ab2cf27debd6ecd280be8eL5
-[SO post]: http://stackoverflow.com/a/18938991/214073
+[SO post]: https://stackoverflow.com/a/18938991/214073
 [passthrough]: https://github.com/kijanawoodard/Blog/commit/c5bcffeef6bc3e10c8fcf635ca5a8bff26d69357
-[git]: http://git-scm.com/
+[git]: https://git-scm.com/
 [copyright commit]: https://github.com/kijanawoodard/Blog/commit/8f3ae65d841bab2bc6287f41923a269a458adf94
 
 ---

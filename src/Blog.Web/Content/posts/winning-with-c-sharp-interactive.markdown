@@ -19,7 +19,7 @@ I can already see an improvement writing this post. Just create the post.mardown
 Hmmmm. Now I'm wondering if I should add the yaml comments at the bottom of the post file. I had thought I would use a library to parse the metadata, but none were quite what I wanted and it turned out to be [not that much code]. Since I'm doing my own parsing up front, I can snip out the comments section before passing the post text to the markdown processor. Hmmmm.
 
 [Jekyll Front Matter]: https://jekyllrb.com/docs/frontmatter/
-[C# Interactive]: http://www.hanselman.com/blog/InteractiveCodingWithCAndFREPLsScriptCSOrTheVisualStudioInteractiveWindow.aspx
+[C# Interactive]: https://www.hanselman.com/blog/InteractiveCodingWithCAndFREPLsScriptCSOrTheVisualStudioInteractiveWindow.aspx
 [not that much code]: https://github.com/kijanawoodard/Blog/blob/7315ca32cfe0334c7c75f0913e88bba9a6cfdeed/src/Blog.Web/Infrastructure/MarkdownSharpContentStorage.cs#L63
 
 ---

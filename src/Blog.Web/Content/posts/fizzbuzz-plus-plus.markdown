@@ -26,8 +26,8 @@ Notice I’m still trying to decompose statements into rough single responsibili
 
 Thoughts?
 
-[Avoiding FizzBuzz]:http://kijanawoodard.com/avoiding-fizzbuzz/
-[enumerable]:http://kijanawoodard.com/ienumerable-each/
+[Avoiding FizzBuzz]:https://kijanawoodard.com/avoiding-fizzbuzz/
+[enumerable]:https://kijanawoodard.com/ienumerable-each/
 
 ---
 # comments begin here
@@ -41,6 +41,6 @@ Thoughts?
   Name: "kijana"
   When: "2010-05-10 03:14:03.000"
 - Email: "luv2code+kijanassite@gmail.com"
-  Message: "<p>I use <a href=\"http://www.linqpad.net/\" rel=\"nofollow\">linqpad</a><a> for these kinds of things.  It's pretty handy for pasting a code snippet and hitting \"run\".</a></p>"
+  Message: "<p>I use <a href=\"https://www.linqpad.net/\" rel=\"nofollow\">linqpad</a><a> for these kinds of things.  It's pretty handy for pasting a code snippet and hitting \"run\".</a></p>"
   Name: "Matt T"
   When: "2010-05-10 03:21:57.000"

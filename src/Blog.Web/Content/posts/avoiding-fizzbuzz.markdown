@@ -29,7 +29,7 @@ Great. I can write FizzBuzz. I also know all the access modifiers and I can use 
 
 Now let’s move on. :-D
 
-[FizzBuzz]:http://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/
+[FizzBuzz]:https://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/
 
 ---
 # comments begin here

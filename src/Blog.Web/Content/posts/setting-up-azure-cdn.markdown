@@ -32,8 +32,8 @@ I also managed to setup a custom domain, so instead of `kijanawoodard.azureedge.
 Everything appears to be serving correctly now. It's amazing how easy doing things like this has become.
 
 [Azure CDN]: https://azure.microsoft.com/en-us/services/cdn/
-[setting up origin pull for the Azure CDN]: http://josephwoodward.co.uk/2015/08/setting-up-origin-pull-azure-cdn/
-[Font Awesome]: http://fontawesome.io/
+[setting up origin pull for the Azure CDN]: https://josephwoodward.co.uk/2015/08/setting-up-origin-pull-azure-cdn/
+[Font Awesome]: https://fontawesome.io/
 
 ---
 # comments being here

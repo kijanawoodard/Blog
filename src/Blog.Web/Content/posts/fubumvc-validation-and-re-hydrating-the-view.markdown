@@ -121,15 +121,15 @@ For the last couple of hours I’ve been trying to come up with a scenario where
 
 I’m going to try to POST via ajax most of the time.
 
-[FubuMVC]:http://fubuworld.com/fubumvc/
-[SOA Course]:http://www.udidahan.com/training/
-[stack]:http://stackoverflow.com/questions/6759287/how-to-set-up-fubumvc-validation
-[overflow]:http://stackoverflow.com/questions/8856390/fubumvc-simple-forms-validation-using-ifailurevalidationpolicy
-[Fubu Behavior]:http://lostechies.com/chadmyers/2011/06/23/cool-stuff-in-fubumvc-no-1-behaviors/
+[FubuMVC]:https://fubuworld.com/fubumvc/
+[SOA Course]:https://www.udidahan.com/training/
+[stack]:https://stackoverflow.com/questions/6759287/how-to-set-up-fubumvc-validation
+[overflow]:https://stackoverflow.com/questions/8856390/fubumvc-simple-forms-validation-using-ifailurevalidationpolicy
+[Fubu Behavior]:https://lostechies.com/chadmyers/2011/06/23/cool-stuff-in-fubumvc-no-1-behaviors/
 [IRedirectable]:https://github.com/ianbattersby/FubuMVC.Recipes/tree/master/src/Continuations/IRedirectable
-[AutoMapper]:http://automapper.org/
-[AjaxContinuations]:http://lostechies.com/josharnold/2012/01/06/our-ajax-conventions-the-ajaxcontinuation/
-[continuations work]:http://lostechies.com/josharnold/2012/01/06/our-ajax-conventionsclientside-continuations/
+[AutoMapper]:https://automapper.org/
+[AjaxContinuations]:https://lostechies.com/josharnold/2012/01/06/our-ajax-conventions-the-ajaxcontinuation/
+[continuations work]:https://lostechies.com/josharnold/2012/01/06/our-ajax-conventionsclientside-continuations/
 
 ---
 # comments begin here

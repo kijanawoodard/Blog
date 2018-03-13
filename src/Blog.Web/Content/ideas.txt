@@ -1,6 +1,6 @@
 ﻿twitter cards / seo
 honey pot
-sitemap [try View]: http://jphellemons.nl/post/Make-a-Google-Sitemap-with-AspNet-C
+sitemap [try View]: https://jphellemons.nl/post/Make-a-Google-Sitemap-with-AspNet-C
 social: https://fourtonfish.makes.org/thimble/make-your-own-social-media-sharing-buttons
 
 X Add explicit about page
@@ -30,20 +30,20 @@ Feature controllers
     Or Action controllers with conneg
 
 Automatic csv for complex types until you reach primitives property.property.property 
-    http://stackoverflow.com/a/10929560/214073
+    https://stackoverflow.com/a/10929560/214073
 
 blind men and the elephant
-make your roles explicit - http://www.infoq.com/presentations/Making-Roles-Explicit-Udi-Dahan#anch41169
+make your roles explicit - https://www.infoq.com/presentations/Making-Roles-Explicit-Udi-Dahan#anch41169
 
 need a construct larger than a class, but smaller than a project - namespace?
 private, protected, internal, public - need something else in between public and internal
     
 reuse is coupling - if i can just get the interface right
-generic repository - http://codebetter.com/gregyoung/2009/01/16/ddd-the-generic-repository/
+generic repository - https://codebetter.com/gregyoung/2009/01/16/ddd-the-generic-repository/
 
 avoid ginormous file and keep classes https://twitter.com/jbogard/status/387945793430495233
 
 
-http://www.sixmonthmba.com/2009/02/999ideas.html
+https://www.sixmonthmba.com/2009/02/999ideas.html
 Video Menus
 RunBag.com

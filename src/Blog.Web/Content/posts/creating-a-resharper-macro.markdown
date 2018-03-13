@@ -52,10 +52,10 @@ If JetBrains wanted to get really crazy, they could create a Publish Plugin feat
 
 I put the [source code] for the macro on GitHub.
 
-[R#]: http://www.jetbrains.com/resharper/
-[R# Live Template]: http://www.jetbrains.com/resharper/features/codeTemplate.html
-[R# Macro]: http://www.jetbrains.com/resharper/webhelp/Reference__Choose_Macro.html
-[extending macros]: http://blogs.jetbrains.com/dotnet/2010/10/templates-galore-extending-functionality-with-macros/
+[R#]: https://www.jetbrains.com/resharper/
+[R# Live Template]: https://www.jetbrains.com/resharper/features/codeTemplate.html
+[R# Macro]: https://www.jetbrains.com/resharper/webhelp/Reference__Choose_Macro.html
+[extending macros]: https://blogs.jetbrains.com/dotnet/2010/10/templates-galore-extending-functionality-with-macros/
 [example 1]: https://github.com/markcapaldi/ReSharperMacros/blob/205aa6368765f742b809c11923d28f78e6e2cdca/ReSharperMacros/TestFixtureVariableExpansionMacro.cs#L49
 [example 2]: https://github.com/joaroyen/ReSharperExtensions
 [source code]: https://github.com/kijanawoodard/ResharperPlugins/blob/master/src/LowercaseHypens.cs
@@ -64,6 +64,6 @@ I put the [source code] for the macro on GitHub.
 # comments begin here
 
 - Email: "m.t.ellis@gmail.com"
-  Message: "<p>Something like <a href=\"http://resharper-plugins.jetbrains.com\" rel=\"nofollow\">http://resharper-plugins.jetbr...</a>, you mean? :)</p><p>ReSharper plugins can be wrapped up as NuGet packages. You can find out more here: <a href=\"http://confluence.jetbrains.com/display/NETCOM/1.9+Packaging+%28R8%29\" rel=\"nofollow\">http://confluence.jetbrains.co...</a></p><p>and there's more documentation on macros here: <a href=\"http://confluence.jetbrains.com/display/NETCOM/4.04+Live+Template+Macros+%28R8%29\" rel=\"nofollow\">http://confluence.jetbrains.co...</a></p><p>We're working on something for NuGet, but for now, you need to download the sdk from the website.<br>Nice post!<br>Matt</p>"
+  Message: "<p>Something like <a href=\"https://resharper-plugins.jetbrains.com\" rel=\"nofollow\">https://resharper-plugins.jetbr...</a>, you mean? :)</p><p>ReSharper plugins can be wrapped up as NuGet packages. You can find out more here: <a href=\"https://confluence.jetbrains.com/display/NETCOM/1.9+Packaging+%28R8%29\" rel=\"nofollow\">https://confluence.jetbrains.co...</a></p><p>and there's more documentation on macros here: <a href=\"https://confluence.jetbrains.com/display/NETCOM/4.04+Live+Template+Macros+%28R8%29\" rel=\"nofollow\">https://confluence.jetbrains.co...</a></p><p>We're working on something for NuGet, but for now, you need to download the sdk from the website.<br>Nice post!<br>Matt</p>"
   Name: "Matt Ellis"
   When: "2013-10-17 14:19:41.000"

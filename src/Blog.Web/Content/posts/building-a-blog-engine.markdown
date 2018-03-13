@@ -64,22 +64,22 @@ I'm pretty happy with this all in all. There's not a whole lot of code. The idea
 
 Tell me what you think.
 
-[kube]: http://imperavi.com/kube/
-[Font Awesome]:http://fortawesome.github.com/Font-Awesome/
-[Markdown]: http://daringfireball.net/projects/markdown/
+[kube]: https://imperavi.com/kube/
+[Font Awesome]:https://fortawesome.github.com/Font-Awesome/
+[Markdown]: https://daringfireball.net/projects/markdown/
 [this post]: https://github.com/kijanawoodard/Blog/blob/master/src/Blog.Web/Content/posts/building-blog.markdown
 [this post raw]:https://raw.github.com/kijanawoodard/Blog/master/src/Blog.Web/Content/posts/building-blog.markdown
-[my gists]: http://kijanawoodard.com/fubumvc-validation-and-re-hydrating-the-view
-[code]: http://kijanawoodard.com/avoiding-fizzbuzz
-[Twitter Bootstrap]:http://twitter.github.com/bootstrap/
-[Foundation]:http://foundation.zurb.com/
+[my gists]: https://kijanawoodard.com/fubumvc-validation-and-re-hydrating-the-view
+[code]: https://kijanawoodard.com/avoiding-fizzbuzz
+[Twitter Bootstrap]:https://twitter.github.com/bootstrap/
+[Foundation]:https://foundation.zurb.com/
 
-[disqus]:http://disqus.com/
+[disqus]:https://disqus.com/
 [gist]:https://gist.github.com/
 
-[markdown links]:http://daringfireball.net/projects/markdown/syntax#link
+[markdown links]:https://daringfireball.net/projects/markdown/syntax#link
 
-[timgthomas]: http://timgthomas.com/
+[timgthomas]: https://timgthomas.com/
 [timgthomas source]:https://github.com/TimGThomas/blog
 
 [my posts]: https://github.com/kijanawoodard/Blog/tree/master/src/Blog.Web/Content/posts
@@ -87,13 +87,13 @@ Tell me what you think.
 [post magic]:https://github.com/kijanawoodard/Blog/blob/master/src/Blog.Web/Initialization/AutofacConfig.cs#L20
 [core]: https://github.com/kijanawoodard/Blog/tree/master/src/Blog.Web/Core
 
-[r# templates]:http://www.jetbrains.com/resharper/features/code_templates.html
-[solid]:http://en.wikipedia.org/wiki/SOLID_(object-oriented_design)
+[r# templates]:https://www.jetbrains.com/resharper/features/code_templates.html
+[solid]:https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)
 
 [post vault]:https://github.com/kijanawoodard/Blog/blob/master/src/Blog.Web/Infrastructure/FilteredPostVault.cs
-[Autofac]:http://code.google.com/p/autofac/
+[Autofac]:https://code.google.com/p/autofac/
 
-[ruslany]: http://blogs.iis.net/ruslany/archive/2009/04/08/10-url-rewriting-tips-and-tricks.aspx "Url Rewriting tips"
+[ruslany]: https://blogs.iis.net/ruslany/archive/2009/04/08/10-url-rewriting-tips-and-tricks.aspx "Url Rewriting tips"
 [urlrewrite]: https://github.com/kijanawoodard/Blog/blob/master/src/Blog.Web/Web.config#L32 "url rewrite rules"
 [viewengine]: https://github.com/kijanawoodard/Blog/blob/master/src/Blog.Web/Infrastructure/AlternateViewEngine.cs "Alternate view engine"
 

@@ -33,7 +33,7 @@ Immediately, we get the idea that other implementations might be:
 `Foo: IFoo` is a give up.
 
 
-[solid]: http://en.wikipedia.org/wiki/Dependency_inversion_principle
+[solid]: https://en.wikipedia.org/wiki/Dependency_inversion_principle
 [questioning]: /questioning-ioc-containers
 [ninject]: https://github.com/ninject/ninject.extensions.conventions
 
@@ -45,6 +45,6 @@ Immediately, we get the idea that other implementations might be:
   Name: "Joey Guerra"
   When: "2013-10-15 02:08:23.000"
 - Email: "disqus@wyldeye.com"
-  Message: "<p>You've brought up two future posts. :-)</p><p>I would say the interface is the Authenticate method. I hinted at this at the end of <a href=\"http://kijanawoodard.com/violating-isp-with-constructor-injection\" rel=\"nofollow\">http://kijanawoodard.com/viola...</a></p>"
+  Message: "<p>You've brought up two future posts. :-)</p><p>I would say the interface is the Authenticate method. I hinted at this at the end of <a href=\"https://kijanawoodard.com/violating-isp-with-constructor-injection\" rel=\"nofollow\">https://kijanawoodard.com/viola...</a></p>"
   Name: "Kijana Woodard"
   When: "2013-10-15 14:44:03.000"

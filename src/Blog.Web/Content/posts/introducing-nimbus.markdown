@@ -108,19 +108,19 @@ But I think we can do better.
 [Nimbus]: https://github.com/kijanawoodard/nimbus
 [nimbus source]: https://github.com/kijanawoodard/nimbus/blob/b594b02a5770bf142b19f1ab468967d5f0bab694/src/mediator.cs
 [partial application]: /constructor-injection-is-partial-application
-[isp]: http://en.wikipedia.org/wiki/Interface_segregation_principle
-[srp]: http://en.wikipedia.org/wiki/Single_responsibility_principle
-[ocp]: http://en.wikipedia.org/wiki/Open/closed_principle
-[dip]: http://en.wikipedia.org/wiki/Dependency_inversion_principle
-[lsp]: http://en.wikipedia.org/wiki/Liskov_substitution_principle
+[isp]: https://en.wikipedia.org/wiki/Interface_segregation_principle
+[srp]: https://en.wikipedia.org/wiki/Single_responsibility_principle
+[ocp]: https://en.wikipedia.org/wiki/Open/closed_principle
+[dip]: https://en.wikipedia.org/wiki/Dependency_inversion_principle
+[lsp]: https://en.wikipedia.org/wiki/Liskov_substitution_principle
 [before]: https://github.com/kijanawoodard/Blog/blob/300ecdf6b48190849b204dbf0ad20b5c80dfd4f4/src/Blog.Web/Actions/PostGet/PostGetController.cs
 [after]: https://github.com/kijanawoodard/Blog/blob/73cbeff9998dcead1d7a3da03669486216288d7b/src/Blog.Web/Actions/PostGet/PostGetController.cs#L20
 [interfaces are gone]: https://github.com/kijanawoodard/Blog/commit/73cbeff9998dcead1d7a3da03669486216288d7b#diff-3131dcc0de723f47d2adfdd9e355dafdL112
 [private]: https://github.com/kijanawoodard/Blog/blob/73cbeff9998dcead1d7a3da03669486216288d7b/src/Blog.Web/Infrastructure/FilteredPostVault.cs#L12
 [mediator configuration]: https://github.com/kijanawoodard/Blog/blob/73cbeff9998dcead1d7a3da03669486216288d7b/src/Blog.Web/Initialization/AutofacConfig.cs#L20
-[rosetta stone]: http://en.wikipedia.org/wiki/Rosetta_Stone
-[abstraction surface]: http://ayende.com/blog/154081/limit-your-abstractions-you-only-get-six-to-a-dozen-in-the-entire-app
-[sphinx]: http://sphinx-doc.org/rest.html#rst-primer
+[rosetta stone]: https://en.wikipedia.org/wiki/Rosetta_Stone
+[abstraction surface]: https://ayende.com/blog/154081/limit-your-abstractions-you-only-get-six-to-a-dozen-in-the-entire-app
+[sphinx]: https://sphinx-doc.org/rest.html#rst-primer
 
 ---
 # comments begin here

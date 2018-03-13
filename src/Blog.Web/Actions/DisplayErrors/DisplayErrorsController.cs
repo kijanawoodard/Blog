@@ -12,8 +12,8 @@ namespace Blog.Web.Actions.DisplayErrors
             return View();
         }
 
-        //http://stackoverflow.com/a/5507125/214073
-        //http://stackoverflow.com/a/7499406/214073
+        //https://stackoverflow.com/a/5507125/214073
+        //https://stackoverflow.com/a/7499406/214073
         public ActionResult ThrowError()
         {
             throw new NotImplementedException("Test Error");

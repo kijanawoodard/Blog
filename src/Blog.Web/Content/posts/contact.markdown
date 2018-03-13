@@ -6,7 +6,7 @@ Feel free to reach out to me.
   <figcaption>214.395.4965 m | contact@kijanawoodard.com</figcaption>
 </figure>
 
-[devops]: http://www.devopslive.org/devops-at-gamestop/
+[devops]: https://www.devopslive.org/devops-at-gamestop/
 
 ---
 # comments begin here

@@ -18,7 +18,7 @@ I decided on the first option: changing the parts separator so my id looks like 
 
 Rule of life: Don't Fight the Framework. If you find yourself writing a lot of code to get around a framework/tool issue, either drop the framework/tool or drop your hack code. It's more trouble than it's worth.
 
-[ravenid]: http://weblogs.asp.net/shijuvarghese/archive/2010/06/04/how-to-work-ravendb-id-with-asp-net-mvc-routes.aspx
+[ravenid]: https://weblogs.asp.net/shijuvarghese/archive/2010/06/04/how-to-work-ravendb-id-with-asp-net-mvc-routes.aspx
 
 ---
 # comments begin here

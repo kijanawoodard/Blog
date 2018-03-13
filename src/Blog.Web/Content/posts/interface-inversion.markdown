@@ -49,11 +49,11 @@ Isn't [Big Design Up Front][bduf] what we were trying to avoid when we decided t
 
  
 [previous post]: /foo-ifoo-is-an-anti-pattern
-[Joey Guerra]: http://www.joeyguerra.com/
+[Joey Guerra]: https://www.joeyguerra.com/
 [violating-isp-with-constructor-injection]: /violating-isp-with-constructor-injection
-[duck typing]: http://en.wikipedia.org/wiki/Duck_typing
-[adapter pattern]: http://en.wikipedia.org/wiki/Adapter_pattern
-[bduf]: http://en.wikipedia.org/wiki/Big_Design_Up_Front
+[duck typing]: https://en.wikipedia.org/wiki/Duck_typing
+[adapter pattern]: https://en.wikipedia.org/wiki/Adapter_pattern
+[bduf]: https://en.wikipedia.org/wiki/Big_Design_Up_Front
 
 ---
 # comments begin here

@@ -19,9 +19,9 @@ I considered a special hook to register controllers given that we found that Con
 [Vessel]: /introducing-vessel
 [RegisterModules]: https://github.com/kijanawoodard/Blog/blob/45887586ac446a628292fe1cd7b11673b9cc017d/src/Blog.Web/Infrastructure/Vessel.cs#L48
 [use module]: https://github.com/kijanawoodard/Blog/blob/45887586ac446a628292fe1cd7b11673b9cc017d/src/Blog.Web/Actions/PostGet/PostGetController.cs#L16
-[legibility]: http://www.ribbonfarm.com/2010/07/26/a-big-little-idea-called-legibility/
+[legibility]: https://www.ribbonfarm.com/2010/07/26/a-big-little-idea-called-legibility/
 [central configuration]: https://github.com/kijanawoodard/Blog/blob/45887586ac446a628292fe1cd7b11673b9cc017d/src/Blog.Web/Initialization/VesselConfig.cs#L15
-[isp]: http://en.wikipedia.org/wiki/Interface_segregation_principle
+[isp]: https://en.wikipedia.org/wiki/Interface_segregation_principle
 [pain]: https://github.com/kijanawoodard/Blog/blob/45887586ac446a628292fe1cd7b11673b9cc017d/src/Blog.Web/Actions/PostGet/PostGetController.cs#L16
 
 ---

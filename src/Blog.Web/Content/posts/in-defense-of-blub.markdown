@@ -22,8 +22,8 @@ In defense of Blub programmers, it must be said that any programmer who has look
 
 I’ll take a team full of Blub programmers over a team of average programmers any day.
 
-[rb]: http://raganwald.com/
-[blub]: http://raganwald.com/2006/10/are-we-blub-programmers.html
+[rb]: https://raganwald.com/
+[blub]: https://raganwald.com/2006/10/are-we-blub-programmers.html
 
 ---
 # comments begin here
