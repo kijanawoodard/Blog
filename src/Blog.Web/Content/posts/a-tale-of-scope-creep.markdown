@@ -49,7 +49,7 @@ The more I use [git], the more I like tiny commits that address a single issue. 
 [partial commit]: https://github.com/kijanawoodard/Blog/commit/728c10ec6608cac03644454a7a38b7376bd10d71
 [vessel]: /introducing-vessel
 [wire]: https://github.com/kijanawoodard/Blog/commit/97dee8e93dd305436e7687892bebbcdfeba0b9de
-[FubuMVC]: https://fubuworld.com/fubumvc/
+[FubuMVC]: https://fubumvc.github.io/
 [openrasta]: https://openrasta.org/
 [container incantations]: https://docs.structuremap.net/ConstructorAndSetterInjection.htm
 [404 page]: /oops

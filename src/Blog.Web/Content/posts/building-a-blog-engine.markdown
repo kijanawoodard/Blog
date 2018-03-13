@@ -65,7 +65,7 @@ I'm pretty happy with this all in all. There's not a whole lot of code. The idea
 Tell me what you think.
 
 [kube]: https://imperavi.com/kube/
-[Font Awesome]:https://fortawesome.github.com/Font-Awesome/
+[Font Awesome]: https://fontawesome.com
 [Markdown]: https://daringfireball.net/projects/markdown/
 [this post]: https://github.com/kijanawoodard/Blog/blob/master/src/Blog.Web/Content/posts/building-blog.markdown
 [this post raw]:https://raw.github.com/kijanawoodard/Blog/master/src/Blog.Web/Content/posts/building-blog.markdown

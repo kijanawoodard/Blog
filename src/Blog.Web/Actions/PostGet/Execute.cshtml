@@ -18,10 +18,8 @@
 }
 
 <header>
-    <hgroup>
-        <h2><a href="@Url.Action("Execute", "PostGet", new {slug = Model.Post.Slug})" title="@Model.Post.Title">@Model.Post.Title</a></h2>
-        <h4 class="subheader">@Model.Post.PublishedAtCst.ToLongDateString()</h4>
-    </hgroup>
+    <h2><a href="@Url.Action("Execute", "PostGet", new {slug = Model.Post.Slug})" title="@Model.Post.Title" class="header">@Model.Post.Title</a></h2>
+    <h4 class="subheader">@Model.Post.PublishedAtCst.ToLongDateString()</h4>
 </header>
 
 <div class="text">

@@ -51,7 +51,7 @@ Interestingly, I had nearly run out of reasons to have a controller class, other
 A side note on [scope creep]. I spent a fair amount of time trying to work out pdf content negotiation. After hunting around, I found [Rotativa], which looked promising, but I ran into [a bug]. It could be my issue, by while I was thinking about how to code my way out of this problem, it finally dawned on me: ctrl-p in chrome, plus [a little css][print css], pdf support done. :-]
 
 [archive]: /archive
-[web api conneg]: https://www.asp.net/web-api/overview/formats-and-model-binding/content-negotiation
+[web api conneg]: https://docs.microsoft.com/en-us/aspnet/web-api/overview/formats-and-model-binding/content-negotiation
 [404 page]: /oops
 [partial action invoker]: https://github.com/kijanawoodard/Blog/blob/728c10ec6608cac03644454a7a38b7376bd10d71/src/Blog.Web/Infrastructure/PartialViewActionInvoker.cs
 [conneg action invoker]: https://github.com/kijanawoodard/Blog/blob/0c6c3fb975deaec89035c79e9213698c7a5be5a3/src/Blog.Web/Infrastructure/ContentNegotiatingActionInvoker.cs#L14

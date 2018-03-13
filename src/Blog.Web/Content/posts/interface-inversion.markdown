@@ -49,7 +49,7 @@ Isn't [Big Design Up Front][bduf] what we were trying to avoid when we decided t
 
  
 [previous post]: /foo-ifoo-is-an-anti-pattern
-[Joey Guerra]: https://www.joeyguerra.com/
+[Joey Guerra]: http://www.joeyguerra.com/
 [violating-isp-with-constructor-injection]: /violating-isp-with-constructor-injection
 [duck typing]: https://en.wikipedia.org/wiki/Duck_typing
 [adapter pattern]: https://en.wikipedia.org/wiki/Adapter_pattern

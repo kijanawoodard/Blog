@@ -44,8 +44,8 @@ Hopefully those tips will help you get your own templates up and running smoothl
 If anything is unclear, try watching the [companion video] on YouTube. Please [contact me] with any comments, ommissions, or clarifications. Making the video was fun. I'll mix in more video content with future posts.
 
 
-[Eric Sowell]: https://ericsowell.com/blog/2007/5/22/how-to-edit-visual-studio-templates
-[multiple file templates]: https://kerlagon.com/Blog/item-templates-saving-you-time-in-visual-studio/
+[Eric Sowell]: http://ericsowell.com/blog/2007/5/22/how-to-edit-visual-studio-templates
+[multiple file templates]: http://kerlagon.com/Blog/item-templates-saving-you-time-in-visual-studio/
 [companion video]: https://www.youtube.com/watch?v=Xf3d5PKjUNc
 [template parameters]: https://msdn.microsoft.com/en-us/library/eehb4faa.aspx?f=255&MSPPError=-2147217396
 [contact me]: /contact

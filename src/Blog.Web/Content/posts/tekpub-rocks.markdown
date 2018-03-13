@@ -14,7 +14,7 @@ Rob was already my here because of [SubSonic], now I have TekPub to be thankful 
 
 Thanks Rob and James.
 
-[TekPub]:https://tekpub.com/
+[TekPub]:http://tekpub.com/
 [SubSonic]:https://subsonicproject.com/
 
 ---

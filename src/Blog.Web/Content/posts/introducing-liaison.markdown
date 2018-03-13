@@ -104,7 +104,7 @@ On a minor note, I named nimbus with the project, solution, folders, etc all low
 [introducing nimbus]: /introducing-nimbus
 [nimbus]: https://github.com/kijanawoodard/nimbus/blob/507a3a9ba81e3af640d877158b8168f1e74e27f3/src/mediator.cs
 [Liaison]: https://github.com/kijanawoodard/Liaison
-[web scale]: https://mongodb-is-web-scale.com/    
+[web scale]: http://mongodb-is-web-scale.com/    
 [Mike Pennington]: https://www.linkedin.com/in/mikepennington
 [added comments]: https://github.com/kijanawoodard/nimbus/blob/507a3a9ba81e3af640d877158b8168f1e74e27f3/src/mediator.cs#L88
 [mediator configuration]: https://github.com/kijanawoodard/Blog/blob/36b4b747c0a538d46ac418e0ed51f07e66bedb52/src/Blog.Web/Initialization/AutofacConfig.cs#L20
