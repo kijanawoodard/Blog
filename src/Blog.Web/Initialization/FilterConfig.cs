@@ -8,6 +8,7 @@ namespace Blog.Web.Initialization
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new LastModifiedCacheAttribute());
+            filters.Add(new ErrorHandler.AiHandleErrorAttribute());
         }
     }
 }
