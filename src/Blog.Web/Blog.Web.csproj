@@ -217,6 +217,7 @@
     <Content Include="pinterest-de76f.html" />
     <Content Include="robots.txt" />
     <Content Include="Content\sitemap.xml" />
+    <Content Include="Content\googled0ed70f6ca21fb3d.html" /> 
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
