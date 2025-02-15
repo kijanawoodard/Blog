@@ -8,6 +8,9 @@ builder.Services.AddRazorComponents();
 builder.WebHost.UseStaticWebAssets();
 builder.Services.AddBlazorStaticService(opt => {
         //opt.IgnoredPathsOnContentCopy.Add("app.css");//pre-build version for tailwind
+        opt.HotReloadEnabled = true;
+        opt.ShouldGenerateSitemap = true;
+        opt.SiteUrl = "https://kijanawoodard.com";
     }
 ).AddBlazorStaticContentService<BlogFrontMatter>();
 
