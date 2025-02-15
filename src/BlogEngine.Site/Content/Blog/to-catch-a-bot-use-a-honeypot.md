@@ -2,7 +2,7 @@
 title: To Catch a Bot, Use a Honeypot
 created: 8/9/2016 10:22:44 AM
 published: 8/9/2016 10:22:44 AM
-tags: blog
+tags: [blog,security, web-development, spam-prevention]
 ---
 
 For my [contact] form, I needed some spam protection from the evil bots roaming the interwebs. I considered [recaptcha], but I want to minimize the amount of javascript on this site, plus it's fun to see what I can do on my own.

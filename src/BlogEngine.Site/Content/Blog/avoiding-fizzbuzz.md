@@ -1,7 +1,7 @@
 ---
 title: Avoiding FizzBuzz
 published: May 09, 2010
-tags: []
+tags: [csharp, programming, interview-questions]
 ---
 
 Getting hired for a programming job means interviewing. This process is utterly necessary, but often tedious.

@@ -2,7 +2,7 @@
 title: Item Templates in Visual Studio 2015
 created: 8/9/2016 5:46:49 PM
 published: 8/10/2016 5:46:49 AM
-tags: blog, notes
+tags: [blog, visual-studio, templates, development-tools]
 ---
 
 Now that blog posts, metadata, and comments are combined in one file, it's less work to start a new post. I figured I'd reduce friction even further by using a Visual Studio Item Template. It's best to remove every barrier to writing new posts. ;-)

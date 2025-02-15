@@ -1,7 +1,7 @@
 ---
 title: Violating ISP with Constructor Injection
 published: October 10, 2013
-tags: []
+tags: [isp, dependency-injection, solid]
 ---
 
 One [problem with IoC containers][questioning-ioc] is that they facilitate [ISP] violations through constructor injection.

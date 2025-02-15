@@ -1,5 +1,5 @@
 ---
-title: Foo: IFoo is an Anti-Pattern
+title: "Foo: IFoo is an Anti-Pattern"
 published: October 14, 2013
 tags: [design-patterns, architecture]
 ---

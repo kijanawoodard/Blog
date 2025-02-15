@@ -1,7 +1,7 @@
 ---
 title: Javascript UTC Datetime
 published: June 05, 2012
-tags: 
+tags: [javascript, datetime, utc]
 ---
 
 I created a date in js like this: `new Date(2012, 0, 1, 8, 15, 0);`.

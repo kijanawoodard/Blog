@@ -2,7 +2,7 @@
 title: A Tale of Scope Creep
 lead: Sample post so you can see how it works
 published: 2013-11-05
-tags: []
+tags: [aspnet-mvc, web-development]
 ---
 
 [Zach Burke] mentioned to me that he wanted to add a 404 page to his new blog. Sounds like a good idea, lets do it.

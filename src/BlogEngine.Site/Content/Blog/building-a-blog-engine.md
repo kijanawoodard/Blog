@@ -1,7 +1,7 @@
 ---
 title: Building My Own Blog
 published: December 08, 2012
-tags: []
+tags: [blog, web-development]
 ---
 
 

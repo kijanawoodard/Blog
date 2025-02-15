@@ -1,7 +1,7 @@
 ---
 title: NullOr Extension Method
 published: May 19, 2010
-tags: 
+tags: [csharp, extension-methods, null-handling]
 ---
 
 I find myself writing code like this a lot:
@@ -11,7 +11,7 @@ I find myself writing code like this a lot:
         var thing = foo == null ? null : foo.Thing;
     }
 
-I thought about adding an operator like ??? to go with ?? and ?, but you can’t do that in c# and it would probably be confusing to the next programmer anyway.
+I thought about adding an operator like ??? to go with ?? and ?, but you can't do that in c# and it would probably be confusing to the next programmer anyway.
 
 So how about an extension method to wrap that up:
 
@@ -30,7 +30,7 @@ So how about an extension method to wrap that up:
         var value = foo.NullOr(f => f.Property);
     }
 
-Not a lot less typing, but a bit clearer and you’re less likely to screw up.
+Not a lot less typing, but a bit clearer and you're less likely to screw up.
 
 ---
 # comments begin here

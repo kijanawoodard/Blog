@@ -1,7 +1,7 @@
 ---
 title: C# Partition List into List of Lists
 published: October 17, 2010
-tags: []
+tags: [csharp, programming]
 ---
 [Edit: See the comments to see why this post is totally unnecessary. Thanks Matt!]
 

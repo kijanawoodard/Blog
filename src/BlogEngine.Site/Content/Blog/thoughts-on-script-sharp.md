@@ -1,12 +1,12 @@
 ---
 title: Thoughts on Script#
 published: May 12, 2010
-tags: 
+tags: [javascript, csharp, web-development]
 ---
 
-I had an email discussion about [Script#] the other day. I didn’t like it. I admit I looked at the website for less time than it took me to write this post.
+I had an email discussion about [Script#] the other day. I didn't like it. I admit I looked at the website for less time than it took me to write this post.
 
-After sleeping on it, I figured out what bothers me about it. It reminds me of WebForms – let’s pretend we’re not in a browser.
+After sleeping on it, I figured out what bothers me about it. It reminds me of WebForms – let's pretend we're not in a browser.
 
 Better approaches to being uncomfortable working in a browser:
 

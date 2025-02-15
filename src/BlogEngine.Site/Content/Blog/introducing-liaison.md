@@ -1,7 +1,7 @@
 ---
 title: Introducing Liaison
 published: October 25, 2013
-tags: 
+tags: [csharp, architecture, liaison, nimbus]
 ---
 
 Well [nimbus][introducing nimbus], you had a great run, but now it's over. Make room for [Liaison].

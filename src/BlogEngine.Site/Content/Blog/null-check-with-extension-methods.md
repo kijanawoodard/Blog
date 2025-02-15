@@ -1,12 +1,12 @@
 ---
 title: Null Check with Extension Methods
 published: May 18, 2010
-tags: 
+tags: [csharp, extension-methods, null-handling]
 ---
 
 I mentioned that I got an idea while writing the post on [extension methods]. I realized that you can null check using this technique.
 
-It get’s annoying writing this code over and over:
+It get's annoying writing this code over and over:
 
     public static void ImportantMethod(string value)
     {
@@ -48,7 +48,7 @@ Much nicer. The overloads can facilitate whatever messaging level you desire.
 
 This is all probably a moot point with [Code Contracts in .net 4.0][code contracts]. To get Code Contracts working in VS2010, you have to [download the code from DevLabs][DevLabs]. That caught me off guard because the code contracts namespace is available by default in VS2010, but the actual code analysis was not.
 
-Still, in the right situations I’d like to work on avoiding null altogether with the [Null Object Pattern] or [immutable classes].
+Still, in the right situations I'd like to work on avoiding null altogether with the [Null Object Pattern] or [immutable classes].
 
 [extension methods]:https://kijanawoodard.com/cool-feature-of-extension-methods
 [null object]: https://journal.stuffwithstuff.com/2008/04/08/whats-the-opposite-of-nullable/

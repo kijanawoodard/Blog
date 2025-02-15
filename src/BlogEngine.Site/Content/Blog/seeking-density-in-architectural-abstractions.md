@@ -1,7 +1,7 @@
 ---
 title: Seeking Density in Architectural Abstractions
 published: February 14, 2012
-tags: 
+tags: [architecture, design-patterns, abstractions]
 ---
 
 I've found myself making mental leaps about coding more quickly by cross pollinating the input data.

@@ -1,7 +1,7 @@
 ---
 title: Goodbye Disqus
 published: July 27, 2016
-tags: 
+tags: [blog, comments, disqus]
 ---
 
 I've decided to remove disqus comments from my blog.

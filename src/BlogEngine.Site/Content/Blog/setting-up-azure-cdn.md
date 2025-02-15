@@ -2,7 +2,7 @@
 title: Setting Up Azure CDN
 created: 8/4/2016 9:57:46 AM
 published: 8/4/2016 9:57:46 AM
-tags: blog, notes
+tags: [blog, azure, cdn, web-performance]
 ---
 
 Using a CDN is a well known way to increase the performance of your web site. At $0.087 per GB, I figured why not give the [Azure CDN] a try.

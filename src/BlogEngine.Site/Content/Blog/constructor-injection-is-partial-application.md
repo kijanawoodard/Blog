@@ -1,7 +1,7 @@
 ---
 title: Constructor Injection is Partial Application
 published: October 16, 2013
-tags: []
+tags: [dependency-injection, oop]
 ---
 
 Looking back on my posts about [violating ISP][violating-isp-with-constructor-injection] and [duck typing][interface-inversion], a question emerges: why not declare our dependencies on the _methods_ that need them, rather than at the object level?

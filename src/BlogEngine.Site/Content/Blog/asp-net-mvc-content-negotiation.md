@@ -1,7 +1,7 @@
 ---
 title: Asp.net MVC Content Negotiation
 published: November 08, 2013
-tags: ["asp.net", "mvc"]
+tags: [aspnet-mvc, web-development]
 ---
 
 It's long bothered me that I had a separate endpoint for Atom. After adding the [archive] endpoint, the absurdity really showed since is the same data, just in a different format.

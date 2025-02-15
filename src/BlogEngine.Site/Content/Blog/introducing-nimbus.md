@@ -1,7 +1,7 @@
 ---
 title: Introducing Nimbus
 published: October 24, 2013
-tags: 
+tags: [nimbus, ioc, mediator, design-patterns]
 ---
 
 Once I started [questioning IoC] containers, a [variety][violating isp] of [problems][violating srp] presented [themselves][foo ifoo].

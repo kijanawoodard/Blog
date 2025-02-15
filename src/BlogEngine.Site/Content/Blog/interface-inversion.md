@@ -1,7 +1,7 @@
 ---
 title: Interface Inversion
 published: October 15, 2013
-tags: 
+tags: [csharp, programming, interfaces, design-patterns]
 ---
 
 On my [previous post], [Joey Guerra] asked a question in the comments:

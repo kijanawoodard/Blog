@@ -1,7 +1,7 @@
 ---
 title: #Winning with C# Interactive
 published: July 29, 2016
-tags: blog, csharp
+tags: [blog, csharp]
 ---
 
 For my blog engine, I had a static C# class that contained a list of metadata about each post. That means when adding a new post, I had to add an element to the Posts list and create the markdown file.

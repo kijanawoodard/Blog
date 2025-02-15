@@ -1,7 +1,7 @@
 ---
 title: Vessel Modules
 published: November 01, 2013
-tags: 
+tags: [vessel, ioc, modules]
 ---
 
 After implementing [Vessel], I was curious what it would be like to add a module system. To do this, I added a [RegisterModules] method that scans for classes implementing `IModule` and executes them.

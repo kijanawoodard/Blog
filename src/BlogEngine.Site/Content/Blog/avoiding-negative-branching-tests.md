@@ -1,7 +1,7 @@
 ---
 title: Avoiding Negative Branching Tests
 published: May 17, 2010
-tags: []
+tags: [csharp, programming]
 ---
 
 I try to avoid ! tests in "if" blocks if there is a clearer way to express the idea in positive manner. Thanks to Larry McNutt for turning me on to this concept.

@@ -1,7 +1,7 @@
 ---
 title: Just use string Id for RavenDB
 published: May 31, 2012
-tags: 
+tags: [ravendb, architecture, best-practices]
 ---
 
 I tried to fight the framework, but it isn't worth it. With RavenDB, the default expectation is to use string for Id properties and they will get generated to look like this: "posts/1". The slash causes a problem for MVC routing and it doesn't look all that great "posts/details/posts/1".

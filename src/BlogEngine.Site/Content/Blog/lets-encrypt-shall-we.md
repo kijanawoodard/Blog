@@ -2,7 +2,7 @@
 title: Let's Encrypt, Shall We?
 created: 8/4/2016 6:47:12 PM
 published: 8/5/2016 6:47:12 AM
-tags: blog, notes
+tags: [blog, azure, web-development, security]
 ---
 
 TLS Everywhere is gaining traction. I'm not convinced, but I'm not passionate enough about the issue to dig into it. I was intrigued by the [Let's Encypt] project and it's mission to provide free, pervasive, SSL Certs, and wanted to see if I could get it working [IRL].

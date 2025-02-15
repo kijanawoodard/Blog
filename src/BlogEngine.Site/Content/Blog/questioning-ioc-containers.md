@@ -1,7 +1,7 @@
 ---
 title: Questioning IoC Containers
 published: October 09, 2013
-tags: 
+tags: [ioc, architecture, dependency-injection]
 ---
 
 Last night I awoke at 3am with a thought: maybe Greg Young has a point.

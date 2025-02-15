@@ -1,7 +1,7 @@
 ---
 title: How to Wake Up Your Kids
 published: October 12, 2013
-tags: missives
+tags: [missives, parenting, humor]
 ---
 
 Ever think that your young kids are sleeping too much at night or during naps? Feel that you aren't spending enough "bonding time" with them because they just sleep sleep sleep?

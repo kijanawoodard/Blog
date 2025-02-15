@@ -1,10 +1,10 @@
 ---
 title: Why Enums Suck
 published: May 10, 2010
-tags: 
+tags: [csharp, architecture, design-patterns]
 ---
 
-I inherited some code at work that made use of enums. I happily continued the pattern in order to get the job done considering the tight deadline. My spidey sense kept tingling telling me something was wrong, but I couldn’t quite put my finger on it.
+I inherited some code at work that made use of enums. I happily continued the pattern in order to get the job done considering the tight deadline. My spidey sense kept tingling telling me something was wrong, but I couldn't quite put my finger on it.
 
 The code I started with was pretty standard stuff.
 
@@ -57,7 +57,7 @@ And then there was branching logic on the enum. This is where the trouble began:
         }
     }        
 
-This code was smelly and I was adding more of it. I really didn’t understand what I didn’t like, but I wanted to do something different.
+This code was smelly and I was adding more of it. I really didn't understand what I didn't like, but I wanted to do something different.
 
 I decided to use extension methods.
 
@@ -91,11 +91,11 @@ So now my consuming code looked like this:
     foreach (var car in cars)
         car.CarType.DoCarStuff(); 
            
-Ahhhh. Now that’s bliss. All the car type junk was packaged together and the calling code is dead simple.
+Ahhhh. Now that's bliss. All the car type junk was packaged together and the calling code is dead simple.
 
-But something still felt…wrong. The big “switches” were all gone, but I still had some “if (carType ==” statements lying around. I could put those in the extension methods, but that wasn’t really the root issue.
+But something still felt...wrong. The big "switches" were all gone, but I still had some "if (carType ==" statements lying around. I could put those in the extension methods, but that wasn't really the root issue.
 
-I went to the Big G and typed something like “c# alternatives to enums”. Somewhere along the line I stumbled on this post about comparing c# enums to java enums.
+I went to the Big G and typed something like "c# alternatives to enums". Somewhere along the line I stumbled on this post about comparing c# enums to java enums.
 
 At first, I thought, this looks like a ton more code to write for little gain. But it felt like the right direction. I decided to just write it and see what happened.
 
@@ -142,21 +142,21 @@ At first, I thought, this looks like a ton more code to write for little gain. B
         private Action _dostuff;
     }        
 
-And suddenly the real problem with the original code was obvious. Switch/If blocks were littered everywhere through the program. If you added a new CarType, you’d have to hunt through the entire application updating the switch/if logic.
+And suddenly the real problem with the original code was obvious. Switch/If blocks were littered everywhere through the program. If you added a new CarType, you'd have to hunt through the entire application updating the switch/if logic.
 
 The extension method class was better in that the code was all in one class, but you still had to go through and update it all.
 
-Now, when you create a new “enum” type, all the logic is done right there. Even typing up this blog post I smiled when I didn’t have to change my Car class or the consuming code that called DoCarStuff(). I can add CarTypes at will, knowing I don’t have to change any other code.
+Now, when you create a new "enum" type, all the logic is done right there. Even typing up this blog post I smiled when I didn't have to change my Car class or the consuming code that called DoCarStuff(). I can add CarTypes at will, knowing I don't have to change any other code.
 
-Enums are still useful when all they do is identity. As soon as you start branching on enums, switch to a class. You’ll thank me later.
+Enums are still useful when all they do is identity. As soon as you start branching on enums, switch to a class. You'll thank me later.
 
-So by now, you might be thinking, congratulations, you’ve discovered the strategy pattern. I get that. However, I find it useful to think about solving concrete problems like getting rid of branching code on enums by using proper classes. It’s the same thing, but if I just said, “use the strategy pattern”, a lot of people, myself included, would leave the blog post less informed.
+So by now, you might be thinking, congratulations, you've discovered the strategy pattern. I get that. However, I find it useful to think about solving concrete problems like getting rid of branching code on enums by using proper classes. It's the same thing, but if I just said, "use the strategy pattern", a lot of people, myself included, would leave the blog post less informed.
 
 Finally, I know some of you might think that this code is terrible:
 
     car.CarType.DoCarStuff();        
 
-I realize that Car should probably define DoCarStuff and not expose it’s CarType, but this was the first example I could think of and I figured I’d write the post instead of trying to think of the perfect example.
+I realize that Car should probably define DoCarStuff and not expose it's CarType, but this was the first example I could think of and I figured I'd write the post instead of trying to think of the perfect example.
 
 Thoughts?
 
@@ -172,7 +172,7 @@ Thoughts?
   Name: "F"
   When: "2012-03-23 13:45:48.000"
 - Email: "kijanawoodard@wyldeye.com"
-  Message: "<p>Congratulations, you (nearly) understood the post!</p><p>I didn't \"re-invent inheritance\", I'm *utilizing* classes to solve a particular type of problem instead of using magic strings or enums. The whole point of the post is that you should bias towards leaning on OO instead of enums.</p>"
+  Message: "<p>Congratulations, you (nearly) understood the post!</p><p>I didn't "re-invent inheritance", I'm *utilizing* classes to solve a particular type of problem instead of using magic strings or enums. The whole point of the post is that you should bias towards leaning on OO instead of enums.</p>"
   Name: "kijana"
   When: "2012-03-30 20:55:47.000"
 - Email: "mohamed.elmalky@gmail.com"
@@ -192,7 +192,7 @@ Thoughts?
   Name: "Kijana Woodard"
   When: "2013-09-27 20:20:18.000"
 - Email: "diogo.filipe.acastro@gmail.com"
-  Message: "<p>Definitely! That's a good lesson to take from this. I also agree with you when you say that enums are good for identification. \"LogLevel\" is a classical example.</p>"
+  Message: "<p>Definitely! That's a good lesson to take from this. I also agree with you when you say that enums are good for identification. "LogLevel" is a classical example.</p>"
   Name: "Diogo Castro"
   When: "2013-09-29 21:36:28.000"
 - Email: "willmotil@live.com"

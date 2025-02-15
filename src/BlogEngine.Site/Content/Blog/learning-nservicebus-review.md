@@ -1,7 +1,7 @@
 ---
 title: Learning NServiceBus Review
 published: September 30, 2013
-tags: []
+tags: [nservicebus, messaging, web-development]
 comments:
   - email: "sandyp@packtpub.com"
     message: "<p>Thanks for a detailed review of the book. Certainly looking forward to it.</p>"

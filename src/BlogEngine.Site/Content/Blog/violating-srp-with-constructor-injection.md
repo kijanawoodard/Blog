@@ -1,7 +1,7 @@
 ---
 title: Violating SRP with Constructor Injection
 published: October 11, 2013
-tags: []
+tags: ["solid", "dependency injection"]
 comments:
   - email: "landon.poch@gmail.com"
     message: "<p>Udi Dahan has a good post about domain messaging, which is very different than the enterprise messaging and integration that most people think of when they hear the term \"messaging.\"   <a href=\"http://udidahan.com/2009/06/14/domain-events-salvation/\" rel=\"nofollow\">https://www.udidahan.com/2009/0...</a>.  There are some other niceties that could be added to Udi's example but he's provided enough to make his point.</p><p>Domain messaging is lightweight and specific to the internals of the application only.  It's also noteworthy that this message bus isn't necessarily being injected into everything (static) because you often want to raise a domain event from inside an aggregate root or entity.  Injecting dependencies into those is generally a bad idea.  Handlers usually don't run on a separate thread either so you can keep control over when you need to spin off a new thread or when you don't need that added complexity.</p><p>I've also found that domain messaging helps keep your infrastructure related code decoupled from your aggregates/entites so that your domain layer is more pure.</p>"
