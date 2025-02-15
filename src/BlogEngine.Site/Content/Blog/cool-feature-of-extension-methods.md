@@ -1,7 +1,7 @@
 ---
 title: Cool Feature of Extension Methods
 published: May 16, 2010
-tags: 
+tags: []
 ---
 
 One cool and useful feature of extension methods is the fact that a null instance can call the method.
