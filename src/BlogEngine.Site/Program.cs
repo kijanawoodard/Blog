@@ -1,3 +1,5 @@
+using System.Security.Cryptography;
+using System.Text;
 using BlazorStatic;
 using BlogEngine.Site.Components;
 
@@ -12,7 +14,7 @@ builder.Services.AddBlazorStaticService(opt => {
         opt.ShouldGenerateSitemap = true;
         opt.SiteUrl = "https://kijanawoodard.com";
     }
-).AddBlazorStaticContentService<BlogFrontMatter>();
+).AddBlazorStaticContentService<PostFrontMatter>();
 
 var app = builder.Build();
 
@@ -43,4 +45,29 @@ public static class WebsiteKeys
     public const string Title = "BlazorStatic Minimal Blog";
     public const string BlogPostStorageAddress = $"{GitHubRepo}/tree/main/Content/Blog";
     public const string BlogLead = "Sample blog created with BlazorStatic and TailwindCSS";
+}
+
+public class PostFrontMatter : BlogFrontMatter
+{
+    public PostComment[] Comments { get; set; } = [];
+}
+
+public class PostComment
+{
+    public string Email { get; set; }
+    public string Name { get; set; }
+    public string Message { get; set; }
+    public DateTime When { get; set; }
+}
+
+public static class StringExtensions
+{
+    public static string ToMd5(this string input)
+    {
+        if (string.IsNullOrWhiteSpace(input)) return "*************";
+        var asciiBytes = Encoding.ASCII.GetBytes(input);
+        var hashedBytes = MD5.Create().ComputeHash(asciiBytes);
+        var hashedString = BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
+        return hashedString;
+    }
 }

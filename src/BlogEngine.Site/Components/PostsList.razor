@@ -1,7 +1,7 @@
 @using System.Globalization
 @using BlazorStatic
 @using BlazorStatic.Services
-@inject BlazorStaticContentService<BlogFrontMatter> blazorStaticContentService
+@inject BlazorStaticContentService<PostFrontMatter> blazorStaticContentService
 @inject BlazorStaticService blazorStaticService
 
 <ul class="divide-y   divide-gray-700">
@@ -49,10 +49,10 @@
 
 
 @code {
-    List<Post<BlogFrontMatter>> posts = new();
+    List<Post<PostFrontMatter>> posts = new();
 
 
-    [Parameter] public List<Post<BlogFrontMatter>>? Posts { get; set; }
+    [Parameter] public List<Post<PostFrontMatter>>? Posts { get; set; }
     protected override void OnInitialized()
     {
         posts = Posts != null ? Posts.OrderBy(x => x.FrontMatter.Published).ToList() : blazorStaticContentService.Posts;

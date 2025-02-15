@@ -17,4 +17,10 @@
   <url>
     <loc>https://kijanawoodard.com/blog/learning-nservicebus-review</loc>
   </url>
+  <url>
+    <loc>https://kijanawoodard.com/blog/violating-isp-with-constructor-injection</loc>
+  </url>
+  <url>
+    <loc>https://kijanawoodard.com/blog/violating-srp-with-constructor-injection</loc>
+  </url>
 </urlset>

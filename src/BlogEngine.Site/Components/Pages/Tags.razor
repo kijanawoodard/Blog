@@ -3,7 +3,7 @@
 @using BlazorStatic
 @using BlazorStatic.Services
 @using System.Net
-@inject BlazorStaticContentService<BlogFrontMatter> blazorStaticContentService
+@inject BlazorStaticContentService<PostFrontMatter> blazorStaticContentService
 
 @if (TagName == null)
 {
@@ -40,7 +40,7 @@
 
     [Parameter] public string? TagName { get; set; }
 
-    List<Post<BlogFrontMatter>>? posts;
+    List<Post<PostFrontMatter>>? posts;
 
     protected override void OnInitialized()
     {

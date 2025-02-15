@@ -2,6 +2,11 @@
 title: Learning NServiceBus Review
 published: September 30, 2013
 tags: []
+comments:
+  - email: "sandyp@packtpub.com"
+    message: "<p>Thanks for a detailed review of the book. Certainly looking forward to it.</p>"
+    name: "Sandy"
+    when: "2013-10-03 09:12:04.000"
 ---
 
 I was contacted by Packt Publishing to review [Learning NServiceBus by David Boike][learning]. David is active in the NServiceBus community, so I was eager to see what he had put together. 
@@ -35,8 +40,3 @@ All in all, as someone who has explained basic NServiceBus and Messaging on nume
 
 ---
 # comments begin here
-
-- Email: "sandyp@packtpub.com"
-  Message: "<p>Thanks for a detailed review of the book. Certainly looking forward to it.</p>"
-  Name: "Sandy"
-  When: "2013-10-03 09:12:04.000"
