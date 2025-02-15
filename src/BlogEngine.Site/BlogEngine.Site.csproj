@@ -8,13 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BlogEngine.Generator\BlogEngine.Generator.csproj" 
+    <!-- <ProjectReference Include="..\BlogEngine.Generator\BlogEngine.Generator.csproj" 
                       OutputItemType="Analyzer" 
-                      ReferenceOutputAssembly="false" />
+                      ReferenceOutputAssembly="false" /> -->
   </ItemGroup>
 
   <ItemGroup>
-    <AdditionalFiles Include="content/**/*.md" />
+    <AdditionalFiles Include="**/*.markdown" />
   </ItemGroup>
 
   <!-- Copy generated HTML files to wwwroot -->

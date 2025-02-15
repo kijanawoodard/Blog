@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -31,18 +32,58 @@ public class BlogGenerator : IIncrementalGenerator
 {
     public void Initialize(IncrementalGeneratorInitializationContext context)
     {
+        // Add a debugger launch point
+/*#if DEBUG
+        if (!Debugger.IsAttached)
+        {
+            Debugger.Launch();
+        }
+#endif*/
+        try 
+        {
+            var assembly = typeof(Markdig.MarkdownPipeline).Assembly;
+            Debug.WriteLine($"Found Markdig assembly: {assembly.Location}");
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Error loading Markdig: {ex}");
+        }
+        
         var markdownFiles = context.AdditionalTextsProvider
-            .Where(f => Path.GetExtension(f.Path).Equals(".md", StringComparison.OrdinalIgnoreCase));
+            .Where(f => Path.GetExtension(f.Path).Equals(".markdown", StringComparison.OrdinalIgnoreCase));
 
-        IncrementalValueProvider<(Compilation, ImmutableArray<AdditionalText>)> sources =
-            context.CompilationProvider.Combine(markdownFiles.Collect());
+        // Transform the files to include their content
+        var markdownContentsProvider = markdownFiles.Select((file, cancellationToken) =>
+        {
+            var content = file.GetText(cancellationToken)?.ToString() ?? string.Empty;
+            return (File: file, Content: content);
+        });
 
-        context.RegisterSourceOutput(sources, GenerateFiles);
+        // Combine with compilation
+        var compilationAndContent = context.CompilationProvider.Combine(
+            markdownContentsProvider.Collect());
+
+        // Register the source output
+        context.RegisterSourceOutput(compilationAndContent, 
+            (spc, source) => GenerateFiles(spc, source.Right));
+
+        /*context.RegisterSourceOutput(markdownFiles, (spc, file) =>
+        {
+            // Add logging for each file found
+            Debug.WriteLine($"Found markdown file: {file.Path}");
+        });*/
     }
 
     private void GenerateFiles(SourceProductionContext context, 
-        (Compilation Compilation, ImmutableArray<AdditionalText> Files) input)
+        ImmutableArray<(AdditionalText File, string Content)> files)
     {
+        
+/*#if DEBUG
+        if (!Debugger.IsAttached)
+        {
+            Debugger.Launch();
+        }
+#endif*/
         var posts = new List<BlogPost>();
         var pipeline = new MarkdownPipelineBuilder()
             .UseYamlFrontMatter()
@@ -52,15 +93,21 @@ public class BlogGenerator : IIncrementalGenerator
         var deserializer = new DeserializerBuilder()
             .WithNamingConvention(CamelCaseNamingConvention.Instance)
             .Build();
+        
+        var outputPath = Path.Combine(
+            Path.GetDirectoryName(files.First().File.Path) ?? "",
+            "obj",
+            "Generated",
+            "BlogEngine");
 
-        foreach (var file in input.Files)
+        foreach (var (file, content) in files)
         {
             if (context.CancellationToken.IsCancellationRequested)
                 return;
 
             try
             {
-                var content = file.GetText(context.CancellationToken)?.ToString() ?? "";
+                //var content = file.GetText(context.CancellationToken)?.ToString() ?? "";
                 
                 // Extract front matter
                 var document = Markdown.Parse(content, pipeline);
@@ -98,16 +145,25 @@ public class BlogGenerator : IIncrementalGenerator
                     .ToArray() ?? Array.Empty<string>();
 
                 // Remove front matter and convert to HTML
-                content = content.Replace(yaml, "").TrimStart('-', '\r', '\n');
-                var html = Markdown.ToHtml(content, pipeline);
+                var trimmed = content.Replace(yaml, "").TrimStart('-', '\r', '\n');
+                var html = Markdown.ToHtml(trimmed, pipeline);
                 
                 var slug = Path.GetFileNameWithoutExtension(file.Path).ToLowerInvariant();
                 
                 posts.Add(new BlogPost(slug, title, published, tags, html, file.Path));
 
+                html = WrapBlogPost(title, published, tags, html);
+                var sourceText = $@"
+// <generated-html filename=""{slug}.html"">
+/*
+{html}
+*/
+// </generated-html>";
+                context.AddSource($"{slug}.html.generated", sourceText);
+                
                 // Generate blog post HTML
-                context.AddSource($"{slug}.html",
-                    SourceText.From(WrapBlogPost(title, published, tags, html), Encoding.UTF8));
+                /*context.AddSource($"{slug}.generated.html",
+                    SourceText.From(WrapBlogPost(title, published, tags, html), Encoding.UTF8));*/
             }
             catch (Exception ex)
             {
@@ -125,13 +181,13 @@ public class BlogGenerator : IIncrementalGenerator
             }
         }
 
-        // Generate index.html
-        context.AddSource("index.html", 
+        /*// Generate index.html
+        context.AddSource("index.generated.html", 
             SourceText.From(GenerateIndex(posts), Encoding.UTF8));
 
         // Generate sitemap.xml
-        context.AddSource("sitemap.xml",
-            SourceText.From(GenerateSitemap(posts), Encoding.UTF8));
+        context.AddSource("sitemap.generated.xml",
+            SourceText.From(GenerateSitemap(posts), Encoding.UTF8));*/
     }
 
     private string WrapBlogPost(string title, DateTime published, string[] tags, string content) => 

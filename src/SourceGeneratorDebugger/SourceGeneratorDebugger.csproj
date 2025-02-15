@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+        <CompilerGeneratedFilesOutputPath>$(BaseIntermediateOutputPath)Generated</CompilerGeneratedFilesOutputPath>
+         <!-- This tells MSBuild to treat .html and .xml as source files -->
+        <DefaultItemExcludes>$(DefaultItemExcludes);$(CompilerGeneratedFilesOutputPath)/**</DefaultItemExcludes>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Reference to your source generator project -->
+        <ProjectReference Include="..\BlogEngine.Generator\BlogEngine.Generator.csproj" 
+                        OutputItemType="Analyzer"
+                        ReferenceOutputAssembly="false" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <AdditionalFiles Include="**/*.markdown" />
+    </ItemGroup>
+
+<Target Name="HelloWorld">
+    <Message Text="Hello from MSBuild!" Importance="high" />
+</Target>
+
+    <Target Name="CopyGeneratedHtml">
+  <PropertyGroup>
+    <GeneratedPath>$(BaseIntermediateOutputPath)Generated\BlogEngine.Generator\BlogEngine.Generator.BlogGenerator</GeneratedPath>
+  </PropertyGroup>
+
+  <Message Text="=== Starting CopyGeneratedHtml ===" Importance="high" />
+  <Message Text="Looking in: $(GeneratedPath)" Importance="high" />
+  
+  <ItemGroup>
+    <GeneratedFiles Include="$(GeneratedPath)\**\*.html.generated.cs" />
+    <GeneratedFiles Include="$(GeneratedPath)\**\*.xml.generated.cs" />
+  </ItemGroup>
+
+  <Message Text="Found files: @(GeneratedFiles)" Importance="high" />
+  
+  <MakeDir Directories="www" />
+  
+  <Copy
+    SourceFiles="@(GeneratedFiles)"
+    DestinationFiles="@(GeneratedFiles->'www\$([System.String]::Copy('%(Filename)').Replace('.html.generated', '')).html')" />
+</Target>
+
+    <PropertyGroup>
+        <!-- Enable source generator debugging -->
+        <DebugSourceGenerators>true</DebugSourceGenerators>
+    </PropertyGroup>
+
+</Project>
