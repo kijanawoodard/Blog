@@ -1,7 +1,7 @@
 ---
 title: .Net Demon
 published: October 08, 2013
-tags: little things
+tags: [tools, little things]
 ---
 
 

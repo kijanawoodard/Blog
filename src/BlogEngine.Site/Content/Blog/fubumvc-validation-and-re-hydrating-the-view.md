@@ -1,10 +1,10 @@
 ---
 title: FubuMVC, Validation, and Re-Hydrating the View
 published: February 12, 2012
-tags: 
+tags: [fubumvc, validation, web]
 ---
 
-Last week, I started experimenting with FubuMVC. About two months ago, I met three of the Fubu guys down in Austin and they sparked my curiosity about [FubuMVC]. Last month I took [Udi Dahan’s excellent SOA course][SOA Course] and asked him about FubuMVC in light of his views on SOA. His response was to challenge me to give FubuMVC a try and find out.
+Last week, I started experimenting with FubuMVC. About two months ago, I met three of the Fubu guys down in Austin and they sparked my curiosity about [FubuMVC]. Last month I took [Udi Dahan's excellent SOA course][SOA Course] and asked him about FubuMVC in light of his views on SOA. His response was to challenge me to give FubuMVC a try and find out.
 
 I started working my way through the beginner material on FubuMVC when I struck upon an issue present in any web framework: when you POST data and hit a problem, how do you re-hydrate the view with the data the user entered and show the user about what went wrong.
 
@@ -38,9 +38,9 @@ The crux of the idea is that the Input Model for the POST is symmetrical with th
 
 I defined a RequestModel for the GET, a ViewModel which might contain reference data, and an InputModel which is POSTed back to the server.
 
-The reference data is the kicker. I really don’t want to post all the reference data back to the server when most of my posts will be fine. On more complex pages, it’s just difficult to do. However, once on the server, it’s tricky to marshal the user’s input data over to the GET method. I also don’t want my GET method to have to deal with the possibility of Input model data showing up as parameters.
+The reference data is the kicker. I really don't want to post all the reference data back to the server when most of my posts will be fine. On more complex pages, it's just difficult to do. However, once on the server, it's tricky to marshal the user's input data over to the GET method. I also don't want my GET method to have to deal with the possibility of Input model data showing up as parameters.
 
-Here’s some non working code I threw together to see how I liked my idea.
+Here's some non working code I threw together to see how I liked my idea.
 
     public FooEditViewModel Execute(FooEditRequestModel request)
     {
@@ -69,17 +69,17 @@ Here’s some non working code I threw together to see how I liked my idea.
         return model;
     }
 
-I’m using some FubuMVC patterns here, so you’ll kinda have to accept that this is possible if you’re coming from another web server stack. Both my GET and POST methods return the view model. I taught FubuMVC that any method the takes a class with "Request" in the name is a GET and any method that takes a class with "Input" in the name is a POST.
+I'm using some FubuMVC patterns here, so you'll kinda have to accept that this is possible if you're coming from another web server stack. Both my GET and POST methods return the view model. I taught FubuMVC that any method the takes a class with "Request" in the name is a GET and any method that takes a class with "Input" in the name is a POST.
 
 The GET is pretty standard. The POST is where the fun begins.
 
-First, I’m not happy with the Try/Catch. I’d rather wrap that up with a [Fubu Behavior]. But let’s move on for a second.
+First, I'm not happy with the Try/Catch. I'd rather wrap that up with a [Fubu Behavior]. But let's move on for a second.
 
-If all goes well, I’m going to update my Foo and redirect to wherever using the [IRedirectable] interface. A lot of FubuMVC POST examples return FubuContinuation to handle the redirection, but I wanted to be able to return my view model directly from the POST to avoid having to find a way to get the data over to the GET method.
+If all goes well, I'm going to update my Foo and redirect to wherever using the [IRedirectable] interface. A lot of FubuMVC POST examples return FubuContinuation to handle the redirection, but I wanted to be able to return my view model directly from the POST to avoid having to find a way to get the data over to the GET method.
 
 If my request goes sideways, I *should* be able to get all the data I need from my InputModel in order to build a RequestModel. With that RequestModel, I can simply execute the GET and obtain a ViewModel. Now I can just use [AutoMapper] to copy over the InputModel properties over the ViewModel and I should be golden. FubuMVC really shines here. In my ASP.Net version of this, the action method returns a ViewResult which I had to crack open in order to find and modify the view model within.
 
-Now back to that try/catch I don’t like. The FubuMVC examples I’ve seen show how to set up validation failure handlers to do something when the InputModel doesn’t validate.
+Now back to that try/catch I don't like. The FubuMVC examples I've seen show how to set up validation failure handlers to do something when the InputModel doesn't validate.
 
 It seems to me there are 4 general concepts of correctness for POSTing an InputModel.
 
@@ -90,9 +90,9 @@ It seems to me there are 4 general concepts of correctness for POSTing an InputM
 
 In the last case, I prefer to send the user to a "Fail Whale" type of generic error page and issue a priority 1 alert to OPS. Either, someone is hacking the system, or we have a serious bug in our UI that is presenting invalid options to users. Either way, someone should deal with the problem quickly.
 
-In the other cases, it’s nice to present the form back to the user telling them what’s wrong and letting them make a choice. The PRG pattern above allows for this.
+In the other cases, it's nice to present the form back to the user telling them what's wrong and letting them make a choice. The PRG pattern above allows for this.
 
-Using FubuMVC, I can imagine ways to get this into the behavior chain based on our conventions and have it working seamlessly. I’ve been growing increasingly wary of inheritance, but I can see defining our classes like this.
+Using FubuMVC, I can imagine ways to get this into the behavior chain based on our conventions and have it working seamlessly. I've been growing increasingly wary of inheritance, but I can see defining our classes like this.
 
     public class FooEditRequestModel
     ...
@@ -101,25 +101,25 @@ Using FubuMVC, I can imagine ways to get this into the behavior chain based on o
     public class FooEditViewModel : FooEditInputModel, IRedirectable   
     ....
 
-Now our behaviors could know exactly which methods to execute and which data to copy when doing it’s work.
+Now our behaviors could know exactly which methods to execute and which data to copy when doing it's work.
 
-Boy…This was a lot of work.
+Boy...This was a lot of work.
 
 It looks like the Fubu team is working hard to get some similar behavior using symmetrical models baked into FubuMVC. For "completeness", they probably should.
 
 After going through this exercise, I had to ask myself how the Fubu team themselves have managed to get by without all this. The answer is that they mostly POST via ajax.
 
-I read about [AjaxContinuations] when I was first starting to dig into FubuMVC, but I ignored it as an oddity. Of course I want to POST my entire page back to the server, because…well, because….because that’s what’s done.
+I read about [AjaxContinuations] when I was first starting to dig into FubuMVC, but I ignored it as an oddity. Of course I want to POST my entire page back to the server, because...well, because...because that's what's done.
 
 Now imagine my form POSTed via ajax. Immediately, my "re-hydrate" the ViewModel problem evaporates. All my thought on symmetrical models seems meaningless. My how do I wrap all this in a Behavior/Try/Catch simplifies as well.
 
 In addition I gain some interesting choices for the Concurrency Violation / DB Down case. I can auto-repost or I can tell the user who changed what data or I can just do the normal "submit again" messaging.
 
-Of course I have some work to do on the client like tie error messages back to fields and follow urls that come in via the ajax response. It turns out the Fubu team has been [working on all that stuff][continuations work], but that wouldn’t be too hard to cook up yourself either.
+Of course I have some work to do on the client like tie error messages back to fields and follow urls that come in via the ajax response. It turns out the Fubu team has been [working on all that stuff][continuations work], but that wouldn't be too hard to cook up yourself either.
 
-For the last couple of hours I’ve been trying to come up with a scenario where it was unacceptable to POST via ajax. For web "applications", dependence on javascript is standard. I wouldn’t want to try and build a complex app without it. For e-commerce, I can see not forcing javascript on users. However, it turns out that they are mostly posting data that can’t fail an authorization check. By that I mean if they spoof another valid ProductId on their form, so what, they just found a new way to fill out their shopping cart. The only places you may have an issue is when they submit CC info or Address information. But these places are limited compared to a web "application" where most of the pages involve modifying data in some way.
+For the last couple of hours I've been trying to come up with a scenario where it was unacceptable to POST via ajax. For web "applications", dependence on javascript is standard. I wouldn't want to try and build a complex app without it. For e-commerce, I can see not forcing javascript on users. However, it turns out that they are mostly posting data that can't fail an authorization check. By that I mean if they spoof another valid ProductId on their form, so what, they just found a new way to fill out their shopping cart. The only places you may have an issue is when they submit CC info or Address information. But these places are limited compared to a web "application" where most of the pages involve modifying data in some way.
 
-I’m going to try to POST via ajax most of the time.
+I'm going to try to POST via ajax most of the time.
 
 [FubuMVC]:https://fubumvc.github.io/
 [SOA Course]:http://udidahan.com/training/

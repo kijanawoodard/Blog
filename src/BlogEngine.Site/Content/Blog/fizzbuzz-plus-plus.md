@@ -1,7 +1,7 @@
 ---
 title: FizzBuzz++
 published: May 09, 2010
-tags: 
+tags: [coding, csharp]
 ---
 
 Thanks to Matt Taylor sending me email comments about my [Avoiding FizzBuzz] post, I decided to jazz it up a bit.
@@ -22,7 +22,7 @@ Using my [IEnumerable Each extension method][enumerable], I tried out this versi
  
     Enumerable.Range(1, 100).Each(printnum);
 
-Notice I’m still trying to decompose statements into rough single responsibility. I’m still going for readability/maintainability over trying to minimize statement count. At the same time, I always strive to reduce typing by staying pretty DRY. It’s a balancing act.
+Notice I'm still trying to decompose statements into rough single responsibility. I'm still going for readability/maintainability over trying to minimize statement count. At the same time, I always strive to reduce typing by staying pretty DRY. It's a balancing act.
 
 Thoughts?
 

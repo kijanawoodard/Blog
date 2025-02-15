@@ -1,7 +1,7 @@
 ---
 title: Foo: IFoo is an Anti-Pattern
 published: October 14, 2013
-tags: 
+tags: [design-patterns, architecture]
 ---
 
 This simple code, used in so many examples, has always bothered me.
