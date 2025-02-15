@@ -60,6 +60,3 @@ The more I use [git], the more I like tiny commits that address a single issue. 
 [git]: https://git-scm.com/
 [copyright commit]: https://github.com/kijanawoodard/Blog/commit/8f3ae65d841bab2bc6287f41923a269a458adf94
 
----
-# comments begin here
-

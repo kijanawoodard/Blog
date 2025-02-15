@@ -2,6 +2,19 @@
 title: Asp.net MVC Content Negotiation
 published: November 08, 2013
 tags: [aspnet-mvc, web-development]
+comments:
+- email: "khalidabuhakmeh@gmail.com"
+  message: "<p>Restful Routing has the idea of a FormatResult. You can send in data, and based on the requests extension it will figure out what view you want to render it in. It works decently well, just gets goofy when dealing with ajax and routings \"keep stuff around\" default.</p><p><a href=\"https://restfulrouting.com/mappings/extras\" rel=\"nofollow\">https://restfulrouting.com/mapp...</a></p><p>OH YEAH I WENT THERE!!!! Booyah!</p>"
+  name: "khalidabuhakmeh"
+  when: "2013-11-08 17:05:09.000"
+- email: "graphite@joeyguerra.com"
+  message: "<p>IIIIIIEEEEEEEEE!!!!!! IE Accepts header doesn't include text/html.</p><p><a href=\"https://www.gethifi.com/blog/browser-rest-http-accept-headers\" rel=\"nofollow\">https://www.gethifi.com/blog/br...</a></p>"
+  name: "Joey Guerra"
+  when: "2013-11-11 20:14:07.000"
+- email: "disqus@wyldeye.com"
+  message: "<p>Bleh. I checked my blog and IE 10 seems ok. I don't think I care about IE 8. I'll wait for the complaints to come in.</p><p>In terms of webkit, I'm handling that by making the preference based on the order of my conneg components. It looks like I should prefer the one marked with q, but I'll leave that for another day. A day, far far far in the future.</p>"
+  name: "Kijana Woodard"
+  when: "2013-11-12 03:44:21.000"
 ---
 
 It's long bothered me that I had a separate endpoint for Atom. After adding the [archive] endpoint, the absurdity really showed since is the same data, just in a different format.
@@ -69,19 +82,3 @@ A side note on [scope creep]. I spent a fair amount of time trying to work out p
 [Rotativa]: https://github.com/webgio/Rotativa
 [a bug]: https://github.com/webgio/Rotativa/issues/44
 [print css]: https://github.com/kijanawoodard/Blog/blob/13d109fbd53f7acc949553bded904306447cc144/src/Blog.Web/Content/css/site.css#L90
-
----
-# comments begin here
-
-- Email: "khalidabuhakmeh@gmail.com"
-  Message: "<p>Restful Routing has the idea of a FormatResult. You can send in data, and based on the requests extension it will figure out what view you want to render it in. It works decently well, just gets goofy when dealing with ajax and routings \"keep stuff around\" default.</p><p><a href=\"https://restfulrouting.com/mappings/extras\" rel=\"nofollow\">https://restfulrouting.com/mapp...</a></p><p>OH YEAH I WENT THERE!!!! Booyah!</p>"
-  Name: "khalidabuhakmeh"
-  When: "2013-11-08 17:05:09.000"
-- Email: "graphite@joeyguerra.com"
-  Message: "<p>IIIIIIEEEEEEEEE!!!!!! IE Accepts header doesn't include text/html.</p><p><a href=\"https://www.gethifi.com/blog/browser-rest-http-accept-headers\" rel=\"nofollow\">https://www.gethifi.com/blog/br...</a></p>"
-  Name: "Joey Guerra"
-  When: "2013-11-11 20:14:07.000"
-- Email: "disqus@wyldeye.com"
-  Message: "<p>Bleh. I checked my blog and IE 10 seems ok. I don't think I care about IE 8. I'll wait for the complaints to come in.</p><p>In terms of webkit, I'm handling that by making the preference based on the order of my conneg components. It looks like I should prefer the one marked with q, but I'll leave that for another day. A day, far far far in the future.</p>"
-  Name: "Kijana Woodard"
-  When: "2013-11-12 03:44:21.000"
