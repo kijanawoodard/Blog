@@ -1,0 +1,81 @@
+﻿textarea {
+  resize: vertical; }
+
+input[type=submit],
+input[type=reset],
+button {
+  background: #2196f3;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  padding: 8px 16px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap; }
+
+input[type=submit]::-moz-focus-inner,
+input[type=reset]::-moz-focus-inner,
+button::-moz-focus-inner {
+  padding: 0; }
+
+input[type=submit]:hover,
+input[type=reset]:hover,
+button:hover {
+  background: #0c7cd5;
+  border-color: 1px solid rgba(0, 0, 0, 0.54); }
+
+input[type=submit]:active,
+input[type=reset]:active,
+button:active {
+  background: #0c7cd5;
+  border-color: 1px solid rgba(0, 0, 0, 0.54);
+  box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  outline-offset: -2px; }
+
+input[type=submit]:focus,
+input[type=reset]:focus,
+button:focus {
+  background: #0c7cd5;
+  border-color: 1px solid rgba(0, 0, 0, 0.54);
+  box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  outline: 0; }
+
+input[type=submit]:disabled,
+button:disabled {
+  background: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.38);
+  cursor: not-allowed; }
+
+form label { width: 100%;display: inline-block;}
+form.submit input, form.submit input[type="text"], form.submit input[type="password"],
+form.submit input[type="email"], form.submit textarea {
+    min-width: 240px;
+    min-height: 2em;
+    padding-left: .7em;
+    display: block;
+    margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 768px)  {
+    form.submit input, form.submit input[type="text"], form.submit input[type="password"],
+    form.submit input[type="email"], form.submit textarea {
+        min-width: 440px;
+    }
+}
+
+form.submit textarea { min-height: 8em; }
+form.submit .special { display: none !important;}
+form.submit .special label { vertical-align: baseline;}
+form.submit label > input {
+     display: inline-block;
+     min-width: inherit;
+     vertical-align: baseline;
+     margin-right: .2em;
+     margin-bottom: 0;
+     min-height: inherit;
+     line-height: 1.5em;
+     vertical-align: -2px;
+}

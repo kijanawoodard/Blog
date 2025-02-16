@@ -27,60 +27,16 @@
     return;
 }
 <article>
-    <div class="xl:divide-y  xl:divide-gray-700">
+    <div>
         <header class="pt-6 xl:pb-6">
             <div class="space-y-1 text-center">
-                <dl class="space-y-10">
-                    <div>
-                        <dt class="sr-only">Published on</dt>
-                        <dd class="text-base font-medium leading-6 text-gray-400">
-                            <time datetime="@_post.FrontMatter.Published.ToString("yyyy-MM-ddTHH:mm:ss.fffK", CultureInfo.InvariantCulture)">
-                                @_post.FrontMatter.Published.ToString("MMMM d, yyyy", new CultureInfo("en-US"))
-                            </time>
-                        </dd>
-                    </div>
-                </dl>
                 <div class="prose prose-invert mx-auto">
-                    <h1 class="">@_post.FrontMatter.Title</h1>
+                    <h2 class="">@_post.FrontMatter.Title</h2>
+                    <h4 class="subheader"><time>@_post.FrontMatter.Published.ToLongDateString()</time></h4>
                 </div>
             </div>
         </header>
         <div class="grid-rows-[auto_1fr] divide-y  pb-8 divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0">
-
-            <dl class="pb-10 pt-6 xl:border-b  xl:pt-11 xl:border-gray-700">
-                <dt class="sr-only">Authors</dt>
-                <dd>
-                    <ul class="flex flex-wrap justify-center gap-4 sm:space-x-12 xl:block xl:space-x-0 xl:space-y-8">
-                        @foreach(var author in _post.FrontMatter.Authors)
-                        {
-                            <li class="flex items-center space-x-2">
-                                @* <img alt="avatar" loading="lazy" width="38" height="38" decoding="async" data-nimg="1" class="h-10 w-10 rounded-full" srcset="/_next/image?url=%2Fstatic%2Fimages%2Favatar.png&amp;w=48&amp;q=75 1x, /_next/image?url=%2Fstatic%2Fimages%2Favatar.png&amp;w=96&amp;q=75 2x" src="/_next/image?url=%2Fstatic%2Fimages%2Favatar.png&amp;w=96&amp;q=75" style="color: transparent;"/> *@
-                                <dl class="whitespace-nowrap text-sm font-medium leading-5">
-                                    @if (!string.IsNullOrWhiteSpace(author.Name))
-                                    {
-                                        <dt class="sr-only">Name</dt>
-                                        <dd class="text-gray-900 dark:text-gray-100 flex gap-1 items-center">
-                                            @author.Name
-                                            @if (!string.IsNullOrWhiteSpace(author.XUserName))
-                                            {
-                                                <a target="_blank" rel="noopener noreferrer" href="https://x.com/@author.XUserName" class="flex gap-1 text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                                                    <Svg SizeClasses="w-4 h-4" Icon="Svg.Icons.X"/>
-                                                </a>
-                                            }
-                                            @if (!string.IsNullOrWhiteSpace(author.GitHubUserName))
-                                            {
-                                                <a target="_blank" rel="noopener noreferrer" href="https://github.com/@author.GitHubUserName" class="flex gap-1 items-center text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                                                    <Svg SizeClasses="w-4 h-4" Icon="Svg.Icons.Github"/>
-                                                </a>
-                                            }
-                                        </dd>
-                                    }
-                                </dl>
-                            </li>
-                        }
-                    </ul>
-                </dd>
-            </dl>
             <div class="divide-y  divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
                 <div class="prose prose-invert max-w-none pb-8 pt-10">
                     @((MarkupString)_post.HtmlContent)
@@ -101,14 +57,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="pt-4 xl:pt-8">
-                    <a class="text-primary-500 hover:text-primary-400" aria-label="Back to the home" href="">← Back to the home</a>
-                </div>
+                
             </footer>
         </div>
     </div>
 </article>
-<aside>
+<aside id="comments">
+    <p>
+        If you see a mistake in the post *or* you want to make a comment, please <a href="@($"https://github.com/kijanawoodard/Blog/edit/master/src/BlogEngine.Site/Content/Blog/{_post.Url}.md")"> submit an edit</a>.
+        You can also <a href="/contact">contact me</a> and I'll post the comment.
+    </p>
+
     <header>@_post.FrontMatter.Comments.Length Comments...</header>
     @foreach (var comment in _post.FrontMatter.Comments)
     {
