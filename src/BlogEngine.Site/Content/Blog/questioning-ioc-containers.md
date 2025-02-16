@@ -3,14 +3,14 @@ title: Questioning IoC Containers
 published: October 09, 2013
 tags: [ioc, architecture, dependency-injection]
 comments:
-  - Email: "joey@joeyguerra.com"
-    Message: "<p>Are you describing the decorator pattern here?</p>"
-    Name: "Joey Guerra"
-    When: "2013-10-09 16:13:01.000"
-  - Email: "disqus@wyldeye.com"
-    Message: "<p>I don't usually \"think in patterns\", but if you're taking about the \"solution\", then the mediator pattern...I guess.</p>"
-    Name: "Kijana Woodard"
-    When: "2013-10-09 16:35:37.000"
+  - email: "joey@joeyguerra.com"
+    message: "<p>Are you describing the decorator pattern here?</p>"
+    name: "Joey Guerra"
+    when: "2013-10-09 16:13:01.000"
+  - email: "disqus@wyldeye.com"
+    message: "<p>I don't usually \"think in patterns\", but if you're taking about the \"solution\", then the mediator pattern...I guess.</p>"
+    name: "Kijana Woodard"
+    when: "2013-10-09 16:35:37.000"
 ---
 Last night I awoke at 3am with a thought: maybe Greg Young has a point.
 

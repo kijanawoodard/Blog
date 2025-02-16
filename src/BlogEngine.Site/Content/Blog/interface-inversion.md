@@ -3,10 +3,10 @@ title: Interface Inversion
 published: October 15, 2013
 tags: [csharp, programming, interfaces, design-patterns]
 comments:
-  - Email: "graphite@joeyguerra.com"
-    Message: "<p>Oh the paradox!</p>"
-    Name: "Joey Guerra"
-    When: "2013-10-16 01:52:43.000"
+  - email: "graphite@joeyguerra.com"
+    message: "<p>Oh the paradox!</p>"
+    name: "Joey Guerra"
+    when: "2013-10-16 01:52:43.000"
 ---
 On my [previous post], [Joey Guerra] asked a question in the comments:
 
