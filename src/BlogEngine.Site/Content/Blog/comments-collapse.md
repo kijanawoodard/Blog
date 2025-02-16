@@ -2,7 +2,7 @@
 title: Comments Collapse
 published: 8/1/2016 11:18:51 AM
 tags: [blog, csharp]
-comments:
+comments: []
 ---
 At the end of my [previous post], I considered merging the comments into post file. 
 
