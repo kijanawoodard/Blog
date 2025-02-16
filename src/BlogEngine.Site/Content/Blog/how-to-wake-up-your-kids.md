@@ -2,8 +2,28 @@
 title: How to Wake Up Your Kids
 published: October 12, 2013
 tags: [missives, parenting, humor]
+comments:
+  - Email: "graphite@joeyguerra.com"
+    Message: "<p>I have personally observed and confirmed every one of these techniques as valid proven facts.</p>"
+    Name: "Joey Guerra"
+    When: "2013-10-12 14:20:25.000"
+  - Email: "brian.t.odonnell@gmail.com"
+    Message: "<p>It's funny 'cause it's true. :-)</p>"
+    Name: "Brian"
+    When: "2013-10-12 14:43:02.000"
+  - Email: "liamlsullivan@gmail.com"
+    Message: "<p>See, their behavior really is logical and predictable!</p>"
+    Name: "Liam Lynch"
+    When: "2013-10-12 17:26:24.000"
+  - Email: "trailmax1@gmail.com"
+    Message: "<p>Brilliant! and not violations of SRP in constructors!</p>"
+    Name: "trailmax"
+    When: "2013-10-15 14:38:19.000"
+  - Email: "daniel@dreamfree.co.uk"
+    Message: "<p>Fantastic! Kids are like TDD for your character. Except, it's much harder to make any of the tests go green. Sleep well.</p>"
+    Name: "Daniel Whittaker"
+    When: "2015-8-31 02:09:00.000"
 ---
-
 Ever think that your young kids are sleeping too much at night or during naps? Feel that you aren't spending enough "bonding time" with them because they just sleep sleep sleep?
 
 Here are a few tips to *wake up your kids* based on personal observation.
@@ -50,26 +70,3 @@ Air travel helps here since you have to be there by a certain time. Cruises are 
 
 I doubt these techniques will work once kids get to teenage years. I'll write a follow up post in 12 years to let you know.
 
----
-# comments begin here
-
-- Email: "graphite@joeyguerra.com"
-  Message: "<p>I have personally observed and confirmed every one of these techniques as valid proven facts.</p>"
-  Name: "Joey Guerra"
-  When: "2013-10-12 14:20:25.000"
-- Email: "brian.t.odonnell@gmail.com"
-  Message: "<p>It's funny 'cause it's true. :-)</p>"
-  Name: "Brian"
-  When: "2013-10-12 14:43:02.000"
-- Email: "liamlsullivan@gmail.com"
-  Message: "<p>See, their behavior really is logical and predictable!</p>"
-  Name: "Liam Lynch"
-  When: "2013-10-12 17:26:24.000"
-- Email: "trailmax1@gmail.com"
-  Message: "<p>Brilliant! and not violations of SRP in constructors!</p>"
-  Name: "trailmax"
-  When: "2013-10-15 14:38:19.000"
-- Email: "daniel@dreamfree.co.uk"
-  Message: "<p>Fantastic! Kids are like TDD for your character. Except, it's much harder to make any of the tests go green. Sleep well.</p>"
-  Name: "Daniel Whittaker"
-  When: "2015-8-31 02:09:00.000"

@@ -2,8 +2,12 @@
 title: Interface Inversion
 published: October 15, 2013
 tags: [csharp, programming, interfaces, design-patterns]
+comments:
+  - Email: "graphite@joeyguerra.com"
+    Message: "<p>Oh the paradox!</p>"
+    Name: "Joey Guerra"
+    When: "2013-10-16 01:52:43.000"
 ---
-
 On my [previous post], [Joey Guerra] asked a question in the comments:
 
 > Can we go further? Can't we just say that class Oauth2Authentication is the interface? I mean, why do I have to care if it implements IAuthenticate? Do I care if it implements that "interface" or do I care if it has or doesn't a method called Authenticate?
@@ -55,10 +59,3 @@ Isn't [Big Design Up Front][bduf] what we were trying to avoid when we decided t
 [adapter pattern]: https://en.wikipedia.org/wiki/Adapter_pattern
 [bduf]: https://en.wikipedia.org/wiki/Big_Design_Up_Front
 
----
-# comments begin here
-
-- Email: "graphite@joeyguerra.com"
-  Message: "<p>Oh the paradox!</p>"
-  Name: "Joey Guerra"
-  When: "2013-10-16 01:52:43.000"

@@ -2,8 +2,12 @@
 title: FubuMVC, Validation, and Re-Hydrating the View
 published: February 12, 2012
 tags: [fubumvc, validation, web]
+comments:
+  - Email: "nospam@ventaur.com"
+    Message: "<p>This post brings to light quite a few good points. The Fubu team has not focused on PRG for the very reason you point out; they use AJAX most of the time. They have admitted this fact for quite a while now.</p><p>I get the benefits too. However, a lot of my clients are trainers of various materials and expect that their students will be on disparate systems with older browsers. Furthermore, there still some companies out there that insist on disabling JavaScript across the entire corporation. It boggles my mind that this is still common practice, but it is nonetheless.</p><p>So, I still need to be able to support both POST scenarios. Typically, I just hook the form's with my AJAX. If JavaScript is disabled, the form's action takes over and a full POST occurs. Like you, I then run into the re-hydration problems. I hate that I even have to bother with the classic PRG, but I do.</p><p>Finally, if this does get baked into FubuMvc sometime fairly soon, I'll want to use behaviors to detect an AJAX POST vs. a standard one and handle all the cruft for each for me. For now, I'm going to think about your PRG solution and do some trials. It's a very interesting technique and, I don't see any waste if an AJAX POST does happen; the standard continuation just won't happen.</p><p>Great post!</p>"
+    Name: "Matt S."
+    When: "2012-02-28 07:43:45.000"
 ---
-
 Last week, I started experimenting with FubuMVC. About two months ago, I met three of the Fubu guys down in Austin and they sparked my curiosity about [FubuMVC]. Last month I took [Udi Dahan's excellent SOA course][SOA Course] and asked him about FubuMVC in light of his views on SOA. His response was to challenge me to give FubuMVC a try and find out.
 
 I started working my way through the beginner material on FubuMVC when I struck upon an issue present in any web framework: when you POST data and hit a problem, how do you re-hydrate the view with the data the user entered and show the user about what went wrong.
@@ -131,10 +135,3 @@ I'm going to try to POST via ajax most of the time.
 [AjaxContinuations]:https://lostechies.com/josharnold/2012/01/06/our-ajax-conventions-the-ajaxcontinuation/
 [continuations work]:https://lostechies.com/josharnold/2012/01/06/our-ajax-conventionsclientside-continuations/
 
----
-# comments begin here
-
-- Email: "nospam@ventaur.com"
-  Message: "<p>This post brings to light quite a few good points. The Fubu team has not focused on PRG for the very reason you point out; they use AJAX most of the time. They have admitted this fact for quite a while now.</p><p>I get the benefits too. However, a lot of my clients are trainers of various materials and expect that their students will be on disparate systems with older browsers. Furthermore, there still some companies out there that insist on disabling JavaScript across the entire corporation. It boggles my mind that this is still common practice, but it is nonetheless.</p><p>So, I still need to be able to support both POST scenarios. Typically, I just hook the form's with my AJAX. If JavaScript is disabled, the form's action takes over and a full POST occurs. Like you, I then run into the re-hydration problems. I hate that I even have to bother with the classic PRG, but I do.</p><p>Finally, if this does get baked into FubuMvc sometime fairly soon, I'll want to use behaviors to detect an AJAX POST vs. a standard one and handle all the cruft for each for me. For now, I'm going to think about your PRG solution and do some trials. It's a very interesting technique and, I don't see any waste if an AJAX POST does happen; the standard continuation just won't happen.</p><p>Great post!</p>"
-  Name: "Matt S."
-  When: "2012-02-28 07:43:45.000"

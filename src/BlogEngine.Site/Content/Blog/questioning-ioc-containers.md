@@ -2,8 +2,16 @@
 title: Questioning IoC Containers
 published: October 09, 2013
 tags: [ioc, architecture, dependency-injection]
+comments:
+  - Email: "joey@joeyguerra.com"
+    Message: "<p>Are you describing the decorator pattern here?</p>"
+    Name: "Joey Guerra"
+    When: "2013-10-09 16:13:01.000"
+  - Email: "disqus@wyldeye.com"
+    Message: "<p>I don't usually \"think in patterns\", but if you're taking about the \"solution\", then the mediator pattern...I guess.</p>"
+    Name: "Kijana Woodard"
+    When: "2013-10-09 16:35:37.000"
 ---
-
 Last night I awoke at 3am with a thought: maybe Greg Young has a point.
 
 The other day, I watched Greg's [8 lines of code][eight-lines] video. I found myself agreeing, out loud, with the presentation, which is somewhat startling when you're sitting by yourself. One thing I couldn't quite swallow was his "no ioc" stance.
@@ -138,14 +146,3 @@ And I think that was Greg Young's point.
 [autofac-expressions]: https://www.codeproject.com/Articles/25380/Dependency-Injection-with-Autofac#registering-a-component-created-with-an-expression
 [event-store]: https://github.com/EventStore/EventStore/blob/master/src/EventStore/EventStore.Core/SingleVNode.cs
 
----
-# comments begin here
-
-- Email: "joey@joeyguerra.com"
-  Message: "<p>Are you describing the decorator pattern here?</p>"
-  Name: "Joey Guerra"
-  When: "2013-10-09 16:13:01.000"
-- Email: "disqus@wyldeye.com"
-  Message: "<p>I don't usually \"think in patterns\", but if you're taking about the \"solution\", then the mediator pattern...I guess.</p>"
-  Name: "Kijana Woodard"
-  When: "2013-10-09 16:35:37.000"

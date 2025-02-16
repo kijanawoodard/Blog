@@ -2,8 +2,12 @@
 title: In Defense of Blub
 published: May 11, 2010
 tags: [programming, languages, opinion]
+comments:
+  - Email: "graphite@joeyguerra.com"
+    Message: "<p>What about Blub Companies?</p>"
+    Name: "Joey Guerra"
+    When: "2014-10-12 14:20:25.000"
 ---
-
 A while back, I read quite a bit of [Reginald Braithwaite's excellent blog][rb]. If you care at all about programming, reading his blog will intrigue, mystify, depress, and inspire you.
 
 I particularly liked his post about everyone being a [Blub programmer][blub]. To quote a Paul Graham quote from Reg's blog:
@@ -25,10 +29,3 @@ I'll take a team full of Blub programmers over a team of average programmers any
 [rb]: http://raganwald.com/
 [blub]: http://weblog.raganwald.com/2006/10/are-we-blub-programmers.html
 
----
-# comments begin here
-
-- Email: "graphite@joeyguerra.com"
-  Message: "<p>What about Blub Companies?</p>"
-  Name: "Joey Guerra"
-  When: "2014-10-12 14:20:25.000"

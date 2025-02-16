@@ -2,8 +2,16 @@
 title: "Foo: IFoo is an Anti-Pattern"
 published: October 14, 2013
 tags: [design-patterns, architecture]
+comments:
+  - Email: "graphite@joeyguerra.com"
+    Message: "<p>Can we go further? Can't we just say that class Oauth2Authentication is the interface? I mean, why do I have to care if it implements IAuthenticate? Do I care if it implements that \"interface\" or do I care if it has or doesn't a method called Authenticate?</p>"
+    Name: "Joey Guerra"
+    When: "2013-10-15 02:08:23.000"
+  - Email: "disqus@wyldeye.com"
+    Message: "<p>You've brought up two future posts. :-)</p><p>I would say the interface is the Authenticate method. I hinted at this at the end of <a href=\"https://kijanawoodard.com/violating-isp-with-constructor-injection\" rel=\"nofollow\">https://kijanawoodard.com/viola...</a></p>"
+    Name: "Kijana Woodard"
+    When: "2013-10-15 14:44:03.000"
 ---
-
 This simple code, used in so many examples, has always bothered me.
 
     class Foo : IFoo
@@ -37,14 +45,3 @@ Immediately, we get the idea that other implementations might be:
 [questioning]: /questioning-ioc-containers
 [ninject]: https://github.com/ninject/ninject.extensions.conventions
 
----
-# comments begin here
-
-- Email: "graphite@joeyguerra.com"
-  Message: "<p>Can we go further? Can't we just say that class Oauth2Authentication is the interface? I mean, why do I have to care if it implements IAuthenticate? Do I care if it implements that \"interface\" or do I care if it has or doesn't a method called Authenticate?</p>"
-  Name: "Joey Guerra"
-  When: "2013-10-15 02:08:23.000"
-- Email: "disqus@wyldeye.com"
-  Message: "<p>You've brought up two future posts. :-)</p><p>I would say the interface is the Authenticate method. I hinted at this at the end of <a href=\"https://kijanawoodard.com/violating-isp-with-constructor-injection\" rel=\"nofollow\">https://kijanawoodard.com/viola...</a></p>"
-  Name: "Kijana Woodard"
-  When: "2013-10-15 14:44:03.000"

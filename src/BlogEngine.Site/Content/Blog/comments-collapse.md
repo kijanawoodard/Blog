@@ -1,9 +1,10 @@
-﻿---
+---
 title: Comments Collapse
 published: 8/1/2016 11:18:51 AM
 tags: [blog, csharp]
+comments:
+  ---
 ---
-
 At the end of my [previous post], I considered merging the comments into post file. 
 
 I couldn't help myself. ;-)
@@ -27,7 +28,3 @@ There's a [nice wiki on c# interactive]. One thing to note, ReSharper maps the H
 [previous post]: /winning-with-c-sharp-interactive
 [nice wiki on c# interactive]: https://github.com/dotnet/roslyn/wiki/Interactive-Window
 
----
-# comments begin here
-
----

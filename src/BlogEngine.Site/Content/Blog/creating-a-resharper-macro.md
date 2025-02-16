@@ -2,8 +2,12 @@
 title: Creating a ReSharper Macro
 published: October 17, 2013
 tags: [resharper, tools]
+comments:
+  - Email: "m.t.ellis@gmail.com"
+    Message: "<p>Something like <a href=\"https://resharper-plugins.jetbrains.com\" rel=\"nofollow\">https://resharper-plugins.jetbr...</a>, you mean? :)</p><p>ReSharper plugins can be wrapped up as NuGet packages. You can find out more here: <a href=\"https://confluence.jetbrains.com/display/NETCOM/1.9+Packaging+%28R8%29\" rel=\"nofollow\">https://confluence.jetbrains.co...</a></p><p>and there's more documentation on macros here: <a href=\"https://confluence.jetbrains.com/display/NETCOM/4.04+Live+Template+Macros+%28R8%29\" rel=\"nofollow\">https://confluence.jetbrains.co...</a></p><p>We're working on something for NuGet, but for now, you need to download the sdk from the website.<br>Nice post!<br>Matt</p>"
+    Name: "Matt Ellis"
+    When: "2013-10-17 14:19:41.000"
 ---
-
 I wanted to get [R#] to do a little typing for me so that I can more easily add new blog posts.
 
 A new post looks like this:
@@ -60,10 +64,3 @@ I put the [source code] for the macro on GitHub.
 [example 2]: https://github.com/joaroyen/ReSharperExtensions
 [source code]: https://github.com/kijanawoodard/ResharperPlugins/blob/master/src/LowercaseHypens.cs
 
----
-# comments begin here
-
-- Email: "m.t.ellis@gmail.com"
-  Message: "<p>Something like <a href=\"https://resharper-plugins.jetbrains.com\" rel=\"nofollow\">https://resharper-plugins.jetbr...</a>, you mean? :)</p><p>ReSharper plugins can be wrapped up as NuGet packages. You can find out more here: <a href=\"https://confluence.jetbrains.com/display/NETCOM/1.9+Packaging+%28R8%29\" rel=\"nofollow\">https://confluence.jetbrains.co...</a></p><p>and there's more documentation on macros here: <a href=\"https://confluence.jetbrains.com/display/NETCOM/4.04+Live+Template+Macros+%28R8%29\" rel=\"nofollow\">https://confluence.jetbrains.co...</a></p><p>We're working on something for NuGet, but for now, you need to download the sdk from the website.<br>Nice post!<br>Matt</p>"
-  Name: "Matt Ellis"
-  When: "2013-10-17 14:19:41.000"
