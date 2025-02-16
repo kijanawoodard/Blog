@@ -34,6 +34,7 @@ app.UseAntiforgery();
 app.MapStaticAssets();
 app.MapRazorComponents<App>();
 
+Console.WriteLine($"BlogEngine.Site started in {app.Environment.EnvironmentName} mode");
 app.UseBlazorStaticGenerator(shutdownApp: !app.Environment.IsDevelopment());
 
 app.Run();
