@@ -29,7 +29,3 @@ For now, I'm happy with this approach. I can always make it more robust later if
 [formspree]: https://formspree.io/
 [first honeypot]: https://github.com/kijanawoodard/Blog/blob/4dffaaadc4eb2a7e9d53849f662159ffddac7e52/src/Blog.Web/Actions/Contact/Index.cshtml#L20
 
----
-# comments being here
-
----

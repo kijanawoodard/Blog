@@ -50,7 +50,3 @@ If anything is unclear, try watching the [companion video] on YouTube. Please [c
 [template parameters]: https://msdn.microsoft.com/en-us/library/eehb4faa.aspx?f=255&MSPPError=-2147217396
 [contact me]: /contact
 
----
-# comments being here
-
----

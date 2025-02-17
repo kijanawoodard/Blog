@@ -35,7 +35,4 @@ Everything appears to be serving correctly now. It's amazing how easy doing thin
 [setting up origin pull for the Azure CDN]: https://josephwoodward.co.uk/2015/08/setting-up-origin-pull-azure-cdn/
 [Font Awesome]: https://fontawesome.io/
 
----
-# comments being here
 
----

@@ -35,7 +35,3 @@ Oh well. I could buy a cert for this, or just wait until Q4 and see what happens
 [azure cdn]: /setting-up-azure-cdn
 [CDN TLS]: https://feedback.azure.com/forums/169397-cdn/suggestions/1332683-allow-https-for-custom-cdn-domain-names
 
----
-# comments being here
-
----
