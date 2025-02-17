@@ -1,5 +1,5 @@
 ---
-title: #Winning with C# Interactive
+title: "#Winning with C# Interactive"
 published: July 29, 2016
 tags: [blog, csharp]
 ---
