@@ -15,7 +15,7 @@ Say you want to copy a file and you type the word "File" and realize you don't h
 Now press Ctrl-. (period). You get a pop-up like this:
 
 <figure>
-    <img src="/content/posts/images/use-ctrl-period-to-insert-using.png" alt="use ctrl period to insert using" /> 
+    <img src="/images/use-ctrl-period-to-insert-using.png" alt="use ctrl period to insert using" /> 
     <figcaption>Quickly insert using directives with ctrl period</figcaption>
 </figure>
 

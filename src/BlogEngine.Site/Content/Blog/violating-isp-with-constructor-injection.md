@@ -118,9 +118,9 @@ Too many dependencies contribute to SRP violations as well, but I'll save that f
 
 [questioning-ioc]: /questioning-ioc-containers
 [ISP]: https://en.wikipedia.org/wiki/Interface_segregation_principle
-[too-many-methods]: /content/posts/images/violating-isp/too-many-methods.png  "CustomerService doesn't use SendDailyAppStatusToOperations"
-[too-many-dependencies]: /content/posts/images/violating-isp/too-many-dependencies.png  "CustomerService doesn't EmailService for this"
-[passing-test]: /content/posts/images/violating-isp/passing-test.png  "the test passes anyway"
+[too-many-methods]: /images/violating-isp/too-many-methods.png  "CustomerService doesn't use SendDailyAppStatusToOperations"
+[too-many-dependencies]: /images/violating-isp/too-many-dependencies.png  "CustomerService doesn't EmailService for this"
+[passing-test]: /images/violating-isp/passing-test.png  "the test passes anyway"
 [8 lines of code]: https://www.infoq.com/presentations/8-lines-code-refactoring
 [unit testing?]: https://twitter.com/jbogard/status/387977767209672704
 [straw man]: https://en.wikipedia.org/wiki/Straw_man
