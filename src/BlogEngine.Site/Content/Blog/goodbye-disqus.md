@@ -21,6 +21,3 @@ On taking ownership, disqus has an export feature. It "works", but it's not idea
 
 At the moment, I've migrated comments to yaml and they are stored in the github repo with posts. I'm looking at options for a friendlier comment system, but in the meantime, send me a pull request. ;-)
 
----
-# comments begin here
-

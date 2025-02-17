@@ -31,6 +31,3 @@ F# could grow on me.
 [code]: https://github.com/kijanawoodard/DisqusParser/blob/master/tryout.fsx#L11
 [F# Interactive]: https://fsharpforfunandprofit.com/installing-and-using/
 
----
-# comments begin here
-

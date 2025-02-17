@@ -23,6 +23,3 @@ Hmmmm. Now I'm wondering if I should add the yaml comments at the bottom of the 
 [C# Interactive]: https://www.hanselman.com/blog/InteractiveCodingWithCAndFREPLsScriptCSOrTheVisualStudioInteractiveWindow.aspx
 [not that much code]: https://github.com/kijanawoodard/Blog/blob/7315ca32cfe0334c7c75f0913e88bba9a6cfdeed/src/Blog.Web/Infrastructure/MarkdownSharpContentStorage.cs#L63
 
----
-# comments begin here
-

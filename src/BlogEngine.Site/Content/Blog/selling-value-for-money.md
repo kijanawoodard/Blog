@@ -25,6 +25,3 @@ And yet, for real goods, it's so much more obvious this is a bad deal. I could b
 
 I wish more managers would veto bad deals in service based companies.
 
----
-# comments begin here
-

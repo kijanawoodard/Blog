@@ -33,6 +33,3 @@ So how about an extension method to wrap that up:
 
 Not a lot less typing, but a bit clearer and you're less likely to screw up.
 
----
-# comments begin here
-

@@ -14,6 +14,3 @@ Switch on the code has a [code snippet tutorial][tutorial].
 [using directives]:/blog/quickly-creating-using-namespace-directives
 [tutorial]:https://www.switchonthecode.com/tutorials/csharp-tutorial-visual-studio-code-snippets
 
----
-# comments begin here
-

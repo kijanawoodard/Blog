@@ -12,6 +12,3 @@ Gmail doesn't mess around with spam. Even messages from Gmail are not above susp
     <figcaption>Gmail is tough on spam!</figcaption>
 </figure>
 
----
-# comments begin here
-

@@ -30,6 +30,3 @@ Breathe deep and move on.
 [MVC 2]: http://www.tekpub.com/production/aspmvc
 [ReSharper]:https://www.jetbrains.com/resharper/
 
----
-# comments begin here
-

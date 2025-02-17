@@ -13,6 +13,3 @@ The date is already converted to UTC and will convert back to local time for dis
 
 Once again, if you think you need to write a bunch of code to solve a common business problem, you're thinking incorrectly about the problem, the solution, or both.
 
----
-# comments begin here
-

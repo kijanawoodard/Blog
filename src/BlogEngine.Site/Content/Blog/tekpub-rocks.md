@@ -18,6 +18,3 @@ Thanks Rob and James.
 [TekPub]:http://tekpub.com/
 [SubSonic]:https://subsonicproject.com/
 
----
-# comments begin here
-

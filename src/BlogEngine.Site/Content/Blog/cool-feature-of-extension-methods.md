@@ -38,6 +38,3 @@ You would expect the second call to HasValue would blow up because the string is
 
 On a side note, I think string.IsNullOrWhiteSpace is new for C# 4.0. I just found that writing the code sample for this post. Otherwise, I had to do a null check before doing a trim and then checking the length of the string.
 
----
-# comments begin here
-

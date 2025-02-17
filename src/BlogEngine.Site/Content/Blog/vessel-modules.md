@@ -25,6 +25,3 @@ I considered a special hook to register controllers given that we found that Con
 [isp]: https://en.wikipedia.org/wiki/Interface_segregation_principle
 [pain]: https://github.com/kijanawoodard/Blog/blob/45887586ac446a628292fe1cd7b11673b9cc017d/src/Blog.Web/Actions/PostGet/PostGetController.cs#L16
 
----
-# comments begin here
-
