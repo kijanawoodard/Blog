@@ -1,0 +1,82 @@
+@page "/"
+@page "/blog/{fileName}"
+@using BlazorStatic
+@using BlazorStatic.Services
+@inject BlazorStaticContentService<PostFrontMatter> BlazorStaticContentService
+
+
+@* No filename -> show latest posts *@
+@if (string.IsNullOrWhiteSpace(FileName))
+{
+    <PostsList/>
+    return;
+}
+
+@* Show specific post by filename param *@
+@if (_post == null)
+{
+    <div>Post not found 🤷 </div>
+    return;
+}
+<article>
+    <header>
+        <h2>@_post.FrontMatter.Title</h2>
+        <h4 class="subheader"><time>@_post.FrontMatter.Published.ToLongDateString()</time></h4>
+    </header>
+    
+    <div class="text">
+        @((MarkupString)_post.HtmlContent)
+    </div>
+    
+    <div style="display: none;">
+        <a target="_blank" rel="noopener noreferrer" href="@($"{WebsiteKeys.BlogPostStorageAddress}/{FileName}.md")">View on GitHub</a>
+    </div>
+    
+    <hr />
+    
+    <footer>
+        <h4>Tags</h4>
+        <div>
+            @foreach (var tag in _post.FrontMatter.Tags)
+            {
+                <a href="@BlazorStaticContentService.Options.Tags.TagsPageUrl/@tag">@tag &nbsp;</a>
+            }
+        </div>
+    </footer>
+</article>
+<hr />
+<aside id="comments">
+    <p>
+        If you see a mistake in the post *or* you want to make a comment, please <a href="@($"https://github.com/kijanawoodard/Blog/edit/master/src/BlogEngine.Site/Content/Blog/{_post.Url}.md")"> submit an edit</a>.
+        You can also <a href="/contact">contact me</a> and I'll post the comment.
+    </p>
+
+    <header>@_post.FrontMatter.Comments.Length Comments...</header>
+    @foreach (var comment in _post.FrontMatter.Comments)
+    {
+        <div class="comment">
+            <div class="avatar"><img src="https://s.gravatar.com/avatar/@(comment.Email.ToMd5())?d=identicon" alt="@comment.Name"/></div>
+            <div class="body">
+                <header>
+                    <span class="name">@comment.Name</span>
+                    <span class="when" title="@comment.When.ToLongDateString() @comment.When.ToShortTimeString()">• @comment.When.ToString("MM/dd/yyyy hh:mm tt")</span>
+                </header>
+                <main>
+                    @((MarkupString)comment.Message)
+                </main>
+            </div>
+        </div>
+    }
+</aside>
+
+
+@code{
+    [Parameter] public string? FileName { get; set; }
+    Post<PostFrontMatter>? _post;
+
+    protected override void OnInitialized()
+    {
+        if (string.IsNullOrWhiteSpace(FileName)) return;
+        _post = BlazorStaticContentService.Posts.FirstOrDefault(x => x.Url == FileName);
+    }
+}

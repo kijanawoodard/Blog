@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>@WebsiteKeys.Title</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <base href="/"/>
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <link rel="stylesheet" href="css/kube.min.css"/>
+    <link rel="stylesheet" href="css/kube.responsive.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/forms.css"/>
+    <link rel="stylesheet" href="app.css"/>
+    <link rel="stylesheet" href="css/site.css"/>
+    <link rel="stylesheet" href="css/layout.css"/>
+    <link rel="stylesheet" href="BlogEngine.Site.styles.css"/>
+
+    <ImportMap/>
+    <HeadOutlet/>
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="row">
+            <hgroup class="third">
+                <h1><a href="/" rel="home">Kijana Woodard</a>
+                </h1>
+                <h4 class="subheader">Software Minimalism</h4>
+            </hgroup>
+            <div class="third actions">
+                <a href="/about">
+                    <span class="surround-icon"><span class="fa fa-user"></span > About</span>
+                </a>
+            </div>
+            <form action="https://www.google.com/search" method="GET" class="third search">
+                <input type="hidden" name="q" value="site://kijanawoodard.com"/>
+
+                <span class="surround-icon"><span class="fa fa-search"></span ></span>
+                <input type="text" name="q" placeholder="Search"/>
+            </form>
+        </header>
+        <hr/>
+        <Routes />
+        <aside>
+            <section id="contact">
+                <ul>
+                    <li>
+                        <a href="/about">
+                            <span class="fa fa-3x fa-envelope"></span >
+                            <span>About</span>
+                            <small>/about</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/kijanawoodard" target="_blank">
+                            <span class="fa fa-3x fa-linkedin"></span >
+                            <span>LinkedIn</span>
+                            <small>linkedin.com/in/kijanawoodard</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/kijanawoodard" target="_blank">
+                            <span class="fa fa-3x fa-github"></span >
+                            <span>GitHub</span>
+                            <small>github.com/kijanawoodard</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/100680108589078267321/" target="_blank">
+                            <span class="fa fa-3x fa-google-plus-official"></span >
+                            <span>Google+</span>
+                            <small>plus.google.com/kijanawoodard</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/kijanawoodard" target="_blank">
+                            <span class="fa fa-3x fa-twitter"></span >
+                            <span>Twitter</span>
+                            <small>twitter.com/kijanawoodard</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/kijanawoodard" target="_blank">
+                            <span class="fa fa-3x fa-facebook"></span >
+                            <span>Facebook</span>
+                            <small>facebook.com/kijanawoodard</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://feeds.feedburner.com/kijanawoodard" target="_blank">
+                            <span class="fa fa-3x fa-rss"></span >
+                            <span>Atom Feed</span>
+                            <small>feeds.feedburner.com/kijanawoodard</small>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+        <hr />
+        <footer>
+            @{ var info = AssemblyExtensions.GetAssemblyInfo(); }
+            <p>
+                <span class="fa fa-copyright copyright"></span> 
+                <span class="copyright">Kijana Woodard 2010 - @DateTime.UtcNow.Year</span> 
+                Version @info.Version - @info.LastModified.ToLongDateString() @info.LastModified.ToShortTimeString()
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>

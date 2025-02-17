@@ -1,0 +1,44 @@
+@page "/tags/{tagName}"
+@page "/tags"
+@using BlazorStatic
+@using BlazorStatic.Services
+@inject BlazorStaticContentService<PostFrontMatter> BlazorStaticContentService
+
+@if (TagName == null)
+{
+    <div>
+        @{
+            var tagsWithCount = BlazorStaticContentService.Posts
+                .SelectMany(x => x.Tags)
+                .GroupBy(x => x)
+                .Select(group => new { Tag = group.Key, Count = group.Count() })
+                .OrderByDescending(x => x.Count);
+
+            foreach(var tagGroup in tagsWithCount)
+            {
+                <a href="@($"{BlazorStaticContentService.Options.Tags.TagsPageUrl}/{tagGroup.Tag.EncodedName}")">@tagGroup.Tag.Name</a>
+            }
+        }
+    </div>
+    return;
+}
+
+<header>
+    <h1>@TagName</h1>
+    <p>Blog posts tagged by <span>@TagName</span></p>
+</header>
+<PostsList Posts="_posts"/>
+
+@code {
+
+    [Parameter] public string? TagName { get; set; }
+
+    List<Post<PostFrontMatter>>? _posts;
+
+    protected override void OnInitialized()
+    {
+        if (string.IsNullOrWhiteSpace(TagName)) return;
+        _posts = BlazorStaticContentService.Posts.Where(x => x.FrontMatter.Tags.Contains(TagName)).ToList();
+    }
+
+}
