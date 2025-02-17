@@ -2,14 +2,13 @@
 @page "/tags"
 @using BlazorStatic
 @using BlazorStatic.Services
-@using System.Net
-@inject BlazorStaticContentService<PostFrontMatter> blazorStaticContentService
+@inject BlazorStaticContentService<PostFrontMatter> BlazorStaticContentService
 
 @if (TagName == null)
 {
     <div>
         @{
-            var tagsWithCount = blazorStaticContentService.Posts
+            var tagsWithCount = BlazorStaticContentService.Posts
                 .SelectMany(x => x.Tags)
                 .GroupBy(x => x)
                 .Select(group => new { Tag = group.Key, Count = group.Count() })
@@ -17,7 +16,7 @@
 
             foreach(var tagGroup in tagsWithCount)
             {
-                <a href="@($"{blazorStaticContentService.Options.Tags.TagsPageUrl}/{tagGroup.Tag.EncodedName}")">@tagGroup.Tag.Name</a>
+                <a href="@($"{BlazorStaticContentService.Options.Tags.TagsPageUrl}/{tagGroup.Tag.EncodedName}")">@tagGroup.Tag.Name</a>
             }
         }
     </div>
@@ -28,18 +27,18 @@
     <h1>@TagName</h1>
     <p>Blog posts tagged by <span>@TagName</span></p>
 </header>
-<PostsList Posts="posts"/>
+<PostsList Posts="_posts"/>
 
 @code {
 
     [Parameter] public string? TagName { get; set; }
 
-    List<Post<PostFrontMatter>>? posts;
+    List<Post<PostFrontMatter>>? _posts;
 
     protected override void OnInitialized()
     {
         if (string.IsNullOrWhiteSpace(TagName)) return;
-        posts = blazorStaticContentService.Posts.Where(x => x.FrontMatter.Tags.Contains(TagName)).ToList();
+        _posts = BlazorStaticContentService.Posts.Where(x => x.FrontMatter.Tags.Contains(TagName)).ToList();
     }
 
 }

@@ -53,12 +53,14 @@ public class PostFrontMatter : BlogFrontMatter
     public PostComment[] Comments { get; set; } = [];
 }
 
+// ReSharper disable once ClassNeverInstantiated.Global
+// These are the properties that are used in the front matter of the blog posts
 public class PostComment
 {
-    public string Email { get; set; }
-    public string Name { get; set; }
-    public string Message { get; set; }
-    public DateTime When { get; set; }
+    public string Email { get; set; } = "";
+    public string Name { get; set; } = "";
+    public string Message { get; set; } = "";
+    public DateTime When { get; set; } = DateTime.MinValue;
 }
 
 public static class StringExtensions
@@ -78,18 +80,18 @@ public static class AssemblyExtensions
         public static AssemblyInfo GetAssemblyInfo()
         {
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
-            var fileInfo = new System.IO.FileInfo(assembly.Location);
+            var fileInfo = new FileInfo(assembly.Location);
             
             return new AssemblyInfo
             {
-                Version = assembly.GetName().Version,
+                Version = assembly.GetName().Version ?? new Version(0, 0),
                 LastModified = fileInfo.LastWriteTime
             };
         }
 
         public class AssemblyInfo
         {
-            public Version Version { get; set; }
-            public DateTime LastModified { get; set; }
+            public Version Version { get; init; } = new(0, 0);
+            public DateTime LastModified { get; init; } = DateTime.MinValue;
         }
     }

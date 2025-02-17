@@ -1,16 +1,14 @@
-@using System.Globalization
 @using BlazorStatic
 @using BlazorStatic.Services
-@inject BlazorStaticContentService<PostFrontMatter> blazorStaticContentService
-@inject BlazorStaticService blazorStaticService
+@inject BlazorStaticContentService<PostFrontMatter> BlazorStaticContentService
 
 <ul id="home" class="posts">
-    @foreach(var post in posts.OrderByDescending(x => x.FrontMatter.Published))
+    @foreach(var post in _posts.OrderByDescending(x => x.FrontMatter.Published))
     {
         <li>
             <article>
                 <h2>
-                    <a href="@blazorStaticContentService.Options.PageUrl/@(post.Url)">@post.FrontMatter.Title</a>
+                    <a href="@BlazorStaticContentService.Options.PageUrl/@(post.Url)">@post.FrontMatter.Title</a>
                 </h2>
                 <h4 class="subheader">
                     <time>@post.FrontMatter.Published.ToLongDateString()</time>
@@ -18,7 +16,7 @@
                 <div>
                     @((MarkupString)post.FrontMatter.Lead)
                 </div>
-                <a aria-label='Read "@(post.FrontMatter.Lead)"' href="@blazorStaticContentService.Options.PageUrl/@(post.Url)">Read more →</a>
+                <a aria-label='Read "@(post.FrontMatter.Lead)"' href="@BlazorStaticContentService.Options.PageUrl/@(post.Url)">Read more →</a>
             </article>
         </li>
     }
@@ -26,13 +24,13 @@
 
 
 @code {
-    List<Post<PostFrontMatter>> posts = new();
+    List<Post<PostFrontMatter>> _posts = new();
 
 
     [Parameter] public List<Post<PostFrontMatter>>? Posts { get; set; }
     protected override void OnInitialized()
     {
-        posts = Posts != null ? Posts.OrderBy(x => x.FrontMatter.Published).ToList() : blazorStaticContentService.Posts;
+        _posts = Posts != null ? Posts.OrderBy(x => x.FrontMatter.Published).ToList() : BlazorStaticContentService.Posts;
         base.OnInitialized();
     }
 }
