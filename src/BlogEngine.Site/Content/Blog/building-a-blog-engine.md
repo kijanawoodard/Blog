@@ -89,8 +89,8 @@ Tell me what you think.
 [Markdown]: https://daringfireball.net/projects/markdown/
 [this post]: https://github.com/kijanawoodard/Blog/blob/master/src/Blog.Web/Content/posts/building-blog.markdown
 [this post raw]:https://raw.github.com/kijanawoodard/Blog/master/src/Blog.Web/Content/posts/building-blog.markdown
-[my gists]: https://kijanawoodard.com/blog/fubumvc-validation-and-re-hydrating-the-view
-[code]: https://kijanawoodard.com/blog/avoiding-fizzbuzz
+[my gists]: /blog/fubumvc-validation-and-re-hydrating-the-view
+[code]: /blog/avoiding-fizzbuzz
 [Twitter Bootstrap]:https://twitter.github.com/bootstrap/
 [Foundation]:https://foundation.zurb.com/
 
