@@ -34,15 +34,14 @@
                 <div class="prose prose-invert max-w-none pb-8 pt-10">
                     @((MarkupString)_post.HtmlContent)
                 </div>
-                <hr />
-                <div class="pb-6 pt-6 text-sm text-gray-300">
+                <div style="display: none;">
                     <a target="_blank" rel="noopener noreferrer" href="@($"{WebsiteKeys.BlogPostStorageAddress}/{FileName}.md")">View on GitHub</a>
                 </div>
             </div>
             <footer>
                 <div class=" text-sm font-medium leading-5 divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">
                     <div class="py-4 xl:py-8">
-                        <h4 class="text-xs uppercase tracking-wide text-gray-400">Tags</h4>
+                        <h4>Tags</h4>
                         <div class="flex flex-wrap">
                             @foreach(var tag in _post.FrontMatter.Tags)
                             {
@@ -56,6 +55,7 @@
         </div>
     </div>
 </article>
+<hr />
 <aside id="comments">
     <p>
         If you see a mistake in the post *or* you want to make a comment, please <a href="@($"https://github.com/kijanawoodard/Blog/edit/master/src/BlogEngine.Site/Content/Blog/{_post.Url}.md")"> submit an edit</a>.
