@@ -20,40 +20,30 @@
     return;
 }
 <article>
+    <header>
+        <h2>@_post.FrontMatter.Title</h2>
+        <h4 class="subheader"><time>@_post.FrontMatter.Published.ToLongDateString()</time></h4>
+    </header>
+    
     <div>
-        <header>
-            <div>
-                <div>
-                    <h2>@_post.FrontMatter.Title</h2>
-                    <h4 class="subheader"><time>@_post.FrontMatter.Published.ToLongDateString()</time></h4>
-                </div>
-            </div>
-        </header>
-        <div>
-            <div>
-                <div>
-                    @((MarkupString)_post.HtmlContent)
-                </div>
-                <div style="display: none;">
-                    <a target="_blank" rel="noopener noreferrer" href="@($"{WebsiteKeys.BlogPostStorageAddress}/{FileName}.md")">View on GitHub</a>
-                </div>
-            </div>
-            <hr />
-            <footer>
-                <div>
-                    <div>
-                        <h4>Tags</h4>
-                        <div>
-                            @foreach (var tag in _post.FrontMatter.Tags)
-                            {
-                                <a href="@BlazorStaticContentService.Options.Tags.TagsPageUrl/@tag">@tag &nbsp;</a>
-                            }
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </div>
+        @((MarkupString)_post.HtmlContent)
     </div>
+    
+    <div style="display: none;">
+        <a target="_blank" rel="noopener noreferrer" href="@($"{WebsiteKeys.BlogPostStorageAddress}/{FileName}.md")">View on GitHub</a>
+    </div>
+    
+    <hr />
+    
+    <footer>
+        <h4>Tags</h4>
+        <div>
+            @foreach (var tag in _post.FrontMatter.Tags)
+            {
+                <a href="@BlazorStaticContentService.Options.Tags.TagsPageUrl/@tag">@tag &nbsp;</a>
+            }
+        </div>
+    </footer>
 </article>
 <hr />
 <aside id="comments">

@@ -24,16 +24,11 @@
     return;
 }
 
-<div>
-    <div>
-        <h1>@TagName</h1>
-        <p>
-            Blog posts tagged by
-            <span>@TagName</span>
-        </p>
-    </div>
-    <PostsList Posts="posts"/>
-</div>
+<header>
+    <h1>@TagName</h1>
+    <p>Blog posts tagged by <span>@TagName</span></p>
+</header>
+<PostsList Posts="posts"/>
 
 @code {
 

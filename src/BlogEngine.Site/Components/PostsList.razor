@@ -9,24 +9,16 @@
     {
         <li>
             <article>
+                <h2>
+                    <a href="@blazorStaticContentService.Options.PageUrl/@(post.Url)">@post.FrontMatter.Title</a>
+                </h2>
+                <h4 class="subheader">
+                    <time>@post.FrontMatter.Published.ToLongDateString()</time>
+                </h4>
                 <div>
-                    <div>
-                        <div>
-                            <div>
-                                <h2>
-                                    <a href="@blazorStaticContentService.Options.PageUrl/@(post.Url)">@post.FrontMatter.Title</a>
-                                </h2>
-                                <h4 class="subheader"><time>@post.FrontMatter.Published.ToLongDateString()</time></h4>
-                            </div>
-                            <div>
-                                @((MarkupString)post.FrontMatter.Lead)
-                            </div>
-                        </div>
-                        <div>
-                            <a aria-label='Read "@(post.FrontMatter.Lead)"' href="@blazorStaticContentService.Options.PageUrl/@(post.Url)">Read more →</a>
-                        </div>
-                    </div>
+                    @((MarkupString)post.FrontMatter.Lead)
                 </div>
+                <a aria-label='Read "@(post.FrontMatter.Lead)"' href="@blazorStaticContentService.Options.PageUrl/@(post.Url)">Read more →</a>
             </article>
         </li>
     }
