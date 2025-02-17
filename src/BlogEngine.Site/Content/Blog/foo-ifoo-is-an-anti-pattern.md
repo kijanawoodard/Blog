@@ -9,7 +9,7 @@ comments:
     name: "Joey Guerra"
     when: "2013-10-15 02:08:23.000"
   - email: "disqus@wyldeye.com"
-    message: "<p>You've brought up two future posts. :-)</p><p>I would say the interface is the Authenticate method. I hinted at this at the end of <a href=\"https://kijanawoodard.com/blog/violating-isp-with-constructor-injection\" rel=\"nofollow\">https://kijanawoodard.com/blog/viola...</a></p>"
+    message: "<p>You've brought up two future posts. :-)</p><p>I would say the interface is the Authenticate method. I hinted at this at the end of <a href=\"https://kijanawoodard.com/blog/violating-isp-with-constructor-injection\" rel=\"nofollow\">https://kijanawoodard.com/blog/violating-isp-with-constructor-injection</a></p>"
     name: "Kijana Woodard"
     when: "2013-10-15 14:44:03.000"
 ---

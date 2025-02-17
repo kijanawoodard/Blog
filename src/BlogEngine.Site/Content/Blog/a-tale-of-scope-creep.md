@@ -42,18 +42,18 @@ The more I use [git], the more I like tiny commits that address a single issue. 
 [httperrors]: https://stackoverflow.com/questions/3554844/asp-net-mvc-404-handling-and-iis7-httperrors
 [404 debate]: https://stackoverflow.com/a/9026907/214073
 [404 commit]: https://github.com/kijanawoodard/Blog/commit/48ed632e7045522e1404f1739dcc2cd982a63697
-[archive]: /archive
-[mediator]: /introducing-liaison
+[archive]: /blog/archive
+[mediator]: /blog/introducing-liaison
 [archive commit]: https://github.com/kijanawoodard/Blog/commit/ce65020fdb81e06dab3a70365c7588407e695f1e
 [FubuMVC Behaviors]: https://lostechies.com/chadmyers/2011/06/23/cool-stuff-in-fubumvc-no-1-behaviors/
 [stumbling around]: https://github.com/kijanawoodard/Blog/blob/728c10ec6608cac03644454a7a38b7376bd10d71/src/Blog.Web/Infrastructure/PartialViewActionInvoker.cs#L8
 [partial commit]: https://github.com/kijanawoodard/Blog/commit/728c10ec6608cac03644454a7a38b7376bd10d71
-[vessel]: /introducing-vessel
+[vessel]: /blog/introducing-vessel
 [wire]: https://github.com/kijanawoodard/Blog/commit/97dee8e93dd305436e7687892bebbcdfeba0b9de
 [FubuMVC]: https://fubumvc.github.io/
 [openrasta]: https://openrasta.org/
 [container incantations]: https://docs.structuremap.net/ConstructorAndSetterInjection.htm
-[404 page]: /oops
+[404 page]: /blog/oops
 [remove layout]: https://github.com/kijanawoodard/Blog/commit/728c10ec6608cac03644454a7a38b7376bd10d71#diff-8bc27b9c14ab2cf27debd6ecd280be8eL5
 [SO post]: https://stackoverflow.com/a/18938991/214073
 [passthrough]: https://github.com/kijanawoodard/Blog/commit/c5bcffeef6bc3e10c8fcf635ca5a8bff26d69357

@@ -53,7 +53,7 @@ There's an unintended consequence of this aspect of C#. Architects want to avoid
 Isn't [Big Design Up Front][bduf] what we were trying to avoid when we decided to made our code "loosely coupled" by adding interfaces?
 
  
-[previous post]: /foo-ifoo-is-an-anti-pattern
+[previous post]: /blog/foo-ifoo-is-an-anti-pattern
 [Joey Guerra]: http://www.joeyguerra.com/
 [violating-isp-with-constructor-injection]: /violating-isp-with-constructor-injection
 [duck typing]: https://en.wikipedia.org/wiki/Duck_typing

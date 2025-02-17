@@ -25,6 +25,6 @@ The instructions for comments are changed to reflect that there's only one file 
 
 There's a [nice wiki on c# interactive]. One thing to note, ReSharper maps the History Navigation keys [`Alt+UpArrow`] to something else. I decided to map it back, but scope the assignment to the interactive window.
 
-[previous post]: /winning-with-c-sharp-interactive
+[previous post]: /blog/winning-with-c-sharp-interactive
 [nice wiki on c# interactive]: https://github.com/dotnet/roslyn/wiki/Interactive-Window
 

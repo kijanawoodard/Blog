@@ -17,7 +17,7 @@ I think Vessel is now complete, perhaps a bit bloated by features. Maybe some da
 
 I considered a special hook to register controllers given that we found that Controllers always take exactly one dependency. However, I'd like to live with that "[pain]" for the moment and see if it can inspire better solutions.
 
-[Vessel]: /introducing-vessel
+[Vessel]: /blog/introducing-vessel
 [RegisterModules]: https://github.com/kijanawoodard/Blog/blob/45887586ac446a628292fe1cd7b11673b9cc017d/src/Blog.Web/Infrastructure/Vessel.cs#L48
 [use module]: https://github.com/kijanawoodard/Blog/blob/45887586ac446a628292fe1cd7b11673b9cc017d/src/Blog.Web/Actions/PostGet/PostGetController.cs#L16
 [legibility]: https://www.ribbonfarm.com/2010/07/26/a-big-little-idea-called-legibility/

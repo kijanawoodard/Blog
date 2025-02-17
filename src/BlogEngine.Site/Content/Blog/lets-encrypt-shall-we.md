@@ -33,6 +33,6 @@ Oh well. I could buy a cert for this, or just wait until Q4 and see what happens
 [Let's Encypt]: https://letsencrypt.org/getting-started/
 [IRL]: https://www.urbandictionary.com/define.php?term=IRL
 [troy hunt]: https://www.troyhunt.com/everything-you-need-to-know-about-loading-a-free-lets-encrypt-certificate-into-an-azure-website/
-[azure cdn]: /setting-up-azure-cdn
+[azure cdn]: /blog/setting-up-azure-cdn
 [CDN TLS]: https://feedback.azure.com/forums/169397-cdn/suggestions/1332683-allow-https-for-custom-cdn-domain-names
 
