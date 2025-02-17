@@ -150,12 +150,6 @@
     <loc>https://kijanawoodard.com/blog/winning-with-c-sharp-interactive</loc>
   </url>
   <url>
-    <loc>https://kijanawoodard.com/tags/dependency-injection</loc>
-  </url>
-  <url>
-    <loc>https://kijanawoodard.com/tags/oop</loc>
-  </url>
-  <url>
     <loc>https://kijanawoodard.com/tags/aspnet-mvc</loc>
   </url>
   <url>
@@ -172,6 +166,12 @@
   </url>
   <url>
     <loc>https://kijanawoodard.com/tags/blog</loc>
+  </url>
+  <url>
+    <loc>https://kijanawoodard.com/tags/dependency-injection</loc>
+  </url>
+  <url>
+    <loc>https://kijanawoodard.com/tags/oop</loc>
   </url>
   <url>
     <loc>https://kijanawoodard.com/tags/resharper</loc>
