@@ -21,17 +21,17 @@
 }
 <article>
     <div>
-        <header class="pt-6 xl:pb-6">
-            <div class="space-y-1 text-center">
-                <div class="prose prose-invert mx-auto">
-                    <h2 class="">@_post.FrontMatter.Title</h2>
+        <header>
+            <div>
+                <div>
+                    <h2>@_post.FrontMatter.Title</h2>
                     <h4 class="subheader"><time>@_post.FrontMatter.Published.ToLongDateString()</time></h4>
                 </div>
             </div>
         </header>
-        <div class="grid-rows-[auto_1fr] divide-y  pb-8 divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0">
-            <div class="divide-y  divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
-                <div class="prose prose-invert max-w-none pb-8 pt-10">
+        <div>
+            <div>
+                <div>
                     @((MarkupString)_post.HtmlContent)
                 </div>
                 <div style="display: none;">
@@ -40,10 +40,10 @@
             </div>
             <hr />
             <footer>
-                <div class=" text-sm font-medium leading-5 divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">
-                    <div class="py-4 xl:py-8">
+                <div>
+                    <div>
                         <h4>Tags</h4>
-                        <div class="flex flex-wrap">
+                        <div>
                             @foreach (var tag in _post.FrontMatter.Tags)
                             {
                                 <a href="@BlazorStaticContentService.Options.Tags.TagsPageUrl/@tag">@tag &nbsp;</a>
@@ -51,7 +51,6 @@
                         </div>
                     </div>
                 </div>
-
             </footer>
         </div>
     </div>
