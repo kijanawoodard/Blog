@@ -2,6 +2,7 @@
 title: Item Templates in Visual Studio 2015
 created: 8/9/2016 5:46:49 PM
 published: 8/10/2016 5:46:49 AM
+lead: A practical guide to creating and implementing custom item templates in Visual Studio 2015, with tips for handling non-code files and troubleshooting common issues.
 tags: [blog, visual-studio, templates, development-tools]
 ---
 

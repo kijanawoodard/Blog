@@ -1,6 +1,7 @@
 ---
 title: Seeking Density in Architectural Abstractions
 published: February 14, 2012
+lead: A reflection on the value and pitfalls of architectural abstractions in software development, exploring when they add value and when they become unnecessary overhead.
 tags: [architecture, design-patterns, abstractions]
 comments:
   - email: "casey.j.watson@gmail.com"

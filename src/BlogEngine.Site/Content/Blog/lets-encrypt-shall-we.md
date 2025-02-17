@@ -2,6 +2,7 @@
 title: Let's Encrypt, Shall We?
 created: 8/4/2016 6:47:12 PM
 published: 8/5/2016 6:47:12 AM
+lead: A practical walkthrough of implementing Let's Encrypt SSL certificates on Azure WebApps, including troubleshooting common pitfalls and limitations.
 tags: [blog, azure, web-development, security]
 ---
 

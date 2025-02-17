@@ -1,6 +1,7 @@
 ---
 title: "#Winning with C# Interactive"
 published: July 29, 2016
+lead: A practical example of using Visual Studio's C# Interactive window to efficiently process and migrate blog post metadata into Jekyll-style front matter format.
 tags: [blog, csharp]
 ---
 

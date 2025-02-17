@@ -1,6 +1,7 @@
 ---
 title: Removing Disqus with F# 
 published: July 28, 2016
+lead: A practical demonstration of using F#'s type providers to elegantly parse and process Disqus comment export data, showcasing the language's powerful XML handling capabilities.
 tags: [fsharp, xml, web-development]
 ---
 

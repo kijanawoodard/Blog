@@ -1,6 +1,7 @@
 ---
 title: Violating ISP with Constructor Injection
 published: October 10, 2013
+lead: A deep dive into how constructor injection can inadvertently violate the Interface Segregation Principle, with examples of common anti-patterns and their solutions.
 tags: [isp, dependency-injection, solid]
 comments:
   - email: "landon.poch@gmail.com"

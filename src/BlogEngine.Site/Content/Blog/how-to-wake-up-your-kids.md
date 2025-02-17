@@ -1,6 +1,7 @@
 ---
 title: How to Wake Up Your Kids
 published: October 12, 2013
+lead: A humorous guide to the seemingly inevitable ways parents accidentally wake their sleeping children, based on real-life observations and experiences.
 tags: [missives, parenting, humor]
 comments:
   - email: "graphite@joeyguerra.com"

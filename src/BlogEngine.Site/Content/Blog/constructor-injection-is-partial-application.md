@@ -1,6 +1,7 @@
 ---
 title: Constructor Injection is Partial Application
 published: October 16, 2013
+lead: Drawing a parallel between object-oriented constructor injection and functional programming's partial application, revealing how both patterns solve the problem of dependency management.
 tags: [dependency-injection, oop]
 ---
 

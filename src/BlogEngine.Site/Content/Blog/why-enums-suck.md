@@ -1,6 +1,7 @@
 ---
 title: Why Enums Suck
 published: May 10, 2010
+lead: A discussion on why using enums to drive behavior is an anti-pattern, and how object-oriented principles provide a better solution.
 tags: [csharp, architecture, design-patterns]
 comments:
   - email: "joey@joeyguerra.com"

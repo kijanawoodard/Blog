@@ -1,6 +1,7 @@
 ---
 title: Cool Feature of Extension Methods
 published: May 16, 2010
+lead: An exploration of a lesser-known feature of C# extension methods - their ability to be called on null instances, making them particularly useful for null-checking scenarios.
 tags: [csharp, programming]
 ---
 

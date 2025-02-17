@@ -1,6 +1,7 @@
 ---
 title: .Net Demon
 published: October 08, 2013
+lead: A review of .Net Demon, a Visual Studio extension that enhances developer productivity through automatic compilation and browser refresh features.
 tags: [tools, little things]
 comments:
   - email: "khalidabuhakmeh@gmail.com"

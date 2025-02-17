@@ -1,6 +1,7 @@
 ---
 title: C# Partition List into List of Lists
 published: October 17, 2010
+lead: An exploration of different approaches to partitioning lists in C#, including a discovery of how LINQ's GroupBy provides a simpler solution than custom partitioning logic.
 tags: [csharp, programming]
 comments:
   - email: "luv2code+kijanassite@gmail.com"
@@ -35,7 +36,7 @@ I have a class that looks roughly like this:
         public int DivisionId { get; set; }
     }
 
-Some divisions have 11 “ScoreTypes”, some have 10, some have 7, etc. So I needed a way to break up my single list (the result of a db query) into chunks to give to my View code.
+Some divisions have 11 "ScoreTypes", some have 10, some have 7, etc. So I needed a way to break up my single list (the result of a db query) into chunks to give to my View code.
 
 I came up with this:
 
@@ -56,11 +57,11 @@ I came up with this:
     var final = list.Partition(x => x.DivisionId );
 
 
-I’m pretty happy with this. I played around partitioning by different elements and even a bit with partitioning by multiple elements. It kept on producing expected results. 
+I'm pretty happy with this. I played around partitioning by different elements and even a bit with partitioning by multiple elements. It kept on producing expected results. 
 
 p.s.
 
-That [MoreLinq] project by Jon Skeet mentioned in the StackOverflow post looks interesting. I didn’t get a chance to go through it yet.
+That [MoreLinq] project by Jon Skeet mentioned in the StackOverflow post looks interesting. I didn't get a chance to go through it yet.
 
 [SO]:https://stackoverflow.com/questions/3773403/linq-partition-list-into-lists-of-8-members
 [MoreLinq]:https://code.google.com/p/morelinq/source/browse/#svn/trunk/MoreLinq

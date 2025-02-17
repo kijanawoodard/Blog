@@ -1,6 +1,7 @@
 ---
 title: Introducing Vessel
 published: October 31, 2013
+lead: Introducing Vessel, a minimalist dependency injection container that challenges traditional IoC patterns with a simpler, more focused approach to object composition.
 tags: [vessel, ioc, dependency-injection]
 comments:
   - email: "landon.poch@gmail.com"

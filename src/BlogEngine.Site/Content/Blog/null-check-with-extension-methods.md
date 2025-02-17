@@ -1,6 +1,7 @@
 ---
 title: Null Check with Extension Methods
 published: May 18, 2010
+lead: An exploration of using C# extension methods to create a more concise and reusable approach to null checking, reducing boilerplate code in method arguments validation.
 tags: [csharp, extension-methods, null-handling]
 ---
 

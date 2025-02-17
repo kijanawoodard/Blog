@@ -1,6 +1,7 @@
 ---
 title: Thoughts on Script#
 published: May 12, 2010
+lead: A critical perspective on Script#, arguing that compiling C# to JavaScript is reminiscent of WebForms' approach of abstracting away the browser, suggesting more direct solutions instead.
 tags: [javascript, csharp, web-development]
 comments:
   - email: "iceman_qwa@yahoo.com"

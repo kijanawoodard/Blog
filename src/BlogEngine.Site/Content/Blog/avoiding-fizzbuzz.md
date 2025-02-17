@@ -1,6 +1,7 @@
 ---
 title: Avoiding FizzBuzz
 published: May 09, 2010
+lead: A reflection on technical interviews and the value of focusing on deeper discussions rather than basic coding exercises, accompanied by a LINQ-based FizzBuzz implementation.
 tags: [csharp, programming, interview-questions]
 ---
 

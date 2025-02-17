@@ -1,6 +1,7 @@
 ---
 title: Creating a ReSharper Macro
 published: October 17, 2013
+lead: A practical guide to creating custom ReSharper macros for automating repetitive code patterns, demonstrated through a blog post template example.
 tags: [resharper, tools]
 comments:
   - email: "m.t.ellis@gmail.com"

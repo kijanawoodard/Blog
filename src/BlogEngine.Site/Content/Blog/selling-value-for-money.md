@@ -1,6 +1,7 @@
 ---
 title: Selling Value for Money
 published: May 20, 2010
+lead: A critical look at how service-based businesses, particularly in software development, often undervalue their work and the long-term consequences of underselling services.
 tags: [business, consulting]
 ---
 

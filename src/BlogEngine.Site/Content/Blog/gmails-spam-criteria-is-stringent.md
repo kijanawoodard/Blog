@@ -1,6 +1,7 @@
 ---
 title: Gmail's Spam Criteria is Stringent
 published: January 11, 2010
+lead: A humorous observation of Gmail's aggressive spam filtering, which is so thorough it even flags Gmail's own messages as potential spam.
 tags: [gmail, email, spam]
 ---
 

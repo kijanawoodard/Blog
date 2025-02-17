@@ -1,6 +1,7 @@
 ---
 title: Visual Studio Code Snippets
 published: May 15, 2010
+lead: A humorous reflection on discovering Visual Studio's built-in code snippets feature, highlighting its time-saving benefits for developers.
 tags: ["visual studio", "productivity"]
 ---
 

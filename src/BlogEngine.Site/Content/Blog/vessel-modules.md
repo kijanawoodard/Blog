@@ -1,6 +1,7 @@
 ---
 title: Vessel Modules
 published: November 01, 2013
+lead: An exploration of implementing a module system in Vessel, discussing the tradeoffs between application-level and feature-level legibility in IoC container design.
 tags: [vessel, ioc, modules]
 ---
 

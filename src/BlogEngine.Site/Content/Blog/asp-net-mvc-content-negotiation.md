@@ -1,6 +1,7 @@
 ---
 title: Asp.net MVC Content Negotiation
 published: November 08, 2013
+lead: An exploration of implementing content negotiation in ASP.NET MVC, allowing single endpoints to serve multiple content types through custom action invokers and format-specific views.
 tags: [aspnet-mvc, web-development]
 comments:
 - email: "khalidabuhakmeh@gmail.com"

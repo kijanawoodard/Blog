@@ -1,6 +1,7 @@
 ---
 title: Violating SRP with Constructor Injection
 published: October 11, 2013
+lead: An examination of how constructor injection patterns can lead to Single Responsibility Principle violations, with practical examples and solutions.
 tags: ["solid", "dependency injection"]
 comments:
   - email: "landon.poch@gmail.com"

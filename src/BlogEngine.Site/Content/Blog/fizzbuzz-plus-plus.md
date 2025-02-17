@@ -1,6 +1,7 @@
 ---
 title: FizzBuzz++
 published: May 09, 2010
+lead: An enhanced implementation of the classic FizzBuzz programming exercise, demonstrating more elegant solutions using C# extension methods and functional programming concepts.
 tags: [coding, csharp]
 comments:
   - email: "larry@mcnutt-consulting.com"

@@ -2,6 +2,7 @@
 title: Setting Up Azure CDN
 created: 8/4/2016 9:57:46 AM
 published: 8/4/2016 9:57:46 AM
+lead: A step-by-step guide to implementing Azure CDN for web applications, including troubleshooting common issues with propagation times, CORS settings, and custom domain configuration.
 tags: [blog, azure, cdn, web-performance]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Learning NServiceBus Review
 published: September 30, 2013
+lead: A comprehensive review of David Boike's book on NServiceBus, examining how it effectively introduces messaging concepts and practical implementation for developers.
 tags: [nservicebus, messaging, web-development]
 comments:
   - email: "sandyp@packtpub.com"

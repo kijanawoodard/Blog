@@ -1,6 +1,7 @@
 ---
 title: In Defense of Blub
 published: May 11, 2010
+lead: A pragmatic perspective on the concept of 'Blub' programming languages, arguing that while not perfect, they often provide the right balance of power and practicality for real-world development.
 tags: [programming, languages, opinion]
 comments:
   - email: "graphite@joeyguerra.com"

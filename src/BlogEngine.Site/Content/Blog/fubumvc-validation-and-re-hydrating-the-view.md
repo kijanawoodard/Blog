@@ -1,6 +1,7 @@
 ---
 title: FubuMVC, Validation, and Re-Hydrating the View
 published: February 12, 2012
+lead: Exploring a solution for handling form validation and view re-hydration in FubuMVC, with a focus on maintaining user input data after failed POST requests.
 tags: [fubumvc, validation, web]
 comments:
   - email: "nospam@ventaur.com"

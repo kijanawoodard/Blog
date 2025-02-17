@@ -1,6 +1,7 @@
 ---
 title: Introducing Liaison
 published: October 25, 2013
+lead: Introducing a minimalist in-memory message bus implementation for .NET that focuses on simplicity and understanding core messaging patterns.
 tags: [csharp, architecture, liaison, nimbus]
 comments:
   - email: "graphite@joeyguerra.com"

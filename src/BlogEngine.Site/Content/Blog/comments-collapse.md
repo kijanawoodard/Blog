@@ -1,6 +1,7 @@
 ---
 title: Comments Collapse
 published: 8/1/2016 11:18:51 AM
+lead: A quick demonstration of using C# Interactive to merge separate comment YAML files into their corresponding blog post files, reducing file management overhead.
 tags: [blog, csharp]
 comments: []
 ---

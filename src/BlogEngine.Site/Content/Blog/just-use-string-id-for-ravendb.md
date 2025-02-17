@@ -1,6 +1,7 @@
 ---
 title: Just use string Id for RavenDB
 published: May 31, 2012
+lead: A practical guide on why using string IDs in RavenDB is the better choice over integers, especially when dealing with indexes and routing in MVC applications.
 tags: [ravendb, architecture, best-practices]
 comments:
   - email: "max@mwsd.se"

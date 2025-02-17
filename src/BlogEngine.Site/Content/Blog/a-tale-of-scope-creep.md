@@ -1,7 +1,7 @@
 ---
 title: A Tale of Scope Creep
-lead: Sample post so you can see how it works
 published: 2013-11-05
+lead: A detailed journey of how implementing a simple 404 page evolved into multiple features, including archive pages, partial views, and content negotiation improvements.
 tags: [aspnet-mvc, web-development]
 ---
 

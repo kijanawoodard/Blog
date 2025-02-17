@@ -1,6 +1,7 @@
 ---
 title: Interface Inversion
 published: October 15, 2013
+lead: Exploring a different perspective on interface design in C# and questioning traditional interface implementation patterns.
 tags: [csharp, programming, interfaces, design-patterns]
 comments:
   - email: "graphite@joeyguerra.com"

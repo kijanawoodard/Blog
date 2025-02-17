@@ -1,6 +1,7 @@
 ---
 title: Javascript UTC Datetime
 published: June 05, 2012
+lead: A quick tip about JavaScript's built-in UTC datetime handling capabilities, demonstrating how the language automatically manages timezone conversions without additional code.
 tags: [javascript, datetime, utc]
 ---
 

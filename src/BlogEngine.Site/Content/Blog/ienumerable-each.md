@@ -1,6 +1,7 @@
 ---
 title: IEnumerable Each()
 published: May 09, 2010
+lead: A simple implementation of an Each() extension method for IEnumerable in C#, discussing its utility and implementation considerations.
 tags: [csharp, programming, extensions]
 comments:
   - email: "landon.poch@gmail.com"

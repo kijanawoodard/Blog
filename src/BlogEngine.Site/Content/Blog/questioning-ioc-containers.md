@@ -1,6 +1,7 @@
 ---
 title: Questioning IoC Containers
 published: October 09, 2013
+lead: An exploration of Greg Young's perspective on IoC containers, questioning their necessity and examining simpler alternatives in software architecture.
 tags: [ioc, architecture, dependency-injection]
 comments:
   - email: "joey@joeyguerra.com"

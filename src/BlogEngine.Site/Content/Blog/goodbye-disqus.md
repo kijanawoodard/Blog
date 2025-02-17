@@ -1,6 +1,7 @@
 ---
 title: Goodbye Disqus
 published: July 27, 2016
+lead: A reflection on the decision to remove Disqus comments from a blog, discussing the technical and philosophical reasons for taking ownership of comment data and exploring alternative solutions.
 tags: [blog, comments, disqus]
 ---
 

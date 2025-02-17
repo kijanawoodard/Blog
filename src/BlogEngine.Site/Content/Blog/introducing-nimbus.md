@@ -1,6 +1,7 @@
 ---
 title: Introducing Nimbus
 published: October 24, 2013
+lead: Introducing Nimbus, a lightweight mediator implementation that emerged from questioning traditional IoC container patterns and seeking simpler alternatives.
 tags: [nimbus, ioc, mediator, design-patterns]
 comments:
   - email: "mikepennington@gmail.com"

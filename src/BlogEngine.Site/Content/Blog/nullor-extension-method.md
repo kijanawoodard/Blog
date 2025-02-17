@@ -1,6 +1,7 @@
 ---
 title: NullOr Extension Method
 published: May 19, 2010
+lead: A practical C# extension method implementation for handling null values more elegantly, providing a cleaner alternative to repetitive null-checking patterns.
 tags: [csharp, extension-methods, null-handling]
 ---
 

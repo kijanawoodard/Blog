@@ -1,6 +1,7 @@
 ---
 title: Avoiding Negative Branching Tests
 published: May 17, 2010
+lead: A discussion on improving code readability by favoring positive conditional logic over negative branching, with practical examples using C# extension methods.
 tags: [csharp, programming]
 ---
 

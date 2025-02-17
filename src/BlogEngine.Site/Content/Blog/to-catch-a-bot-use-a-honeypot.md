@@ -2,6 +2,7 @@
 title: To Catch a Bot, Use a Honeypot
 created: 8/9/2016 10:22:44 AM
 published: 8/9/2016 10:22:44 AM
+lead: A practical implementation of honeypot fields to detect and filter bot submissions in web forms, offering a JavaScript-free alternative to traditional CAPTCHA solutions.
 tags: [blog,security, web-development, spam-prevention]
 ---
 

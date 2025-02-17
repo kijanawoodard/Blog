@@ -1,6 +1,7 @@
 ---
 title: Building My Own Blog
 published: December 08, 2012
+lead: A personal journey in creating a minimalist blog engine from scratch, discussing the design decisions, challenges, and lessons learned along the way.
 tags: [blog, web-development]
 comments:
   - email: "landon.poch@gmail.com"

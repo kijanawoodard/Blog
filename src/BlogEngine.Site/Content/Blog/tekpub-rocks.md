@@ -1,6 +1,7 @@
 ---
 title: TekPub Rocks!
 published: January 10, 2010
+lead: A personal testimonial about the effectiveness of TekPub's video tutorials in deepening understanding of familiar technologies like jQuery, LINQ, and MVC.
 tags: [learning, video-tutorials]
 ---
 

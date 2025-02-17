@@ -1,6 +1,7 @@
 ---
 title: "Foo: IFoo is an Anti-Pattern"
 published: October 14, 2013
+lead: A critique of the common practice of naming interfaces and their implementations with the Foo:IFoo pattern, exploring why this approach often indicates poor design thinking.
 tags: [design-patterns, architecture]
 comments:
   - email: "graphite@joeyguerra.com"

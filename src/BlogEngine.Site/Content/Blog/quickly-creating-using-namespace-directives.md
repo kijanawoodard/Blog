@@ -1,6 +1,7 @@
 ---
 title: Quickly Creating Using Namespace Directives
 published: May 14, 2010
+lead: A discovery of Visual Studio's built-in Ctrl+. shortcut for automatically adding namespace directives, eliminating the need for manual namespace lookups and typing.
 tags: [visual-studio, tips-and-tricks, mvc]
 ---
 
