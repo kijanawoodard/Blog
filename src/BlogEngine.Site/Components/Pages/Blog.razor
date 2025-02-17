@@ -38,19 +38,20 @@
                     <a target="_blank" rel="noopener noreferrer" href="@($"{WebsiteKeys.BlogPostStorageAddress}/{FileName}.md")">View on GitHub</a>
                 </div>
             </div>
+            <hr />
             <footer>
                 <div class=" text-sm font-medium leading-5 divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">
                     <div class="py-4 xl:py-8">
                         <h4>Tags</h4>
                         <div class="flex flex-wrap">
-                            @foreach(var tag in _post.FrontMatter.Tags)
+                            @foreach (var tag in _post.FrontMatter.Tags)
                             {
                                 <a href="@BlazorStaticContentService.Options.Tags.TagsPageUrl/@tag">@tag &nbsp;</a>
                             }
                         </div>
                     </div>
                 </div>
-                
+
             </footer>
         </div>
     </div>
