@@ -11,7 +11,7 @@ If you knew this before and didn't tell me, you're probably the same person who 
 
 Switch on the code has a [code snippet tutorial][tutorial].
 
-[using directives]:https://kijanawoodard.com/quickly-creating-using-namespace-directives
+[using directives]:https://kijanawoodard.com/blog/quickly-creating-using-namespace-directives
 [tutorial]:https://www.switchonthecode.com/tutorials/csharp-tutorial-visual-studio-code-snippets
 
 ---

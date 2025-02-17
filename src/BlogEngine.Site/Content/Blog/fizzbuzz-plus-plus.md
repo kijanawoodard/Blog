@@ -39,6 +39,6 @@ Notice I'm still trying to decompose statements into rough single responsibility
 
 Thoughts?
 
-[Avoiding FizzBuzz]:https://kijanawoodard.com/avoiding-fizzbuzz
-[enumerable]:https://kijanawoodard.com/ienumerable-each
+[Avoiding FizzBuzz]:https://kijanawoodard.com/blog/avoiding-fizzbuzz
+[enumerable]:https://kijanawoodard.com/blog/ienumerable-each
 

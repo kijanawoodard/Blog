@@ -24,5 +24,5 @@ Anyway, an Each() extension method on IEnumerable is trivial:
         }
     }
 
-[Avoiding FizzBuzz]:https://kijanawoodard.com/avoiding-fizzbuzz
+[Avoiding FizzBuzz]:https://kijanawoodard.com/blog/avoiding-fizzbuzz
 
