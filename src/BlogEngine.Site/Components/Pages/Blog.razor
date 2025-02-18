@@ -1,16 +1,7 @@
-@page "/"
 @page "/blog/{fileName}"
 @using BlazorStatic
 @using BlazorStatic.Services
 @inject BlazorStaticContentService<PostFrontMatter> BlazorStaticContentService
-
-
-@* No filename -> show latest posts *@
-@if (string.IsNullOrWhiteSpace(FileName))
-{
-    <PostsList/>
-    return;
-}
 
 @* Show specific post by filename param *@
 @if (_post == null)
