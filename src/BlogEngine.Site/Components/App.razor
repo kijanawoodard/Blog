@@ -103,9 +103,9 @@
         <footer>
             @{ var info = AssemblyExtensions.GetAssemblyInfo(); }
             <p>
-                <span class="fa fa-copyright copyright"></span> 
-                <span class="copyright">Kijana Woodard 2010 - @DateTime.UtcNow.Year</span> 
-                Version @info.Version - @info.LastModified.ToLongDateString() @info.LastModified.ToShortTimeString()
+                <span class="copyright">&copy; Kijana Woodard 2010 - @DateTime.UtcNow.Year</span>
+                <br/>
+                <span>Version @info.Version - @info.LastModified.ToString("G")</span>
             </p>
         </footer>
     </div>

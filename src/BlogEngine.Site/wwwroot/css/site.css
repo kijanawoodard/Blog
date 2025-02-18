@@ -33,11 +33,11 @@ article div.text ol { font-size: 1.5em; }
 
 aside ul { margin: 0; }
 aside h4, aside h3 { color: #4f4f4f;margin-bottom: .5em;font-size: 1em; }
-aside small, article footer small {color: #999; font-size:.8em;}
+aside small, article footer small {color: #444; font-size:.8em;}
 aside section { margin-bottom: 2em; }
 
 footer p {
-  color: #ccc;
+  color: #777;
   font-size: 1em;
   text-align: left;
   line-height: 40px; 
