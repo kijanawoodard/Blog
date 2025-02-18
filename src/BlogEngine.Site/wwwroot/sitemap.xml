@@ -9,6 +9,9 @@
     <loc>https://kijanawoodard.com/about</loc>
   </url>
   <url>
+    <loc>https://kijanawoodard.com/blog/a-new-blog-engine</loc>
+  </url>
+  <url>
     <loc>https://kijanawoodard.com/blog/a-tale-of-scope-creep</loc>
   </url>
   <url>
@@ -144,6 +147,15 @@
     <loc>https://kijanawoodard.com/blog/winning-with-c-sharp-interactive</loc>
   </url>
   <url>
+    <loc>https://kijanawoodard.com/tags/blog</loc>
+  </url>
+  <url>
+    <loc>https://kijanawoodard.com/tags/static-sites</loc>
+  </url>
+  <url>
+    <loc>https://kijanawoodard.com/tags/blazor</loc>
+  </url>
+  <url>
     <loc>https://kijanawoodard.com/tags/aspnet-mvc</loc>
   </url>
   <url>
@@ -157,9 +169,6 @@
   </url>
   <url>
     <loc>https://kijanawoodard.com/tags/interview-questions</loc>
-  </url>
-  <url>
-    <loc>https://kijanawoodard.com/tags/blog</loc>
   </url>
   <url>
     <loc>https://kijanawoodard.com/tags/dependency-injection</loc>
