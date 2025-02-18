@@ -18,6 +18,22 @@
     <div>Post not found 🤷 </div>
     return;
 }
+<PageTitle>@_post.FrontMatter.Title</PageTitle>
+<HeadContent>
+    <meta name="description" content="@_post.FrontMatter.Lead">
+    <meta property="og:title" content="@_post.FrontMatter.Title">
+    <meta property="og:description" content="@_post.FrontMatter.Lead">
+    <meta property="og:url" content="@($"{WebsiteKeys.BlogPostStorageAddress}/{FileName}")">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="@WebsiteKeys.Title">
+
+    @* Twitter/X Card Tags *@
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="@_post.FrontMatter.Title">
+    <meta name="twitter:description" content="@_post.FrontMatter.Lead">
+    <meta name="twitter:site" content="@@kijanawoodard" />
+    <meta name="twitter:creator" content="@@kijanawoodard" />
+</HeadContent>
 <article>
     <header>
         <h2>@_post.FrontMatter.Title</h2>
