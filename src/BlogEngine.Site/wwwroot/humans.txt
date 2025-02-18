@@ -1,0 +1,8 @@
+﻿/* TEAM */
+Programmer: Kijana Woodard
+Email: contact [at] kijanawoodard.com
+X: @kijanawoodard
+From: Dallas, TX, USA
+
+/* TECH */
+C#, Markdown, Blazor
