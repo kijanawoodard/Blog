@@ -43,7 +43,7 @@ public static class WebsiteKeys
 {
     public const string GitHubRepo = "https://github.com/kijanawoodard/Blog";
     public const string X = "https://x.com/";
-    public const string Title = "Kijana Woodard Blog";
+    public const string Title = "Kijana Woodard's Blog";
     public const string BlogPostStorageAddress = $"{GitHubRepo}/tree/static/src/BlogEngine.Site/Content/Blog";
     public const string BlogLead = "Personal blog of Kijana Woodard";
 }
