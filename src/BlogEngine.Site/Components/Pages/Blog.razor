@@ -30,17 +30,13 @@
         <h3>@_post.FrontMatter.Title</h3>
         <h4 class="subheader"><time>@_post.FrontMatter.Published.ToLongDateString()</time></h4>
     </header>
-    
+
     <div class="text">
         @((MarkupString)_post.HtmlContent)
     </div>
-    
-    <div style="display: none;">
-        <a target="_blank" rel="noopener noreferrer" href="@($"{WebsiteKeys.BlogPostStorageAddress}/{FileName}.md")">View on GitHub</a>
-    </div>
-    
+
     <hr />
-    
+
     <footer>
         <h4>Tags</h4>
         <div>
