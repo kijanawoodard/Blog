@@ -34,11 +34,11 @@
                     <span class="surround-icon"><span class="fa fa-envelope"></span> Contact</span>
                 </a>
             </div>
-            <form action="https://www.google.com/search" method="GET" class="third search">
-                <input type="hidden" name="q" value="site:kijanawoodard.com"/>
-
-                <span class="surround-icon"><span class="fa fa-search"></span ></span>
-                <input type="text" name="q" placeholder="Search"/>
+            <form action="https://www.duckduckgo.com/" method="GET" class="third search" onsubmit="this.q.value = 'site:kijanawoodard.com ' + this.userInput.value;">
+                <input type="hidden" name="q" value=""/>
+    
+                <span class="surround-icon"><span class="fa fa-search"></span></span>
+                <input type="text" name="userInput" placeholder="Search"/>
             </form>
         </header>
         <hr/>
