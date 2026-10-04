@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@inject NavigationManager Nav
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="robots" content="index, follow">
     <meta name="description" content="Kijana Woodard's blog about software development and anything else that seems interesting.">
+    <link rel="canonical" href="@CanonicalUrl">
     <link rel="author" href="/humans.txt">
     <link rel="icon" type="image/x-icon" href="favicon.png" />
     <link rel="stylesheet" href="css/kube.min.css"/>
@@ -111,3 +113,20 @@
 </body>
 
 </html>
+
+@code {
+    // Folder-style pages are served as /name/index.html, so Cloudflare redirects /name to /name/.
+    // Post and tag pages are served as /name.html, so they have no trailing slash.
+    private static readonly string[] FolderPages = ["about", "contact", "tags"];
+
+    private string CanonicalUrl
+    {
+        get
+        {
+            var path = Nav.ToBaseRelativePath(Nav.Uri).Split('?', '#')[0].Trim('/');
+            if (path.Length == 0) return "https://kijanawoodard.com/";
+            var suffix = FolderPages.Contains(path) ? "/" : "";
+            return $"https://kijanawoodard.com/{path}{suffix}";
+        }
+    }
+}
