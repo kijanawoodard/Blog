@@ -1,0 +1,62 @@
+# Kijana Woodard's Blog
+
+> Personal blog of Kijana Woodard, a software developer in Dallas, Texas and CEO of Kaizen I/O. Posts cover C#, ASP.NET, Blazor, software design, and building a minimalist static blog engine. Content is plain Markdown rendered to a static site.
+
+## About
+
+- [About](https://kijanawoodard.com/about): Who Kijana is, talks, and background
+- [Contact](https://kijanawoodard.com/contact): Where to find Kijana online
+- [Tags](https://kijanawoodard.com/tags): Posts grouped by topic
+
+## Posts
+
+- [A New Blog Engine](https://kijanawoodard.com/blog/a-new-blog-engine): A look back at the original blog engine and the transition to a new static site built with BlazorStatic highlighting the changes.
+- [Item Templates in Visual Studio 2015](https://kijanawoodard.com/blog/item-templates-in-visual-studio-2015): A practical guide to creating and implementing custom item templates in Visual Studio 2015, with tips for handling non-code files and troubleshooting common issues.
+- [To Catch a Bot, Use a Honeypot](https://kijanawoodard.com/blog/to-catch-a-bot-use-a-honeypot): A practical implementation of honeypot fields to detect and filter bot submissions in web forms, offering a JavaScript-free alternative to traditional CAPTCHA solutions.
+- [Let's Encrypt, Shall We?](https://kijanawoodard.com/blog/lets-encrypt-shall-we): A practical walkthrough of implementing Let's Encrypt SSL certificates on Azure WebApps, including troubleshooting common pitfalls and limitations.
+- [Setting Up Azure CDN](https://kijanawoodard.com/blog/setting-up-azure-cdn): A step-by-step guide to implementing Azure CDN for web applications, including troubleshooting common issues with propagation times, CORS settings, and custom domain configuration.
+- [Comments Collapse](https://kijanawoodard.com/blog/comments-collapse): A quick demonstration of using C# Interactive to merge separate comment YAML files into their corresponding blog post files, reducing file management overhead.
+- [#Winning with C# Interactive](https://kijanawoodard.com/blog/winning-with-c-sharp-interactive): A practical example of using Visual Studio's C# Interactive window to efficiently process and migrate blog post metadata into Jekyll-style front matter format.
+- [Removing Disqus with F#](https://kijanawoodard.com/blog/removing-disqus-with-f-sharp): A practical demonstration of using F#'s type providers to elegantly parse and process Disqus comment export data, showcasing the language's powerful XML handling capabilities.
+- [Goodbye Disqus](https://kijanawoodard.com/blog/goodbye-disqus): A reflection on the decision to remove Disqus comments from a blog, discussing the technical and philosophical reasons for taking ownership of comment data and exploring alternative solutions.
+- [Asp.net MVC Content Negotiation](https://kijanawoodard.com/blog/asp-net-mvc-content-negotiation): An exploration of implementing content negotiation in ASP.NET MVC, allowing single endpoints to serve multiple content types through custom action invokers and format-specific views.
+- [A Tale of Scope Creep](https://kijanawoodard.com/blog/a-tale-of-scope-creep): A detailed journey of how implementing a simple 404 page evolved into multiple features, including archive pages, partial views, and content negotiation improvements.
+- [Vessel Modules](https://kijanawoodard.com/blog/vessel-modules): An exploration of implementing a module system in Vessel, discussing the tradeoffs between application-level and feature-level legibility in IoC container design.
+- [Introducing Vessel](https://kijanawoodard.com/blog/introducing-vessel): Introducing Vessel, a minimalist dependency injection container that challenges traditional IoC patterns with a simpler, more focused approach to object composition.
+- [Introducing Liaison](https://kijanawoodard.com/blog/introducing-liaison): Introducing a minimalist in-memory message bus implementation for .NET that focuses on simplicity and understanding core messaging patterns.
+- [Introducing Nimbus](https://kijanawoodard.com/blog/introducing-nimbus): Introducing Nimbus, a lightweight mediator implementation that emerged from questioning traditional IoC container patterns and seeking simpler alternatives.
+- [Creating a ReSharper Macro](https://kijanawoodard.com/blog/creating-a-resharper-macro): A practical guide to creating custom ReSharper macros for automating repetitive code patterns, demonstrated through a blog post template example.
+- [Constructor Injection is Partial Application](https://kijanawoodard.com/blog/constructor-injection-is-partial-application): Drawing a parallel between object-oriented constructor injection and functional programming's partial application, revealing how both patterns solve the problem of dependency management.
+- [Interface Inversion](https://kijanawoodard.com/blog/interface-inversion): Exploring a different perspective on interface design in C# and questioning traditional interface implementation patterns.
+- [Foo: IFoo is an Anti-Pattern](https://kijanawoodard.com/blog/foo-ifoo-is-an-anti-pattern): A critique of the common practice of naming interfaces and their implementations with the Foo:IFoo pattern, exploring why this approach often indicates poor design thinking.
+- [How to Wake Up Your Kids](https://kijanawoodard.com/blog/how-to-wake-up-your-kids): A humorous guide to the seemingly inevitable ways parents accidentally wake their sleeping children, based on real-life observations and experiences.
+- [Violating SRP with Constructor Injection](https://kijanawoodard.com/blog/violating-srp-with-constructor-injection): An examination of how constructor injection patterns can lead to Single Responsibility Principle violations, with practical examples and solutions.
+- [Violating ISP with Constructor Injection](https://kijanawoodard.com/blog/violating-isp-with-constructor-injection): A deep dive into how constructor injection can inadvertently violate the Interface Segregation Principle, with examples of common anti-patterns and their solutions.
+- [Questioning IoC Containers](https://kijanawoodard.com/blog/questioning-ioc-containers): An exploration of Greg Young's perspective on IoC containers, questioning their necessity and examining simpler alternatives in software architecture.
+- [.Net Demon](https://kijanawoodard.com/blog/dotnet-demon): A review of .Net Demon, a Visual Studio extension that enhances developer productivity through automatic compilation and browser refresh features.
+- [Learning NServiceBus Review](https://kijanawoodard.com/blog/learning-nservicebus-review): A comprehensive review of David Boike's book on NServiceBus, examining how it effectively introduces messaging concepts and practical implementation for developers.
+- [Building My Own Blog](https://kijanawoodard.com/blog/building-a-blog-engine): A personal journey in creating a minimalist blog engine from scratch, discussing the design decisions, challenges, and lessons learned along the way.
+- [Javascript UTC Datetime](https://kijanawoodard.com/blog/javascript-utc-datetime): A quick tip about JavaScript's built-in UTC datetime handling capabilities, demonstrating how the language automatically manages timezone conversions without additional code.
+- [Just use string Id for RavenDB](https://kijanawoodard.com/blog/just-use-string-id-for-ravendb): A practical guide on why using string IDs in RavenDB is the better choice over integers, especially when dealing with indexes and routing in MVC applications.
+- [Seeking Density in Architectural Abstractions](https://kijanawoodard.com/blog/seeking-density-in-architectural-abstractions): A reflection on the value and pitfalls of architectural abstractions in software development, exploring when they add value and when they become unnecessary overhead.
+- [FubuMVC, Validation, and Re-Hydrating the View](https://kijanawoodard.com/blog/fubumvc-validation-and-re-hydrating-the-view): Exploring a solution for handling form validation and view re-hydration in FubuMVC, with a focus on maintaining user input data after failed POST requests.
+- [C# Partition List into List of Lists](https://kijanawoodard.com/blog/c-partition-list-into-list-of-lists): An exploration of different approaches to partitioning lists in C#, including a discovery of how LINQ's GroupBy provides a simpler solution than custom partitioning logic.
+- [Selling Value for Money](https://kijanawoodard.com/blog/selling-value-for-money): A critical look at how service-based businesses, particularly in software development, often undervalue their work and the long-term consequences of underselling services.
+- [NullOr Extension Method](https://kijanawoodard.com/blog/nullor-extension-method): A practical C# extension method implementation for handling null values more elegantly, providing a cleaner alternative to repetitive null-checking patterns.
+- [Null Check with Extension Methods](https://kijanawoodard.com/blog/null-check-with-extension-methods): An exploration of using C# extension methods to create a more concise and reusable approach to null checking, reducing boilerplate code in method arguments validation.
+- [Avoiding Negative Branching Tests](https://kijanawoodard.com/blog/avoiding-negative-branching-tests): A discussion on improving code readability by favoring positive conditional logic over negative branching, with practical examples using C# extension methods.
+- [Cool Feature of Extension Methods](https://kijanawoodard.com/blog/cool-feature-of-extension-methods): An exploration of a lesser-known feature of C# extension methods - their ability to be called on null instances, making them particularly useful for null-checking scenarios.
+- [Visual Studio Code Snippets](https://kijanawoodard.com/blog/visual-studio-code-snippets): A humorous reflection on discovering Visual Studio's built-in code snippets feature, highlighting its time-saving benefits for developers.
+- [Quickly Creating Using Namespace Directives](https://kijanawoodard.com/blog/quickly-creating-using-namespace-directives): A discovery of Visual Studio's built-in Ctrl+. shortcut for automatically adding namespace directives, eliminating the need for manual namespace lookups and typing.
+- [Thoughts on Script#](https://kijanawoodard.com/blog/thoughts-on-script-sharp): A critical perspective on Script#, arguing that compiling C# to JavaScript is reminiscent of WebForms' approach of abstracting away the browser, suggesting more direct solutions instead.
+- [In Defense of Blub](https://kijanawoodard.com/blog/in-defense-of-blub): A pragmatic perspective on the concept of 'Blub' programming languages, arguing that while not perfect, they often provide the right balance of power and practicality for real-world development.
+- [Why Enums Suck](https://kijanawoodard.com/blog/why-enums-suck): A discussion on why using enums to drive behavior is an anti-pattern, and how object-oriented principles provide a better solution.
+- [Avoiding FizzBuzz](https://kijanawoodard.com/blog/avoiding-fizzbuzz): A reflection on technical interviews and the value of focusing on deeper discussions rather than basic coding exercises, accompanied by a LINQ-based FizzBuzz implementation.
+- [FizzBuzz++](https://kijanawoodard.com/blog/fizzbuzz-plus-plus): An enhanced implementation of the classic FizzBuzz programming exercise, demonstrating more elegant solutions using C# extension methods and functional programming concepts.
+- [IEnumerable Each()](https://kijanawoodard.com/blog/ienumerable-each): A simple implementation of an Each() extension method for IEnumerable in C#, discussing its utility and implementation considerations.
+- [Gmail's Spam Criteria is Stringent](https://kijanawoodard.com/blog/gmails-spam-criteria-is-stringent): A humorous observation of Gmail's aggressive spam filtering, which is so thorough it even flags Gmail's own messages as potential spam.
+- [TekPub Rocks!](https://kijanawoodard.com/blog/tekpub-rocks): A personal testimonial about the effectiveness of TekPub's video tutorials in deepening understanding of familiar technologies like jQuery, LINQ, and MVC.
+
+## Source
+
+- [GitHub repository](https://github.com/kijanawoodard/Blog): Blog engine and all post Markdown
